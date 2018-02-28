@@ -34,6 +34,8 @@ using namespace std;
 using namespace dev;
 using namespace dev::solidity;
 
+//@note: @here: @tuple encoder
+
 string ABIFunctions::tupleEncoder(
 	TypePointers const& _givenTypes,
 	TypePointers const& _targetTypes,
