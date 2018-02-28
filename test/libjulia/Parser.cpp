@@ -52,11 +52,11 @@ bool parse(string const& _source, ErrorReporter& errorReporter)
 	try
 	{
 		auto scanner = make_shared<Scanner>(CharStream(_source));
-		auto parserResult = assembly::Parser(errorReporter, true).parse(scanner);
+		auto parserResult = assembly::Parser(errorReporter, assembly::AsmFlavour::IULIA).parse(scanner, false);
 		if (parserResult)
 		{
 			assembly::AsmAnalysisInfo analysisInfo;
-			return (assembly::AsmAnalyzer(analysisInfo, errorReporter, true)).analyze(*parserResult);
+			return (assembly::AsmAnalyzer(analysisInfo, errorReporter, assembly::AsmFlavour::IULIA)).analyze(*parserResult);
 		}
 	}
 	catch (FatalError const&)
@@ -196,6 +196,14 @@ BOOST_AUTO_TEST_CASE(empty_call)
 	CHECK_ERROR("{ () }", ParserError, "Literal or identifier expected.");
 }
 
+BOOST_AUTO_TEST_CASE(tokens_as_identifers)
+{
+	BOOST_CHECK(successParse("{ let return:u256 := 1:u256 }"));
+	BOOST_CHECK(successParse("{ let byte:u256 := 1:u256 }"));
+	BOOST_CHECK(successParse("{ let address:u256 := 1:u256 }"));
+	BOOST_CHECK(successParse("{ let bool:u256 := 1:u256 }"));
+}
+
 BOOST_AUTO_TEST_CASE(lacking_types)
 {
 	CHECK_ERROR("{ let x := 1:u256 }", ParserError, "Expected token Identifier got 'Assign'");
@@ -220,6 +228,7 @@ BOOST_AUTO_TEST_CASE(number_literals)
 	CHECK_ERROR("{ let x:u256 := .1:u256 }", ParserError, "Invalid number literal.");
 	CHECK_ERROR("{ let x:u256 := 1e5:u256 }", ParserError, "Invalid number literal.");
 	CHECK_ERROR("{ let x:u256 := 67.235:u256 }", ParserError, "Invalid number literal.");
+	CHECK_ERROR("{ let x:u256 := 0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff:u256 }", TypeError, "Number literal too large (> 256 bits)");
 }
 
 BOOST_AUTO_TEST_CASE(builtin_types)

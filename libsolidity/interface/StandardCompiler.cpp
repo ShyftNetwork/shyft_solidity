@@ -193,7 +193,7 @@ Json::Value formatLinkReferences(std::map<size_t, std::string> const& linkRefere
 	for (auto const& ref: linkReferences)
 	{
 		string const& fullname = ref.second;
-		size_t colon = fullname.find(':');
+		size_t colon = fullname.rfind(':');
 		solAssert(colon != string::npos, "");
 		string file = fullname.substr(0, colon);
 		string name = fullname.substr(colon + 1);
@@ -236,7 +236,11 @@ Json::Value StandardCompiler::compileInternal(Json::Value const& _input)
 		return formatFatalError("JSONError", "Only \"Solidity\" is supported as a language.");
 
 	Json::Value const& sources = _input["sources"];
-	if (!sources)
+
+	if (!sources.isObject() && !sources.isNull())
+		return formatFatalError("JSONError", "\"sources\" is not a JSON object.");
+
+	if (sources.empty())
 		return formatFatalError("JSONError", "No input sources specified.");
 
 	Json::Value errors = Json::arrayValue;
@@ -323,13 +327,29 @@ Json::Value StandardCompiler::compileInternal(Json::Value const& _input)
 	m_compilerStack.setOptimiserSettings(optimize, optimizeRuns);
 
 	map<string, h160> libraries;
-	Json::Value jsonLibraries = settings.get("libraries", Json::Value());
+	Json::Value jsonLibraries = settings.get("libraries", Json::Value(Json::objectValue));
+	if (!jsonLibraries.isObject())
+		return formatFatalError("JSONError", "\"libraries\" is not a JSON object.");
 	for (auto const& sourceName: jsonLibraries.getMemberNames())
 	{
 		auto const& jsonSourceName = jsonLibraries[sourceName];
+		if (!jsonSourceName.isObject())
+			return formatFatalError("JSONError", "library entry is not a JSON object.");
 		for (auto const& library: jsonSourceName.getMemberNames())
-			// @TODO use libraries only for the given source
-			libraries[library] = h160(jsonSourceName[library].asString());
+		{
+			try
+			{
+				// @TODO use libraries only for the given source
+				libraries[library] = h160(jsonSourceName[library].asString());
+			}
+			catch (dev::BadHexCharacter)
+			{
+				return formatFatalError(
+					"JSONError",
+					"Invalid library address (\"" + jsonSourceName[library].asString() + "\") supplied."
+				);
+			}
+		}
 	}
 	m_compilerStack.setLibraries(libraries);
 
@@ -461,7 +481,7 @@ Json::Value StandardCompiler::compileInternal(Json::Value const& _input)
 	Json::Value contractsOutput = Json::objectValue;
 	for (string const& contractName: compilationSuccess ? m_compilerStack.contractNames() : vector<string>())
 	{
-		size_t colon = contractName.find(':');
+		size_t colon = contractName.rfind(':');
 		solAssert(colon != string::npos, "");
 		string file = contractName.substr(0, colon);
 		string name = contractName.substr(colon + 1);
@@ -550,12 +570,11 @@ Json::Value StandardCompiler::compile(Json::Value const& _input)
 string StandardCompiler::compile(string const& _input)
 {
 	Json::Value input;
-	Json::Reader reader;
-
+	string errors;
 	try
 	{
-		if (!reader.parse(_input, input, false))
-			return jsonCompactPrint(formatFatalError("JSONError", reader.getFormattedErrorMessages()));
+		if (!jsonParseStrict(_input, input, &errors))
+			return jsonCompactPrint(formatFatalError("JSONError", errors));
 	}
 	catch(...)
 	{

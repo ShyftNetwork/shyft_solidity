@@ -40,27 +40,28 @@ using namespace dev::solidity;
 
 void dev::julia::test::printErrors(ErrorList const& _errors, Scanner const& _scanner)
 {
+	SourceReferenceFormatter formatter(cout, [&](std::string const&) -> Scanner const& { return _scanner; });
+
 	for (auto const& error: _errors)
-		SourceReferenceFormatter::printExceptionInformation(
-			cout,
+		formatter.printExceptionInformation(
 			*error,
-			(error->type() == Error::Type::Warning) ? "Warning" : "Error",
-			[&](std::string const&) -> Scanner const& { return _scanner; }
+			(error->type() == Error::Type::Warning) ? "Warning" : "Error"
 		);
 }
 
 
 pair<shared_ptr<Block>, shared_ptr<assembly::AsmAnalysisInfo>> dev::julia::test::parse(string const& _source, bool _julia)
 {
+	auto flavour = _julia ? assembly::AsmFlavour::IULIA : assembly::AsmFlavour::Strict;
 	ErrorList errors;
 	ErrorReporter errorReporter(errors);
 	auto scanner = make_shared<Scanner>(CharStream(_source), "");
-	auto parserResult = assembly::Parser(errorReporter, _julia).parse(scanner);
+	auto parserResult = assembly::Parser(errorReporter, flavour).parse(scanner, false);
 	if (parserResult)
 	{
 		BOOST_REQUIRE(errorReporter.errors().empty());
 		auto analysisInfo = make_shared<assembly::AsmAnalysisInfo>();
-		assembly::AsmAnalyzer analyzer(*analysisInfo, errorReporter, _julia);
+		assembly::AsmAnalyzer analyzer(*analysisInfo, errorReporter, flavour);
 		if (analyzer.analyze(*parserResult))
 		{
 			BOOST_REQUIRE(errorReporter.errors().empty());

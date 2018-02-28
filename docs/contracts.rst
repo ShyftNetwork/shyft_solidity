@@ -467,13 +467,13 @@ The following statements are considered modifying the state:
     }
 
 .. note::
-  ``constant`` is an alias to ``view``.
+  ``constant`` on functions is an alias to ``view``, but this is deprecated and is planned to be dropped in version 0.5.0.
 
 .. note::
   Getter methods are marked ``view``.
 
 .. warning::
-  The compiler does not enforce yet that a ``view`` method is not modifying state.
+  Before version 0.4.17 the compiler didn't enforce that ``view`` is not modifying the state.
 
 .. index:: ! pure function, function;pure
 
@@ -503,7 +503,7 @@ In addition to the list of state modifying statements explained above, the follo
     }
 
 .. warning::
-  The compiler does not enforce yet that a ``pure`` method is not reading from the state.
+  Before version 0.4.17 the compiler didn't enforce that ``view`` is not reading the state.
 
 .. index:: ! fallback function, function;fallback
 
@@ -724,10 +724,12 @@ All non-indexed arguments will be stored in the data part of the log.
         );
 
         function deposit(bytes32 _id) public payable {
-            // Any call to this function (even deeply nested) can
-            // be detected from the JavaScript API by filtering
-            // for `Deposit` to be called.
-            Deposit(msg.sender, _id, msg.value);
+            // Events are emitted using `emit`, followed by
+            // the name of the event and the arguments
+            // (if any) in parentheses. Any such invocation
+            // (even deeply nested) can be detected from
+            // the JavaScript API by filtering for `Deposit`.
+            emit Deposit(msg.sender, _id, msg.value);
         }
     }
 
@@ -939,15 +941,15 @@ derived override, but this function will bypass
         function kill() public { /* do cleanup 2 */ super.kill(); }
     }
 
-    contract Final is Base2, Base1 {
+    contract Final is Base1, Base2 {
     }
 
-If ``Base1`` calls a function of ``super``, it does not simply
+If ``Base2`` calls a function of ``super``, it does not simply
 call this function on one of its base contracts.  Rather, it
 calls this function on the next base contract in the final
-inheritance graph, so it will call ``Base2.kill()`` (note that
+inheritance graph, so it will call ``Base1.kill()`` (note that
 the final inheritance sequence is -- starting with the most
-derived contract: Final, Base1, Base2, mortal, owned).
+derived contract: Final, Base2, Base1, mortal, owned).
 The actual function that is called when using super is
 not known in the context of the class where it is used,
 although its type is known. This is similar for ordinary
@@ -1053,6 +1055,17 @@ but they can be used as base contracts::
 
 If a contract inherits from an abstract contract and does not implement all non-implemented functions by overriding, it will itself be abstract.
 
+Note that a function without implementation is different from a :ref:`Function Type <function_types>` even though their syntax looks very similar.
+
+Example of function without implementation (a function declaration)::
+
+    function foo(address) external returns (address);
+
+Example of a Function Type (a variable declaration, where the variable is of type ``function``)::
+
+    function(address) external returns (address) foo;
+
+
 .. index:: ! contract;interface, ! interface contract
 
 **********
@@ -1100,7 +1113,11 @@ is executed in the context of the calling contract, i.e. ``this`` points to the
 calling contract, and especially the storage from the calling contract can be
 accessed. As a library is an isolated piece of source code, it can only access
 state variables of the calling contract if they are explicitly supplied (it
-would have no way to name them, otherwise).
+would have no way to name them, otherwise). Library functions can only be
+called directly (i.e. without the use of ``DELEGATECALL``) if they do not modify
+the state (i.e. if they are ``view`` or ``pure`` functions),
+because libraries are assumed to be stateless. In particular, it is
+not possible to destroy a library unless Solidity's type system is circumvented.
 
 Libraries can be seen as implicit base contracts of the contracts that use them.
 They will not be explicitly visible in the inheritance hierarchy, but calls
@@ -1111,7 +1128,7 @@ if the library were a base contract. Of course, calls to internal functions
 use the internal calling convention, which means that all internal types
 can be passed and memory types will be passed by reference and not copied.
 To realize this in the EVM, code of internal library functions
-and all functions called from therein will be pulled into the calling
+and all functions called from therein will at compile time be pulled into the calling
 contract, and a regular ``JUMP`` call will be used instead of a ``DELEGATECALL``.
 
 .. index:: using for, set
@@ -1267,6 +1284,30 @@ Restrictions for libraries in comparison to contracts:
 - Cannot receive Ether
 
 (These might be lifted at a later point.)
+
+Call Protection For Libraries
+=============================
+
+As mentioned in the introduction, if a library's code is executed
+using a ``CALL`` instead of a ``DELEGATECALL`` or ``CALLCODE``,
+it will revert unless a ``view`` or ``pure`` function is called.
+
+The EVM does not provide a direct way for a contract to detect
+whether it was called using ``CALL`` or not, but a contract
+can use the ``ADDRESS`` opcode to find out "where" it is
+currently running. The generated code compares this address
+to the address used at construction time to determine the mode
+of calling.
+
+More specifically, the runtime code of a library always starts
+with a push instruction, which is a zero of 20 bytes at
+compilation time. When the deploy code runs, this constant
+is replaced in memory by the current address and this
+modified code is stored in the contract. At runtime,
+this causes the deploy time address to be the first
+constant to be pushed onto the stack and the dispatcher
+code compares the current address against this constant
+for any non-view and non-pure function.
 
 .. index:: ! using for, library
 

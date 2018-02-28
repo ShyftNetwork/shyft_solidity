@@ -1,14 +1,51 @@
-### 0.4.20 (unreleased)
+### 0.4.21 (unreleased)
 
 Features:
- * Limit the number of warnings raised for creating abstract contracts.
- * Inline Assembly: Issue warning for using jump labels (already existed for jump instructions).
+ * C99/C++-style scoping rules (instead of JavaScript function scoping) take effect as experimental v0.5.0 feature.
+ * Code Generator: Assert that ``k != 0`` for ``molmod(a, b, k)`` and ``addmod(a, b, k)`` as experimental 0.5.0 feature.
+ * Standard JSON: Reject badly formatted invalid JSON inputs.
+ * Type Checker: Disallow uninitialized storage pointers as experimental 0.5.0 feature.
+ * Support and recommend using ``emit EventName();`` to call events explicitly.
+ * Syntax Analyser: Do not warn about experimental features if they do not concern code generation.
+ * Syntax Checker: Mark ``throw`` as an error as experimental 0.5.0 feature.
+ * Syntax Checker: Issue error if no visibility is specified on contract functions as experimental 0.5.0 feature.
 
 Bugfixes:
+ * Assembly: Raise error on oversized number literals in assembly.
+ * JSON-AST: Add "documentation" property to function, event and modifier definition.
+ * Resolver: Properly determine shadowing for imports with aliases.
+ * Standalone Assembly: Do not ignore input after closing brace of top level block.
+ * Standard JSON: catch errors properly when invalid "sources" are passed
+ * Type Checker: Properly warn when using ``_offset`` and ``_slot`` for constants in inline assembly.
+ * Commandline interface: throw error if option is unknown
+
+### 0.4.20 (2018-02-14)
+
+Features:
+ * Code Generator: Prevent non-view functions in libraries from being called
+   directly (as opposed to via delegatecall).
+ * Commandline interface: Support strict mode of assembly (disallowing jumps,
+   instructional opcodes, etc) with the ``--strict-assembly`` switch.
+ * Inline Assembly: Issue warning for using jump labels (already existed for jump instructions).
+ * Inline Assembly: Support some restricted tokens (return, byte, address) as identifiers in Iulia mode.
+ * Optimiser: Replace ``x % 2**i`` by ``x & (2**i-1)``.
+ * Resolver: Continue resolving references after the first error.
+ * Resolver: Suggest alternative identifiers if a given identifier is not found.
+ * SMT Checker: Take if-else branch conditions into account in the SMT encoding of the program
+   variables.
+ * Syntax Checker: Deprecate the ``var`` keyword (and mark it an error as experimental 0.5.0 feature).
+ * Type Checker: Allow `this.f.selector` to be a pure expression.
+ * Type Checker: Issue warning for using ``public`` visibility for interface functions.
+ * Type Checker: Limit the number of warnings raised for creating abstract contracts.
+
+Bugfixes:
+ * Error Output: Truncate huge number literals in the middle to avoid output blow-up.
  * Parser: Disallow event declarations with no parameter list.
  * Standard JSON: Populate the ``sourceLocation`` field in the error list.
+ * Standard JSON: Properly support contract and library file names containing a colon (such as URLs).
  * Type Checker: Suggest the experimental ABI encoder if using ``struct``s as function parameters
    (instead of an internal compiler error).
+ * Type Checker: Improve error message for wrong struct initialization.
 
 ### 0.4.19 (2017-11-30)
 

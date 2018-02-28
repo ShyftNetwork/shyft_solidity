@@ -604,6 +604,8 @@ bool TypeChecker::visit(FunctionDefinition const& _function)
 		{
 			if (_function.visibility() < FunctionDefinition::Visibility::Public)
 				m_errorReporter.typeError(_function.location(), "Functions in interfaces cannot be internal or private.");
+			else if (_function.visibility() != FunctionDefinition::Visibility::External)
+				m_errorReporter.warning(_function.location(), "Functions in interfaces should be declared external.");
 		}
 		if (_function.isConstructor())
 			m_errorReporter.typeError(_function.location(), "Constructor cannot be defined in interfaces.");
@@ -802,7 +804,12 @@ bool TypeChecker::visit(InlineAssembly const& _inlineAssembly)
 		solAssert(!!declaration, "");
 		if (auto var = dynamic_cast<VariableDeclaration const*>(declaration))
 		{
-			if (ref->second.isSlot || ref->second.isOffset)
+			if (var->isConstant())
+			{
+				m_errorReporter.typeError(_identifier.location, "Constant variables not supported by inline assembly.");
+				return size_t(-1);
+			}
+			else if (ref->second.isSlot || ref->second.isOffset)
 			{
 				if (!var->isStateVariable() && !var->type()->dataStoredIn(DataLocation::Storage))
 				{
@@ -814,11 +821,6 @@ bool TypeChecker::visit(InlineAssembly const& _inlineAssembly)
 					m_errorReporter.typeError(_identifier.location, "Storage variables cannot be assigned to.");
 					return size_t(-1);
 				}
-			}
-			else if (var->isConstant())
-			{
-				m_errorReporter.typeError(_identifier.location, "Constant variables not supported by inline assembly.");
-				return size_t(-1);
 			}
 			else if (!var->isLocalVariable())
 			{
@@ -873,7 +875,7 @@ bool TypeChecker::visit(InlineAssembly const& _inlineAssembly)
 	assembly::AsmAnalyzer analyzer(
 		*_inlineAssembly.annotation().analysisInfo,
 		m_errorReporter,
-		false,
+		assembly::AsmFlavour::Loose,
 		identifierAccess
 	);
 	if (!analyzer.analyze(_inlineAssembly.operations()))
@@ -953,6 +955,16 @@ void TypeChecker::endVisit(Return const& _return)
 	}
 }
 
+void TypeChecker::endVisit(EmitStatement const& _emit)
+{
+	if (
+		_emit.eventCall().annotation().kind != FunctionCallKind::FunctionCall ||
+		dynamic_cast<FunctionType const&>(*type(_emit.eventCall().expression())).kind() != FunctionType::Kind::Event
+	)
+		m_errorReporter.typeError(_emit.eventCall().expression().location(), "Expression has to be an event invocation.");
+	m_insideEmitStatement = false;
+}
+
 bool TypeChecker::visit(VariableDeclarationStatement const& _statement)
 {
 	if (!_statement.initialValue())
@@ -970,7 +982,11 @@ bool TypeChecker::visit(VariableDeclarationStatement const& _statement)
 				string errorText{"Uninitialized storage pointer."};
 				if (varDecl.referenceLocation() == VariableDeclaration::Location::Default)
 					errorText += " Did you mean '<type> memory " + varDecl.name() + "'?";
-				m_errorReporter.warning(varDecl.location(), errorText);
+				solAssert(m_scope, "");
+				if (m_scope->sourceUnit().annotation().experimentalFeatures.count(ExperimentalFeature::V050))
+					m_errorReporter.declarationError(varDecl.location(), errorText);
+				else
+					m_errorReporter.warning(varDecl.location(), errorText);
 			}
 		}
 		else if (dynamic_cast<MappingType const*>(type(varDecl).get()))
@@ -1525,6 +1541,13 @@ bool TypeChecker::visit(FunctionCall const& _functionCall)
 		else if (functionName->name() == "suicide" && functionType->kind() == FunctionType::Kind::Selfdestruct)
 			m_errorReporter.warning(_functionCall.location(), "\"suicide\" has been deprecated in favour of \"selfdestruct\"");
 	}
+	if (!m_insideEmitStatement && functionType->kind() == FunctionType::Kind::Event)
+	{
+		if (m_scope->sourceUnit().annotation().experimentalFeatures.count(ExperimentalFeature::V050))
+			m_errorReporter.typeError(_functionCall.location(), "Event invocations have to be prefixed by \"emit\".");
+		else
+			m_errorReporter.warning(_functionCall.location(), "Invoking events without \"emit\" prefix is deprecated.");
+	}
 
 	TypePointers parameterTypes = functionType->parameterTypes();
 
@@ -1551,8 +1574,12 @@ bool TypeChecker::visit(FunctionCall const& _functionCall)
 
 	if (!functionType->takesArbitraryParameters() && parameterTypes.size() != arguments.size())
 	{
+		bool isStructConstructorCall = _functionCall.annotation().kind == FunctionCallKind::StructConstructorCall;
+
 		string msg =
-			"Wrong argument count for function call: " +
+			"Wrong argument count for " +
+			string(isStructConstructorCall ? "struct constructor" : "function call") +
+			": " +
 			toString(arguments.size()) +
 			" arguments given but expected " +
 			toString(parameterTypes.size()) +

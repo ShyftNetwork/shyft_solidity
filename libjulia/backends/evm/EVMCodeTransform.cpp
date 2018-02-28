@@ -77,6 +77,13 @@ void CodeTransform::operator()(StackAssignment const& _assignment)
 	checkStackHeight(&_assignment);
 }
 
+void CodeTransform::operator()(ExpressionStatement const& _statement)
+{
+	m_assembly.setSourceLocation(_statement.location);
+	boost::apply_visitor(*this, _statement.expression);
+	checkStackHeight(&_statement);
+}
+
 void CodeTransform::operator()(Label const& _label)
 {
 	m_assembly.setSourceLocation(_label.location);
@@ -460,7 +467,7 @@ AbstractAssembly::LabelID CodeTransform::functionEntryID(string const& _name, Sc
 	return m_context->functionEntryIDs[&_function];
 }
 
-void CodeTransform::visitExpression(Statement const& _expression)
+void CodeTransform::visitExpression(Expression const& _expression)
 {
 	int height = m_assembly.stackHeight();
 	boost::apply_visitor(*this, _expression);
@@ -515,7 +522,7 @@ void CodeTransform::generateAssignment(Identifier const& _variableName)
 	}
 }
 
-int CodeTransform::variableHeightDiff(solidity::assembly::Scope::Variable const& _var, bool _forSwap)
+int CodeTransform::variableHeightDiff(solidity::assembly::Scope::Variable const& _var, bool _forSwap) const
 {
 	solAssert(m_context->variableStackHeights.count(&_var), "");
 	int heightDiff = m_assembly.stackHeight() - m_context->variableStackHeights[&_var];
@@ -530,12 +537,12 @@ int CodeTransform::variableHeightDiff(solidity::assembly::Scope::Variable const&
 		return heightDiff;
 }
 
-void CodeTransform::expectDeposit(int _deposit, int _oldHeight)
+void CodeTransform::expectDeposit(int _deposit, int _oldHeight) const
 {
 	solAssert(m_assembly.stackHeight() == _oldHeight + _deposit, "Invalid stack deposit.");
 }
 
-void CodeTransform::checkStackHeight(void const* _astElement)
+void CodeTransform::checkStackHeight(void const* _astElement) const
 {
 	solAssert(m_info.stackHeightInfo.count(_astElement), "Stack height for AST element not found.");
 	solAssert(

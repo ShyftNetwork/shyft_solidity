@@ -101,6 +101,7 @@ public:
 	void operator()(Identifier const& _identifier);
 	void operator()(FunctionalInstruction const& _instr);
 	void operator()(FunctionCall const&);
+	void operator()(ExpressionStatement const& _statement);
 	void operator()(Label const& _label);
 	void operator()(StackAssignment const& _assignment);
 	void operator()(Assignment const& _assignment);
@@ -118,7 +119,7 @@ private:
 	AbstractAssembly::LabelID labelID(solidity::assembly::Scope::Label const& _label);
 	AbstractAssembly::LabelID functionEntryID(std::string const& _name, solidity::assembly::Scope::Function const& _function);
 	/// Generates code for an expression that is supposed to return a single value.
-	void visitExpression(Statement const& _expression);
+	void visitExpression(Expression const& _expression);
 
 	void visitStatements(std::vector<Statement> const& _statements);
 
@@ -132,11 +133,11 @@ private:
 	/// Determines the stack height difference to the given variables. Throws
 	/// if it is not yet in scope or the height difference is too large. Returns
 	/// the (positive) stack height difference otherwise.
-	int variableHeightDiff(solidity::assembly::Scope::Variable const& _var, bool _forSwap);
+	int variableHeightDiff(solidity::assembly::Scope::Variable const& _var, bool _forSwap) const;
 
-	void expectDeposit(int _deposit, int _oldHeight);
+	void expectDeposit(int _deposit, int _oldHeight) const;
 
-	void checkStackHeight(void const* _astElement);
+	void checkStackHeight(void const* _astElement) const;
 
 	julia::AbstractAssembly& m_assembly;
 	solidity::assembly::AsmAnalysisInfo& m_info;
