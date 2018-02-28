@@ -419,7 +419,7 @@ assembly::FunctionDefinition Parser::parseFunctionDefinition()
 	expectToken(Token::LParen);
 	while (currentToken() != Token::RParen)
 	{
-		funDef.arguments.emplace_back(parseTypedName());
+		funDef.parameters.emplace_back(parseTypedName());
 		if (currentToken() == Token::RParen)
 			break;
 		expectToken(Token::Comma);
@@ -431,7 +431,7 @@ assembly::FunctionDefinition Parser::parseFunctionDefinition()
 		expectToken(Token::GreaterThan);
 		while (true)
 		{
-			funDef.returns.emplace_back(parseTypedName());
+			funDef.returnVariables.emplace_back(parseTypedName());
 			if (currentToken() == Token::LBrace)
 				break;
 			expectToken(Token::Comma);
@@ -448,10 +448,11 @@ assembly::Statement Parser::parseCall(assembly::Statement&& _instruction)
 	if (_instruction.type() == typeid(Instruction))
 	{
 		solAssert(!m_julia, "Instructions are invalid in JULIA");
+		Instruction const& instruction = std::move(boost::get<Instruction>(_instruction));
 		FunctionalInstruction ret;
-		ret.instruction = std::move(boost::get<Instruction>(_instruction));
-		ret.location = ret.instruction.location;
-		solidity::Instruction instr = ret.instruction.instruction;
+		ret.instruction = instruction.instruction;
+		ret.location = std::move(instruction.location);
+		solidity::Instruction instr = ret.instruction;
 		InstructionInfo instrInfo = instructionInfo(instr);
 		if (solidity::isDupInstruction(instr))
 			fatalParserError("DUPi instructions not allowed for functional notation");

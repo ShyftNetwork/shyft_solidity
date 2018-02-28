@@ -1,3 +1,15 @@
+### 0.4.20 (unreleased)
+
+Features:
+ * Limit the number of warnings raised for creating abstract contracts.
+ * Inline Assembly: Issue warning for using jump labels (already existed for jump instructions).
+
+Bugfixes:
+ * Parser: Disallow event declarations with no parameter list.
+ * Standard JSON: Populate the ``sourceLocation`` field in the error list.
+ * Type Checker: Suggest the experimental ABI encoder if using ``struct``s as function parameters
+   (instead of an internal compiler error).
+
 ### 0.4.19 (2017-11-30)
 
 Features:

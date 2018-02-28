@@ -60,14 +60,14 @@ struct StackAssignment { SourceLocation location; Identifier variableName; };
 /// the same amount of items as the number of variables.
 struct Assignment { SourceLocation location; std::vector<Identifier> variableNames; std::shared_ptr<Statement> value; };
 /// Functional instruction, e.g. "mul(mload(20:u256), add(2:u256, x))"
-struct FunctionalInstruction { SourceLocation location; Instruction instruction; std::vector<Statement> arguments; };
+struct FunctionalInstruction { SourceLocation location; solidity::Instruction instruction; std::vector<Statement> arguments; };
 struct FunctionCall { SourceLocation location; Identifier functionName; std::vector<Statement> arguments; };
 /// Block-scope variable declaration ("let x:u256 := mload(20:u256)"), non-hoisted
 struct VariableDeclaration { SourceLocation location; TypedNameList variables; std::shared_ptr<Statement> value; };
 /// Block that creates a scope (frees declared stack variables)
 struct Block { SourceLocation location; std::vector<Statement> statements; };
 /// Function definition ("function f(a, b) -> (d, e) { ... }")
-struct FunctionDefinition { SourceLocation location; std::string name; TypedNameList arguments; TypedNameList returns; Block body; };
+struct FunctionDefinition { SourceLocation location; std::string name; TypedNameList parameters; TypedNameList returnVariables; Block body; };
 /// Conditional execution without "else" part.
 struct If { SourceLocation location; std::shared_ptr<Statement> condition; Block body; };
 /// Switch case or default case

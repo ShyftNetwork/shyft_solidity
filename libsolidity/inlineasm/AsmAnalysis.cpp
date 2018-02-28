@@ -56,6 +56,7 @@ bool AsmAnalyzer::operator()(Label const& _label)
 {
 	solAssert(!m_julia, "");
 	m_info.stackHeightInfo[&_label] = m_stackHeight;
+	warnOnInstructions(solidity::Instruction::JUMPDEST, _label.location);
 	return true;
 }
 
@@ -146,10 +147,11 @@ bool AsmAnalyzer::operator()(FunctionalInstruction const& _instr)
 		if (!expectExpression(arg))
 			success = false;
 	// Parser already checks that the number of arguments is correct.
-	solAssert(instructionInfo(_instr.instruction.instruction).args == int(_instr.arguments.size()), "");
-	if (!(*this)(_instr.instruction))
-		success = false;
+	auto const& info = instructionInfo(_instr.instruction);
+	solAssert(info.args == int(_instr.arguments.size()), "");
+	m_stackHeight += info.ret - info.args;
 	m_info.stackHeightInfo[&_instr] = m_stackHeight;
+	warnOnInstructions(_instr.instruction, _instr.location);
 	return success;
 }
 
@@ -217,14 +219,14 @@ bool AsmAnalyzer::operator()(assembly::FunctionDefinition const& _funDef)
 	Block const* virtualBlock = m_info.virtualBlocks.at(&_funDef).get();
 	solAssert(virtualBlock, "");
 	Scope& varScope = scope(virtualBlock);
-	for (auto const& var: _funDef.arguments + _funDef.returns)
+	for (auto const& var: _funDef.parameters + _funDef.returnVariables)
 	{
 		expectValidType(var.type, var.location);
 		m_activeVariables.insert(&boost::get<Scope::Variable>(varScope.identifiers.at(var.name)));
 	}
 
 	int const stackHeight = m_stackHeight;
-	m_stackHeight = _funDef.arguments.size() + _funDef.returns.size();
+	m_stackHeight = _funDef.parameters.size() + _funDef.returnVariables.size();
 
 	bool success = (*this)(_funDef.body);
 
@@ -522,11 +524,11 @@ void AsmAnalyzer::warnOnInstructions(solidity::Instruction _instr, SourceLocatio
 			"the Metropolis hard fork. Before that it acts as an invalid instruction."
 		);
 
-	if (_instr == solidity::Instruction::JUMP || _instr == solidity::Instruction::JUMPI)
+	if (_instr == solidity::Instruction::JUMP || _instr == solidity::Instruction::JUMPI || _instr == solidity::Instruction::JUMPDEST)
 		m_errorReporter.warning(
 			_location,
-			"Jump instructions are low-level EVM features that can lead to "
+			"Jump instructions and labels are low-level EVM features that can lead to "
 			"incorrect stack access. Because of that they are discouraged. "
-			"Please consider using \"switch\" or \"for\" statements instead."
+			"Please consider using \"switch\", \"if\" or \"for\" statements instead."
 		);
 }
