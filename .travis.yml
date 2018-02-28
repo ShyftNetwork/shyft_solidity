@@ -34,6 +34,7 @@ branches:
         - develop
         - release
         - /^v[0-9]/
+        - build_0.4.19
 
 env:
     global:
@@ -71,7 +72,7 @@ matrix:
           sudo: required
           compiler: gcc
           before_install:
-            - sudo apt-get -y install python-sphinx 
+            - sudo apt-get -y install python-sphinx
           env:
               - SOLC_DOCS=On
               - SOLC_RELEASE=Off
@@ -195,7 +196,7 @@ deploy:
     # Both the build and deploy steps for Emscripten are only run within the Ubuntu
     # configurations (not for macOS).  That is controlled by conditionals within the bash
     # scripts because TravisCI doesn't provide much in the way of conditional logic.
-   
+
     - provider: script
       script: test $SOLC_EMSCRIPTEN != On || (scripts/release_emscripten.sh)
       skip_cleanup: true
