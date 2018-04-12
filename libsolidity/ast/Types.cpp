@@ -2357,6 +2357,11 @@ string FunctionType::richIdentifier() const
 	case Kind::ObjectCreation: id += "objectcreation"; break;
 	case Kind::Assert: id += "assert"; break;
 	case Kind::Require: id += "require";break;
+// Alex Binesh: Start
+//		case Kind::Getattest: id += "getattest";break;  // Is this needed ? Perhaps not. The control flow never visits here
+// Alex Binesh: End
+
+
 	default: solAssert(false, "Unknown function location."); break;
 	}
 	id += "_" + stateMutabilityToString(m_stateMutability);

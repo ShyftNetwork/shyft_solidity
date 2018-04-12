@@ -1,4 +1,4 @@
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/abinesh/shyft_solidity
+/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/abinesh/shyft_solidity
 CMake Deprecation Warning at cmake/EthPolicy.cmake:12 (cmake_policy):
   The OLD behavior for policy CMP0028 will be removed from a future version
   of CMake.
@@ -27,24 +27,11 @@ Call Stack (most recent call first):
 -- Detecting CXX compile features - done
 -- boost headers: /usr/include
 -- boost lib   : /usr/lib/x86_64-linux-gnu/libboost_regex.a;/usr/lib/x86_64-linux-gnu/libboost_filesystem.a;/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a;/usr/lib/x86_64-linux-gnu/libboost_program_options.a;/usr/lib/x86_64-linux-gnu/libboost_system.a
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
--- Performing Test fstack-protector-strong
--- Performing Test fstack-protector-strong - Success
--- Performing Test Wimplicit-fallthrough
--- Performing Test Wimplicit-fallthrough - Failed
 
 ------------------------------------------------------------------------
 -- Configuring solidity
 ------------------------------------------------------------------------
---                  CMake Version                            3.9.6
+--                  CMake Version                            3.10.2
 -- CMAKE_BUILD_TYPE Build type                               Debug
 -- TARGET_PLATFORM  Target platform                          Linux
 --------------------------------------------------------------- features

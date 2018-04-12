@@ -189,10 +189,10 @@
 		<Unit filename="/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/version.h.in">
+		<Unit filename="/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\lib_json\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/version.h.in">
 			<Option virtualFolder="CMake Files\src\lib_json\"/>
 		</Unit>
 		<Unit filename="/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/CMakeLists.txt">

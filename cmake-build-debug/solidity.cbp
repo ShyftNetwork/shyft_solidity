@@ -1471,34 +1471,34 @@
 		<Unit filename="/home/abinesh/shyft_solidity/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthPolicy.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthBuildInfo.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthCcache.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthDependencies.cmake">
-			<Option virtualFolder="CMake Files\cmake\"/>
-		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake/jsoncpp.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthCheckCXXCompilerFlag.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthCompilerSettings.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthCheckCXXCompilerFlag.cmake">
-			<Option virtualFolder="CMake Files\cmake\"/>
-		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthUtils.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthDependencies.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthOptions.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthBuildInfo.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthPolicy.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/abinesh/shyft_solidity/cmake/EthUtils.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/abinesh/shyft_solidity/cmake/FindZ3.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/abinesh/shyft_solidity/cmake/jsoncpp.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/abinesh/shyft_solidity/cmake/templates/license.h.in">
