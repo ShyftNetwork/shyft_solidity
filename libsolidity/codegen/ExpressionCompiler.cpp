@@ -670,7 +670,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 		case FunctionType::Kind::Revert:
 			m_context.appendRevert();
 			break;
-//Alex Binesh Start
+//Alex Binesh Start:Opcode Changes
         case FunctionType::Kind::Getattest:
 		{
 			arguments[1]->accept(*this);
@@ -715,7 +715,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			m_context << Instruction::TOPOINT;
 			break;
 		}
-//Alex Binesh End
+//Alex Binesh End:Opcode Changes
 		case FunctionType::Kind::SHA3:
 		{
 			TypePointers argumentTypes;

@@ -98,9 +98,9 @@ GasMeter::GasConsumption GasMeter::estimateMax(AssemblyItem const& _item, bool _
 			}));
 			break;
 
-//Alex Binesh: Start
+//Alex Binesh: Start:Opcode Changes
 // Figure out the gas		case Instruction::GETATTEST:
-//Alex Binesh: End
+//Alex Binesh: End:Opcode Changes
 
 		case Instruction::KECCAK256:
 			gas = GasCosts::keccak256Gas;

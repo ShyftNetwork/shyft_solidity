@@ -903,12 +903,12 @@ public:
 		ObjectCreation, ///< array creation using new
 		Assert, ///< assert()
 		Require, ///< require()
-//Alex Binesh: Start
+//Alex Binesh: Start:Opcode Changes
 		Getattest, ///< GETATTEST()
         CheckAttestValid, ///CHECKATTESTVALID()
         Getrevoke, ///CHECKATTESTVALID()
 		Topoint /// TOPOINT()
-//Alex Binesh: End
+//Alex Binesh: End:Opcode Changes
 	};
 
 	virtual Category category() const override { return Category::Function; }
