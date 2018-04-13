@@ -64,6 +64,9 @@ struct SourceUnitAnnotation: ASTAnnotation
 	std::map<ASTString, std::vector<Declaration const*>> exportedSymbols;
 	/// Experimental features.
 	std::set<ExperimentalFeature> experimentalFeatures;
+//Alex Binesh:Start:New Pragma Changes
+	std::set<ShyftFeature> ShyftFeatures;
+//Alex Binesh:End:New Pragma Changes
 };
 
 struct ImportAnnotation: ASTAnnotation

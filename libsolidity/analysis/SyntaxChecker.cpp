@@ -68,6 +68,43 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 	solAssert(_pragma.tokens().size() == _pragma.literals().size(), "");
 	if (_pragma.tokens()[0] != Token::Identifier)
 		m_errorReporter.syntaxError(_pragma.location(), "Invalid pragma \"" + _pragma.literals()[0] + "\"");
+
+//Alex Binesh: Start:New Pragma Changes
+	else if (_pragma.literals()[0] == "ShyftPragma")
+	{
+		solAssert(m_sourceUnit, "");
+		vector<string> literals(_pragma.literals().begin() + 1, _pragma.literals().end());
+		if (literals.size() == 0)
+			m_errorReporter.syntaxError(
+					_pragma.location(),
+					"ShyftPragma feature name is missing."
+			);
+		else if (literals.size() > 1)
+			m_errorReporter.syntaxError(
+					_pragma.location(),
+					"Stray arguments."
+			);
+		else
+		{
+			string const literal = literals[0];
+			if (literal.empty())
+				m_errorReporter.syntaxError(_pragma.location(), "Empty Shyft feature name is invalid.");
+			else if (!ShyftFeaturesNames.count(literal))
+				m_errorReporter.syntaxError(_pragma.location(), "Unsupported Shyft feature name.");
+			else if (m_sourceUnit->annotation().ShyftFeatures.count(ShyftFeaturesNames.at(literal)))
+				m_errorReporter.syntaxError(_pragma.location(), "Duplicate Shyft feature name.");
+			else
+			{
+				auto feature = ShyftFeaturesNames.at(literal);
+				m_sourceUnit->annotation().ShyftFeatures.insert(feature);
+//	Look at this later			if (!ExperimentalFeatureOnlyAnalysis.count(feature))
+//					m_errorReporter.warning(_pragma.location(), "Shyft features are turned on. Do not use Shyft features on live deployments.");
+			}
+		}
+	}
+
+//Alex Binesh: End:New Pragma Changes
+
 	else if (_pragma.literals()[0] == "experimental")
 	{
 		solAssert(m_sourceUnit, "");

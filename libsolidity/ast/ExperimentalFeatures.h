@@ -33,7 +33,7 @@ enum class ExperimentalFeature
 	ABIEncoderV2, // new ABI encoder that makes use of JULIA
 	V050, // v0.5.0 breaking changes
 	Test,
-	TestOnlyAnalysis
+	TestOnlyAnalysis,
 };
 
 static const std::map<ExperimentalFeature, bool> ExperimentalFeatureOnlyAnalysis =
@@ -49,7 +49,30 @@ static const std::map<std::string, ExperimentalFeature> ExperimentalFeatureNames
 	{ "v0.5.0", ExperimentalFeature::V050 },
 	{ "__test", ExperimentalFeature::Test },
 	{ "__testOnlyAnalysis", ExperimentalFeature::TestOnlyAnalysis },
+//Alex Binesh:Start:Reserved Word Changes
+//	{ "ShyftPragma", ExperimentalFeature::TestOnlyAnalysis },
+//Alex Binesh:End:Reserved Words Changes
 };
+
+//Alex Binesh: Start:New Pragma Changes
+enum class ShyftFeature
+{
+	NameOfShyftPragma
+};
+
+//static const std::map<ShyftFeature, bool> ShyftFeatureOnlyAnalysis =
+//			{
+//					{ ExperimentalFeature::SMTChecker, true },
+//					{ ExperimentalFeature::TestOnlyAnalysis, true },
+//			};
+
+static const std::map<std::string, ShyftFeature> ShyftFeaturesNames =
+{
+//Alex Binesh:Start:Reserved Word Changes
+	{ "ShyftPragmaName", ShyftFeature::NameOfShyftPragma },
+//Alex Binesh:End:Reserved Words Changes
+};
+
 
 }
 }
