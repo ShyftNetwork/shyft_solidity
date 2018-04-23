@@ -1208,7 +1208,7 @@ boost/multiprecision/detail/generic_interconvert.hpp
 libdevcore/Exceptions.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/backends/evm/EVMAssembly.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMAssembly.cpp
 libjulia/backends/evm/EVMAssembly.h
 -
 libevmasm/Instruction.h
@@ -1216,7 +1216,7 @@ libevmasm/Instruction.h
 libsolidity/interface/Exceptions.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/backends/evm/EVMCodeTransform.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMCodeTransform.cpp
 libjulia/backends/evm/EVMCodeTransform.h
 -
 libsolidity/inlineasm/AsmAnalysisInfo.h
@@ -1228,7 +1228,7 @@ libsolidity/interface/Exceptions.h
 boost/range/adaptor/reversed.hpp
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/ASTCopier.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTCopier.cpp
 libjulia/optimiser/ASTCopier.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1238,7 +1238,7 @@ libsolidity/interface/Exceptions.h
 libdevcore/Common.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/ASTWalker.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTWalker.cpp
 libjulia/optimiser/ASTWalker.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1248,7 +1248,7 @@ libsolidity/interface/Exceptions.h
 boost/range/adaptor/reversed.hpp
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/DataFlowAnalyzer.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/DataFlowAnalyzer.cpp
 libjulia/optimiser/DataFlowAnalyzer.h
 -
 libjulia/optimiser/NameCollector.h
@@ -1262,7 +1262,7 @@ libdevcore/CommonData.h
 boost/range/adaptor/reversed.hpp
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/Disambiguator.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Disambiguator.cpp
 libjulia/optimiser/Disambiguator.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1272,7 +1272,7 @@ libsolidity/inlineasm/AsmScope.h
 libsolidity/interface/Exceptions.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/ExpressionInliner.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionInliner.cpp
 libjulia/optimiser/ExpressionInliner.h
 -
 libjulia/optimiser/InlinableExpressionFunctionFinder.h
@@ -1286,7 +1286,7 @@ libsolidity/inlineasm/AsmData.h
 boost/algorithm/cxx11/all_of.hpp
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/ExpressionSimplifier.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionSimplifier.cpp
 libjulia/optimiser/ExpressionSimplifier.h
 -
 libjulia/optimiser/SimplificationRules.h
@@ -1300,7 +1300,7 @@ libsolidity/interface/Exceptions.h
 libdevcore/CommonData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/FunctionGrouper.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionGrouper.cpp
 libjulia/optimiser/FunctionGrouper.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1310,7 +1310,7 @@ libsolidity/interface/Exceptions.h
 boost/range/algorithm_ext/erase.hpp
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/FunctionHoister.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionHoister.cpp
 libjulia/optimiser/FunctionHoister.h
 -
 libjulia/optimiser/Utilities.h
@@ -1322,7 +1322,7 @@ libsolidity/interface/Exceptions.h
 libdevcore/CommonData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/InlinableExpressionFunctionFinder.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/InlinableExpressionFunctionFinder.cpp
 libjulia/optimiser/InlinableExpressionFunctionFinder.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1330,19 +1330,19 @@ libsolidity/inlineasm/AsmData.h
 libsolidity/interface/Exceptions.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/Metrics.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Metrics.cpp
 libjulia/optimiser/Metrics.h
 -
 libsolidity/inlineasm/AsmData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/NameCollector.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/NameCollector.cpp
 libjulia/optimiser/NameCollector.h
 -
 libsolidity/inlineasm/AsmData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/Rematerialiser.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Rematerialiser.cpp
 libjulia/optimiser/Rematerialiser.h
 -
 libjulia/optimiser/Metrics.h
@@ -1352,7 +1352,7 @@ libjulia/optimiser/ASTCopier.h
 libsolidity/inlineasm/AsmData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/Semantics.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Semantics.cpp
 libjulia/optimiser/Semantics.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1362,7 +1362,7 @@ libevmasm/SemanticInformation.h
 libdevcore/CommonData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/SimplificationRules.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/SimplificationRules.cpp
 libjulia/optimiser/SimplificationRules.h
 -
 libjulia/optimiser/Utilities.h
@@ -1378,13 +1378,13 @@ libsolidity/inlineasm/AsmData.h
 libevmasm/RuleList.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/Substitution.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Substitution.cpp
 libjulia/optimiser/Substitution.h
 -
 libsolidity/inlineasm/AsmData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/SyntacticalEquality.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/SyntacticalEquality.cpp
 libjulia/optimiser/SyntacticalEquality.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1394,7 +1394,7 @@ libsolidity/interface/Exceptions.h
 libdevcore/CommonData.h
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/UnusedPruner.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/UnusedPruner.cpp
 libjulia/optimiser/UnusedPruner.h
 -
 libjulia/optimiser/NameCollector.h
@@ -1408,7 +1408,7 @@ libsolidity/inlineasm/AsmData.h
 boost/algorithm/cxx11/none_of.hpp
 -
 
-/home/abinesh/shyft_solidity/libjulia/optimiser/Utilities.cpp
+/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Utilities.cpp
 libjulia/optimiser/Utilities.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1418,7 +1418,7 @@ libdevcore/CommonData.h
 boost/range/algorithm_ext/erase.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/ConstantEvaluator.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ConstantEvaluator.cpp
 libsolidity/analysis/ConstantEvaluator.h
 -
 libsolidity/ast/AST.h
@@ -1426,7 +1426,7 @@ libsolidity/ast/AST.h
 libsolidity/interface/ErrorReporter.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/DeclarationContainer.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/DeclarationContainer.cpp
 libsolidity/analysis/DeclarationContainer.h
 -
 libsolidity/ast/AST.h
@@ -1436,7 +1436,7 @@ libsolidity/ast/Types.h
 libdevcore/StringUtils.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/DocStringAnalyser.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/DocStringAnalyser.cpp
 libsolidity/analysis/DocStringAnalyser.h
 -
 libsolidity/ast/AST.h
@@ -1446,7 +1446,7 @@ libsolidity/interface/ErrorReporter.h
 libsolidity/parsing/DocStringParser.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/GlobalContext.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/GlobalContext.cpp
 memory
 -
 libsolidity/analysis/GlobalContext.h
@@ -1456,7 +1456,7 @@ libsolidity/ast/AST.h
 libsolidity/ast/Types.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/NameAndTypeResolver.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/NameAndTypeResolver.cpp
 libsolidity/analysis/NameAndTypeResolver.h
 -
 libsolidity/ast/AST.h
@@ -1470,7 +1470,7 @@ libdevcore/StringUtils.h
 boost/algorithm/string.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/PostTypeChecker.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/PostTypeChecker.cpp
 libsolidity/analysis/PostTypeChecker.h
 -
 libsolidity/ast/AST.h
@@ -1486,7 +1486,7 @@ boost/range/adaptor/map.hpp
 memory
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/ReferencesResolver.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ReferencesResolver.cpp
 libsolidity/analysis/ReferencesResolver.h
 -
 libsolidity/ast/AST.h
@@ -1508,13 +1508,13 @@ libsolidity/interface/ErrorReporter.h
 boost/algorithm/string.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/SemVerHandler.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/SemVerHandler.cpp
 libsolidity/analysis/SemVerHandler.h
 -
 functional
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/StaticAnalyzer.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/StaticAnalyzer.cpp
 libsolidity/analysis/StaticAnalyzer.h
 -
 libsolidity/ast/AST.h
@@ -1524,7 +1524,7 @@ libsolidity/interface/ErrorReporter.h
 memory
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/SyntaxChecker.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/SyntaxChecker.cpp
 libsolidity/analysis/SyntaxChecker.h
 -
 memory
@@ -1540,7 +1540,7 @@ libsolidity/interface/ErrorReporter.h
 libsolidity/interface/Version.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/TypeChecker.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/TypeChecker.cpp
 libsolidity/analysis/TypeChecker.h
 -
 memory
@@ -1560,7 +1560,7 @@ libsolidity/inlineasm/AsmData.h
 libsolidity/interface/ErrorReporter.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/analysis/ViewPureChecker.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ViewPureChecker.cpp
 libsolidity/analysis/ViewPureChecker.h
 -
 libevmasm/SemanticInformation.h
@@ -1572,7 +1572,7 @@ libsolidity/ast/ExperimentalFeatures.h
 functional
 -
 
-/home/abinesh/shyft_solidity/libsolidity/ast/AST.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/ast/AST.cpp
 libsolidity/ast/AST.h
 -
 libsolidity/ast/ASTVisitor.h
@@ -1588,11 +1588,11 @@ algorithm
 functional
 -
 
-/home/abinesh/shyft_solidity/libsolidity/ast/ASTAnnotations.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTAnnotations.cpp
 libsolidity/ast/ASTAnnotations.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/ast/ASTJsonConverter.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTJsonConverter.cpp
 libsolidity/ast/ASTJsonConverter.h
 -
 boost/algorithm/string/join.hpp
@@ -1606,7 +1606,7 @@ libsolidity/inlineasm/AsmData.h
 libsolidity/inlineasm/AsmPrinter.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/ast/ASTPrinter.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTPrinter.cpp
 libsolidity/ast/ASTPrinter.h
 -
 libsolidity/ast/AST.h
@@ -1616,11 +1616,11 @@ json/json.h
 boost/algorithm/string/join.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/ast/ASTUtils.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTUtils.cpp
 libsolidity/ast/ASTUtils.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/ast/Types.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/ast/Types.cpp
 libsolidity/ast/Types.h
 -
 libsolidity/ast/AST.h
@@ -1650,7 +1650,7 @@ boost/range/adaptor/transformed.hpp
 limits
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/ABIFunctions.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ABIFunctions.cpp
 libsolidity/codegen/ABIFunctions.h
 -
 libsolidity/ast/AST.h
@@ -1664,7 +1664,7 @@ boost/algorithm/string/join.hpp
 boost/range/adaptor/reversed.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/ArrayUtils.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ArrayUtils.cpp
 libsolidity/codegen/ArrayUtils.h
 -
 libevmasm/Instruction.h
@@ -1680,7 +1680,7 @@ libsolidity/interface/Exceptions.h
 libsolidity/codegen/LValue.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/Compiler.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/Compiler.cpp
 libsolidity/codegen/Compiler.h
 -
 libevmasm/Assembly.h
@@ -1688,7 +1688,7 @@ libevmasm/Assembly.h
 libsolidity/codegen/ContractCompiler.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/CompilerContext.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerContext.cpp
 libsolidity/codegen/CompilerContext.h
 -
 libsolidity/codegen/CompilerUtils.h
@@ -1722,7 +1722,7 @@ numeric
 libsolidity/inlineasm/AsmPrinter.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/CompilerUtils.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerUtils.cpp
 libsolidity/codegen/CompilerUtils.h
 -
 libsolidity/ast/AST.h
@@ -1736,7 +1736,7 @@ libsolidity/codegen/LValue.h
 libsolidity/codegen/ABIFunctions.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/ContractCompiler.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ContractCompiler.cpp
 libsolidity/codegen/ContractCompiler.h
 -
 libsolidity/inlineasm/AsmCodeGen.h
@@ -1760,7 +1760,7 @@ boost/range/adaptor/reversed.hpp
 algorithm
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/ExpressionCompiler.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ExpressionCompiler.cpp
 utility
 -
 numeric
@@ -1786,7 +1786,7 @@ libsolidity/codegen/LValue.h
 libevmasm/GasMeter.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/codegen/LValue.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/codegen/LValue.cpp
 libsolidity/codegen/LValue.h
 -
 libevmasm/Instruction.h
@@ -1798,7 +1798,7 @@ libsolidity/ast/AST.h
 libsolidity/codegen/CompilerUtils.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/formal/SMTChecker.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTChecker.cpp
 libsolidity/formal/SMTChecker.h
 -
 libsolidity/formal/Z3Interface.h
@@ -1814,7 +1814,7 @@ boost/range/adaptor/map.hpp
 boost/algorithm/string/replace.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/formal/SMTLib2Interface.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTLib2Interface.cpp
 libsolidity/formal/SMTLib2Interface.h
 -
 libsolidity/interface/Exceptions.h
@@ -1842,13 +1842,13 @@ string
 array
 -
 
-/home/abinesh/shyft_solidity/libsolidity/formal/VariableUsage.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/formal/VariableUsage.cpp
 libsolidity/formal/VariableUsage.h
 -
 libsolidity/ast/ASTVisitor.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/formal/Z3Interface.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/formal/Z3Interface.cpp
 libsolidity/formal/Z3Interface.h
 -
 libsolidity/interface/Exceptions.h
@@ -1856,7 +1856,7 @@ libsolidity/interface/Exceptions.h
 libdevcore/CommonIO.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/inlineasm/AsmAnalysis.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysis.cpp
 libsolidity/inlineasm/AsmAnalysis.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1878,7 +1878,7 @@ memory
 functional
 -
 
-/home/abinesh/shyft_solidity/libsolidity/inlineasm/AsmAnalysisInfo.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysisInfo.cpp
 libsolidity/inlineasm/AsmAnalysisInfo.h
 -
 libsolidity/inlineasm/AsmScope.h
@@ -1886,7 +1886,7 @@ libsolidity/inlineasm/AsmScope.h
 ostream
 -
 
-/home/abinesh/shyft_solidity/libsolidity/inlineasm/AsmCodeGen.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmCodeGen.cpp
 libsolidity/inlineasm/AsmCodeGen.h
 -
 libsolidity/inlineasm/AsmParser.h
@@ -1922,7 +1922,7 @@ memory
 functional
 -
 
-/home/abinesh/shyft_solidity/libsolidity/inlineasm/AsmParser.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmParser.cpp
 libsolidity/inlineasm/AsmParser.h
 -
 libsolidity/parsing/Scanner.h
@@ -1936,7 +1936,7 @@ ctype.h
 algorithm
 -
 
-/home/abinesh/shyft_solidity/libsolidity/inlineasm/AsmPrinter.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmPrinter.cpp
 libsolidity/inlineasm/AsmPrinter.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1954,11 +1954,11 @@ memory
 functional
 -
 
-/home/abinesh/shyft_solidity/libsolidity/inlineasm/AsmScope.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScope.cpp
 libsolidity/inlineasm/AsmScope.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/inlineasm/AsmScopeFiller.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScopeFiller.cpp
 libsolidity/inlineasm/AsmScopeFiller.h
 -
 libsolidity/inlineasm/AsmData.h
@@ -1980,13 +1980,13 @@ memory
 functional
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/ABI.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/ABI.cpp
 libsolidity/interface/ABI.h
 -
 libsolidity/ast/AST.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/AssemblyStack.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/AssemblyStack.cpp
 libsolidity/interface/AssemblyStack.h
 -
 libsolidity/parsing/Scanner.h
@@ -2008,7 +2008,7 @@ libjulia/backends/evm/EVMCodeTransform.h
 libjulia/backends/evm/EVMAssembly.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/CompilerStack.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/CompilerStack.cpp
 libsolidity/interface/CompilerStack.h
 -
 libsolidity/interface/Version.h
@@ -2058,7 +2058,7 @@ json/json.h
 boost/algorithm/string.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/ErrorReporter.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/ErrorReporter.cpp
 libsolidity/interface/ErrorReporter.h
 -
 libsolidity/ast/AST.h
@@ -2066,13 +2066,13 @@ libsolidity/ast/AST.h
 memory
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/Exceptions.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/Exceptions.cpp
 libsolidity/interface/Exceptions.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/GasEstimator.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/GasEstimator.cpp
 GasEstimator.h
-/home/abinesh/shyft_solidity/libsolidity/interface/GasEstimator.h
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/GasEstimator.h
 map
 -
 functional
@@ -2094,7 +2094,7 @@ libsolidity/ast/ASTVisitor.h
 libsolidity/codegen/CompilerUtils.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/GasEstimator.h
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/GasEstimator.h
 vector
 -
 map
@@ -2106,7 +2106,7 @@ libevmasm/GasMeter.h
 libevmasm/Assembly.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/Natspec.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/Natspec.cpp
 libsolidity/interface/Natspec.h
 -
 boost/range/irange.hpp
@@ -2114,7 +2114,7 @@ boost/range/irange.hpp
 libsolidity/ast/AST.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/SourceReferenceFormatter.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/SourceReferenceFormatter.cpp
 libsolidity/interface/SourceReferenceFormatter.h
 -
 libsolidity/parsing/Scanner.h
@@ -2122,7 +2122,7 @@ libsolidity/parsing/Scanner.h
 libsolidity/interface/Exceptions.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/StandardCompiler.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/StandardCompiler.cpp
 libsolidity/interface/StandardCompiler.h
 -
 libsolidity/interface/SourceReferenceFormatter.h
@@ -2136,7 +2136,7 @@ libdevcore/JSON.h
 libdevcore/SHA3.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/interface/Version.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/interface/Version.cpp
 libsolidity/interface/Version.h
 -
 string
@@ -2150,7 +2150,7 @@ libsolidity/interface/Exceptions.h
 solidity/BuildInfo.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/parsing/DocStringParser.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/parsing/DocStringParser.cpp
 libsolidity/parsing/DocStringParser.h
 -
 libsolidity/interface/ErrorReporter.h
@@ -2162,7 +2162,7 @@ boost/range/irange.hpp
 boost/range/algorithm.hpp
 -
 
-/home/abinesh/shyft_solidity/libsolidity/parsing/Parser.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Parser.cpp
 ctype.h
 -
 vector
@@ -2178,7 +2178,7 @@ libsolidity/inlineasm/AsmParser.h
 libsolidity/interface/ErrorReporter.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/parsing/ParserBase.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/parsing/ParserBase.cpp
 libsolidity/parsing/ParserBase.h
 -
 libsolidity/parsing/Scanner.h
@@ -2186,7 +2186,7 @@ libsolidity/parsing/Scanner.h
 libsolidity/interface/ErrorReporter.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/parsing/Scanner.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Scanner.cpp
 algorithm
 -
 tuple
@@ -2196,7 +2196,7 @@ libsolidity/interface/Exceptions.h
 libsolidity/parsing/Scanner.h
 -
 
-/home/abinesh/shyft_solidity/libsolidity/parsing/Token.cpp
+/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Token.cpp
 map
 -
 libsolidity/parsing/Token.h

@@ -1,8 +1,8 @@
-# Install script for directory: /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src
+# Install script for directory: /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abinesh/shyft_solidity/cmake-build-debug/deps")
+  set(CMAKE_INSTALL_PREFIX "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,9 +32,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/cmake_install.cmake")
+  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/cmake_install.cmake")
 
 endif()
 

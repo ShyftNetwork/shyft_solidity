@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz" ABSOLUTE)
-get_filename_component(directory "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project" ABSOLUTE)
+get_filename_component(filename "/home/abinesh/temp/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz" ABSOLUTE)
+get_filename_component(directory "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

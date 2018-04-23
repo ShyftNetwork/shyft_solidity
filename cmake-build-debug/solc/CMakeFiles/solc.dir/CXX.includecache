@@ -536,13 +536,13 @@ boost/multiprecision/detail/generic_interconvert.hpp
 libdevcore/Exceptions.h
 -
 
-/home/abinesh/shyft_solidity/solc/CommandLineInterface.cpp
+/home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.cpp
 CommandLineInterface.h
-/home/abinesh/shyft_solidity/solc/CommandLineInterface.h
+/home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.h
 solidity/BuildInfo.h
-/home/abinesh/shyft_solidity/solc/solidity/BuildInfo.h
+/home/abinesh/temp/shyft_solidity/solc/solidity/BuildInfo.h
 license.h
-/home/abinesh/shyft_solidity/solc/license.h
+/home/abinesh/temp/shyft_solidity/solc/license.h
 libsolidity/interface/Version.h
 -
 libsolidity/parsing/Scanner.h
@@ -596,7 +596,7 @@ iostream
 fstream
 -
 
-/home/abinesh/shyft_solidity/solc/CommandLineInterface.h
+/home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.h
 libsolidity/interface/CompilerStack.h
 -
 libsolidity/interface/AssemblyStack.h
@@ -608,9 +608,9 @@ boost/filesystem/path.hpp
 memory
 -
 
-/home/abinesh/shyft_solidity/solc/main.cpp
+/home/abinesh/temp/shyft_solidity/solc/main.cpp
 CommandLineInterface.h
-/home/abinesh/shyft_solidity/solc/CommandLineInterface.h
+/home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.h
 clocale
 -
 iostream

@@ -1,51 +1,43 @@
-
 {
 	"sources" : 
 	[
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project-complete.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project-complete.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-install.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-install.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-download.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-download.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-update.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-update.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-patch.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-patch.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-configure.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-configure.rule"
 		},
-		
 		{
-			"file" : "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-build.rule"
+			"file" : "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-build.rule"
 		}
 	],
 	"target" : 
 	{
-		"labels" : [ "jsoncpp-project" ],
+		"labels" : 
+		[
+			"jsoncpp-project"
+		],
 		"name" : "jsoncpp-project"
 	}
 }

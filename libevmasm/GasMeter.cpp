@@ -97,6 +97,11 @@ GasMeter::GasConsumption GasMeter::estimateMax(AssemblyItem const& _item, bool _
 				classes.find(AssemblyItem(1))
 			}));
 			break;
+
+//Alex Binesh: Start:Opcode Changes
+// Figure out the gas		case Instruction::GETATTEST:
+//Alex Binesh: End:Opcode Changes
+
 		case Instruction::KECCAK256:
 			gas = GasCosts::keccak256Gas;
 			gas += wordGas(GasCosts::keccak256WordGas, m_state->relativeStackElement(-1));

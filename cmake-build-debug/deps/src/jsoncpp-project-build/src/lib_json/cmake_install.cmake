@@ -1,8 +1,8 @@
-# Install script for directory: /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json
+# Install script for directory: /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abinesh/shyft_solidity/cmake-build-debug/deps")
+  set(CMAKE_INSTALL_PREFIX "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,7 +32,12 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/libjsoncpp.a")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/libjsoncpp.a")
 endif()
 

@@ -261,6 +261,10 @@ void CSECodeGenerator::addDependencies(Id _c)
 			case Instruction::MLOAD:
 				knownToBeIndependent = m_expressionClasses.knownToBeDifferentBy32(slot, slotToLoadFrom);
 				break;
+//Alex Binesh: Start:Opcode Changes
+			case Instruction::GETATTEST: // Don't think I need this. The control flow never visits this function. May have to remove this soon
+//Alex Binesh: End:Opcode Changes
+
 			case Instruction::KECCAK256:
 			{
 				Id length = expr.arguments.at(1);

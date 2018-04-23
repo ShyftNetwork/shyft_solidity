@@ -1,4 +1,4 @@
-The system is: Linux - 4.13.0-36-generic - x86_64
+The system is: Linux - 4.13.0-38-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_269ba/fast"
-/usr/bin/make -f CMakeFiles/cmTC_269ba.dir/build.make CMakeFiles/cmTC_269ba.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_269ba.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_269ba.dir/testCCompiler.c.o   -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_269ba
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_269ba.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_269ba.dir/testCCompiler.c.o  -o cmTC_269ba 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_66f36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_66f36.dir/build.make CMakeFiles/cmTC_66f36.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66f36.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_66f36.dir/testCCompiler.c.o   -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_66f36
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66f36.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_66f36.dir/testCCompiler.c.o  -o cmTC_66f36 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9ccb0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9ccb0.dir/build.make CMakeFiles/cmTC_9ccb0.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o   -c /home/abinesh/clion-2017.3.4/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_9ccb0
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ccb0.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o  -o cmTC_9ccb0 
+Run Build Command:"/usr/bin/make" "cmTC_75758/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75758.dir/build.make CMakeFiles/cmTC_75758.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o   -c /home/abinesh/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_75758
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75758.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o  -o cmTC_75758 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9ccb0' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuqjxXH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9ccb0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_75758' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwMwZjZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_75758 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_9ccb0/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_9ccb0.dir/build.make CMakeFiles/cmTC_9ccb0.dir/build]
-  ignore line: [make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o   -c /home/abinesh/clion-2017.3.4/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_9ccb0]
-  ignore line: [/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ccb0.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o  -o cmTC_9ccb0 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_75758/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_75758.dir/build.make CMakeFiles/cmTC_75758.dir/build]
+  ignore line: [make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o   -c /home/abinesh/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_75758]
+  ignore line: [/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75758.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o  -o cmTC_75758 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9ccb0' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuqjxXH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9ccb0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_75758' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwMwZjZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_75758 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccuqjxXH.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccwMwZjZ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_9ccb0] ==> ignore
+    arg [cmTC_75758] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_9ccb0.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_75758.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -149,17 +149,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1a81f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1a81f.dir/build.make CMakeFiles/cmTC_1a81f.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1a81f.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_1a81f.dir/feature_tests.c.o   -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1a81f
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a81f.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1a81f.dir/feature_tests.c.o  -o cmTC_1a81f 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ad577/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ad577.dir/build.make CMakeFiles/cmTC_ad577.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ad577.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_ad577.dir/feature_tests.c.o   -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ad577
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad577.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ad577.dir/feature_tests.c.o  -o cmTC_ad577 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -169,17 +169,17 @@ make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMake
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_079ee/fast"
-/usr/bin/make -f CMakeFiles/cmTC_079ee.dir/build.make CMakeFiles/cmTC_079ee.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_079ee.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_079ee.dir/feature_tests.c.o   -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_079ee
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_079ee.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_079ee.dir/feature_tests.c.o  -o cmTC_079ee 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_67085/fast"
+/usr/bin/make -f CMakeFiles/cmTC_67085.dir/build.make CMakeFiles/cmTC_67085.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_67085.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_67085.dir/feature_tests.c.o   -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_67085
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67085.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_67085.dir/feature_tests.c.o  -o cmTC_67085 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -189,17 +189,17 @@ make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMake
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ba4ab/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ba4ab.dir/build.make CMakeFiles/cmTC_ba4ab.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ba4ab.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_ba4ab.dir/feature_tests.c.o   -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_ba4ab
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba4ab.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ba4ab.dir/feature_tests.c.o  -o cmTC_ba4ab 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_8b497/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8b497.dir/build.make CMakeFiles/cmTC_8b497.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b497.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_8b497.dir/feature_tests.c.o   -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_8b497
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b497.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8b497.dir/feature_tests.c.o  -o cmTC_8b497 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -207,30 +207,30 @@ make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMake
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8df96/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8df96.dir/build.make CMakeFiles/cmTC_8df96.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8df96.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_8df96.dir/testCXXCompiler.cxx.o -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_8df96
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8df96.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_8df96.dir/testCXXCompiler.cxx.o  -o cmTC_8df96 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_9233f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9233f.dir/build.make CMakeFiles/cmTC_9233f.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9233f.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_9233f.dir/testCXXCompiler.cxx.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_9233f
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9233f.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_9233f.dir/testCXXCompiler.cxx.o  -o cmTC_9233f 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d2ad0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d2ad0.dir/build.make CMakeFiles/cmTC_d2ad0.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o -c /home/abinesh/clion-2017.3.4/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_d2ad0
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2ad0.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d2ad0 
+Run Build Command:"/usr/bin/make" "cmTC_53adf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_53adf.dir/build.make CMakeFiles/cmTC_53adf.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o -c /home/abinesh/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_53adf
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53adf.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_53adf 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -240,23 +240,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d2ad0' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvKhTwa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d2ad0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_53adf' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9t9Apt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_53adf /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d2ad0/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d2ad0.dir/build.make CMakeFiles/cmTC_d2ad0.dir/build]
-  ignore line: [make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o -c /home/abinesh/clion-2017.3.4/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_d2ad0]
-  ignore line: [/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2ad0.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d2ad0 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_53adf/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_53adf.dir/build.make CMakeFiles/cmTC_53adf.dir/build]
+  ignore line: [make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o -c /home/abinesh/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_53adf]
+  ignore line: [/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53adf.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_53adf ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -266,13 +266,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d2ad0' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvKhTwa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d2ad0 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_53adf' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9t9Apt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_53adf /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvKhTwa.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc9t9Apt.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -290,7 +290,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d2ad0] ==> ignore
+    arg [cmTC_53adf] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -302,7 +302,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_d2ad0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_53adf.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -328,17 +328,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_822be/fast"
-/usr/bin/make -f CMakeFiles/cmTC_822be.dir/build.make CMakeFiles/cmTC_822be.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_822be.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_822be.dir/feature_tests.cxx.o -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_822be
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_822be.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_822be.dir/feature_tests.cxx.o  -o cmTC_822be 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_7fb42/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7fb42.dir/build.make CMakeFiles/cmTC_7fb42.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7fb42.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_7fb42.dir/feature_tests.cxx.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_7fb42
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fb42.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_7fb42.dir/feature_tests.cxx.o  -o cmTC_7fb42 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -401,17 +401,17 @@ make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMake
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ab6a7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ab6a7.dir/build.make CMakeFiles/cmTC_ab6a7.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ab6a7.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_ab6a7.dir/feature_tests.cxx.o -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ab6a7
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab6a7.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ab6a7.dir/feature_tests.cxx.o  -o cmTC_ab6a7 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e6167/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e6167.dir/build.make CMakeFiles/cmTC_e6167.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e6167.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_e6167.dir/feature_tests.cxx.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e6167
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6167.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_e6167.dir/feature_tests.cxx.o  -o cmTC_e6167 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -474,17 +474,17 @@ make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMake
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_46f92/fast"
-/usr/bin/make -f CMakeFiles/cmTC_46f92.dir/build.make CMakeFiles/cmTC_46f92.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_46f92.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_46f92.dir/feature_tests.cxx.o -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_46f92
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46f92.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_46f92.dir/feature_tests.cxx.o  -o cmTC_46f92 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_00668/fast"
+/usr/bin/make -f CMakeFiles/cmTC_00668.dir/build.make CMakeFiles/cmTC_00668.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_00668.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_00668.dir/feature_tests.cxx.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_00668
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00668.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_00668.dir/feature_tests.cxx.o  -o cmTC_00668 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -547,17 +547,17 @@ make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMake
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2d446/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2d446.dir/build.make CMakeFiles/cmTC_2d446.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2d446.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_2d446.dir/feature_tests.cxx.o -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2d446
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d446.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2d446.dir/feature_tests.cxx.o  -o cmTC_2d446 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c53c8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c53c8.dir/build.make CMakeFiles/cmTC_c53c8.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c53c8.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_c53c8.dir/feature_tests.cxx.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c53c8
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c53c8.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c53c8.dir/feature_tests.cxx.o  -o cmTC_c53c8 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -618,46 +618,46 @@ make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMake
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e5a26/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e5a26.dir/build.make CMakeFiles/cmTC_e5a26.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e5a26.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_e5a26.dir/CheckIncludeFile.c.o   -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_e5a26
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5a26.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e5a26.dir/CheckIncludeFile.c.o  -o cmTC_e5a26 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d2f4b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d2f4b.dir/build.make CMakeFiles/cmTC_d2f4b.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2f4b.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d2f4b.dir/CheckIncludeFile.c.o   -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d2f4b
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2f4b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d2f4b.dir/CheckIncludeFile.c.o  -o cmTC_d2f4b 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4bf62/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4bf62.dir/build.make CMakeFiles/cmTC_4bf62.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4bf62.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4bf62.dir/CheckFunctionExists.c.o   -c /home/abinesh/clion-2017.3.4/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_4bf62
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bf62.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_4bf62.dir/CheckFunctionExists.c.o  -o cmTC_4bf62 -lpthread 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_17908/fast"
+/usr/bin/make -f CMakeFiles/cmTC_17908.dir/build.make CMakeFiles/cmTC_17908.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17908.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_17908.dir/CheckFunctionExists.c.o   -c /home/abinesh/clion-2018.1.1/bin/cmake/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_17908
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17908.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_17908.dir/CheckFunctionExists.c.o  -o cmTC_17908 -lpthread 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Performing C++ SOURCE FILE Test fstack-protector-strong succeeded with the following output:
-Change Dir: /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_24a54/fast"
-/usr/bin/make -f CMakeFiles/cmTC_24a54.dir/build.make CMakeFiles/cmTC_24a54.dir/build
-make[1]: Entering directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_24a54.dir/src.cxx.o
-/usr/bin/c++    -Dfstack-protector-strong   -fstack-protector-strong -o CMakeFiles/cmTC_24a54.dir/src.cxx.o -c /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Run Build Command:"/usr/bin/make" "cmTC_e476e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e476e.dir/build.make CMakeFiles/cmTC_e476e.dir/build
+make[1]: Entering directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e476e.dir/src.cxx.o
+/usr/bin/c++    -Dfstack-protector-strong   -fstack-protector-strong -o CMakeFiles/cmTC_e476e.dir/src.cxx.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
 <command-line>:0:7: warning: missing whitespace after the macro name
-Linking CXX executable cmTC_24a54
-/home/abinesh/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24a54.dir/link.txt --verbose=1
-/usr/bin/c++   -Dfstack-protector-strong    -rdynamic CMakeFiles/cmTC_24a54.dir/src.cxx.o  -o cmTC_24a54 
-make[1]: Leaving directory '/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
+Linking CXX executable cmTC_e476e
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e476e.dir/link.txt --verbose=1
+/usr/bin/c++   -Dfstack-protector-strong    -rdynamic CMakeFiles/cmTC_e476e.dir/src.cxx.o  -o cmTC_e476e 
+make[1]: Leaving directory '/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }

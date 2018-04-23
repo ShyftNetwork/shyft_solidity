@@ -549,6 +549,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 		case FunctionType::Kind::BareCall:
 		case FunctionType::Kind::BareCallCode:
 		case FunctionType::Kind::BareDelegateCall:
+
 			_functionCall.expression().accept(*this);
 			appendExternalFunctionCall(function, arguments);
 			break;
@@ -598,6 +599,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			break;
 		}
 		case FunctionType::Kind::SetGas:
+
 		{
 			// stack layout: contract_address function_id [gas] [value]
 			_functionCall.expression().accept(*this);
@@ -622,8 +624,10 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 				m_context << Instruction::POP;
 			arguments.front()->accept(*this);
 			break;
+
 		case FunctionType::Kind::Send:
 		case FunctionType::Kind::Transfer:
+
 			_functionCall.expression().accept(*this);
 			// Provide the gas stipend manually at first because we may send zero ether.
 			// Will be zeroed if we send more than zero ether.
@@ -666,6 +670,52 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 		case FunctionType::Kind::Revert:
 			m_context.appendRevert();
 			break;
+//Alex Binesh Start:Opcode Changes
+        case FunctionType::Kind::Getattest:
+		{
+			arguments[1]->accept(*this);
+			utils().convertType(*arguments[1]->annotation().type, IntegerType(64));// This is the 2nd parameter passed into the function
+			m_context << Instruction::DUP1 << Instruction::ISZERO;
+			m_context.appendConditionalInvalid();
+			arguments[0]->accept(*this);
+			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
+			m_context << Instruction::GETATTEST;
+			break;
+		}
+		case FunctionType::Kind::CheckAttestValid:
+		{
+			arguments[1]->accept(*this);
+			utils().convertType(*arguments[1]->annotation().type, IntegerType(256));// This is the 2nd parameter passed into the function
+			m_context << Instruction::DUP1 << Instruction::ISZERO;
+			m_context.appendConditionalInvalid();
+			arguments[0]->accept(*this);
+			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
+			m_context << Instruction::CHECKATTESTVALID;
+			break;
+		}
+		case FunctionType::Kind::Getrevoke:
+		{
+			arguments[1]->accept(*this);
+			utils().convertType(*arguments[1]->annotation().type, IntegerType(64));// This is the 2nd parameter passed into the function
+			m_context << Instruction::DUP1 << Instruction::ISZERO;
+			m_context.appendConditionalInvalid();
+			arguments[0]->accept(*this);
+			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
+			m_context << Instruction::GETREVOKE;
+			break;
+		}
+		case FunctionType::Kind::Topoint:
+		{
+			arguments[1]->accept(*this);
+			utils().convertType(*arguments[1]->annotation().type, IntegerType(64));// This is the 2nd parameter passed into the function
+			m_context << Instruction::DUP1 << Instruction::ISZERO;
+			m_context.appendConditionalInvalid();
+			arguments[0]->accept(*this);
+			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
+			m_context << Instruction::TOPOINT;
+			break;
+		}
+//Alex Binesh End:Opcode Changes
 		case FunctionType::Kind::SHA3:
 		{
 			TypePointers argumentTypes;
@@ -755,6 +805,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			m_context << logInstruction(numIndexed);
 			break;
 		}
+
 		case FunctionType::Kind::BlockHash:
 		{
 			arguments[0]->accept(*this);
@@ -889,7 +940,8 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			m_context << Instruction::POP;
 			break;
 		}
-		case FunctionType::Kind::Assert:
+
+        case FunctionType::Kind::Assert:
 		case FunctionType::Kind::Require:
 		{
 			arguments.front()->accept(*this);

@@ -902,7 +902,13 @@ public:
 		ByteArrayPush, ///< .push() to a dynamically sized byte array in storage
 		ObjectCreation, ///< array creation using new
 		Assert, ///< assert()
-		Require ///< require()
+		Require, ///< require()
+//Alex Binesh: Start:Opcode Changes
+		Getattest, ///< GETATTEST()
+        CheckAttestValid, ///CHECKATTESTVALID()
+        Getrevoke, ///CHECKATTESTVALID()
+		Topoint /// TOPOINT()
+//Alex Binesh: End:Opcode Changes
 	};
 
 	virtual Category category() const override { return Category::Function; }
