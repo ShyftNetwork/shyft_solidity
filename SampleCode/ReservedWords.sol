@@ -1,5 +1,5 @@
 pragma solidity ^0.4.16;
-//pragma ShyftPragma ShyftPragmaName;
+pragma ShyftPragma ShyftPragmaName;
 contract Unique {
 
 string fn;

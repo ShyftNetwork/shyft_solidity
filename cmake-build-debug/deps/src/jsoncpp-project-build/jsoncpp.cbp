@@ -8,94 +8,94 @@
 		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\lib_json\;CMake Files\include\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="jsoncpp_lib_static">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/libjsoncpp.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/libjsoncpp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/../../include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/../../include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -106,21 +106,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 jsoncpp_lib_static"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 jsoncpp_lib_static"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="jsoncpp_lib_static/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/libjsoncpp.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/libjsoncpp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/../../include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/../../include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -131,71 +131,71 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 jsoncpp_lib_static/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 jsoncpp_lib_static/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/assertions.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/assertions.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/config.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/config.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/features.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/features.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/forwards.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/forwards.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/reader.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/reader.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/value.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/value.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/version.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/version.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/json/writer.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/json/writer.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_tool.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_tool.h">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_valueiterator.inl">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_valueiterator.inl">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/version.h.in">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/version.h.in">
 			<Option target="jsoncpp_lib_static"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/version.in">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/version.in">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\lib_json\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/version.h.in">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/version.h.in">
 			<Option virtualFolder="CMake Files\src\lib_json\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\"/>
 		</Unit>
 	</Project>

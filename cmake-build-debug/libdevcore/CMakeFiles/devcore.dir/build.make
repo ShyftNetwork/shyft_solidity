@@ -43,10 +43,10 @@ RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abinesh/temp/shyft_solidity
+CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abinesh/temp/shyft_solidity/cmake-build-debug
+CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include libdevcore/CMakeFiles/devcore.dir/depend.make
@@ -59,16 +59,16 @@ include libdevcore/CMakeFiles/devcore.dir/flags.make
 
 libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.o: ../libdevcore/CommonData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/CommonData.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/CommonData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/CommonData.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonData.cpp
 
 libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/CommonData.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/CommonData.cpp > CMakeFiles/devcore.dir/CommonData.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonData.cpp > CMakeFiles/devcore.dir/CommonData.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/CommonData.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/CommonData.cpp -o CMakeFiles/devcore.dir/CommonData.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonData.cpp -o CMakeFiles/devcore.dir/CommonData.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.o.requires:
 
@@ -83,16 +83,16 @@ libdevcore/CMakeFiles/devcore.dir/CommonData.cpp.o.provides.build: libdevcore/CM
 
 libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.o: ../libdevcore/CommonIO.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/CommonIO.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/CommonIO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/CommonIO.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonIO.cpp
 
 libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/CommonIO.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/CommonIO.cpp > CMakeFiles/devcore.dir/CommonIO.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonIO.cpp > CMakeFiles/devcore.dir/CommonIO.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/CommonIO.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/CommonIO.cpp -o CMakeFiles/devcore.dir/CommonIO.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonIO.cpp -o CMakeFiles/devcore.dir/CommonIO.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.o.requires:
 
@@ -107,16 +107,16 @@ libdevcore/CMakeFiles/devcore.dir/CommonIO.cpp.o.provides.build: libdevcore/CMak
 
 libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.o: ../libdevcore/Exceptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/Exceptions.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/Exceptions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/Exceptions.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Exceptions.cpp
 
 libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/Exceptions.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/Exceptions.cpp > CMakeFiles/devcore.dir/Exceptions.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Exceptions.cpp > CMakeFiles/devcore.dir/Exceptions.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/Exceptions.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/Exceptions.cpp -o CMakeFiles/devcore.dir/Exceptions.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Exceptions.cpp -o CMakeFiles/devcore.dir/Exceptions.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.o.requires:
 
@@ -131,16 +131,16 @@ libdevcore/CMakeFiles/devcore.dir/Exceptions.cpp.o.provides.build: libdevcore/CM
 
 libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.o: ../libdevcore/IndentedWriter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/IndentedWriter.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/IndentedWriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/IndentedWriter.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/IndentedWriter.cpp
 
 libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/IndentedWriter.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/IndentedWriter.cpp > CMakeFiles/devcore.dir/IndentedWriter.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/IndentedWriter.cpp > CMakeFiles/devcore.dir/IndentedWriter.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/IndentedWriter.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/IndentedWriter.cpp -o CMakeFiles/devcore.dir/IndentedWriter.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/IndentedWriter.cpp -o CMakeFiles/devcore.dir/IndentedWriter.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.o.requires:
 
@@ -155,16 +155,16 @@ libdevcore/CMakeFiles/devcore.dir/IndentedWriter.cpp.o.provides.build: libdevcor
 
 libdevcore/CMakeFiles/devcore.dir/JSON.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/JSON.cpp.o: ../libdevcore/JSON.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libdevcore/CMakeFiles/devcore.dir/JSON.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/JSON.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/JSON.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libdevcore/CMakeFiles/devcore.dir/JSON.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/JSON.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/JSON.cpp
 
 libdevcore/CMakeFiles/devcore.dir/JSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/JSON.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/JSON.cpp > CMakeFiles/devcore.dir/JSON.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/JSON.cpp > CMakeFiles/devcore.dir/JSON.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/JSON.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/JSON.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/JSON.cpp -o CMakeFiles/devcore.dir/JSON.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/JSON.cpp -o CMakeFiles/devcore.dir/JSON.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/JSON.cpp.o.requires:
 
@@ -179,16 +179,16 @@ libdevcore/CMakeFiles/devcore.dir/JSON.cpp.o.provides.build: libdevcore/CMakeFil
 
 libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.o: ../libdevcore/SHA3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/SHA3.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/SHA3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/SHA3.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SHA3.cpp
 
 libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/SHA3.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/SHA3.cpp > CMakeFiles/devcore.dir/SHA3.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SHA3.cpp > CMakeFiles/devcore.dir/SHA3.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/SHA3.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/SHA3.cpp -o CMakeFiles/devcore.dir/SHA3.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SHA3.cpp -o CMakeFiles/devcore.dir/SHA3.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.o.requires:
 
@@ -203,16 +203,16 @@ libdevcore/CMakeFiles/devcore.dir/SHA3.cpp.o.provides.build: libdevcore/CMakeFil
 
 libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.o: ../libdevcore/StringUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/StringUtils.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/StringUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/StringUtils.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/StringUtils.cpp
 
 libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/StringUtils.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/StringUtils.cpp > CMakeFiles/devcore.dir/StringUtils.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/StringUtils.cpp > CMakeFiles/devcore.dir/StringUtils.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/StringUtils.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/StringUtils.cpp -o CMakeFiles/devcore.dir/StringUtils.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/StringUtils.cpp -o CMakeFiles/devcore.dir/StringUtils.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.o.requires:
 
@@ -227,16 +227,16 @@ libdevcore/CMakeFiles/devcore.dir/StringUtils.cpp.o.provides.build: libdevcore/C
 
 libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.o: ../libdevcore/SwarmHash.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/SwarmHash.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/SwarmHash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/SwarmHash.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SwarmHash.cpp
 
 libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/SwarmHash.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/SwarmHash.cpp > CMakeFiles/devcore.dir/SwarmHash.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SwarmHash.cpp > CMakeFiles/devcore.dir/SwarmHash.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/SwarmHash.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/SwarmHash.cpp -o CMakeFiles/devcore.dir/SwarmHash.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SwarmHash.cpp -o CMakeFiles/devcore.dir/SwarmHash.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.o.requires:
 
@@ -251,16 +251,16 @@ libdevcore/CMakeFiles/devcore.dir/SwarmHash.cpp.o.provides.build: libdevcore/CMa
 
 libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.o: ../libdevcore/UTF8.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/UTF8.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/UTF8.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/UTF8.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/UTF8.cpp
 
 libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/UTF8.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/UTF8.cpp > CMakeFiles/devcore.dir/UTF8.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/UTF8.cpp > CMakeFiles/devcore.dir/UTF8.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/UTF8.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/UTF8.cpp -o CMakeFiles/devcore.dir/UTF8.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/UTF8.cpp -o CMakeFiles/devcore.dir/UTF8.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.o.requires:
 
@@ -275,16 +275,16 @@ libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.o.provides.build: libdevcore/CMakeFil
 
 libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.o: libdevcore/CMakeFiles/devcore.dir/flags.make
 libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.o: ../libdevcore/Whiskers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/Whiskers.cpp.o -c /home/abinesh/temp/shyft_solidity/libdevcore/Whiskers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/devcore.dir/Whiskers.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Whiskers.cpp
 
 libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/devcore.dir/Whiskers.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/libdevcore/Whiskers.cpp > CMakeFiles/devcore.dir/Whiskers.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Whiskers.cpp > CMakeFiles/devcore.dir/Whiskers.cpp.i
 
 libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/devcore.dir/Whiskers.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/libdevcore/Whiskers.cpp -o CMakeFiles/devcore.dir/Whiskers.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Whiskers.cpp -o CMakeFiles/devcore.dir/Whiskers.cpp.s
 
 libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.o.requires:
 
@@ -325,9 +325,9 @@ libdevcore/libdevcore.a: libdevcore/CMakeFiles/devcore.dir/UTF8.cpp.o
 libdevcore/libdevcore.a: libdevcore/CMakeFiles/devcore.dir/Whiskers.cpp.o
 libdevcore/libdevcore.a: libdevcore/CMakeFiles/devcore.dir/build.make
 libdevcore/libdevcore.a: libdevcore/CMakeFiles/devcore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libdevcore.a"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && $(CMAKE_COMMAND) -P CMakeFiles/devcore.dir/cmake_clean_target.cmake
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/devcore.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libdevcore.a"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && $(CMAKE_COMMAND) -P CMakeFiles/devcore.dir/cmake_clean_target.cmake
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/devcore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 libdevcore/CMakeFiles/devcore.dir/build: libdevcore/libdevcore.a
@@ -348,10 +348,10 @@ libdevcore/CMakeFiles/devcore.dir/requires: libdevcore/CMakeFiles/devcore.dir/Wh
 .PHONY : libdevcore/CMakeFiles/devcore.dir/requires
 
 libdevcore/CMakeFiles/devcore.dir/clean:
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore && $(CMAKE_COMMAND) -P CMakeFiles/devcore.dir/cmake_clean.cmake
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore && $(CMAKE_COMMAND) -P CMakeFiles/devcore.dir/cmake_clean.cmake
 .PHONY : libdevcore/CMakeFiles/devcore.dir/clean
 
 libdevcore/CMakeFiles/devcore.dir/depend:
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/temp/shyft_solidity /home/abinesh/temp/shyft_solidity/libdevcore /home/abinesh/temp/shyft_solidity/cmake-build-debug /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore /home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/CMakeFiles/devcore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/CMakeFiles/devcore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libdevcore/CMakeFiles/devcore.dir/depend
 

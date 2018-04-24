@@ -678,7 +678,8 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			m_context << Instruction::DUP1 << Instruction::ISZERO;
 			m_context.appendConditionalInvalid();
 			arguments[0]->accept(*this);
-			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
+//Alex Binesh: Replace libe below with me later			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
+			utils().convertType(*arguments[0]->annotation().type, IntegerType(64));
 			m_context << Instruction::GETATTEST;
 			break;
 		}

@@ -1,4 +1,4 @@
-# Install script for directory: /home/abinesh/temp/shyft_solidity
+# Install script for directory: /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,14 +39,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/cmake_install.cmake")
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/cmake_install.cmake")
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/cmake_install.cmake")
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/cmake_install.cmake")
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/cmake_install.cmake")
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/cmake_install.cmake")
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/cmake_install.cmake")
-  include("/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/cmake_install.cmake")
+  include("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/cmake_install.cmake")
 
 endif()
 
@@ -58,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/abinesh/temp/shyft_solidity/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

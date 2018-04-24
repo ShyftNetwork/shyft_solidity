@@ -1,4 +1,5 @@
 pragma solidity ^0.4.16;
+pragma substance ^0.1.0;
 contract Unique {
 
 string fn;
@@ -10,9 +11,21 @@ bytes32 sId;
 	    	fn =s;
     		ln =y;
     		sId =i;
-	uint64 ThirdInput;
-
-	MathSafe(ThirdInput==0);
+address AttestAddr;
+uint64 RlpDict;
+uint64 uiRevokeRet;
+uint256 ThirdInput;
+uint256 xx;
+uint256 uiNonce;
+bool bRetVal;
+//byte ReturnValue="";
+xx =0;
+ThirdInput=0;
+	getattest(RlpDict,RlpDict);
+	bRetVal=checktattestvalid(AttestAddr,uiNonce); 
+	uiRevokeRet=getrevoke(AttestAddr,RlpDict); 
+	uiRevokeRet=topoint(AttestAddr,RlpDict); 
+    	//keccak256(s,y,i);
 	}
 
 	function getOut()constant public returns (bytes20 ){

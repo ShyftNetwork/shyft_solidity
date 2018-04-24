@@ -50,7 +50,7 @@ namespace dev
 						{ "__test", ExperimentalFeature::Test },
 						{ "__testOnlyAnalysis", ExperimentalFeature::TestOnlyAnalysis },
 //Alex Binesh:Start:New Pragma Changes
-//	{ "ShyftPragma", ExperimentalFeature::TestOnlyAnalysis },
+	{ "ShyftPragma", ExperimentalFeature::TestOnlyAnalysis },
 //Alex Binesh:End:New Pragma Changes
 				};
 

@@ -10,21 +10,26 @@ bytes32 sId;
 	    	fn =s;
     		ln =y;
     		sId =i;
-address AttestAddr;
 uint64 RlpDict;
+uint64 Input1;
 uint64 uiRevokeRet;
-uint256 ThirdInput;
-uint256 xx;
-uint256 uiNonce;
-bool bRetVal;
-//byte ReturnValue="";
-xx =0;
-ThirdInput=0;
-	getattest(AttestAddr,RlpDict); 
-	bRetVal=checktattestvalid(AttestAddr,uiNonce); 
-	uiRevokeRet=getrevoke(AttestAddr,RlpDict); 
-	uiRevokeRet=topoint(AttestAddr,RlpDict); 
-    	//keccak256(s,y,i);
+/*
+    address AttestAddr;
+    uint256 ThirdInput;
+    uint256 xx;
+    uint256 uiNonce;
+    bool bRetVal;
+    byte ReturnValue="";
+    xx =0;
+    ThirdInput=0;
+*/
+	uiRevokeRet=getattest(Input1,RlpDict);
+/*
+    getattest(AttestAddr,RlpDict);
+	bRetVal=checktattestvalid(AttestAddr,uiNonce);
+	uiRevokeRet=getrevoke(AttestAddr,RlpDict);
+	uiRevokeRet=topoint(AttestAddr,RlpDict);
+*/
 	}
 
 	function getOut()constant public returns (bytes20 ){

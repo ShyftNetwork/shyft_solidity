@@ -8,105 +8,105 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\templates\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\deps\;CMake Files\cmake-build-debug\deps\tmp\;CMake Files\libdevcore\;CMake Files\libevmasm\;CMake Files\libsolidity\;CMake Files\libsolc\;CMake Files\solc\;CMake Files\liblll\;CMake Files\lllc\;CMake Files\test\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="jsoncpp-project">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 jsoncpp-project"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 jsoncpp-project"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="solidity_BuildInfo.h">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 solidity_BuildInfo.h"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 solidity_BuildInfo.h"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="devcore">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/libdevcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/libdevcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -117,22 +117,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 devcore"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 devcore"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="devcore/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/libdevcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/libdevcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -143,22 +143,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 devcore/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 devcore/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="evmasm">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/libevmasm.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/libevmasm.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -169,22 +169,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 evmasm"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 evmasm"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="evmasm/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/libevmasm.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/libevmasm.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -195,23 +195,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 evmasm/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 evmasm/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="solidity">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/libsolidity.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/libsolidity.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DHAVE_Z3"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -222,23 +222,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 solidity"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 solidity"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="solidity/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/libsolidity.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/libsolidity.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DHAVE_Z3"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -249,22 +249,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 solidity/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 solidity/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libsolc">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/libsolc.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/libsolc.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -275,22 +275,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 libsolc"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 libsolc"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libsolc/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/libsolc.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/libsolc.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -301,22 +301,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 libsolc/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 libsolc/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="solc">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/solc" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/solc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -327,22 +327,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 solc"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 solc"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="solc/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/solc" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/solc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -353,22 +353,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 solc/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 solc/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/solc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lll">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/liblll.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/liblll.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -379,22 +379,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 lll"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 lll"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lll/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/liblll.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/liblll.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -405,22 +405,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 lll/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 lll/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/liblll/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lllc">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/lllc" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/lllc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -431,22 +431,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 lllc"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 lllc"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lllc/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/lllc" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/lllc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -457,22 +457,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 lllc/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 lllc/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="solfuzzer">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/solfuzzer" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/solfuzzer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -483,22 +483,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 solfuzzer"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 solfuzzer"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="solfuzzer/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/solfuzzer" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/solfuzzer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -509,22 +509,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 solfuzzer/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 solfuzzer/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="soltest">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/soltest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/soltest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -535,22 +535,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 soltest"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 soltest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="soltest/fast">
-				<Option output="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/soltest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/abinesh/temp/shyft_solidity/cmake-build-debug/test"/>
+				<Option output="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/soltest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include"/>
-					<Add directory="/home/abinesh/temp/shyft_solidity"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include"/>
+					<Add directory="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -561,974 +561,974 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 soltest/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/temp/shyft_solidity/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 soltest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/Assertions.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Assertions.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/Common.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Common.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/CommonData.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonData.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/CommonData.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonData.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/CommonIO.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonIO.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/CommonIO.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CommonIO.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/Exceptions.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Exceptions.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/Exceptions.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Exceptions.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/FixedHash.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/FixedHash.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/IndentedWriter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/IndentedWriter.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/IndentedWriter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/IndentedWriter.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/JSON.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/JSON.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/JSON.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/JSON.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/SHA3.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SHA3.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/SHA3.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SHA3.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/StringUtils.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/StringUtils.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/StringUtils.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/StringUtils.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/SwarmHash.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SwarmHash.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/SwarmHash.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/SwarmHash.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/UTF8.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/UTF8.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/UTF8.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/UTF8.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/Whiskers.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Whiskers.cpp">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/Whiskers.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/Whiskers.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/vector_ref.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/vector_ref.h">
 			<Option target="devcore"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/Assembly.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Assembly.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/Assembly.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Assembly.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/AssemblyItem.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/AssemblyItem.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/AssemblyItem.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/AssemblyItem.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/BlockDeduplicator.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/BlockDeduplicator.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/BlockDeduplicator.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/BlockDeduplicator.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/CommonSubexpressionEliminator.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/CommonSubexpressionEliminator.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/CommonSubexpressionEliminator.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/CommonSubexpressionEliminator.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/ConstantOptimiser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ConstantOptimiser.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/ConstantOptimiser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ConstantOptimiser.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/ControlFlowGraph.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ControlFlowGraph.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/ControlFlowGraph.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ControlFlowGraph.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/Exceptions.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Exceptions.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/ExpressionClasses.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ExpressionClasses.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/ExpressionClasses.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ExpressionClasses.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/GasMeter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/GasMeter.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/GasMeter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/GasMeter.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/Instruction.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Instruction.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/Instruction.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Instruction.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/JumpdestRemover.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/JumpdestRemover.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/JumpdestRemover.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/JumpdestRemover.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/KnownState.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/KnownState.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/KnownState.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/KnownState.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/LinkerObject.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/LinkerObject.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/LinkerObject.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/LinkerObject.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/PathGasMeter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PathGasMeter.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/PathGasMeter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PathGasMeter.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/PeepholeOptimiser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PeepholeOptimiser.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/PeepholeOptimiser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PeepholeOptimiser.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/RuleList.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/RuleList.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/SemanticInformation.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SemanticInformation.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/SemanticInformation.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SemanticInformation.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/SimplificationRule.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SimplificationRule.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/SimplificationRules.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SimplificationRules.cpp">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/SimplificationRules.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SimplificationRules.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/SourceLocation.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SourceLocation.h">
 			<Option target="evmasm"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/ASTDataForward.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/ASTDataForward.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/backends/evm/AbstractAssembly.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/backends/evm/AbstractAssembly.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMAssembly.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/backends/evm/EVMAssembly.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMAssembly.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/backends/evm/EVMAssembly.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMCodeTransform.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/backends/evm/EVMCodeTransform.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMCodeTransform.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/backends/evm/EVMCodeTransform.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTCopier.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ASTCopier.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTCopier.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ASTCopier.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTWalker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ASTWalker.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTWalker.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ASTWalker.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/DataFlowAnalyzer.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/DataFlowAnalyzer.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/DataFlowAnalyzer.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/DataFlowAnalyzer.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Disambiguator.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Disambiguator.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Disambiguator.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Disambiguator.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionInliner.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ExpressionInliner.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionInliner.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ExpressionInliner.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionSimplifier.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ExpressionSimplifier.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionSimplifier.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ExpressionSimplifier.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionGrouper.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/FunctionGrouper.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionGrouper.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/FunctionGrouper.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionHoister.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/FunctionHoister.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionHoister.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/FunctionHoister.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/InlinableExpressionFunctionFinder.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/InlinableExpressionFunctionFinder.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/InlinableExpressionFunctionFinder.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/InlinableExpressionFunctionFinder.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Metrics.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Metrics.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Metrics.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Metrics.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/NameCollector.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/NameCollector.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/NameCollector.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/NameCollector.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Rematerialiser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Rematerialiser.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Rematerialiser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Rematerialiser.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Semantics.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Semantics.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Semantics.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Semantics.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/SimplificationRules.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/SimplificationRules.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/SimplificationRules.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/SimplificationRules.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Substitution.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Substitution.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Substitution.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Substitution.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/SyntacticalEquality.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/SyntacticalEquality.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/SyntacticalEquality.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/SyntacticalEquality.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/UnusedPruner.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/UnusedPruner.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/UnusedPruner.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/UnusedPruner.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Utilities.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Utilities.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libjulia/optimiser/Utilities.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Utilities.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/CodeFragment.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/CodeFragment.cpp">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/CodeFragment.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/CodeFragment.h">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/Compiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/Compiler.cpp">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/Compiler.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/Compiler.h">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/CompilerState.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/CompilerState.cpp">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/CompilerState.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/CompilerState.h">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/Exceptions.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/Exceptions.h">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/Parser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/Parser.cpp">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/Parser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/Parser.h">
 			<Option target="lll"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolc/libsolc.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolc/libsolc.cpp">
 			<Option target="libsolc"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolc/libsolc.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolc/libsolc.h">
 			<Option target="libsolc"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ConstantEvaluator.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ConstantEvaluator.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ConstantEvaluator.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ConstantEvaluator.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/DeclarationContainer.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/DeclarationContainer.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/DeclarationContainer.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/DeclarationContainer.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/DocStringAnalyser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/DocStringAnalyser.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/DocStringAnalyser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/DocStringAnalyser.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/GlobalContext.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/GlobalContext.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/GlobalContext.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/GlobalContext.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/NameAndTypeResolver.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/NameAndTypeResolver.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/NameAndTypeResolver.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/NameAndTypeResolver.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/PostTypeChecker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/PostTypeChecker.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/PostTypeChecker.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/PostTypeChecker.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ReferencesResolver.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ReferencesResolver.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ReferencesResolver.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ReferencesResolver.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/SemVerHandler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/SemVerHandler.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/SemVerHandler.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/SemVerHandler.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/StaticAnalyzer.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/StaticAnalyzer.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/StaticAnalyzer.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/StaticAnalyzer.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/SyntaxChecker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/SyntaxChecker.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/SyntaxChecker.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/SyntaxChecker.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/TypeChecker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/TypeChecker.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/TypeChecker.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/TypeChecker.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ViewPureChecker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ViewPureChecker.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/analysis/ViewPureChecker.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ViewPureChecker.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/AST.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/AST.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/AST.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/AST.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTAnnotations.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTAnnotations.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTAnnotations.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTAnnotations.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTEnums.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTEnums.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTForward.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTForward.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTJsonConverter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTJsonConverter.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTJsonConverter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTJsonConverter.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTPrinter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTPrinter.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTPrinter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTPrinter.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTUtils.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTUtils.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTUtils.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTUtils.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTVisitor.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTVisitor.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/AST_accept.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/AST_accept.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/ExperimentalFeatures.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ExperimentalFeatures.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/Types.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/Types.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/ast/Types.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/Types.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ABIFunctions.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ABIFunctions.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ABIFunctions.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ABIFunctions.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ArrayUtils.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ArrayUtils.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ArrayUtils.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ArrayUtils.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/Compiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/Compiler.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/Compiler.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/Compiler.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerContext.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/CompilerContext.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerContext.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/CompilerContext.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerUtils.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/CompilerUtils.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerUtils.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/CompilerUtils.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ContractCompiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ContractCompiler.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ContractCompiler.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ContractCompiler.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ExpressionCompiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ExpressionCompiler.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/ExpressionCompiler.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ExpressionCompiler.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/LValue.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/LValue.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/codegen/LValue.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/LValue.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTChecker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/SMTChecker.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTChecker.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/SMTChecker.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTLib2Interface.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/SMTLib2Interface.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTLib2Interface.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/SMTLib2Interface.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/SolverInterface.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/SolverInterface.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/VariableUsage.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/VariableUsage.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/VariableUsage.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/VariableUsage.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/Z3Interface.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/Z3Interface.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/formal/Z3Interface.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/Z3Interface.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysis.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmAnalysis.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysis.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmAnalysis.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysisInfo.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmAnalysisInfo.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysisInfo.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmAnalysisInfo.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmCodeGen.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmCodeGen.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmCodeGen.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmCodeGen.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmData.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmData.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmDataForward.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmDataForward.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmParser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmParser.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmParser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmParser.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmPrinter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmPrinter.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmPrinter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmPrinter.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScope.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmScope.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScope.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmScope.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScopeFiller.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmScopeFiller.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScopeFiller.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmScopeFiller.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/ABI.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/ABI.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/ABI.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/ABI.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/AssemblyStack.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/AssemblyStack.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/AssemblyStack.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/AssemblyStack.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/CompilerStack.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/CompilerStack.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/CompilerStack.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/CompilerStack.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/ErrorReporter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/ErrorReporter.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/ErrorReporter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/ErrorReporter.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/Exceptions.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Exceptions.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/Exceptions.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Exceptions.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/GasEstimator.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/GasEstimator.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/GasEstimator.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/GasEstimator.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/Natspec.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Natspec.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/Natspec.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Natspec.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/ReadFile.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/ReadFile.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/SourceReferenceFormatter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/SourceReferenceFormatter.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/SourceReferenceFormatter.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/SourceReferenceFormatter.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/StandardCompiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/StandardCompiler.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/StandardCompiler.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/StandardCompiler.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/Version.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Version.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/interface/Version.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Version.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/DocStringParser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/DocStringParser.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/DocStringParser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/DocStringParser.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Parser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Parser.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Parser.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Parser.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/ParserBase.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/ParserBase.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/ParserBase.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/ParserBase.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Scanner.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Scanner.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Scanner.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Scanner.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Token.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Token.cpp">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/Token.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Token.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/parsing/UndefMacros.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/UndefMacros.h">
 			<Option target="solidity"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/lllc/main.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/lllc/main.cpp">
 			<Option target="lllc"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/CommandLineInterface.cpp">
 			<Option target="solc"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/CommandLineInterface.h">
 			<Option target="solc"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/solc/main.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/main.cpp">
 			<Option target="solc"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/ExecutionFramework.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/ExecutionFramework.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/ExecutionFramework.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/ExecutionFramework.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/Metadata.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/Metadata.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/Metadata.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/Metadata.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/RPCSession.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/RPCSession.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/RPCSession.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/RPCSession.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/TestHelper.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/TestHelper.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/TestHelper.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/TestHelper.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/boostTest.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/boostTest.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/contracts/AuctionRegistrar.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/AuctionRegistrar.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/contracts/ContractInterface.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/ContractInterface.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/contracts/FixedFeeRegistrar.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/FixedFeeRegistrar.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/contracts/LLL_ENS.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ENS.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/contracts/LLL_ERC20.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ERC20.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/contracts/Wallet.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/Wallet.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/fuzzer.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/fuzzer.cpp">
 			<Option target="solfuzzer"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libdevcore/Checksum.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Checksum.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libdevcore/IndentedWriter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/IndentedWriter.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libdevcore/JSON.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/JSON.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libdevcore/StringUtils.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/StringUtils.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libdevcore/SwarmHash.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/SwarmHash.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libdevcore/UTF8.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/UTF8.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libdevcore/Whiskers.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Whiskers.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libevmasm/Optimiser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/Optimiser.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libevmasm/SourceLocation.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/SourceLocation.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/Common.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Common.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/Common.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Common.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/Disambiguator.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Disambiguator.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/FunctionGrouper.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionGrouper.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/FunctionHoister.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionHoister.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/Inliner.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Inliner.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/Parser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Parser.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/Rematerialiser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Rematerialiser.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/Simplifier.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Simplifier.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libjulia/UnusedPruner.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/UnusedPruner.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/liblll/Compiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Compiler.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/liblll/EndToEndTest.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/EndToEndTest.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/liblll/ExecutionFramework.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/ExecutionFramework.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/liblll/ExecutionFramework.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/ExecutionFramework.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/liblll/Parser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Parser.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/ABIDecoderTests.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIDecoderTests.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/ABIEncoderTests.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIEncoderTests.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/ABITestsCommon.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABITestsCommon.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/ASTJSON.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ASTJSON.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/AnalysisFramework.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/AnalysisFramework.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/AnalysisFramework.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/AnalysisFramework.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/Assembly.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Assembly.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/ErrorCheck.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ErrorCheck.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/ErrorCheck.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ErrorCheck.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/GasMeter.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/GasMeter.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/Imports.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Imports.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/InlineAssembly.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/InlineAssembly.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/JSONCompiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/JSONCompiler.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/Metadata.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Metadata.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SMTChecker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SMTChecker.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SemVerMatcher.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SemVerMatcher.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityABIJSON.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityABIJSON.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityEndToEndTest.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityEndToEndTest.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityExecutionFramework.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExecutionFramework.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityExecutionFramework.h">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExecutionFramework.h">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityExpressionCompiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExpressionCompiler.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityNameAndTypeResolution.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNameAndTypeResolution.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityNatspecJSON.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNatspecJSON.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityOptimizer.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityOptimizer.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityParser.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityParser.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityScanner.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityScanner.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/SolidityTypes.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityTypes.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/StandardCompiler.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/StandardCompiler.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/libsolidity/ViewPureChecker.cpp">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ViewPureChecker.cpp">
 			<Option target="soltest"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthBuildInfo.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthBuildInfo.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthCcache.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthCcache.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthCheckCXXCompilerFlag.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthCheckCXXCompilerFlag.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthCompilerSettings.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthCompilerSettings.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthDependencies.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthDependencies.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthOptions.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthOptions.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthPolicy.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthPolicy.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/EthUtils.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/EthUtils.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/FindZ3.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/FindZ3.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/jsoncpp.cmake">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/jsoncpp.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake/templates/license.h.in">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/templates/license.h.in">
 			<Option virtualFolder="CMake Files\cmake\templates\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/tmp/jsoncpp-project-cfgcmd.txt.in">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/tmp/jsoncpp-project-cfgcmd.txt.in">
 			<Option virtualFolder="CMake Files\cmake-build-debug\deps\tmp\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libdevcore/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libdevcore/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libdevcore\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libevmasm/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libevmasm\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolidity/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libsolidity\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/libsolc/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolc/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libsolc\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/solc/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\solc\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/liblll/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/liblll/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\liblll\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/lllc/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/lllc/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lllc\"/>
 		</Unit>
-		<Unit filename="/home/abinesh/temp/shyft_solidity/test/CMakeLists.txt">
+		<Unit filename="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
 	</Project>

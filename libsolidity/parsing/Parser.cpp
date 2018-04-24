@@ -76,7 +76,7 @@ ASTPointer<SourceUnit> Parser::parse(shared_ptr<Scanner> const& _scanner)
 		{
 			switch (auto token = m_scanner->currentToken())
 			{
-			case Token::Pragma:
+ 			case Token::Pragma:
 				nodes.push_back(parsePragmaDirective());
 				break;
 			case Token::Import:

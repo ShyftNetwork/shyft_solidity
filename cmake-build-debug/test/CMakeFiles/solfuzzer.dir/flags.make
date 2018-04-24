@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -fpermissive -fuse-ld=gold -O0 -g -DETH_DEBUG   -fstack-p
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/abinesh/temp/shyft_solidity/cmake-build-debug/include -isystem /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/include -I/home/abinesh/temp/shyft_solidity 
+CXX_INCLUDES = -I/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include -isystem /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/include -I/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma 
 

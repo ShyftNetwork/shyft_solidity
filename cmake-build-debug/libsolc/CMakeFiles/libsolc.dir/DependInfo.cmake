@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/abinesh/temp/shyft_solidity/libsolc/libsolc.cpp" "/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolc/CMakeFiles/libsolc.dir/libsolc.cpp.o"
+  "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolc/libsolc.cpp" "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolc/CMakeFiles/libsolc.dir/libsolc.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,9 +17,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/abinesh/temp/shyft_solidity/cmake-build-debug/libsolidity/CMakeFiles/solidity.dir/DependInfo.cmake"
-  "/home/abinesh/temp/shyft_solidity/cmake-build-debug/libevmasm/CMakeFiles/evmasm.dir/DependInfo.cmake"
-  "/home/abinesh/temp/shyft_solidity/cmake-build-debug/libdevcore/CMakeFiles/devcore.dir/DependInfo.cmake"
+  "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libsolidity/CMakeFiles/solidity.dir/DependInfo.cmake"
+  "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/CMakeFiles/evmasm.dir/DependInfo.cmake"
+  "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libdevcore/CMakeFiles/devcore.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

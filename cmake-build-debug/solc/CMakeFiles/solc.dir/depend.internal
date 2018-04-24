@@ -48,8 +48,8 @@ solc/CMakeFiles/solc.dir/CommandLineInterface.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.cpp
- /home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.h
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/CommandLineInterface.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/CommandLineInterface.h
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -78,8 +78,8 @@ solc/CMakeFiles/solc.dir/main.cpp.o
  ..//libsolidity/interface/ReadFile.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/solc/CommandLineInterface.h
- /home/abinesh/temp/shyft_solidity/solc/main.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/CommandLineInterface.h
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/solc/main.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h

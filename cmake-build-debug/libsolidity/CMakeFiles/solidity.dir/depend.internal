@@ -16,7 +16,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/backends/evm/EVMAssembly.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMAssembly.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/backends/evm/EVMAssembly.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/backends/evm/EVMCodeTransform.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -38,7 +38,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/backends/evm/EVMCodeTransform.cp
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/backends/evm/EVMCodeTransform.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/backends/evm/EVMCodeTransform.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ASTCopier.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -53,7 +53,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ASTCopier.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTCopier.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ASTCopier.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ASTWalker.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -68,7 +68,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ASTWalker.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/ASTWalker.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ASTWalker.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/DataFlowAnalyzer.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -87,7 +87,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/DataFlowAnalyzer.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/DataFlowAnalyzer.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/DataFlowAnalyzer.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Disambiguator.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -105,7 +105,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Disambiguator.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/Disambiguator.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Disambiguator.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ExpressionInliner.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -125,7 +125,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ExpressionInliner.cpp.
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionInliner.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ExpressionInliner.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ExpressionSimplifier.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -147,7 +147,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/ExpressionSimplifier.c
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/ExpressionSimplifier.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/ExpressionSimplifier.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/FunctionGrouper.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -162,7 +162,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/FunctionGrouper.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionGrouper.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/FunctionGrouper.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/FunctionHoister.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -180,7 +180,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/FunctionHoister.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/FunctionHoister.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/FunctionHoister.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/InlinableExpressionFunctionFinder.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -196,7 +196,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/InlinableExpressionFun
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/InlinableExpressionFunctionFinder.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/InlinableExpressionFunctionFinder.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Metrics.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -212,7 +212,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Metrics.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/Metrics.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Metrics.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/NameCollector.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -228,7 +228,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/NameCollector.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/NameCollector.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/NameCollector.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Rematerialiser.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -247,7 +247,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Rematerialiser.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/Rematerialiser.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Rematerialiser.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Semantics.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -265,7 +265,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Semantics.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/Semantics.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Semantics.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/SimplificationRules.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -290,7 +290,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/SimplificationRules.cp
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/SimplificationRules.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/SimplificationRules.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Substitution.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -305,7 +305,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Substitution.cpp.o
  ..//libsolidity/inlineasm/AsmDataForward.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/Substitution.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Substitution.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/SyntacticalEquality.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -321,7 +321,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/SyntacticalEquality.cp
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/SyntacticalEquality.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/SyntacticalEquality.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/UnusedPruner.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -340,7 +340,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/UnusedPruner.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/UnusedPruner.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/UnusedPruner.cpp
 libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Utilities.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -355,7 +355,7 @@ libsolidity/CMakeFiles/solidity.dir/__/libjulia/optimiser/Utilities.cpp.o
  ..//libsolidity/inlineasm/AsmDataForward.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libjulia/optimiser/Utilities.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libjulia/optimiser/Utilities.cpp
 libsolidity/CMakeFiles/solidity.dir/analysis/ConstantEvaluator.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -381,7 +381,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/ConstantEvaluator.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/ConstantEvaluator.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ConstantEvaluator.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -416,7 +416,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/DeclarationContainer.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/DeclarationContainer.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/DeclarationContainer.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -453,7 +453,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/DocStringAnalyser.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/DocStringAnalyser.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/DocStringAnalyser.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -487,7 +487,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/GlobalContext.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/GlobalContext.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/GlobalContext.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -527,7 +527,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/NameAndTypeResolver.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/NameAndTypeResolver.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/NameAndTypeResolver.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -566,7 +566,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/PostTypeChecker.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/PostTypeChecker.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/PostTypeChecker.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -611,7 +611,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/ReferencesResolver.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/ReferencesResolver.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ReferencesResolver.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -634,7 +634,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/SemVerHandler.cpp.o
  ..//libsolidity/parsing/UndefMacros.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/SemVerHandler.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/SemVerHandler.cpp
 libsolidity/CMakeFiles/solidity.dir/analysis/StaticAnalyzer.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -661,7 +661,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/StaticAnalyzer.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/StaticAnalyzer.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/StaticAnalyzer.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -700,7 +700,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/SyntaxChecker.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/SyntaxChecker.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -742,7 +742,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/TypeChecker.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/TypeChecker.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/TypeChecker.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -781,7 +781,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/ViewPureChecker.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/analysis/ViewPureChecker.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/ViewPureChecker.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -817,7 +817,7 @@ libsolidity/CMakeFiles/solidity.dir/ast/AST.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/ast/AST.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/AST.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -832,7 +832,7 @@ libsolidity/CMakeFiles/solidity.dir/ast/ASTAnnotations.cpp.o
  ..//libsolidity/ast/ASTAnnotations.h
  ..//libsolidity/ast/ASTForward.h
  ..//libsolidity/ast/ExperimentalFeatures.h
- /home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTAnnotations.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTAnnotations.cpp
 libsolidity/CMakeFiles/solidity.dir/ast/ASTJsonConverter.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -861,7 +861,7 @@ libsolidity/CMakeFiles/solidity.dir/ast/ASTJsonConverter.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTJsonConverter.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTJsonConverter.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -904,7 +904,7 @@ libsolidity/CMakeFiles/solidity.dir/ast/ASTPrinter.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTPrinter.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTPrinter.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -939,7 +939,7 @@ libsolidity/CMakeFiles/solidity.dir/ast/ASTUtils.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/ast/ASTUtils.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/ASTUtils.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -974,7 +974,7 @@ libsolidity/CMakeFiles/solidity.dir/ast/Types.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/ast/Types.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/ast/Types.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1016,7 +1016,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/ABIFunctions.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/ABIFunctions.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ABIFunctions.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1058,7 +1058,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/ArrayUtils.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/ArrayUtils.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ArrayUtils.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1101,7 +1101,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/Compiler.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/Compiler.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/Compiler.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1157,7 +1157,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/CompilerContext.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerContext.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/CompilerContext.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1200,7 +1200,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/CompilerUtils.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/CompilerUtils.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/CompilerUtils.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1254,7 +1254,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/ContractCompiler.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/ContractCompiler.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ContractCompiler.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1301,7 +1301,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/ExpressionCompiler.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/ExpressionCompiler.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/ExpressionCompiler.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1344,7 +1344,7 @@ libsolidity/CMakeFiles/solidity.dir/codegen/LValue.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/codegen/LValue.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/codegen/LValue.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1385,7 +1385,7 @@ libsolidity/CMakeFiles/solidity.dir/formal/SMTChecker.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTChecker.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/SMTChecker.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1408,7 +1408,7 @@ libsolidity/CMakeFiles/solidity.dir/formal/SMTLib2Interface.cpp.o
  ..//libsolidity/interface/ReadFile.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/formal/SMTLib2Interface.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/SMTLib2Interface.cpp
 libsolidity/CMakeFiles/solidity.dir/formal/VariableUsage.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1433,7 +1433,7 @@ libsolidity/CMakeFiles/solidity.dir/formal/VariableUsage.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/formal/VariableUsage.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/VariableUsage.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1458,7 +1458,7 @@ libsolidity/CMakeFiles/solidity.dir/formal/Z3Interface.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/formal/Z3Interface.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/formal/Z3Interface.cpp
 libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmAnalysis.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1478,7 +1478,7 @@ libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmAnalysis.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysis.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmAnalysis.cpp
 libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmAnalysisInfo.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1491,7 +1491,7 @@ libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmAnalysisInfo.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmAnalysisInfo.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmAnalysisInfo.cpp
 libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmCodeGen.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1525,7 +1525,7 @@ libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmCodeGen.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmCodeGen.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmCodeGen.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1555,7 +1555,7 @@ libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmParser.cpp.o
  ..//libsolidity/parsing/UndefMacros.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmParser.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmParser.cpp
 libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmPrinter.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1569,7 +1569,7 @@ libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmPrinter.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmPrinter.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmPrinter.cpp
 libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmScope.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1580,7 +1580,7 @@ libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmScope.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScope.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmScope.cpp
 libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmScopeFiller.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1598,7 +1598,7 @@ libsolidity/CMakeFiles/solidity.dir/inlineasm/AsmScopeFiller.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/inlineasm/AsmScopeFiller.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/inlineasm/AsmScopeFiller.cpp
 libsolidity/CMakeFiles/solidity.dir/interface/ABI.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1622,7 +1622,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/ABI.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/ABI.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/ABI.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1668,7 +1668,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/AssemblyStack.cpp.o
  ..//libsolidity/parsing/UndefMacros.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/AssemblyStack.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/AssemblyStack.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1737,7 +1737,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/CompilerStack.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/CompilerStack.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/CompilerStack.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1771,7 +1771,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/ErrorReporter.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/ErrorReporter.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/ErrorReporter.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1791,7 +1791,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/Exceptions.cpp.o
  ..//libsolidity/interface/Exceptions.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/Exceptions.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Exceptions.cpp
 libsolidity/CMakeFiles/solidity.dir/interface/GasEstimator.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1829,8 +1829,8 @@ libsolidity/CMakeFiles/solidity.dir/interface/GasEstimator.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/GasEstimator.cpp
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/GasEstimator.h
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/GasEstimator.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/GasEstimator.h
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1864,7 +1864,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/Natspec.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/Natspec.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Natspec.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1889,7 +1889,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/SourceReferenceFormatter.cpp.o
  ..//libsolidity/parsing/UndefMacros.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/SourceReferenceFormatter.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/SourceReferenceFormatter.cpp
 libsolidity/CMakeFiles/solidity.dir/interface/StandardCompiler.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1922,7 +1922,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/StandardCompiler.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/StandardCompiler.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/StandardCompiler.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -1944,7 +1944,7 @@ libsolidity/CMakeFiles/solidity.dir/interface/Version.cpp.o
  ..//libsolidity/interface/Version.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/interface/Version.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/interface/Version.cpp
  include/solidity/BuildInfo.h
 libsolidity/CMakeFiles/solidity.dir/parsing/DocStringParser.cpp.o
  ..//libdevcore/Assertions.h
@@ -1960,7 +1960,7 @@ libsolidity/CMakeFiles/solidity.dir/parsing/DocStringParser.cpp.o
  ..//libsolidity/parsing/DocStringParser.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/parsing/DocStringParser.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/DocStringParser.cpp
 libsolidity/CMakeFiles/solidity.dir/parsing/Parser.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -1990,7 +1990,7 @@ libsolidity/CMakeFiles/solidity.dir/parsing/Parser.cpp.o
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h
- /home/abinesh/temp/shyft_solidity/libsolidity/parsing/Parser.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Parser.cpp
  deps/include/json/allocator.h
  deps/include/json/autolink.h
  deps/include/json/config.h
@@ -2016,7 +2016,7 @@ libsolidity/CMakeFiles/solidity.dir/parsing/ParserBase.cpp.o
  ..//libsolidity/parsing/UndefMacros.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/parsing/ParserBase.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/ParserBase.cpp
 libsolidity/CMakeFiles/solidity.dir/parsing/Scanner.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -2030,7 +2030,7 @@ libsolidity/CMakeFiles/solidity.dir/parsing/Scanner.cpp.o
  ..//libsolidity/parsing/UndefMacros.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/parsing/Scanner.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Scanner.cpp
 libsolidity/CMakeFiles/solidity.dir/parsing/Token.cpp.o
  ..//libdevcore/Assertions.h
  ..//libdevcore/Common.h
@@ -2042,4 +2042,4 @@ libsolidity/CMakeFiles/solidity.dir/parsing/Token.cpp.o
  ..//libsolidity/parsing/UndefMacros.h
  ../libdevcore/Exceptions.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
- /home/abinesh/temp/shyft_solidity/libsolidity/parsing/Token.cpp
+ /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/parsing/Token.cpp

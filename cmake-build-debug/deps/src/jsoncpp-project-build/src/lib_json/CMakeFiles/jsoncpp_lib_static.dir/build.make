@@ -43,10 +43,10 @@ RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project
+CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build
+CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build
 
 # Include any dependencies generated for this target.
 include src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/depend.make
@@ -58,17 +58,17 @@ include src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/progress.make
 include src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/flags.make
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o: src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/flags.make
-src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o: /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp
+src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o: /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp > CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp > CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.i
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp -o CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_reader.cpp -o CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.s
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o.requires:
 
@@ -82,17 +82,17 @@ src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o.provides.build:
 
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o: src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/flags.make
-src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o: /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp
+src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o: /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp > CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp > CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.i
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp -o CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_value.cpp -o CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.s
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o.requires:
 
@@ -106,17 +106,17 @@ src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o.provides.build: 
 
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o: src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/flags.make
-src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o: /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o -c /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp
+src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o: /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.i"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp > CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.i
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp > CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.i
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.s"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp -o CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.s
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/json_writer.cpp -o CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.s
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o.requires:
 
@@ -143,9 +143,9 @@ src/lib_json/libjsoncpp.a: src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_v
 src/lib_json/libjsoncpp.a: src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o
 src/lib_json/libjsoncpp.a: src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build.make
 src/lib_json/libjsoncpp.a: src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libjsoncpp.a"
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && $(CMAKE_COMMAND) -P CMakeFiles/jsoncpp_lib_static.dir/cmake_clean_target.cmake
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jsoncpp_lib_static.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libjsoncpp.a"
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && $(CMAKE_COMMAND) -P CMakeFiles/jsoncpp_lib_static.dir/cmake_clean_target.cmake
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jsoncpp_lib_static.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/build: src/lib_json/libjsoncpp.a
@@ -159,10 +159,10 @@ src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/requires: src/lib_json/CMakeFiles
 .PHONY : src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/requires
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/clean:
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && $(CMAKE_COMMAND) -P CMakeFiles/jsoncpp_lib_static.dir/cmake_clean.cmake
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json && $(CMAKE_COMMAND) -P CMakeFiles/jsoncpp_lib_static.dir/cmake_clean.cmake
 .PHONY : src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/clean
 
 src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/depend:
-	cd /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json /home/abinesh/temp/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build/src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/lib_json/CMakeFiles/jsoncpp_lib_static.dir/depend
 
