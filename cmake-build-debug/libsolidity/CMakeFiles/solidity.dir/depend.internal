@@ -681,6 +681,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o
  ..//libdevcore/FixedHash.h
  ..//libdevcore/vector_ref.h
  ..//libevmasm/Instruction.h
+ ..//libevmasm/LinkerObject.h
  ..//libevmasm/SourceLocation.h
  ..//libsolidity/analysis/SemVerHandler.h
  ..//libsolidity/analysis/SyntaxChecker.h
@@ -692,11 +693,16 @@ libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o
  ..//libsolidity/ast/ASTVisitor.h
  ..//libsolidity/ast/ExperimentalFeatures.h
  ..//libsolidity/ast/Types.h
+ ..//libsolidity/interface/AssemblyStack.h
+ ..//libsolidity/interface/CompilerStack.h
  ..//libsolidity/interface/ErrorReporter.h
  ..//libsolidity/interface/Exceptions.h
+ ..//libsolidity/interface/ReadFile.h
  ..//libsolidity/interface/Version.h
  ..//libsolidity/parsing/Token.h
  ..//libsolidity/parsing/UndefMacros.h
+ ..//solc/CommandLineInterface.h
+ ..//solc/ShyftSolidity.h
  ../libdevcore/Common.h
  ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
  ../libevmasm/Exceptions.h

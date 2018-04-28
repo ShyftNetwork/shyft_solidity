@@ -1160,6 +1160,20 @@ libsolidity/parsing/UndefMacros.h
 
 ..//libsolidity/parsing/UndefMacros.h
 
+..//solc/CommandLineInterface.h
+libsolidity/interface/CompilerStack.h
+-
+libsolidity/interface/AssemblyStack.h
+-
+boost/program_options.hpp
+-
+boost/filesystem/path.hpp
+-
+memory
+-
+
+..//solc/ShyftSolidity.h
+
 ../libdevcore/Common.h
 libdevcore/vector_ref.h
 -
@@ -1538,6 +1552,10 @@ libsolidity/analysis/SemVerHandler.h
 libsolidity/interface/ErrorReporter.h
 -
 libsolidity/interface/Version.h
+-
+solc/CommandLineInterface.h
+-
+solc/ShyftSolidity.h
 -
 
 /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libsolidity/analysis/TypeChecker.cpp

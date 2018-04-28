@@ -128,5 +128,5 @@ public:
 using errinfo_sourceLocation = boost::error_info<struct tag_sourceLocation, SourceLocation>;
 using errinfo_secondarySourceLocation = boost::error_info<struct tag_secondarySourceLocation, SecondarySourceLocation>;
 
-}
+	}
 }

@@ -19,7 +19,6 @@
  * @date 2014
  * Solidity AST to EVM bytecode compiler for expressions.
  */
-
 #include <utility>
 #include <numeric>
 #include <boost/range/adaptor/reversed.hpp>
@@ -32,7 +31,9 @@
 #include <libsolidity/codegen/CompilerUtils.h>
 #include <libsolidity/codegen/LValue.h>
 #include <libevmasm/GasMeter.h>
-
+//Alex Binesh: Start: New Pragma Changes
+extern bool bShyft_Compiler;
+//Alex Binesh: End: New Pragma Changes
 using namespace std;
 
 namespace dev
@@ -673,6 +674,12 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 //Alex Binesh Start:Opcode Changes
         case FunctionType::Kind::Getattest:
 		{
+//Alex Binesh: Start:New Pragma Changes
+			if (!bShyft_Compiler)
+			{
+				solAssert(false, "Invalid function type.");
+			}
+//Alex Binesh: End:New Pragma Changes
 			arguments[1]->accept(*this);
 			utils().convertType(*arguments[1]->annotation().type, IntegerType(64));// This is the 2nd parameter passed into the function
 			m_context << Instruction::DUP1 << Instruction::ISZERO;
@@ -685,7 +692,13 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 		}
 		case FunctionType::Kind::CheckAttestValid:
 		{
-			arguments[1]->accept(*this);
+//Alex Binesh: Start:New Pragma Changes
+			if (!bShyft_Compiler)
+			{
+				solAssert(false, "Invalid function type, checkattestvalid()");
+			}
+//Alex Binesh: End:New Pragma Changes
+ 			arguments[1]->accept(*this);
 			utils().convertType(*arguments[1]->annotation().type, IntegerType(256));// This is the 2nd parameter passed into the function
 			m_context << Instruction::DUP1 << Instruction::ISZERO;
 			m_context.appendConditionalInvalid();
@@ -696,6 +709,12 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 		}
 		case FunctionType::Kind::Getrevoke:
 		{
+//Alex Binesh: Start:New Pragma Changes
+			if (!bShyft_Compiler)
+			{
+				solAssert(false, "Invalid function type, getrevoke()");
+			}
+//Alex Binesh: End:New Pragma Changes
 			arguments[1]->accept(*this);
 			utils().convertType(*arguments[1]->annotation().type, IntegerType(64));// This is the 2nd parameter passed into the function
 			m_context << Instruction::DUP1 << Instruction::ISZERO;
@@ -707,6 +726,12 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 		}
 		case FunctionType::Kind::Topoint:
 		{
+//Alex Binesh: Start:New Pragma Changes
+			if (!bShyft_Compiler)
+			{
+				solAssert(false, "Invalid function type, topoint()");
+			}
+//Alex Binesh: End:New Pragma Changes
 			arguments[1]->accept(*this);
 			utils().convertType(*arguments[1]->annotation().type, IntegerType(64));// This is the 2nd parameter passed into the function
 			m_context << Instruction::DUP1 << Instruction::ISZERO;

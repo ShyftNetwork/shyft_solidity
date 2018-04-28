@@ -22,7 +22,10 @@
 #include <libsolidity/analysis/SemVerHandler.h>
 #include <libsolidity/interface/ErrorReporter.h>
 #include <libsolidity/interface/Version.h>
-
+#include <solc/CommandLineInterface.h>
+//Alex Binesh: Start: New Pragma Changes
+#include <solc/ShyftSolidity.h>
+//Alex Binesh: End: New Pragma Changes
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
@@ -69,7 +72,7 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 	if (_pragma.tokens()[0] != Token::Identifier)
 		m_errorReporter.syntaxError(_pragma.location(), "Invalid pragma \"" + _pragma.literals()[0] + "\"");
 
-//Alex Binesh: Start:New_pragma.literals()[0] == "ragma" Pragma Changes
+//Alex Binesh: Start: New Pragma Changes
 	else if (_pragma.literals()[0] == "substance" )
 	{
         vector<Token::Value> tokens(_pragma.tokens().begin() + 1, _pragma.tokens().end());
@@ -77,7 +80,8 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
         SemVerMatchExpressionParser parser(tokens, literals);
         auto matchExpression = parser.parse();
         SemVerVersion currentVersion{string(VersionString)};
-#define Shyft_Compiler  "Yes"
+
+		bShyft_Compiler=true;
 /*        if (!matchExpression.matches(currentVersion))
             m_errorReporter.syntaxError(
                     _pragma.location(),
@@ -166,6 +170,7 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 					string(VersionString) + " - note that nightly builds are considered to be "
 											"strictly less than the released version"
 			);
+
 		m_versionPragmaFound = true;
 	}
 	else
