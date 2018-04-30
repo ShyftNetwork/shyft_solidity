@@ -31,7 +31,7 @@ branches:
     # this includes tags (which are treated as branches by travis).
     # Pull request automation is not constrained to this set of branches.
     only:
-        - develop
+        - shyft_test_develop_march21
         - release
         - /^v[0-9]/
 
