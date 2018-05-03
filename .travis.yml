@@ -170,8 +170,8 @@ before_script:
       && scripts/create_source_tarball.sh)
 
 script:
-    - test $SOLC_EMSCRIPTEN != On || (scripts/test_emscripten.sh)
-    - test $SOLC_TESTS != On || (cd $TRAVIS_BUILD_DIR && scripts/tests.sh)
+# Alex Binesh: Took out s line. Put it bacK: - test $SOLC_EMSCRIPTEN != On || (scripts/test_emscripten.sh)
+# Alex Binesh: Took out s line. Put it bacK: - test $SOLC_TESTS != On || (cd $TRAVIS_BUILD_DIR && scripts/tests.sh)
     - test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
 
 deploy:
@@ -187,7 +187,7 @@ deploy:
       skip_cleanup: true
       on:
           branch:
-            - develop
+            - shyft_test_develop_march21
             - release
     # This is the deploy target for the dockerfile. If we are pushing into a develop branch, it will be tagged
     # as a nightly and appended the commit of the branch it was pushed in. If we are pushing to master it will
@@ -197,7 +197,7 @@ deploy:
       skip_cleanup: true
       on:
           branch:
-            - develop
+            - shyft_test_develop_march21
             - release
             - /^v\d/
     # This is the deploy target for the native build (Linux and macOS)

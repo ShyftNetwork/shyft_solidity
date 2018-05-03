@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/abinesh/clion-2018.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/abinesh/clion-2018.1/bin/cmake/bin/cmake -E remove -f
+RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,37 +59,37 @@ CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -102,27 +102,27 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/abinesh/clion-2018.1/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -157,19 +157,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named solidity_BuildInfo.h
-
-# Build rule for target.
-solidity_BuildInfo.h: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 solidity_BuildInfo.h
-.PHONY : solidity_BuildInfo.h
-
-# fast build rule for target.
-solidity_BuildInfo.h/fast:
-	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/build
-.PHONY : solidity_BuildInfo.h/fast
-
-#=============================================================================
 # Target rules for targets named jsoncpp-project
 
 # Build rule for target.
@@ -181,6 +168,19 @@ jsoncpp-project: cmake_check_build_system
 jsoncpp-project/fast:
 	$(MAKE) -f CMakeFiles/jsoncpp-project.dir/build.make CMakeFiles/jsoncpp-project.dir/build
 .PHONY : jsoncpp-project/fast
+
+#=============================================================================
+# Target rules for targets named solidity_BuildInfo.h
+
+# Build rule for target.
+solidity_BuildInfo.h: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 solidity_BuildInfo.h
+.PHONY : solidity_BuildInfo.h
+
+# fast build rule for target.
+solidity_BuildInfo.h/fast:
+	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/build
+.PHONY : solidity_BuildInfo.h/fast
 
 #=============================================================================
 # Target rules for targets named devcore
@@ -309,10 +309,10 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
+	@echo "... jsoncpp-project"
 	@echo "... edit_cache"
 	@echo "... solidity_BuildInfo.h"
-	@echo "... jsoncpp-project"
+	@echo "... rebuild_cache"
 	@echo "... devcore"
 	@echo "... evmasm"
 	@echo "... solidity"

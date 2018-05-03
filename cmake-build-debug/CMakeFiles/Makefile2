@@ -45,10 +45,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/abinesh/clion-2018.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/abinesh/clion-2018.1/bin/cmake/bin/cmake -E remove -f
+RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -58,43 +58,6 @@ CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity/cmake-build-debug
-
-#=============================================================================
-# Target rules for target CMakeFiles/solidity_BuildInfo.h.dir
-
-# All Build rule for target.
-CMakeFiles/solidity_BuildInfo.h.dir/all:
-	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/depend
-	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num= "Built target solidity_BuildInfo.h"
-.PHONY : CMakeFiles/solidity_BuildInfo.h.dir/all
-
-# Include target in all.
-all: CMakeFiles/solidity_BuildInfo.h.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/solidity_BuildInfo.h.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/solidity_BuildInfo.h.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/solidity_BuildInfo.h.dir/rule
-
-# Convenience name for target.
-solidity_BuildInfo.h: CMakeFiles/solidity_BuildInfo.h.dir/rule
-
-.PHONY : solidity_BuildInfo.h
-
-# clean rule for target.
-CMakeFiles/solidity_BuildInfo.h.dir/clean:
-	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/clean
-.PHONY : CMakeFiles/solidity_BuildInfo.h.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/solidity_BuildInfo.h.dir/clean
-
-.PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/jsoncpp-project.dir
@@ -134,6 +97,43 @@ clean: CMakeFiles/jsoncpp-project.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/solidity_BuildInfo.h.dir
+
+# All Build rule for target.
+CMakeFiles/solidity_BuildInfo.h.dir/all:
+	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/depend
+	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num= "Built target solidity_BuildInfo.h"
+.PHONY : CMakeFiles/solidity_BuildInfo.h.dir/all
+
+# Include target in all.
+all: CMakeFiles/solidity_BuildInfo.h.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/solidity_BuildInfo.h.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/solidity_BuildInfo.h.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/solidity_BuildInfo.h.dir/rule
+
+# Convenience name for target.
+solidity_BuildInfo.h: CMakeFiles/solidity_BuildInfo.h.dir/rule
+
+.PHONY : solidity_BuildInfo.h
+
+# clean rule for target.
+CMakeFiles/solidity_BuildInfo.h.dir/clean:
+	$(MAKE) -f CMakeFiles/solidity_BuildInfo.h.dir/build.make CMakeFiles/solidity_BuildInfo.h.dir/clean
+.PHONY : CMakeFiles/solidity_BuildInfo.h.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/solidity_BuildInfo.h.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory libdevcore
 
 # Convenience name for "all" pass in the directory.
@@ -155,8 +155,8 @@ libdevcore/preinstall:
 # Target rules for target libdevcore/CMakeFiles/devcore.dir
 
 # All Build rule for target.
-libdevcore/CMakeFiles/devcore.dir/all: CMakeFiles/solidity_BuildInfo.h.dir/all
 libdevcore/CMakeFiles/devcore.dir/all: CMakeFiles/jsoncpp-project.dir/all
+libdevcore/CMakeFiles/devcore.dir/all: CMakeFiles/solidity_BuildInfo.h.dir/all
 	$(MAKE) -f libdevcore/CMakeFiles/devcore.dir/build.make libdevcore/CMakeFiles/devcore.dir/depend
 	$(MAKE) -f libdevcore/CMakeFiles/devcore.dir/build.make libdevcore/CMakeFiles/devcore.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target devcore"

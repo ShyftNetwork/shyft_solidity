@@ -32,7 +32,9 @@ REPO_ROOT=$(cd $(dirname "$0")/.. && pwd)
 SOLJSON="$REPO_ROOT/build/libsolc/soljson.js"
 VERSION=$("$REPO_ROOT"/scripts/get_version.sh)
 
-echo "Running solcjs tests...."
-"$REPO_ROOT/test/solcjsTests.sh" "$SOLJSON" "$VERSION"
-echo "Running external tests...."
-"$REPO_ROOT/test/externalTests.sh" "$SOLJSON"
+//Alex Binesh took out this line . Using the line below Put me back later: echo "Running solcjs tests...."
+echo "NOT Running solcjs tests...."
+//Alex Binesh took out this line . Put me back later: "$REPO_ROOT/test/solcjsTests.sh" "$SOLJSON" "$VERSION"
+//Alex Binesh took out this line . Using the line below Put me back later: echo "Running external tests...."
+echo "NOT Running external tests...."
+//Alex Binesh took out this line .Put me back later: "$REPO_ROOT/test/externalTests.sh" "$SOLJSON"
