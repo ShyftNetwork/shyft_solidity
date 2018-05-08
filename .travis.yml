@@ -71,6 +71,10 @@ matrix:
           services:
             - docker
           env:
+# Alex Binesh put the line below here. It is to set the username for docker
+	    - username=AlexAtShyft
+	    - Password=Ar1@n@123
+# Alex Binesh put the line above here. It is to set the username for docker
             - SOLC_DOCKER=On
             - SOLC_INSTALL_DEPS_TRAVIS=Off
             - SOLC_RELEASE=Off
