@@ -38,7 +38,9 @@ matrix:
     services:
     - docker
     env:
-    - username=AlexAtShyft
+#Alex Binesh. Added the below line for the Docker login credential
+    - username=alexatshyft
+#Alex Binesh. Added the above line for the Docker login credential
     - SOLC_DOCKER=On
     - SOLC_INSTALL_DEPS_TRAVIS=Off
     - SOLC_RELEASE=Off
