@@ -144,6 +144,7 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 		SemVerMatchExpressionParser parser(tokens, literals);
 		auto matchExpression = parser.parse();
 		SemVerVersion currentVersion{string(VersionString)};
+//Alex Binesh: Start. Commented out the line below since the compile version is not read properly
 		if (!matchExpression.matches(currentVersion))
 			m_errorReporter.syntaxError(
 				_pragma.location(),
