@@ -15,3 +15,6 @@ See the [Solidity documentation](https://solidity.readthedocs.io/en/latest/insta
 
 ## How to Contribute
 Please see our contribution guidelines in [the Solidity documentation](https://solidity.readthedocs.io/en/latest/contributing.html).
+
+## License
+Shyft
