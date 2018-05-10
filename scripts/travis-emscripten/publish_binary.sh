@@ -53,7 +53,7 @@ ssh-add deploy_key
 git clone --depth 2 git@github.com:ShyftNetwork/shyft_solc-bin.git
 cd solc-bin
 git config user.name "travis"
-// Alex Binesh took out thi line and replaced it with the below: git config user.email "chris@ethereum.org"
+// Alex Binesh: took out thi line and replaced it with the below: git config user.email "chris@ethereum.org"
 git config user.email "alex@shyft.network"
 git checkout -B gh-pages origin/gh-pages
 git clean -f -d -x
