@@ -76,18 +76,18 @@ cache:
   - boost_1_57_0
   - "$HOME/.local"
 install:
-- test $SOLC_INSTALL_DEPS_TRAVIS != On || (scripts/install_deps.sh)
-- test "$TRAVIS_OS_NAME" != "linux" || (scripts/install_cmake.sh)
-- if [ "$TRAVIS_BRANCH" = release -o -n "$TRAVIS_TAG" ]; then echo -n > prerelease.txt;
-  else date -u +"nightly.%Y.%-m.%-d" > prerelease.txt; fi
-- echo -n "$TRAVIS_COMMIT" > commit_hash.txt
+  ## - test $SOLC_INSTALL_DEPS_TRAVIS != On || (scripts/install_deps.sh)
+  ## - test "$TRAVIS_OS_NAME" != "linux" || (scripts/install_cmake.sh)
+  ## - if [ "$TRAVIS_BRANCH" = release -o -n "$TRAVIS_TAG" ]; then echo -n > prerelease.txt;
+  ##  else date -u +"nightly.%Y.%-m.%-d" > prerelease.txt; fi
+  ## - echo -n "$TRAVIS_COMMIT" > commit_hash.txt
 before_script:
-- test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
-- test $SOLC_DOCKER != On || (scripts/docker_build.sh)
-- test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
-  $ZIP_SUFFIX && scripts/create_source_tarball.sh)
+  ## - test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
+  ## - test $SOLC_DOCKER != On || (scripts/docker_build.sh)
+  ## - test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
+  ## $ZIP_SUFFIX && scripts/create_source_tarball.sh)
 script:
-- test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
+  - test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
 deploy:
 - provider: script
   script: test $SOLC_EMSCRIPTEN != On || (scripts/release_emscripten.sh)
