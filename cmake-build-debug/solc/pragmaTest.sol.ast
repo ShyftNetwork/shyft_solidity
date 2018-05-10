@@ -1,0 +1,87 @@
+PragmaDirective
+   Source: "pragma solidity ^0.4.16;"
+PragmaDirective
+   Source: "pragma ShyftPragma ShyftPragmaName;"
+ContractDefinition "Unique"
+   Source: "contract Unique {\n\nstring fn;\nstring ln;\nbytes20  val;\nbytes32 sId;\n\n\tfunction function1(string s, string y, bytes20 i) public returns (bytes20){\n\t    \tfn =s;\n    \t\tln =y;\n    \t\tsId =i;\n\t}\n}"
+  VariableDeclaration "fn"
+     Type: string storage ref
+     Source: "string fn"
+    ElementaryTypeName string
+       Source: "string"
+  VariableDeclaration "ln"
+     Type: string storage ref
+     Source: "string ln"
+    ElementaryTypeName string
+       Source: "string"
+  VariableDeclaration "val"
+     Type: bytes20
+     Source: "bytes20  val"
+    ElementaryTypeName bytes20
+       Source: "bytes20"
+  VariableDeclaration "sId"
+     Type: bytes32
+     Source: "bytes32 sId"
+    ElementaryTypeName bytes32
+       Source: "bytes32"
+  FunctionDefinition "function1" - public
+     Source: "function function1(string s, string y, bytes20 i) public returns (bytes20){\n\t    \tfn =s;\n    \t\tln =y;\n    \t\tsId =i;\n\t}"
+    ParameterList
+       Source: "(string s, string y, bytes20 i)"
+      VariableDeclaration "s"
+         Type: string memory
+         Source: "string s"
+        ElementaryTypeName string
+           Source: "string"
+      VariableDeclaration "y"
+         Type: string memory
+         Source: "string y"
+        ElementaryTypeName string
+           Source: "string"
+      VariableDeclaration "i"
+         Type: bytes20
+         Source: "bytes20 i"
+        ElementaryTypeName bytes20
+           Source: "bytes20"
+    ParameterList
+       Source: "(bytes20)"
+      VariableDeclaration ""
+         Type: bytes20
+         Source: "bytes20"
+        ElementaryTypeName bytes20
+           Source: "bytes20"
+    Block
+       Source: "{\n\t    \tfn =s;\n    \t\tln =y;\n    \t\tsId =i;\n\t}"
+      ExpressionStatement
+         Source: "fn =s"
+        Assignment using operator =
+           Type: string storage ref
+           Source: "fn =s"
+          Identifier fn
+             Type: string storage ref
+             Source: "fn"
+          Identifier s
+             Type: string memory
+             Source: "s"
+      ExpressionStatement
+         Source: "ln =y"
+        Assignment using operator =
+           Type: string storage ref
+           Source: "ln =y"
+          Identifier ln
+             Type: string storage ref
+             Source: "ln"
+          Identifier y
+             Type: string memory
+             Source: "y"
+      ExpressionStatement
+         Source: "sId =i"
+        Assignment using operator =
+           Type: bytes32
+           Source: "sId =i"
+          Identifier sId
+             Type: bytes32
+             Source: "sId"
+          Identifier i
+             Type: bytes20
+             Source: "i"
