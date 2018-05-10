@@ -46,9 +46,9 @@ matrix:
     - username=jaypersanchez
 #Alex Binesh. Added the above line for the Docker login credential. This is my docker username
     - SOLC_DOCKER=On
-    - SOLC_INSTALL_DEPS_TRAVIS=Off
-    - SOLC_RELEASE=Off
-    - SOLC_TESTS=Off
+    - SOLC_INSTALL_DEPS_TRAVIS=On
+    - SOLC_RELEASE=On
+    - SOLC_TESTS=On
   - os: linux
     dist: trusty
     sudo: required
@@ -63,9 +63,9 @@ matrix:
     - docker pull trzeci/emscripten:sdk-tag-1.35.4-64bit
     env:
     - SOLC_EMSCRIPTEN=On
-    - SOLC_INSTALL_DEPS_TRAVIS=Off
-    - SOLC_RELEASE=Off
-    - SOLC_TESTS=Off
+    - SOLC_INSTALL_DEPS_TRAVIS=On
+    - SOLC_RELEASE=On
+    - SOLC_TESTS=On
     - ZIP_SUFFIX=emscripten
     - SOLC_STOREBYTECODE=On
 git:
