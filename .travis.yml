@@ -10,8 +10,8 @@ env:
   - SOLC_BUILD_TYPE=RelWithDebInfo
   - SOLC_EMSCRIPTEN=Off
   - SOLC_INSTALL_DEPS_TRAVIS=On
-  - SOLC_RELEASE=On
-  - SOLC_TESTS=On
+  - SOLC_RELEASE=Off
+  - SOLC_TESTS=Off
   - SOLC_STOREBYTECODE=Off
   - SOLC_DOCKER=Off
   
@@ -24,7 +24,7 @@ matrix:
     compiler: gcc
     env:
     - ZIP_SUFFIX=ubuntu-trusty
-    - SOLC_STOREBYTECODE=On
+    - SOLC_STOREBYTECODE=Off
   - os: linux
     dist: trusty
     sudo: required
@@ -39,7 +39,7 @@ matrix:
     - docker
     env:
     - username=jaypersanchez
-    - SOLC_DOCKER=On
+    - SOLC_DOCKER=Off
     - SOLC_INSTALL_DEPS_TRAVIS=Off
     - SOLC_RELEASE=Off
     - SOLC_TESTS=Off
@@ -56,12 +56,12 @@ matrix:
     - nvm use 7
     - docker pull trzeci/emscripten:sdk-tag-1.35.4-64bit
     env:
-    - SOLC_EMSCRIPTEN=On
+    - SOLC_EMSCRIPTEN=Off
     - SOLC_INSTALL_DEPS_TRAVIS=Off
     - SOLC_RELEASE=Off
     - SOLC_TESTS=Off
     - ZIP_SUFFIX=emscripten
-    - SOLC_STOREBYTECODE=On
+    - SOLC_STOREBYTECODE=Off
 git:
   depth: 2
 cache:
