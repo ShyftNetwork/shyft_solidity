@@ -17,7 +17,7 @@ env:
   - SOLC_DOCKER=Off
   matrix:
 #Alex Binesh. Added the below line for the Docker login password. This is my docker password
-    secure: "ja6hhBnvuJn+DG9NvI6n83fsXBuTsB7IN3whA7WVsvuO8zXsMBoL/RfPSxZAa2ArFzxxhrJoCmjS3GddIJP2q2hR2OS7KkiR7BiC3H2etUZVoBVlxANLCSub5X03yCNT+0oEJlKFLIvf+wRT9o0RY3+aPP6Jgib6fDhxJrbJFQSGJfmL4kF4U0PK1K43bM2YuXRimvLqS9sfPB24b7yl6ZqthRZrJSp1n0tp255LolUfODIKbWRWwX258uMpTXieTPHmckZ61zIKAUDvnVbxmejLhUqrNZQI3vRpENaVj2YZ27I5uBBAD7ICJ8PrzOqMmK1DJLowuGOqFd1CGyXxxyeZo6eFeQlgHhP7m/6cLzx1b6ho5/FXwVieY36nJoDH+Mb9ol/0c+QP7NBuNSdsdS4Kc1RO0qoF6UrwiN4qJoxOLgjR5gNuqJn5TWZcOzU4M7VbgGNbSuc1SV66FkKF26AKlu94r9Ny1KCMMuC9m7rlljT6FyxLPONjwmY29BiRScNZ998opnlt5J2my/VxBN3VM1Kz12mGcWssJSlXtLoQN3MSTgnB+yNCX5MYPHKmtj3S836J00msCf+7M1SAMj8+99Oboy2+VKV9o+Vw4y++YxFTK/oJztACiRvVVXUouiinoVoLXetwly8EyIeMp3ElD3+YxDZmtDioCQkoiu8="
+    secure: ja6hhBnvuJn+DG9NvI6n83fsXBuTsB7IN3whA7WVsvuO8zXsMBoL/RfPSxZAa2ArFzxxhrJoCmjS3GddIJP2q2hR2OS7KkiR7BiC3H2etUZVoBVlxANLCSub5X03yCNT+0oEJlKFLIvf+wRT9o0RY3+aPP6Jgib6fDhxJrbJFQSGJfmL4kF4U0PK1K43bM2YuXRimvLqS9sfPB24b7yl6ZqthRZrJSp1n0tp255LolUfODIKbWRWwX258uMpTXieTPHmckZ61zIKAUDvnVbxmejLhUqrNZQI3vRpENaVj2YZ27I5uBBAD7ICJ8PrzOqMmK1DJLowuGOqFd1CGyXxxyeZo6eFeQlgHhP7m/6cLzx1b6ho5/FXwVieY36nJoDH+Mb9ol/0c+QP7NBuNSdsdS4Kc1RO0qoF6UrwiN4qJoxOLgjR5gNuqJn5TWZcOzU4M7VbgGNbSuc1SV66FkKF26AKlu94r9Ny1KCMMuC9m7rlljT6FyxLPONjwmY29BiRScNZ998opnlt5J2my/VxBN3VM1Kz12mGcWssJSlXtLoQN3MSTgnB+yNCX5MYPHKmtj3S836J00msCf+7M1SAMj8+99Oboy2+VKV9o+Vw4y++YxFTK/oJztACiRvVVXUouiinoVoLXetwly8EyIeMp3ElD3+YxDZmtDioCQkoiu8=
 
 #Alex Binesh. Added the above line for the Docker login password. This is my docker password
 matrix:
@@ -76,16 +76,16 @@ cache:
   - boost_1_57_0
   - "$HOME/.local"
 install:
-  ## - test $SOLC_INSTALL_DEPS_TRAVIS != On || (scripts/install_deps.sh)
-  ## - test "$TRAVIS_OS_NAME" != "linux" || (scripts/install_cmake.sh)
-  ## - if [ "$TRAVIS_BRANCH" = release -o -n "$TRAVIS_TAG" ]; then echo -n > prerelease.txt;
-  ##  else date -u +"nightly.%Y.%-m.%-d" > prerelease.txt; fi
-  ## - echo -n "$TRAVIS_COMMIT" > commit_hash.txt
+  - test $SOLC_INSTALL_DEPS_TRAVIS != On || (scripts/install_deps.sh)
+  - test "$TRAVIS_OS_NAME" != "linux" || (scripts/install_cmake.sh)
+  - if [ "$TRAVIS_BRANCH" = release -o -n "$TRAVIS_TAG" ]; then echo -n > prerelease.txt;
+     else date -u +"nightly.%Y.%-m.%-d" > prerelease.txt; fi
+  - echo -n "$TRAVIS_COMMIT" > commit_hash.txt
 before_script:
-  ## - test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
-  ## - test $SOLC_DOCKER != On || (scripts/docker_build.sh)
-  ## - test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
-  ## $ZIP_SUFFIX && scripts/create_source_tarball.sh)
+  - test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
+  - test $SOLC_DOCKER != On || (scripts/docker_build.sh)
+  - test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
+  $ZIP_SUFFIX && scripts/create_source_tarball.sh)
 script:
   - test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
 deploy:
