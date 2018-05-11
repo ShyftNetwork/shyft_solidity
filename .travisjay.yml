@@ -17,7 +17,8 @@ env:
   - SOLC_DOCKER=Off
   matrix:
 #Alex Binesh. Added the below line for the Docker login password. This is my docker password
-    secure: t3IuBNngD4NHtN2L4Lz502ln6j+lDAlMV2sIVxF5AK8YuOSB4ziFgZurucBJDfv8KiJ6QbmfZA7Rge+W02Cu/78sYYFC8gzQGyGLumJa/LzqJ8oJgZhegJgg2jnNsDEvyyaEsMBeo4XJbdo0O1leyf1V5g0HK3KigV1VJj+bYNTKzN6Gs2VFsJJnxkPi+W2PO2BdmyxLKbdZBtDkmCwgF2qdaRncv2AMKBmdv8LgtZBhemSQgWo2GqH33oTUlz34xwLM8rtUC7NfQN3qRpAQnsSgo7h5gYdffOEtqLqW1SjxOyqTLJbB88/cE8qljEQAF1gCZnG3YIxc7OFZ33bmV5q8N4slFBxODacN429lBydQAkBbM7MAHLWS0ze7c1GId2aLIE+J/waOZxitULRRZzwOneh0NmUe+5qzWMMwB9b3ugqllr7/LfQvmCjObo2M6DS9BEK91vZLoVp6cewO33soD6hz0zPKa5DRo4RPMe4zV3JoYSOoZVfTsEyzFQsGWL1nAbcITxd8gHhi4VUATolEPuzGA3h9KjHCLHJVVfvdkrL/blzHqk5sUwbdIQI/t21iYiRS8px7yhTzqzywR/YjN6kgeHXHxs1/+Wd2wOZJtY7XPqrZW0NSoJr8n/qxo3+NH7hyuPxq8kHGY68tBSKd9LiYuRW4uonTq2QCJbA=
+    secure: "ja6hhBnvuJn+DG9NvI6n83fsXBuTsB7IN3whA7WVsvuO8zXsMBoL/RfPSxZAa2ArFzxxhrJoCmjS3GddIJP2q2hR2OS7KkiR7BiC3H2etUZVoBVlxANLCSub5X03yCNT+0oEJlKFLIvf+wRT9o0RY3+aPP6Jgib6fDhxJrbJFQSGJfmL4kF4U0PK1K43bM2YuXRimvLqS9sfPB24b7yl6ZqthRZrJSp1n0tp255LolUfODIKbWRWwX258uMpTXieTPHmckZ61zIKAUDvnVbxmejLhUqrNZQI3vRpENaVj2YZ27I5uBBAD7ICJ8PrzOqMmK1DJLowuGOqFd1CGyXxxyeZo6eFeQlgHhP7m/6cLzx1b6ho5/FXwVieY36nJoDH+Mb9ol/0c+QP7NBuNSdsdS4Kc1RO0qoF6UrwiN4qJoxOLgjR5gNuqJn5TWZcOzU4M7VbgGNbSuc1SV66FkKF26AKlu94r9Ny1KCMMuC9m7rlljT6FyxLPONjwmY29BiRScNZ998opnlt5J2my/VxBN3VM1Kz12mGcWssJSlXtLoQN3MSTgnB+yNCX5MYPHKmtj3S836J00msCf+7M1SAMj8+99Oboy2+VKV9o+Vw4y++YxFTK/oJztACiRvVVXUouiinoVoLXetwly8EyIeMp3ElD3+YxDZmtDioCQkoiu8="
+
 #Alex Binesh. Added the above line for the Docker login password. This is my docker password
 matrix:
   include:
@@ -42,12 +43,12 @@ matrix:
     - docker
     env:
 #Alex Binesh. Added the below line for the Docker login credential. This is my docker username
-    - username=alexatshyft
+    - username=jaypersanchez
 #Alex Binesh. Added the above line for the Docker login credential. This is my docker username
     - SOLC_DOCKER=On
-    - SOLC_INSTALL_DEPS_TRAVIS=Off
-    - SOLC_RELEASE=Off
-    - SOLC_TESTS=Off
+    - SOLC_INSTALL_DEPS_TRAVIS=On
+    - SOLC_RELEASE=On
+    - SOLC_TESTS=On
   - os: linux
     dist: trusty
     sudo: required
@@ -62,9 +63,9 @@ matrix:
     - docker pull trzeci/emscripten:sdk-tag-1.35.4-64bit
     env:
     - SOLC_EMSCRIPTEN=On
-    - SOLC_INSTALL_DEPS_TRAVIS=Off
-    - SOLC_RELEASE=Off
-    - SOLC_TESTS=Off
+    - SOLC_INSTALL_DEPS_TRAVIS=On
+    - SOLC_RELEASE=On
+    - SOLC_TESTS=On
     - ZIP_SUFFIX=emscripten
     - SOLC_STOREBYTECODE=On
 git:
@@ -81,12 +82,12 @@ install:
   else date -u +"nightly.%Y.%-m.%-d" > prerelease.txt; fi
 - echo -n "$TRAVIS_COMMIT" > commit_hash.txt
 before_script:
-- test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
-- test $SOLC_DOCKER != On || (scripts/docker_build.sh)
-- test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
+  - test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
+  - test $SOLC_DOCKER != On || (scripts/docker_build.sh)
+  - test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
   $ZIP_SUFFIX && scripts/create_source_tarball.sh)
 script:
-- test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
+  - test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
 deploy:
 - provider: script
   script: test $SOLC_EMSCRIPTEN != On || (scripts/release_emscripten.sh)
