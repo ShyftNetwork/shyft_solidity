@@ -29,14 +29,21 @@
 #------------------------------------------------------------------------------
 
 set -e
+echo "Alex -6"
 
 VER=$(cat CMakeLists.txt | grep 'set(PROJECT_VERSION' | sed -e 's/.*set(PROJECT_VERSION "\(.*\)".*/\1/')
+echo "Alex -5"
 test -n "$VER"
+echo "Alex -4"
 VER="v$VER"
+echo "Alex -3"
 COMMIT=$(git rev-parse --short=8 HEAD)
+# remove leading zeros in components - they are not semver-compatible
+echo "Alex -2"
 DATE=$(date --date="$(git log -1 --date=iso --format=%ad HEAD)" --utc +%Y.%-m.%-d)
 
 # remove leading zeros in components - they are not semver-compatible
+echo "Alex -1"
 COMMIT=$(echo "$COMMIT" | sed -e 's/^0*//')
 echo "Alex 1"
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
