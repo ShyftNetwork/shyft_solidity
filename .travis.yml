@@ -104,7 +104,12 @@ deploy:
     - "/^v\\d/"
 - provider: releases
   api_key:
-    secure: PWH37xVBCF0XiSjl+eH7XIdkrfxZXjzvqF4PiBOnD3VnFz+odrdnIwBmCeBYTHTWF8efpp8fmzWJk2UVq1JcpyZiC+SVxO8dx91W2ia1a+wKrEQuDgkUrZBkl5IQNCv0QS81DDQhliyZEaYh8wHO/7RReyMpGpw2U2u85WkFiZ+LdlHEZPfzUeh9lxQ9n8qwFL8Rja+Q05d4cQ8zaVEtofJJT4T6DUWhc3TzuxDYxOmjwg37rC9CkGSLn6VadSh8b3j5R0SZupFsAEvBL/imBLP9r9ewoo7o4p6By3jwiIgH9yNg7LM618xbffcNaYF/KtLBi9uPHfqF7hRD4PlECz+D0PR78nQItOX5HKm1QMg5kCnghRVCA0IVjpV5fiYQnMLM7dCRv34I5b3zLpa69wQ/GLYB2FViqNUfvPeiZTEeIJ2OmATlFx8AH2JoqpY1XJknWb35+vMfa8LSiJJW++SLWeV+ncC92hrvyZ1cy3trepRRZIfyYepxHifnfdWMkddQUJk5b2WS5Fy/TJLZNPeombnpvRhUC38dsYItarKeXTc6k4oADCEDZ2rgGIcEiqRxXV11Y5xHJekLDWzUs+YJNcCuL4pnAP//LOnbnH2w9rLpwhQYSl0anCd097NivAXQJXO2JI/byIYz1kiCVQWnW6EM8+72mLOklf/Qr8k=
+#Alex Binesh. Added the below line for the Docker login password. This is my docker password
+
+#Alex Binesh took this line out and replaced it with the above line which is my own access code    secure: PWH37xVBCF0XiSjl+eH7XIdkrfxZXjzvqF4PiBOnD3VnFz+odrdnIwBmCeBYTHTWF8efpp8fmzWJk2UVq1JcpyZiC+SVxO8dx91W2ia1a+wKrEQuDgkUrZBkl5IQNCv0QS81DDQhliyZEaYh8wHO/7RReyMpGpw2U2u85WkFiZ+LdlHEZPfzUeh9lxQ9n8qwFL8Rja+Q05d4cQ8zaVEtofJJT4T6DUWhc3TzuxDYxOmjwg37rC9CkGSLn6VadSh8b3j5R0SZupFsAEvBL/imBLP9r9ewoo7o4p6By3jwiIgH9yNg7LM618xbffcNaYF/KtLBi9uPHfqF7hRD4PlECz+D0PR78nQItOX5HKm1QMg5kCnghRVCA0IVjpV5fiYQnMLM7dCRv34I5b3zLpa69wQ/GLYB2FViqNUfvPeiZTEeIJ2OmATlFx8AH2JoqpY1XJknWb35+vMfa8LSiJJW++SLWeV+ncC92hrvyZ1cy3trepRRZIfyYepxHifnfdWMkddQUJk5b2WS5Fy/TJLZNPeombnpvRhUC38dsYItarKeXTc6k4oADCEDZ2rgGIcEiqRxXV11Y5xHJekLDWzUs+YJNcCuL4pnAP//LOnbnH2w9rLpwhQYSl0anCd097NivAXQJXO2JI/byIYz1kiCVQWnW6EM8+72mLOklf/Qr8k=
+
+#Alex Binesh . I put the line below which is my Git Access Code
+    secure:d9e124cbbaa72570cee99c0954cdd592b6da41f9 
   overwrite: true
   file_glob: true
   file: "$TRAVIS_BUILD_DIR/upload/*"
