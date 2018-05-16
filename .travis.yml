@@ -12,7 +12,7 @@ env:
   - SOLC_INSTALL_DEPS_TRAVIS=On
 #Alex Binesh. Turned SOLC_TEST=OFF to stop tests. Turn it back on
   - SOLC_RELEASE=On
-  - SOLC_TESTS=Off
+  - SOLC_TESTS=On
   - SOLC_STOREBYTECODE=Off
   - SOLC_DOCKER=Off
   matrix:
