@@ -51,7 +51,6 @@ uname -v > /dev/null 2>&1 || { echo >&2 "ERROR - solidity requires 'uname' to id
 
 # See http://unix.stackexchange.com/questions/92199/how-can-i-reliably-get-the-operating-systems-name
 detect_linux_distro() {
-    echo " In the detect_linux_distro"
     if [ $(command -v lsb_release) ]; then
         DISTRO=$(lsb_release -is)
     elif [ -f /etc/os-release ]; then
@@ -267,7 +266,6 @@ case $(uname -s) in
                 #LinuxMint is a distro on top of Ubuntu.
                 #Ubuntu
                 install_z3=""
-				echo " After sudo apt-get -y update"
                 case $(lsb_release -cs) in
                     trusty|qiana|rebecca|rafaela|rosa)
                         #trusty
