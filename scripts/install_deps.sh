@@ -325,8 +325,9 @@ case $(uname -s) in
                 esac
 
 		echo " Before sudo apt-get -y update"
-                sudo apt-get -y update
+		sudo ls -asl
 		echo " After sudo apt-get -y update"
+                sudo apt-get -y update
                 sudo apt-get -y install \
                     build-essential \
                     cmake \
