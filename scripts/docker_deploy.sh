@@ -2,7 +2,7 @@
 
 set -e
 
-echo Attempting to log in to docker 
+echo Attempting to log in to docker. Username is $DOCKER_USERNAME Passowrd is $DOCKER_PASSWORD 
 docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
 echo Managed to log in to docker username $DOCKER_USERNAME and this is the password $DOCKER_PASSWORD
 version=$($(dirname "$0")/get_version.sh)
