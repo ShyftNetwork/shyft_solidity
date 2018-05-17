@@ -52,8 +52,9 @@ ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 echo "Alex 3"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 echo "Alex 4"
+echo This is the ENCRYPTED_IV: $ENCRYPTED_KEY
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-echo "Alex 5"
+echo This is the ENCRYPTED_IV: $ENCRYPTED_IV
 openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in scripts/travis-emscripten/deploy_key.enc -out deploy_key -d
 echo "Alex 6"
 chmod 600 deploy_key
