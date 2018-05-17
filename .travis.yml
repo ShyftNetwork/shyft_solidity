@@ -15,11 +15,11 @@ env:
   - SOLC_STOREBYTECODE=Off
   - SOLC_DOCKER=Off
   matrix:
-    secure: VjYiHy8gYT+MRz704uCaNEJPc01dKVeIRnXeZK6FogBJvh0cwLmcx5C4/RKGpSYNUpHLV3FiyZmuTMdPDJmaTukJy2krQm+YbqQEtiB9w5UNhqjoV13jHCrhcD5ZAy5o/mBIEiKPt9vsgqnEDg2yO19SA9Fz3ZNUAmjrlkWGFBsgnqugUGLhg4LJpGjCKh18+va8KSFLciG902tigBiwKyOL4jMfdremUrLIjI46V1AhlZ0tJQJmZiO1QmqzCtodbOaMWiBrJFqQ8/+Wp2r7kHhzlF71WOLp9cSxMkTCf3g/kiqDMeRev4EzAsDHVMurzBzt8O2Prkvx+FZfBIM5ypSwpR1gljJpWXQVMt5KOhoDuHxxADDW3khRTB89NTdkMsEuIeLsa54dTUMVEOVIjZ7YKu1DKUz1GgvWHlvOoDsBjzsfMJk5I1E0NKYZvBGx6hFHvucsaHbY00+5Z6qswaAzi4fCPb0KN1WyZYeIrsmGcDzyPdlwCUajpboHo+mqToxOzvnrP7QlJoZ3EITymXrvlnZ9CHvZk72OicOFYFdgCyV5jat2w8xUCAVuPO7aKV8KrwhwEoVZbh/T6E5vdeNYgoihYGO0khBnZtTrdBr9qiEruoD5ET42MKx+euHC+eg+7ZKnB28x6E3nyJjAunFRSTYPc3A5C4VVkwrtZh8=
+ #   secure: VjYiHy8gYT+MRz704uCaNEJPc01dKVeIRnXeZK6FogBJvh0cwLmcx5C4/RKGpSYNUpHLV3FiyZmuTMdPDJmaTukJy2krQm+YbqQEtiB9w5UNhqjoV13jHCrhcD5ZAy5o/mBIEiKPt9vsgqnEDg2yO19SA9Fz3ZNUAmjrlkWGFBsgnqugUGLhg4LJpGjCKh18+va8KSFLciG902tigBiwKyOL4jMfdremUrLIjI46V1AhlZ0tJQJmZiO1QmqzCtodbOaMWiBrJFqQ8/+Wp2r7kHhzlF71WOLp9cSxMkTCf3g/kiqDMeRev4EzAsDHVMurzBzt8O2Prkvx+FZfBIM5ypSwpR1gljJpWXQVMt5KOhoDuHxxADDW3khRTB89NTdkMsEuIeLsa54dTUMVEOVIjZ7YKu1DKUz1GgvWHlvOoDsBjzsfMJk5I1E0NKYZvBGx6hFHvucsaHbY00+5Z6qswaAzi4fCPb0KN1WyZYeIrsmGcDzyPdlwCUajpboHo+mqToxOzvnrP7QlJoZ3EITymXrvlnZ9CHvZk72OicOFYFdgCyV5jat2w8xUCAVuPO7aKV8KrwhwEoVZbh/T6E5vdeNYgoihYGO0khBnZtTrdBr9qiEruoD5ET42MKx+euHC+eg+7ZKnB28x6E3nyJjAunFRSTYPc3A5C4VVkwrtZh8=
   include:
   - os: linux
     dist: trusty
-#    sudo: required
+    sudo: required
     compiler: gcc
     env:
     - ZIP_SUFFIX=ubuntu-trusty
@@ -37,7 +37,7 @@ env:
     services:
     - docker
     env:
-    - username=alexatshyft
+#    - username=alexatshyft
     - SOLC_DOCKER=On
     - SOLC_INSTALL_DEPS_TRAVIS=Off
     - SOLC_RELEASE=Off
