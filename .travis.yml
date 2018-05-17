@@ -38,7 +38,7 @@ matrix:
     services:
     - docker
     env:
-    - username=AlexAtshyft
+    - username=alexatshyft
     - SOLC_DOCKER=On
     - SOLC_INSTALL_DEPS_TRAVIS=Off
     - SOLC_RELEASE=Off
