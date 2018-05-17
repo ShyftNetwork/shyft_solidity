@@ -19,7 +19,7 @@ env:
   include:
   - os: linux
     dist: trusty
-    sudo: required
+#    sudo: required
     compiler: gcc
     env:
     - ZIP_SUFFIX=ubuntu-trusty
