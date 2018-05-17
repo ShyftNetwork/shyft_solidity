@@ -15,9 +15,7 @@ env:
   - SOLC_STOREBYTECODE=Off
   - SOLC_DOCKER=Off
   matrix:
-#Alex Binesh. Added the below line for the Docker login password. This is my docker password
-    secure: t3IuBNngD4NHtN2L4Lz502ln6j+lDAlMV2sIVxF5AK8YuOSB4ziFgZurucBJDfv8KiJ6QbmfZA7Rge+W02Cu/78sYYFC8gzQGyGLumJa/LzqJ8oJgZhegJgg2jnNsDEvyyaEsMBeo4XJbdo0O1leyf1V5g0HK3KigV1VJj+bYNTKzN6Gs2VFsJJnxkPi+W2PO2BdmyxLKbdZBtDkmCwgF2qdaRncv2AMKBmdv8LgtZBhemSQgWo2GqH33oTUlz34xwLM8rtUC7NfQN3qRpAQnsSgo7h5gYdffOEtqLqW1SjxOyqTLJbB88/cE8qljEQAF1gCZnG3YIxc7OFZ33bmV5q8N4slFBxODacN429lBydQAkBbM7MAHLWS0ze7c1GId2aLIE+J/waOZxitULRRZzwOneh0NmUe+5qzWMMwB9b3ugqllr7/LfQvmCjObo2M6DS9BEK91vZLoVp6cewO33soD6hz0zPKa5DRo4RPMe4zV3JoYSOoZVfTsEyzFQsGWL1nAbcITxd8gHhi4VUATolEPuzGA3h9KjHCLHJVVfvdkrL/blzHqk5sUwbdIQI/t21iYiRS8px7yhTzqzywR/YjN6kgeHXHxs1/+Wd2wOZJtY7XPqrZW0NSoJr8n/qxo3+NH7hyuPxq8kHGY68tBSKd9LiYuRW4uonTq2QCJbA=
-#Alex Binesh. Added the above line for the Docker login password. This is my docker password
+    secure: Z3bBMaA/7cqBjPorFRhInz8gs+C21ysRtdErC3yVxSCueM5ri8t0KnmX9XzPVh+ulX10qDS8bN7gokQ2jjTiB3+KB2+QgFnffNHWqitiragtb0pRrg0HqG0rdFdZg545S4sWzYAo4vaOWtSpP5yfcyW93LOGcmqGPEED/3KpxE8Qm7HFNs496gh9vBm8/2rNr2rqDG8GxoV+gIPsADs4HaWADRaOjEvwZZpXIubqPQH8KKqULrgtJbLHMjwVUXYyGgZR5gBBTJ2a4kLSd+Kyk6El6UT2rFCrycpjlYbcz0F09atLxYdfv1BPLAcHJFGlFDxoMc/Do7hZzepnTRYZvj57XAMt/yS1G1pGh6lCCj7YQdoGr6zdsRa7ynGAl89h0+6qi38z4WLGqEJZ4aYGj05f+LE+vghfO7Ku8KenOUXWVnKX4Xvhwze8xAK3p/lW2UwNdCmkWwwfeIY2JJP/zScrluZb07dEQhP1cFVTJ+eIGyfeGcLfpGwgVIIQAZhXbL2POJiHi68pajoAjlXXrqOQ5FR9ldijx+FEN4AVpZBjgoUC0dSFLHuP0uSVsSK8QIE9HagpT212Xgc/S48XmhPaMg6j3XfkP6yr/irIuEKessXyB7h/95deGwWfey+YYLZykp6EdQmvPW6AhagwP61QFZD9efyGS+Ovlw6IQAI=
 matrix:
   include:
   - os: linux
@@ -40,9 +38,7 @@ matrix:
     services:
     - docker
     env:
-#Alex Binesh. Added the below line for the Docker login credential. This is my docker username
     - username=alexatshyft
-#Alex Binesh. Added the above line for the Docker login credential. This is my docker username
     - SOLC_DOCKER=On
     - SOLC_INSTALL_DEPS_TRAVIS=Off
     - SOLC_RELEASE=Off
