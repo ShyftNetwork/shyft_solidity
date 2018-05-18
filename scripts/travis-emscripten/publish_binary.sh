@@ -45,11 +45,11 @@ DATE=$(date --date="$(git log -1 --date=iso --format=%ad HEAD)" --utc +%Y.%-m.%-
 # remove leading zeros in components - they are not semver-compatible
 echo "Alex -1"
 COMMIT=$(echo "$COMMIT" | sed -e 's/^0*//')
-echo "Alex 1"
+echo This is ENCRYPTION_LABEL $ENCRYPTION_LABEL  
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
-echo "Alex 2"
+echo This is ENCRYPTED_KEY_VAR $ENCRYPTED_KEY_VAR  
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
-echo "Alex 3"
+echo This is ENCRYPTED_IV_VAR $ENCRYPTED_IV_VAR  
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 echo "Alex 4"
 echo This is the ENCRYPTED_IV: $ENCRYPTED_KEY
