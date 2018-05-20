@@ -49,7 +49,7 @@ eval `ssh-agent -s`
 ssh-add deploy_key
 
 git clone --depth 2 git@github.com:shyftnetwork/shyft_solc-bin.git
-cd solc-bin
+cd shyft_solc-bin
 git config user.name "travis"
 git config user.email "david@chainsafe.io"
 git checkout -B gh-pages origin/gh-pages
