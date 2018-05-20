@@ -89,7 +89,7 @@ EOF
         ssh-add deploy_key
 
         git clone --depth 2 git@github.com:shyftnetwork/shyft_solidity-test-bytecode.git
-        cd solidity-test-bytecode
+        cd shyft_solidity-test-bytecode
         git config user.name "travis"
         git config user.email "david@chainsafe.io"
         git clean -f -d -x
