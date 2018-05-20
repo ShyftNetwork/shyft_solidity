@@ -43,7 +43,7 @@ ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-openssl aes-256-cbc -K $encrypted_8a0b8b43dcad_key -iv $encrypted_8a0b8b43dcad_iv -in shyft_deploy_key.enc -out deploy_key -d
+openssl aes-256-cbc -K $encrypted_8a0b8b43dcad_key -iv $encrypted_8a0b8b43dcad_iv -in scripts/travis-emscripten/shyft_deploy_key.enc -out deploy_key -d
 chmod 600 deploy_key
 eval `ssh-agent -s`
 ssh-add deploy_key
