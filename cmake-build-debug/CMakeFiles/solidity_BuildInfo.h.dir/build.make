@@ -43,10 +43,10 @@ RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
+CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug
+CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity/cmake-build-debug
 
 # Utility rule file for solidity_BuildInfo.h.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-bu
 include CMakeFiles/solidity_BuildInfo.h.dir/progress.make
 
 CMakeFiles/solidity_BuildInfo.h:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DETH_SOURCE_DIR="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma" -DETH_BUILDINFO_IN="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/templates/BuildInfo.h.in" -DETH_DST_DIR="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/include/solidity" -DETH_CMAKE_DIR="/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake" -DETH_BUILD_TYPE="Debug" -DETH_BUILD_OS="Linux" -DETH_BUILD_COMPILER="g++" -DETH_BUILD_PLATFORM="Linux.g++" -DPROJECT_VERSION="0.4.21" -P /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake/scripts/buildinfo.cmake
+	cd /home/abinesh/shyft_solidity && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DETH_SOURCE_DIR="/home/abinesh/shyft_solidity" -DETH_BUILDINFO_IN="/home/abinesh/shyft_solidity/cmake/templates/BuildInfo.h.in" -DETH_DST_DIR="/home/abinesh/shyft_solidity/cmake-build-debug/include/solidity" -DETH_CMAKE_DIR="/home/abinesh/shyft_solidity/cmake" -DETH_BUILD_TYPE="Debug" -DETH_BUILD_OS="Linux" -DETH_BUILD_COMPILER="g++" -DETH_BUILD_PLATFORM="Linux.g++" -DPROJECT_VERSION="0.4.21" -P /home/abinesh/shyft_solidity/cmake/scripts/buildinfo.cmake
 
 solidity_BuildInfo.h: CMakeFiles/solidity_BuildInfo.h
 solidity_BuildInfo.h: CMakeFiles/solidity_BuildInfo.h.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/solidity_BuildInfo.h.dir/clean:
 .PHONY : CMakeFiles/solidity_BuildInfo.h.dir/clean
 
 CMakeFiles/solidity_BuildInfo.h.dir/depend:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles/solidity_BuildInfo.h.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity /home/abinesh/shyft_solidity /home/abinesh/shyft_solidity/cmake-build-debug /home/abinesh/shyft_solidity/cmake-build-debug /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/solidity_BuildInfo.h.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/solidity_BuildInfo.h.dir/depend
 

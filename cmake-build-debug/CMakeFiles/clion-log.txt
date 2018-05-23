@@ -1,4 +1,4 @@
-/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
+/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/abinesh/shyft_solidity
 CMake Deprecation Warning at cmake/EthPolicy.cmake:12 (cmake_policy):
   The OLD behavior for policy CMP0028 will be removed from a future version
   of CMake.
@@ -56,4 +56,4 @@ Call Stack (most recent call first):
 Z3 SMT solver found. This enables optional SMT checking.
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug
+-- Build files have been written to: /home/abinesh/shyft_solidity/cmake-build-debug

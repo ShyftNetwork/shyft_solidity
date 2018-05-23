@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.21;
 pragma substance ^0.1.0;
 contract Unique {
 

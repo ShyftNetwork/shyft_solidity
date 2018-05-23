@@ -22,14 +22,14 @@ function(check_file_hash has_hash hash_is_good)
   set("${has_hash}" TRUE PARENT_SCOPE)
 
   message(STATUS "verifying file...
-       file='/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz'")
+       file='/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz'")
 
-  file("SHA256" "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz" actual_value)
+  file("SHA256" "/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz" actual_value)
 
   if(NOT "${actual_value}" STREQUAL "087640ebcf7fbcfe8e2717a0b9528fff89c52fcf69fa2a18cc2b538008098f97")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
     message(STATUS "SHA256 hash of
-    /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz
+    /home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz
   does not match expected value
     expected: '087640ebcf7fbcfe8e2717a0b9528fff89c52fcf69fa2a18cc2b538008098f97'
       actual: '${actual_value}'")
@@ -71,7 +71,7 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if("/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz" STREQUAL "")
+if("/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz" STREQUAL "")
   message(FATAL_ERROR "LOCAL can't be empty")
 endif()
 
@@ -79,32 +79,32 @@ if("https://github.com/open-source-parsers/jsoncpp/archive/1.7.7.tar.gz" STREQUA
   message(FATAL_ERROR "REMOTE can't be empty")
 endif()
 
-if(EXISTS "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz")
+if(EXISTS "/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
     if(hash_is_good)
       message(STATUS "File already exists and hash match (skip download):
-  file='/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz'
+  file='/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz'
   SHA256='087640ebcf7fbcfe8e2717a0b9528fff89c52fcf69fa2a18cc2b538008098f97'"
       )
       return()
     else()
       message(STATUS "File already exists but hash mismatch. Removing...")
-      file(REMOVE "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz")
+      file(REMOVE "/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz")
     endif()
   else()
     message(STATUS "File already exists but no hash specified (use URL_HASH):
-  file='/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz'
+  file='/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz'
 Old file will be removed and new file downloaded from URL."
     )
-    file(REMOVE "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz")
+    file(REMOVE "/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz")
   endif()
 endif()
 
 set(retry_number 5)
 
 message(STATUS "Downloading...
-   dst='/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz'
+   dst='/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz'
    timeout='none'"
 )
 
@@ -119,7 +119,7 @@ foreach(i RANGE ${retry_number})
 
     file(
         DOWNLOAD
-        "${url}" "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz"
+        "${url}" "/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz"
         SHOW_PROGRESS
         # no TIMEOUT
         STATUS status
@@ -135,7 +135,7 @@ foreach(i RANGE ${retry_number})
       check_file_hash(has_hash hash_is_good)
       if(has_hash AND NOT hash_is_good)
         message(STATUS "Hash mismatch, removing...")
-        file(REMOVE "/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads/jsoncpp-1.7.7.tar.gz")
+        file(REMOVE "/home/abinesh/shyft_solidity/deps/downloads/jsoncpp-1.7.7.tar.gz")
       else()
         message(STATUS "Downloading... done")
         return()

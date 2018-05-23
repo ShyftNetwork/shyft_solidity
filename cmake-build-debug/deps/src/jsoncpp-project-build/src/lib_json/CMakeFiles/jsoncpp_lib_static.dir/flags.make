@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/include -I/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/../../include 
+CXX_INCLUDES = -I/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/include -I/home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project/src/lib_json/../../include 
 

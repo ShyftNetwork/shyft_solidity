@@ -43,10 +43,10 @@ RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
+CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug
+CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity/cmake-build-debug
 
 # Utility rule file for jsoncpp-project.
 
@@ -64,55 +64,55 @@ CMakeFiles/jsoncpp-project-complete: deps/src/jsoncpp-project-stamp/jsoncpp-proj
 CMakeFiles/jsoncpp-project-complete: deps/src/jsoncpp-project-stamp/jsoncpp-project-configure
 CMakeFiles/jsoncpp-project-complete: deps/src/jsoncpp-project-stamp/jsoncpp-project-build
 CMakeFiles/jsoncpp-project-complete: deps/src/jsoncpp-project-stamp/jsoncpp-project-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'jsoncpp-project'"
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles/jsoncpp-project-complete
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'jsoncpp-project'"
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project-complete
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-done
 
 deps/src/jsoncpp-project-stamp/jsoncpp-project-install: deps/src/jsoncpp-project-stamp/jsoncpp-project-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing install step for 'jsoncpp-project'"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build && cmake --build /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build --config Release --target install
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing install step for 'jsoncpp-project'"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build && cmake --build /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build --config Release --target install
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-install
 
 deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'jsoncpp-project'"
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/tmp
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/deps/downloads
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'jsoncpp-project'"
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity/cmake-build-debug/deps
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity/cmake-build-debug/deps/tmp
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E make_directory /home/abinesh/shyft_solidity/deps/downloads
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir
 
 deps/src/jsoncpp-project-stamp/jsoncpp-project-download: deps/src/jsoncpp-project-stamp/jsoncpp-project-urlinfo.txt
 deps/src/jsoncpp-project-stamp/jsoncpp-project-download: deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (download, verify and extract) for 'jsoncpp-project'"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/download-jsoncpp-project.cmake
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/verify-jsoncpp-project.cmake
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/extract-jsoncpp-project.cmake
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (download, verify and extract) for 'jsoncpp-project'"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/download-jsoncpp-project.cmake
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/verify-jsoncpp-project.cmake
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -P /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/extract-jsoncpp-project.cmake
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-download
 
 deps/src/jsoncpp-project-stamp/jsoncpp-project-update: deps/src/jsoncpp-project-stamp/jsoncpp-project-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No update step for 'jsoncpp-project'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No update step for 'jsoncpp-project'"
 	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E echo_append
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-update
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-update
 
 deps/src/jsoncpp-project-stamp/jsoncpp-project-patch: deps/src/jsoncpp-project-stamp/jsoncpp-project-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'jsoncpp-project'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'jsoncpp-project'"
 	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E echo_append
-	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-patch
+	/home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-patch
 
 deps/src/jsoncpp-project-stamp/jsoncpp-project-configure: deps/tmp/jsoncpp-project-cfgcmd.txt
 deps/src/jsoncpp-project-stamp/jsoncpp-project-configure: deps/src/jsoncpp-project-stamp/jsoncpp-project-update
 deps/src/jsoncpp-project-stamp/jsoncpp-project-configure: deps/src/jsoncpp-project-stamp/jsoncpp-project-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Performing configure step for 'jsoncpp-project'"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_PREFIX=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps -DCMAKE_C_COMPILER=/usr/bin/cc -DCMAKE_CXX_COMPILER=/usr/bin/c++ -DCMAKE_POSITION_INDEPENDENT_CODE= -DJSONCPP_WITH_TESTS=OFF -DJSONCPP_WITH_PKGCONFIG_SUPPORT=OFF -DCMAKE_CXX_FLAGS= "-GCodeBlocks - Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Performing configure step for 'jsoncpp-project'"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_PREFIX=/home/abinesh/shyft_solidity/cmake-build-debug/deps -DCMAKE_C_COMPILER=/usr/bin/cc -DCMAKE_CXX_COMPILER=/usr/bin/c++ -DCMAKE_POSITION_INDEPENDENT_CODE= -DJSONCPP_WITH_TESTS=OFF -DJSONCPP_WITH_PKGCONFIG_SUPPORT=OFF -DCMAKE_CXX_FLAGS= "-GCodeBlocks - Unix Makefiles" /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-configure
 
 deps/src/jsoncpp-project-stamp/jsoncpp-project-build: deps/src/jsoncpp-project-stamp/jsoncpp-project-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing build step for 'jsoncpp-project'"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build && cmake --build /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build --config Release
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing build step for 'jsoncpp-project'"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build && cmake --build /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build --config Release
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-build && /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E touch /home/abinesh/shyft_solidity/cmake-build-debug/deps/src/jsoncpp-project-stamp/jsoncpp-project-build
 
 jsoncpp-project: CMakeFiles/jsoncpp-project
 jsoncpp-project: CMakeFiles/jsoncpp-project-complete
@@ -137,6 +137,6 @@ CMakeFiles/jsoncpp-project.dir/clean:
 .PHONY : CMakeFiles/jsoncpp-project.dir/clean
 
 CMakeFiles/jsoncpp-project.dir/depend:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles/jsoncpp-project.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity /home/abinesh/shyft_solidity /home/abinesh/shyft_solidity/cmake-build-debug /home/abinesh/shyft_solidity/cmake-build-debug /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles/jsoncpp-project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/jsoncpp-project.dir/depend
 

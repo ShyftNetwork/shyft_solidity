@@ -43,10 +43,10 @@ RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
+CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug
+CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include test/CMakeFiles/soltest.dir/depend.make
@@ -59,16 +59,16 @@ include test/CMakeFiles/soltest.dir/flags.make
 
 test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.o: ../test/ExecutionFramework.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/ExecutionFramework.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/ExecutionFramework.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/ExecutionFramework.cpp.o -c /home/abinesh/shyft_solidity/test/ExecutionFramework.cpp
 
 test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/ExecutionFramework.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/ExecutionFramework.cpp > CMakeFiles/soltest.dir/ExecutionFramework.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/ExecutionFramework.cpp > CMakeFiles/soltest.dir/ExecutionFramework.cpp.i
 
 test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/ExecutionFramework.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/ExecutionFramework.cpp -o CMakeFiles/soltest.dir/ExecutionFramework.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/ExecutionFramework.cpp -o CMakeFiles/soltest.dir/ExecutionFramework.cpp.s
 
 test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.o.requires:
 
@@ -83,16 +83,16 @@ test/CMakeFiles/soltest.dir/ExecutionFramework.cpp.o.provides.build: test/CMakeF
 
 test/CMakeFiles/soltest.dir/Metadata.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/Metadata.cpp.o: ../test/Metadata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/soltest.dir/Metadata.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/Metadata.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/Metadata.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/soltest.dir/Metadata.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/Metadata.cpp.o -c /home/abinesh/shyft_solidity/test/Metadata.cpp
 
 test/CMakeFiles/soltest.dir/Metadata.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/Metadata.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/Metadata.cpp > CMakeFiles/soltest.dir/Metadata.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/Metadata.cpp > CMakeFiles/soltest.dir/Metadata.cpp.i
 
 test/CMakeFiles/soltest.dir/Metadata.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/Metadata.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/Metadata.cpp -o CMakeFiles/soltest.dir/Metadata.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/Metadata.cpp -o CMakeFiles/soltest.dir/Metadata.cpp.s
 
 test/CMakeFiles/soltest.dir/Metadata.cpp.o.requires:
 
@@ -107,16 +107,16 @@ test/CMakeFiles/soltest.dir/Metadata.cpp.o.provides.build: test/CMakeFiles/solte
 
 test/CMakeFiles/soltest.dir/RPCSession.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/RPCSession.cpp.o: ../test/RPCSession.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/soltest.dir/RPCSession.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/RPCSession.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/RPCSession.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/soltest.dir/RPCSession.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/RPCSession.cpp.o -c /home/abinesh/shyft_solidity/test/RPCSession.cpp
 
 test/CMakeFiles/soltest.dir/RPCSession.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/RPCSession.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/RPCSession.cpp > CMakeFiles/soltest.dir/RPCSession.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/RPCSession.cpp > CMakeFiles/soltest.dir/RPCSession.cpp.i
 
 test/CMakeFiles/soltest.dir/RPCSession.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/RPCSession.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/RPCSession.cpp -o CMakeFiles/soltest.dir/RPCSession.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/RPCSession.cpp -o CMakeFiles/soltest.dir/RPCSession.cpp.s
 
 test/CMakeFiles/soltest.dir/RPCSession.cpp.o.requires:
 
@@ -131,16 +131,16 @@ test/CMakeFiles/soltest.dir/RPCSession.cpp.o.provides.build: test/CMakeFiles/sol
 
 test/CMakeFiles/soltest.dir/TestHelper.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/TestHelper.cpp.o: ../test/TestHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/CMakeFiles/soltest.dir/TestHelper.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/TestHelper.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/TestHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/CMakeFiles/soltest.dir/TestHelper.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/TestHelper.cpp.o -c /home/abinesh/shyft_solidity/test/TestHelper.cpp
 
 test/CMakeFiles/soltest.dir/TestHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/TestHelper.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/TestHelper.cpp > CMakeFiles/soltest.dir/TestHelper.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/TestHelper.cpp > CMakeFiles/soltest.dir/TestHelper.cpp.i
 
 test/CMakeFiles/soltest.dir/TestHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/TestHelper.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/TestHelper.cpp -o CMakeFiles/soltest.dir/TestHelper.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/TestHelper.cpp -o CMakeFiles/soltest.dir/TestHelper.cpp.s
 
 test/CMakeFiles/soltest.dir/TestHelper.cpp.o.requires:
 
@@ -155,16 +155,16 @@ test/CMakeFiles/soltest.dir/TestHelper.cpp.o.provides.build: test/CMakeFiles/sol
 
 test/CMakeFiles/soltest.dir/boostTest.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/boostTest.cpp.o: ../test/boostTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/CMakeFiles/soltest.dir/boostTest.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/boostTest.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/boostTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/CMakeFiles/soltest.dir/boostTest.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/boostTest.cpp.o -c /home/abinesh/shyft_solidity/test/boostTest.cpp
 
 test/CMakeFiles/soltest.dir/boostTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/boostTest.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/boostTest.cpp > CMakeFiles/soltest.dir/boostTest.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/boostTest.cpp > CMakeFiles/soltest.dir/boostTest.cpp.i
 
 test/CMakeFiles/soltest.dir/boostTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/boostTest.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/boostTest.cpp -o CMakeFiles/soltest.dir/boostTest.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/boostTest.cpp -o CMakeFiles/soltest.dir/boostTest.cpp.s
 
 test/CMakeFiles/soltest.dir/boostTest.cpp.o.requires:
 
@@ -179,16 +179,16 @@ test/CMakeFiles/soltest.dir/boostTest.cpp.o.provides.build: test/CMakeFiles/solt
 
 test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o: ../test/contracts/AuctionRegistrar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/AuctionRegistrar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o -c /home/abinesh/shyft_solidity/test/contracts/AuctionRegistrar.cpp
 
 test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/AuctionRegistrar.cpp > CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/contracts/AuctionRegistrar.cpp > CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.i
 
 test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/AuctionRegistrar.cpp -o CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/contracts/AuctionRegistrar.cpp -o CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.s
 
 test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o.requires:
 
@@ -203,16 +203,16 @@ test/CMakeFiles/soltest.dir/contracts/AuctionRegistrar.cpp.o.provides.build: tes
 
 test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o: ../test/contracts/FixedFeeRegistrar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/FixedFeeRegistrar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o -c /home/abinesh/shyft_solidity/test/contracts/FixedFeeRegistrar.cpp
 
 test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/FixedFeeRegistrar.cpp > CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/contracts/FixedFeeRegistrar.cpp > CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.i
 
 test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/FixedFeeRegistrar.cpp -o CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/contracts/FixedFeeRegistrar.cpp -o CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.s
 
 test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o.requires:
 
@@ -227,16 +227,16 @@ test/CMakeFiles/soltest.dir/contracts/FixedFeeRegistrar.cpp.o.provides.build: te
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o: ../test/contracts/LLL_ENS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ENS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o -c /home/abinesh/shyft_solidity/test/contracts/LLL_ENS.cpp
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ENS.cpp > CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/contracts/LLL_ENS.cpp > CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.i
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ENS.cpp -o CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/contracts/LLL_ENS.cpp -o CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.s
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o.requires:
 
@@ -251,16 +251,16 @@ test/CMakeFiles/soltest.dir/contracts/LLL_ENS.cpp.o.provides.build: test/CMakeFi
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o: ../test/contracts/LLL_ERC20.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ERC20.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o -c /home/abinesh/shyft_solidity/test/contracts/LLL_ERC20.cpp
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ERC20.cpp > CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/contracts/LLL_ERC20.cpp > CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.i
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/LLL_ERC20.cpp -o CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/contracts/LLL_ERC20.cpp -o CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.s
 
 test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o.requires:
 
@@ -275,16 +275,16 @@ test/CMakeFiles/soltest.dir/contracts/LLL_ERC20.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.o: ../test/contracts/Wallet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/Wallet.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/Wallet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/contracts/Wallet.cpp.o -c /home/abinesh/shyft_solidity/test/contracts/Wallet.cpp
 
 test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/contracts/Wallet.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/Wallet.cpp > CMakeFiles/soltest.dir/contracts/Wallet.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/contracts/Wallet.cpp > CMakeFiles/soltest.dir/contracts/Wallet.cpp.i
 
 test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/contracts/Wallet.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/contracts/Wallet.cpp -o CMakeFiles/soltest.dir/contracts/Wallet.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/contracts/Wallet.cpp -o CMakeFiles/soltest.dir/contracts/Wallet.cpp.s
 
 test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.o.requires:
 
@@ -299,16 +299,16 @@ test/CMakeFiles/soltest.dir/contracts/Wallet.cpp.o.provides.build: test/CMakeFil
 
 test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o: ../test/libdevcore/Checksum.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Checksum.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o -c /home/abinesh/shyft_solidity/test/libdevcore/Checksum.cpp
 
 test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Checksum.cpp > CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libdevcore/Checksum.cpp > CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.i
 
 test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Checksum.cpp -o CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libdevcore/Checksum.cpp -o CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.s
 
 test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o.requires:
 
@@ -323,16 +323,16 @@ test/CMakeFiles/soltest.dir/libdevcore/Checksum.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o: ../test/libdevcore/IndentedWriter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/IndentedWriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o -c /home/abinesh/shyft_solidity/test/libdevcore/IndentedWriter.cpp
 
 test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/IndentedWriter.cpp > CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libdevcore/IndentedWriter.cpp > CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.i
 
 test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/IndentedWriter.cpp -o CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libdevcore/IndentedWriter.cpp -o CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.s
 
 test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o.requires:
 
@@ -347,16 +347,16 @@ test/CMakeFiles/soltest.dir/libdevcore/IndentedWriter.cpp.o.provides.build: test
 
 test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o: ../test/libdevcore/JSON.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/JSON.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o -c /home/abinesh/shyft_solidity/test/libdevcore/JSON.cpp
 
 test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libdevcore/JSON.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/JSON.cpp > CMakeFiles/soltest.dir/libdevcore/JSON.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libdevcore/JSON.cpp > CMakeFiles/soltest.dir/libdevcore/JSON.cpp.i
 
 test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libdevcore/JSON.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/JSON.cpp -o CMakeFiles/soltest.dir/libdevcore/JSON.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libdevcore/JSON.cpp -o CMakeFiles/soltest.dir/libdevcore/JSON.cpp.s
 
 test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o.requires:
 
@@ -371,16 +371,16 @@ test/CMakeFiles/soltest.dir/libdevcore/JSON.cpp.o.provides.build: test/CMakeFile
 
 test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o: ../test/libdevcore/StringUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/StringUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o -c /home/abinesh/shyft_solidity/test/libdevcore/StringUtils.cpp
 
 test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/StringUtils.cpp > CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libdevcore/StringUtils.cpp > CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.i
 
 test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/StringUtils.cpp -o CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libdevcore/StringUtils.cpp -o CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.s
 
 test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o.requires:
 
@@ -395,16 +395,16 @@ test/CMakeFiles/soltest.dir/libdevcore/StringUtils.cpp.o.provides.build: test/CM
 
 test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o: ../test/libdevcore/SwarmHash.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/SwarmHash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o -c /home/abinesh/shyft_solidity/test/libdevcore/SwarmHash.cpp
 
 test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/SwarmHash.cpp > CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libdevcore/SwarmHash.cpp > CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.i
 
 test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/SwarmHash.cpp -o CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libdevcore/SwarmHash.cpp -o CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.s
 
 test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o.requires:
 
@@ -419,16 +419,16 @@ test/CMakeFiles/soltest.dir/libdevcore/SwarmHash.cpp.o.provides.build: test/CMak
 
 test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o: ../test/libdevcore/UTF8.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/UTF8.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o -c /home/abinesh/shyft_solidity/test/libdevcore/UTF8.cpp
 
 test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/UTF8.cpp > CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libdevcore/UTF8.cpp > CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.i
 
 test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/UTF8.cpp -o CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libdevcore/UTF8.cpp -o CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.s
 
 test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o.requires:
 
@@ -443,16 +443,16 @@ test/CMakeFiles/soltest.dir/libdevcore/UTF8.cpp.o.provides.build: test/CMakeFile
 
 test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o: ../test/libdevcore/Whiskers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Whiskers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o -c /home/abinesh/shyft_solidity/test/libdevcore/Whiskers.cpp
 
 test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Whiskers.cpp > CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libdevcore/Whiskers.cpp > CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.i
 
 test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libdevcore/Whiskers.cpp -o CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libdevcore/Whiskers.cpp -o CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.s
 
 test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o.requires:
 
@@ -467,16 +467,16 @@ test/CMakeFiles/soltest.dir/libdevcore/Whiskers.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o: ../test/libevmasm/Optimiser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/Optimiser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o -c /home/abinesh/shyft_solidity/test/libevmasm/Optimiser.cpp
 
 test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/Optimiser.cpp > CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libevmasm/Optimiser.cpp > CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.i
 
 test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/Optimiser.cpp -o CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libevmasm/Optimiser.cpp -o CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.s
 
 test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o.requires:
 
@@ -491,16 +491,16 @@ test/CMakeFiles/soltest.dir/libevmasm/Optimiser.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o: ../test/libevmasm/SourceLocation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/SourceLocation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o -c /home/abinesh/shyft_solidity/test/libevmasm/SourceLocation.cpp
 
 test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/SourceLocation.cpp > CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libevmasm/SourceLocation.cpp > CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.i
 
 test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libevmasm/SourceLocation.cpp -o CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libevmasm/SourceLocation.cpp -o CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.s
 
 test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o.requires:
 
@@ -515,16 +515,16 @@ test/CMakeFiles/soltest.dir/libevmasm/SourceLocation.cpp.o.provides.build: test/
 
 test/CMakeFiles/soltest.dir/libjulia/Common.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/Common.cpp.o: ../test/libjulia/Common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Common.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Common.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Common.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Common.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/Common.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/Common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/Common.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Common.cpp > CMakeFiles/soltest.dir/libjulia/Common.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/Common.cpp > CMakeFiles/soltest.dir/libjulia/Common.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/Common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/Common.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Common.cpp -o CMakeFiles/soltest.dir/libjulia/Common.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/Common.cpp -o CMakeFiles/soltest.dir/libjulia/Common.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/Common.cpp.o.requires:
 
@@ -539,16 +539,16 @@ test/CMakeFiles/soltest.dir/libjulia/Common.cpp.o.provides.build: test/CMakeFile
 
 test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o: ../test/libjulia/Disambiguator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Disambiguator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/Disambiguator.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Disambiguator.cpp > CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/Disambiguator.cpp > CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Disambiguator.cpp -o CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/Disambiguator.cpp -o CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o.requires:
 
@@ -563,16 +563,16 @@ test/CMakeFiles/soltest.dir/libjulia/Disambiguator.cpp.o.provides.build: test/CM
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o: ../test/libjulia/FunctionGrouper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionGrouper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/FunctionGrouper.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionGrouper.cpp > CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/FunctionGrouper.cpp > CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionGrouper.cpp -o CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/FunctionGrouper.cpp -o CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o.requires:
 
@@ -587,16 +587,16 @@ test/CMakeFiles/soltest.dir/libjulia/FunctionGrouper.cpp.o.provides.build: test/
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o: ../test/libjulia/FunctionHoister.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionHoister.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/FunctionHoister.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionHoister.cpp > CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/FunctionHoister.cpp > CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/FunctionHoister.cpp -o CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/FunctionHoister.cpp -o CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o.requires:
 
@@ -611,16 +611,16 @@ test/CMakeFiles/soltest.dir/libjulia/FunctionHoister.cpp.o.provides.build: test/
 
 test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o: ../test/libjulia/Inliner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Inliner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/Inliner.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/Inliner.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Inliner.cpp > CMakeFiles/soltest.dir/libjulia/Inliner.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/Inliner.cpp > CMakeFiles/soltest.dir/libjulia/Inliner.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/Inliner.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Inliner.cpp -o CMakeFiles/soltest.dir/libjulia/Inliner.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/Inliner.cpp -o CMakeFiles/soltest.dir/libjulia/Inliner.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o.requires:
 
@@ -635,16 +635,16 @@ test/CMakeFiles/soltest.dir/libjulia/Inliner.cpp.o.provides.build: test/CMakeFil
 
 test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.o: ../test/libjulia/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Parser.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Parser.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/Parser.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/Parser.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Parser.cpp > CMakeFiles/soltest.dir/libjulia/Parser.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/Parser.cpp > CMakeFiles/soltest.dir/libjulia/Parser.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/Parser.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Parser.cpp -o CMakeFiles/soltest.dir/libjulia/Parser.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/Parser.cpp -o CMakeFiles/soltest.dir/libjulia/Parser.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.o.requires:
 
@@ -659,16 +659,16 @@ test/CMakeFiles/soltest.dir/libjulia/Parser.cpp.o.provides.build: test/CMakeFile
 
 test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o: ../test/libjulia/Rematerialiser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Rematerialiser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/Rematerialiser.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Rematerialiser.cpp > CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/Rematerialiser.cpp > CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Rematerialiser.cpp -o CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/Rematerialiser.cpp -o CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o.requires:
 
@@ -683,16 +683,16 @@ test/CMakeFiles/soltest.dir/libjulia/Rematerialiser.cpp.o.provides.build: test/C
 
 test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o: ../test/libjulia/Simplifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Simplifier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/Simplifier.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Simplifier.cpp > CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/Simplifier.cpp > CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/Simplifier.cpp -o CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/Simplifier.cpp -o CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o.requires:
 
@@ -707,16 +707,16 @@ test/CMakeFiles/soltest.dir/libjulia/Simplifier.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o: ../test/libjulia/UnusedPruner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/UnusedPruner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o -c /home/abinesh/shyft_solidity/test/libjulia/UnusedPruner.cpp
 
 test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/UnusedPruner.cpp > CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libjulia/UnusedPruner.cpp > CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.i
 
 test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libjulia/UnusedPruner.cpp -o CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libjulia/UnusedPruner.cpp -o CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.s
 
 test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o.requires:
 
@@ -731,16 +731,16 @@ test/CMakeFiles/soltest.dir/libjulia/UnusedPruner.cpp.o.provides.build: test/CMa
 
 test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.o: ../test/liblll/Compiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/Compiler.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Compiler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/Compiler.cpp.o -c /home/abinesh/shyft_solidity/test/liblll/Compiler.cpp
 
 test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/liblll/Compiler.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Compiler.cpp > CMakeFiles/soltest.dir/liblll/Compiler.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/liblll/Compiler.cpp > CMakeFiles/soltest.dir/liblll/Compiler.cpp.i
 
 test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/liblll/Compiler.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Compiler.cpp -o CMakeFiles/soltest.dir/liblll/Compiler.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/liblll/Compiler.cpp -o CMakeFiles/soltest.dir/liblll/Compiler.cpp.s
 
 test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.o.requires:
 
@@ -755,16 +755,16 @@ test/CMakeFiles/soltest.dir/liblll/Compiler.cpp.o.provides.build: test/CMakeFile
 
 test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o: ../test/liblll/EndToEndTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/EndToEndTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o -c /home/abinesh/shyft_solidity/test/liblll/EndToEndTest.cpp
 
 test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/EndToEndTest.cpp > CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/liblll/EndToEndTest.cpp > CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.i
 
 test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/EndToEndTest.cpp -o CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/liblll/EndToEndTest.cpp -o CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.s
 
 test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o.requires:
 
@@ -779,16 +779,16 @@ test/CMakeFiles/soltest.dir/liblll/EndToEndTest.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o: ../test/liblll/ExecutionFramework.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/ExecutionFramework.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o -c /home/abinesh/shyft_solidity/test/liblll/ExecutionFramework.cpp
 
 test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/ExecutionFramework.cpp > CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/liblll/ExecutionFramework.cpp > CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.i
 
 test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/ExecutionFramework.cpp -o CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/liblll/ExecutionFramework.cpp -o CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.s
 
 test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o.requires:
 
@@ -803,16 +803,16 @@ test/CMakeFiles/soltest.dir/liblll/ExecutionFramework.cpp.o.provides.build: test
 
 test/CMakeFiles/soltest.dir/liblll/Parser.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/liblll/Parser.cpp.o: ../test/liblll/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object test/CMakeFiles/soltest.dir/liblll/Parser.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/Parser.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object test/CMakeFiles/soltest.dir/liblll/Parser.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/liblll/Parser.cpp.o -c /home/abinesh/shyft_solidity/test/liblll/Parser.cpp
 
 test/CMakeFiles/soltest.dir/liblll/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/liblll/Parser.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Parser.cpp > CMakeFiles/soltest.dir/liblll/Parser.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/liblll/Parser.cpp > CMakeFiles/soltest.dir/liblll/Parser.cpp.i
 
 test/CMakeFiles/soltest.dir/liblll/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/liblll/Parser.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/liblll/Parser.cpp -o CMakeFiles/soltest.dir/liblll/Parser.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/liblll/Parser.cpp -o CMakeFiles/soltest.dir/liblll/Parser.cpp.s
 
 test/CMakeFiles/soltest.dir/liblll/Parser.cpp.o.requires:
 
@@ -827,16 +827,16 @@ test/CMakeFiles/soltest.dir/liblll/Parser.cpp.o.provides.build: test/CMakeFiles/
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o: ../test/libsolidity/ABIDecoderTests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIDecoderTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/ABIDecoderTests.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIDecoderTests.cpp > CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/ABIDecoderTests.cpp > CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIDecoderTests.cpp -o CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/ABIDecoderTests.cpp -o CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o.requires:
 
@@ -851,16 +851,16 @@ test/CMakeFiles/soltest.dir/libsolidity/ABIDecoderTests.cpp.o.provides.build: te
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o: ../test/libsolidity/ABIEncoderTests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIEncoderTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/ABIEncoderTests.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIEncoderTests.cpp > CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/ABIEncoderTests.cpp > CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ABIEncoderTests.cpp -o CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/ABIEncoderTests.cpp -o CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o.requires:
 
@@ -875,16 +875,16 @@ test/CMakeFiles/soltest.dir/libsolidity/ABIEncoderTests.cpp.o.provides.build: te
 
 test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o: ../test/libsolidity/ASTJSON.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ASTJSON.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/ASTJSON.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ASTJSON.cpp > CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/ASTJSON.cpp > CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ASTJSON.cpp -o CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/ASTJSON.cpp -o CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o.requires:
 
@@ -899,16 +899,16 @@ test/CMakeFiles/soltest.dir/libsolidity/ASTJSON.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o: ../test/libsolidity/AnalysisFramework.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/AnalysisFramework.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/AnalysisFramework.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/AnalysisFramework.cpp > CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/AnalysisFramework.cpp > CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/AnalysisFramework.cpp -o CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/AnalysisFramework.cpp -o CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o.requires:
 
@@ -923,16 +923,16 @@ test/CMakeFiles/soltest.dir/libsolidity/AnalysisFramework.cpp.o.provides.build: 
 
 test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o: ../test/libsolidity/Assembly.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Assembly.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/Assembly.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Assembly.cpp > CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/Assembly.cpp > CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Assembly.cpp -o CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/Assembly.cpp -o CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o.requires:
 
@@ -947,16 +947,16 @@ test/CMakeFiles/soltest.dir/libsolidity/Assembly.cpp.o.provides.build: test/CMak
 
 test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o: ../test/libsolidity/ErrorCheck.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ErrorCheck.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/ErrorCheck.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ErrorCheck.cpp > CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/ErrorCheck.cpp > CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ErrorCheck.cpp -o CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/ErrorCheck.cpp -o CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o.requires:
 
@@ -971,16 +971,16 @@ test/CMakeFiles/soltest.dir/libsolidity/ErrorCheck.cpp.o.provides.build: test/CM
 
 test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o: ../test/libsolidity/GasMeter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/GasMeter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/GasMeter.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/GasMeter.cpp > CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/GasMeter.cpp > CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/GasMeter.cpp -o CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/GasMeter.cpp -o CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o.requires:
 
@@ -995,16 +995,16 @@ test/CMakeFiles/soltest.dir/libsolidity/GasMeter.cpp.o.provides.build: test/CMak
 
 test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o: ../test/libsolidity/Imports.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Imports.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/Imports.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/Imports.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Imports.cpp > CMakeFiles/soltest.dir/libsolidity/Imports.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/Imports.cpp > CMakeFiles/soltest.dir/libsolidity/Imports.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/Imports.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Imports.cpp -o CMakeFiles/soltest.dir/libsolidity/Imports.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/Imports.cpp -o CMakeFiles/soltest.dir/libsolidity/Imports.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o.requires:
 
@@ -1019,16 +1019,16 @@ test/CMakeFiles/soltest.dir/libsolidity/Imports.cpp.o.provides.build: test/CMake
 
 test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o: ../test/libsolidity/InlineAssembly.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/InlineAssembly.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/InlineAssembly.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/InlineAssembly.cpp > CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/InlineAssembly.cpp > CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/InlineAssembly.cpp -o CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/InlineAssembly.cpp -o CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o.requires:
 
@@ -1043,16 +1043,16 @@ test/CMakeFiles/soltest.dir/libsolidity/InlineAssembly.cpp.o.provides.build: tes
 
 test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o: ../test/libsolidity/JSONCompiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/JSONCompiler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/JSONCompiler.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/JSONCompiler.cpp > CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/JSONCompiler.cpp > CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/JSONCompiler.cpp -o CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/JSONCompiler.cpp -o CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o.requires:
 
@@ -1067,16 +1067,16 @@ test/CMakeFiles/soltest.dir/libsolidity/JSONCompiler.cpp.o.provides.build: test/
 
 test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o: ../test/libsolidity/Metadata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Metadata.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/Metadata.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Metadata.cpp > CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/Metadata.cpp > CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/Metadata.cpp -o CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/Metadata.cpp -o CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o.requires:
 
@@ -1091,16 +1091,16 @@ test/CMakeFiles/soltest.dir/libsolidity/Metadata.cpp.o.provides.build: test/CMak
 
 test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o: ../test/libsolidity/SMTChecker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SMTChecker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SMTChecker.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SMTChecker.cpp > CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SMTChecker.cpp > CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SMTChecker.cpp -o CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SMTChecker.cpp -o CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o.requires:
 
@@ -1115,16 +1115,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SMTChecker.cpp.o.provides.build: test/CM
 
 test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o: ../test/libsolidity/SemVerMatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SemVerMatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SemVerMatcher.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SemVerMatcher.cpp > CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SemVerMatcher.cpp > CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SemVerMatcher.cpp -o CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SemVerMatcher.cpp -o CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o.requires:
 
@@ -1139,16 +1139,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SemVerMatcher.cpp.o.provides.build: test
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o: ../test/libsolidity/SolidityABIJSON.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityABIJSON.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityABIJSON.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityABIJSON.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityABIJSON.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityABIJSON.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityABIJSON.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o.requires:
 
@@ -1163,16 +1163,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityABIJSON.cpp.o.provides.build: te
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o: ../test/libsolidity/SolidityEndToEndTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityEndToEndTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityEndToEndTest.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityEndToEndTest.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityEndToEndTest.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityEndToEndTest.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityEndToEndTest.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o.requires:
 
@@ -1187,16 +1187,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityEndToEndTest.cpp.o.provides.buil
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o: ../test/libsolidity/SolidityExecutionFramework.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExecutionFramework.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityExecutionFramework.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExecutionFramework.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityExecutionFramework.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExecutionFramework.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityExecutionFramework.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o.requires:
 
@@ -1211,16 +1211,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityExecutionFramework.cpp.o.provide
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o: ../test/libsolidity/SolidityExpressionCompiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExpressionCompiler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityExpressionCompiler.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExpressionCompiler.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityExpressionCompiler.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityExpressionCompiler.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityExpressionCompiler.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o.requires:
 
@@ -1235,16 +1235,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityExpressionCompiler.cpp.o.provide
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o: ../test/libsolidity/SolidityNameAndTypeResolution.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNameAndTypeResolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityNameAndTypeResolution.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNameAndTypeResolution.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityNameAndTypeResolution.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNameAndTypeResolution.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityNameAndTypeResolution.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o.requires:
 
@@ -1259,16 +1259,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityNameAndTypeResolution.cpp.o.prov
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o: ../test/libsolidity/SolidityNatspecJSON.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNatspecJSON.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityNatspecJSON.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNatspecJSON.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityNatspecJSON.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityNatspecJSON.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityNatspecJSON.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o.requires:
 
@@ -1283,16 +1283,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityNatspecJSON.cpp.o.provides.build
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o: ../test/libsolidity/SolidityOptimizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityOptimizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityOptimizer.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityOptimizer.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityOptimizer.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityOptimizer.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityOptimizer.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o.requires:
 
@@ -1307,16 +1307,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityOptimizer.cpp.o.provides.build: 
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o: ../test/libsolidity/SolidityParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityParser.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityParser.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityParser.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityParser.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityParser.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o.requires:
 
@@ -1331,16 +1331,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityParser.cpp.o.provides.build: tes
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o: ../test/libsolidity/SolidityScanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityScanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityScanner.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityScanner.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityScanner.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityScanner.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityScanner.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o.requires:
 
@@ -1355,16 +1355,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityScanner.cpp.o.provides.build: te
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o: ../test/libsolidity/SolidityTypes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityTypes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/SolidityTypes.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityTypes.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/SolidityTypes.cpp > CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/SolidityTypes.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/SolidityTypes.cpp -o CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o.requires:
 
@@ -1379,16 +1379,16 @@ test/CMakeFiles/soltest.dir/libsolidity/SolidityTypes.cpp.o.provides.build: test
 
 test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o: ../test/libsolidity/StandardCompiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/StandardCompiler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/StandardCompiler.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/StandardCompiler.cpp > CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/StandardCompiler.cpp > CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/StandardCompiler.cpp -o CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/StandardCompiler.cpp -o CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o.requires:
 
@@ -1403,16 +1403,16 @@ test/CMakeFiles/soltest.dir/libsolidity/StandardCompiler.cpp.o.provides.build: t
 
 test/CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.o: test/CMakeFiles/soltest.dir/flags.make
 test/CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.o: ../test/libsolidity/ViewPureChecker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ViewPureChecker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object test/CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.o -c /home/abinesh/shyft_solidity/test/libsolidity/ViewPureChecker.cpp
 
 test/CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ViewPureChecker.cpp > CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/test/libsolidity/ViewPureChecker.cpp > CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.i
 
 test/CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test/libsolidity/ViewPureChecker.cpp -o CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/test/libsolidity/ViewPureChecker.cpp -o CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.s
 
 test/CMakeFiles/soltest.dir/libsolidity/ViewPureChecker.cpp.o.requires:
 
@@ -1559,8 +1559,8 @@ test/soltest: /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
 test/soltest: /usr/lib/x86_64-linux-gnu/libboost_regex.a
 test/soltest: /usr/lib/x86_64-linux-gnu/libboost_system.a
 test/soltest: test/CMakeFiles/soltest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Linking CXX executable soltest"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/soltest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Linking CXX executable soltest"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/soltest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/soltest.dir/build: test/soltest
@@ -1628,10 +1628,10 @@ test/CMakeFiles/soltest.dir/requires: test/CMakeFiles/soltest.dir/libsolidity/Vi
 .PHONY : test/CMakeFiles/soltest.dir/requires
 
 test/CMakeFiles/soltest.dir/clean:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test && $(CMAKE_COMMAND) -P CMakeFiles/soltest.dir/cmake_clean.cmake
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/test && $(CMAKE_COMMAND) -P CMakeFiles/soltest.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/soltest.dir/clean
 
 test/CMakeFiles/soltest.dir/depend:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/test /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/test/CMakeFiles/soltest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity /home/abinesh/shyft_solidity/test /home/abinesh/shyft_solidity/cmake-build-debug /home/abinesh/shyft_solidity/cmake-build-debug/test /home/abinesh/shyft_solidity/cmake-build-debug/test/CMakeFiles/soltest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/soltest.dir/depend
 

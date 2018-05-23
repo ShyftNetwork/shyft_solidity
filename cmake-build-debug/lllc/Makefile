@@ -48,10 +48,10 @@ RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
+CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug
+CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/lllc/CMakeFiles/progress.marks
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles 0
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles /home/abinesh/shyft_solidity/cmake-build-debug/lllc/CMakeFiles/progress.marks
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/clean
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/preinstall
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/preinstall
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lllc/CMakeFiles/lllc.dir/rule:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/CMakeFiles/lllc.dir/rule
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lllc/CMakeFiles/lllc.dir/rule
 .PHONY : lllc/CMakeFiles/lllc.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ lllc: lllc/CMakeFiles/lllc.dir/rule
 
 # fast build rule for target.
 lllc/fast:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/build
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/build
 .PHONY : lllc/fast
 
 main.o: main.cpp.o
@@ -177,7 +177,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/main.cpp.o
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -186,7 +186,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/main.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -195,7 +195,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/main.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(MAKE) -f lllc/CMakeFiles/lllc.dir/build.make lllc/CMakeFiles/lllc.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

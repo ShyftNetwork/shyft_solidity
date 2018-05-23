@@ -43,10 +43,10 @@ RM = /home/abinesh/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma
+CMAKE_SOURCE_DIR = /home/abinesh/shyft_solidity
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug
+CMAKE_BINARY_DIR = /home/abinesh/shyft_solidity/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include libevmasm/CMakeFiles/evmasm.dir/depend.make
@@ -59,16 +59,16 @@ include libevmasm/CMakeFiles/evmasm.dir/flags.make
 
 libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.o: ../libevmasm/Assembly.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/Assembly.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Assembly.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/Assembly.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/Assembly.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/Assembly.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Assembly.cpp > CMakeFiles/evmasm.dir/Assembly.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/Assembly.cpp > CMakeFiles/evmasm.dir/Assembly.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/Assembly.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Assembly.cpp -o CMakeFiles/evmasm.dir/Assembly.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/Assembly.cpp -o CMakeFiles/evmasm.dir/Assembly.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.o.requires:
 
@@ -83,16 +83,16 @@ libevmasm/CMakeFiles/evmasm.dir/Assembly.cpp.o.provides.build: libevmasm/CMakeFi
 
 libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.o: ../libevmasm/AssemblyItem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/AssemblyItem.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/AssemblyItem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/AssemblyItem.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/AssemblyItem.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/AssemblyItem.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/AssemblyItem.cpp > CMakeFiles/evmasm.dir/AssemblyItem.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/AssemblyItem.cpp > CMakeFiles/evmasm.dir/AssemblyItem.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/AssemblyItem.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/AssemblyItem.cpp -o CMakeFiles/evmasm.dir/AssemblyItem.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/AssemblyItem.cpp -o CMakeFiles/evmasm.dir/AssemblyItem.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.o.requires:
 
@@ -107,16 +107,16 @@ libevmasm/CMakeFiles/evmasm.dir/AssemblyItem.cpp.o.provides.build: libevmasm/CMa
 
 libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o: ../libevmasm/BlockDeduplicator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/BlockDeduplicator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/BlockDeduplicator.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/BlockDeduplicator.cpp > CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/BlockDeduplicator.cpp > CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/BlockDeduplicator.cpp -o CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/BlockDeduplicator.cpp -o CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o.requires:
 
@@ -131,16 +131,16 @@ libevmasm/CMakeFiles/evmasm.dir/BlockDeduplicator.cpp.o.provides.build: libevmas
 
 libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o: ../libevmasm/CommonSubexpressionEliminator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/CommonSubexpressionEliminator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/CommonSubexpressionEliminator.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/CommonSubexpressionEliminator.cpp > CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/CommonSubexpressionEliminator.cpp > CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/CommonSubexpressionEliminator.cpp -o CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/CommonSubexpressionEliminator.cpp -o CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o.requires:
 
@@ -155,16 +155,16 @@ libevmasm/CMakeFiles/evmasm.dir/CommonSubexpressionEliminator.cpp.o.provides.bui
 
 libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o: ../libevmasm/ConstantOptimiser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ConstantOptimiser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/ConstantOptimiser.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ConstantOptimiser.cpp > CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/ConstantOptimiser.cpp > CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ConstantOptimiser.cpp -o CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/ConstantOptimiser.cpp -o CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o.requires:
 
@@ -179,16 +179,16 @@ libevmasm/CMakeFiles/evmasm.dir/ConstantOptimiser.cpp.o.provides.build: libevmas
 
 libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o: ../libevmasm/ControlFlowGraph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ControlFlowGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/ControlFlowGraph.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ControlFlowGraph.cpp > CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/ControlFlowGraph.cpp > CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ControlFlowGraph.cpp -o CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/ControlFlowGraph.cpp -o CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o.requires:
 
@@ -203,16 +203,16 @@ libevmasm/CMakeFiles/evmasm.dir/ControlFlowGraph.cpp.o.provides.build: libevmasm
 
 libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o: ../libevmasm/ExpressionClasses.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ExpressionClasses.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/ExpressionClasses.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/ExpressionClasses.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ExpressionClasses.cpp > CMakeFiles/evmasm.dir/ExpressionClasses.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/ExpressionClasses.cpp > CMakeFiles/evmasm.dir/ExpressionClasses.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/ExpressionClasses.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/ExpressionClasses.cpp -o CMakeFiles/evmasm.dir/ExpressionClasses.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/ExpressionClasses.cpp -o CMakeFiles/evmasm.dir/ExpressionClasses.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o.requires:
 
@@ -227,16 +227,16 @@ libevmasm/CMakeFiles/evmasm.dir/ExpressionClasses.cpp.o.provides.build: libevmas
 
 libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.o: ../libevmasm/GasMeter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/GasMeter.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/GasMeter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/GasMeter.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/GasMeter.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/GasMeter.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/GasMeter.cpp > CMakeFiles/evmasm.dir/GasMeter.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/GasMeter.cpp > CMakeFiles/evmasm.dir/GasMeter.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/GasMeter.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/GasMeter.cpp -o CMakeFiles/evmasm.dir/GasMeter.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/GasMeter.cpp -o CMakeFiles/evmasm.dir/GasMeter.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.o.requires:
 
@@ -251,16 +251,16 @@ libevmasm/CMakeFiles/evmasm.dir/GasMeter.cpp.o.provides.build: libevmasm/CMakeFi
 
 libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.o: ../libevmasm/Instruction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/Instruction.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Instruction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/Instruction.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/Instruction.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/Instruction.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Instruction.cpp > CMakeFiles/evmasm.dir/Instruction.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/Instruction.cpp > CMakeFiles/evmasm.dir/Instruction.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/Instruction.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/Instruction.cpp -o CMakeFiles/evmasm.dir/Instruction.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/Instruction.cpp -o CMakeFiles/evmasm.dir/Instruction.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.o.requires:
 
@@ -275,16 +275,16 @@ libevmasm/CMakeFiles/evmasm.dir/Instruction.cpp.o.provides.build: libevmasm/CMak
 
 libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o: ../libevmasm/JumpdestRemover.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/JumpdestRemover.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/JumpdestRemover.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/JumpdestRemover.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/JumpdestRemover.cpp > CMakeFiles/evmasm.dir/JumpdestRemover.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/JumpdestRemover.cpp > CMakeFiles/evmasm.dir/JumpdestRemover.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/JumpdestRemover.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/JumpdestRemover.cpp -o CMakeFiles/evmasm.dir/JumpdestRemover.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/JumpdestRemover.cpp -o CMakeFiles/evmasm.dir/JumpdestRemover.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o.requires:
 
@@ -299,16 +299,16 @@ libevmasm/CMakeFiles/evmasm.dir/JumpdestRemover.cpp.o.provides.build: libevmasm/
 
 libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.o: ../libevmasm/KnownState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/KnownState.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/KnownState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/KnownState.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/KnownState.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/KnownState.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/KnownState.cpp > CMakeFiles/evmasm.dir/KnownState.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/KnownState.cpp > CMakeFiles/evmasm.dir/KnownState.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/KnownState.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/KnownState.cpp -o CMakeFiles/evmasm.dir/KnownState.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/KnownState.cpp -o CMakeFiles/evmasm.dir/KnownState.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.o.requires:
 
@@ -323,16 +323,16 @@ libevmasm/CMakeFiles/evmasm.dir/KnownState.cpp.o.provides.build: libevmasm/CMake
 
 libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.o: ../libevmasm/LinkerObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/LinkerObject.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/LinkerObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/LinkerObject.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/LinkerObject.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/LinkerObject.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/LinkerObject.cpp > CMakeFiles/evmasm.dir/LinkerObject.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/LinkerObject.cpp > CMakeFiles/evmasm.dir/LinkerObject.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/LinkerObject.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/LinkerObject.cpp -o CMakeFiles/evmasm.dir/LinkerObject.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/LinkerObject.cpp -o CMakeFiles/evmasm.dir/LinkerObject.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.o.requires:
 
@@ -347,16 +347,16 @@ libevmasm/CMakeFiles/evmasm.dir/LinkerObject.cpp.o.provides.build: libevmasm/CMa
 
 libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.o: ../libevmasm/PathGasMeter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/PathGasMeter.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PathGasMeter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/PathGasMeter.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/PathGasMeter.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/PathGasMeter.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PathGasMeter.cpp > CMakeFiles/evmasm.dir/PathGasMeter.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/PathGasMeter.cpp > CMakeFiles/evmasm.dir/PathGasMeter.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/PathGasMeter.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PathGasMeter.cpp -o CMakeFiles/evmasm.dir/PathGasMeter.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/PathGasMeter.cpp -o CMakeFiles/evmasm.dir/PathGasMeter.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.o.requires:
 
@@ -371,16 +371,16 @@ libevmasm/CMakeFiles/evmasm.dir/PathGasMeter.cpp.o.provides.build: libevmasm/CMa
 
 libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o: ../libevmasm/PeepholeOptimiser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PeepholeOptimiser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/PeepholeOptimiser.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PeepholeOptimiser.cpp > CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/PeepholeOptimiser.cpp > CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/PeepholeOptimiser.cpp -o CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/PeepholeOptimiser.cpp -o CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o.requires:
 
@@ -395,16 +395,16 @@ libevmasm/CMakeFiles/evmasm.dir/PeepholeOptimiser.cpp.o.provides.build: libevmas
 
 libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.o: ../libevmasm/SemanticInformation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/SemanticInformation.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SemanticInformation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/SemanticInformation.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/SemanticInformation.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/SemanticInformation.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SemanticInformation.cpp > CMakeFiles/evmasm.dir/SemanticInformation.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/SemanticInformation.cpp > CMakeFiles/evmasm.dir/SemanticInformation.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/SemanticInformation.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SemanticInformation.cpp -o CMakeFiles/evmasm.dir/SemanticInformation.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/SemanticInformation.cpp -o CMakeFiles/evmasm.dir/SemanticInformation.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.o.requires:
 
@@ -419,16 +419,16 @@ libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.o.provides.build: libevm
 
 libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.o: libevmasm/CMakeFiles/evmasm.dir/flags.make
 libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.o: ../libevmasm/SimplificationRules.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.o"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/SimplificationRules.cpp.o -c /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SimplificationRules.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.o"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/evmasm.dir/SimplificationRules.cpp.o -c /home/abinesh/shyft_solidity/libevmasm/SimplificationRules.cpp
 
 libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/evmasm.dir/SimplificationRules.cpp.i"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SimplificationRules.cpp > CMakeFiles/evmasm.dir/SimplificationRules.cpp.i
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abinesh/shyft_solidity/libevmasm/SimplificationRules.cpp > CMakeFiles/evmasm.dir/SimplificationRules.cpp.i
 
 libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/evmasm.dir/SimplificationRules.cpp.s"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm/SimplificationRules.cpp -o CMakeFiles/evmasm.dir/SimplificationRules.cpp.s
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abinesh/shyft_solidity/libevmasm/SimplificationRules.cpp -o CMakeFiles/evmasm.dir/SimplificationRules.cpp.s
 
 libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.o.requires:
 
@@ -481,9 +481,9 @@ libevmasm/libevmasm.a: libevmasm/CMakeFiles/evmasm.dir/SemanticInformation.cpp.o
 libevmasm/libevmasm.a: libevmasm/CMakeFiles/evmasm.dir/SimplificationRules.cpp.o
 libevmasm/libevmasm.a: libevmasm/CMakeFiles/evmasm.dir/build.make
 libevmasm/libevmasm.a: libevmasm/CMakeFiles/evmasm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library libevmasm.a"
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && $(CMAKE_COMMAND) -P CMakeFiles/evmasm.dir/cmake_clean_target.cmake
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/evmasm.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abinesh/shyft_solidity/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library libevmasm.a"
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && $(CMAKE_COMMAND) -P CMakeFiles/evmasm.dir/cmake_clean_target.cmake
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/evmasm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 libevmasm/CMakeFiles/evmasm.dir/build: libevmasm/libevmasm.a
@@ -510,10 +510,10 @@ libevmasm/CMakeFiles/evmasm.dir/requires: libevmasm/CMakeFiles/evmasm.dir/Simpli
 .PHONY : libevmasm/CMakeFiles/evmasm.dir/requires
 
 libevmasm/CMakeFiles/evmasm.dir/clean:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm && $(CMAKE_COMMAND) -P CMakeFiles/evmasm.dir/cmake_clean.cmake
+	cd /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm && $(CMAKE_COMMAND) -P CMakeFiles/evmasm.dir/cmake_clean.cmake
 .PHONY : libevmasm/CMakeFiles/evmasm.dir/clean
 
 libevmasm/CMakeFiles/evmasm.dir/depend:
-	cd /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/libevmasm /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/cmake-build-debug/libevmasm/CMakeFiles/evmasm.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abinesh/shyft_solidity/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abinesh/shyft_solidity /home/abinesh/shyft_solidity/libevmasm /home/abinesh/shyft_solidity/cmake-build-debug /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm /home/abinesh/shyft_solidity/cmake-build-debug/libevmasm/CMakeFiles/evmasm.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libevmasm/CMakeFiles/evmasm.dir/depend
 

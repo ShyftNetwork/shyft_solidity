@@ -1,5 +1,5 @@
-pragma solidity ^0.4.16;
-pragma ShyftPragma ShyftPragmaName;
+pragma solidity ^0.4.21;
+pragma substance ^0.1.0;
 contract Unique {
 
 string fn;
@@ -11,9 +11,9 @@ bytes32 sId;
 	    	fn =s;
     		ln =y;
     		sId =i;
-	uint64 ThirdInput;
+	    uint64 ThirdInput;
 
-	MathSafe(ThirdInput);
+	    MathSafe(ThirdInput);
 	}
 
 	function getOut()constant public returns (bytes20 ){

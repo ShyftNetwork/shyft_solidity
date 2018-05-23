@@ -1,4 +1,4 @@
-# Install script for directory: /home/abinesh/shyft_solidity_Apr24_WithOpCode_Pragma/lllc
+# Install script for directory: /home/abinesh/shyft_solidity/lllc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
