@@ -165,10 +165,7 @@ bool SemanticInformation::movable(Instruction _instruction)
 	switch (_instruction)
 	{
 	case Instruction::KECCAK256:
-//Alex Binesh: Start:Opcode Changes
-//    case Instruction::GETATTEST:  // Not sure if I will need this. The flow control never gets here. May have to remove it soon
-//Alex Binesh: End:Opcode Changes
-    case Instruction::BALANCE:
+	case Instruction::BALANCE:
 	case Instruction::EXTCODESIZE:
 	case Instruction::RETURNDATASIZE:
 	case Instruction::SLOAD:

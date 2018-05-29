@@ -166,7 +166,9 @@ bool CompilerStack::analyze()
 	for (Source const* source: m_sourceOrder)
 		if (!docStringAnalyser.analyseDocStrings(*source->ast))
 			noErrors = false;
-
+//Alex Binesh: Start:New Pragma Changes
+//	using namespace dev::shyft_solidity;
+//Alex Binesh: Start:New Pragma Changes
 	m_globalContext = make_shared<GlobalContext>();
 	NameAndTypeResolver resolver(m_globalContext->declarations(), m_scopes, m_errorReporter);
 	for (Source const* source: m_sourceOrder)

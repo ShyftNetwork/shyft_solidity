@@ -22,7 +22,10 @@
 #include <libsolidity/analysis/SemVerHandler.h>
 #include <libsolidity/interface/ErrorReporter.h>
 #include <libsolidity/interface/Version.h>
-
+#include <solc/CommandLineInterface.h>
+//Alex Binesh: Start: New Pragma Changes
+#include <solc/ShyftSolidity.h>
+//Alex Binesh: End: New Pragma Changes
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
@@ -49,13 +52,13 @@ void SyntaxChecker::endVisit(SourceUnit const& _sourceUnit)
 		SemVerVersion recommendedVersion{string(VersionString)};
 		if (!recommendedVersion.isPrerelease())
 			errorString +=
-				"Consider adding \"pragma solidity ^" +
-				to_string(recommendedVersion.major()) +
-				string(".") +
-				to_string(recommendedVersion.minor()) +
-				string(".") +
-				to_string(recommendedVersion.patch()) +
-				string(";\"");
+					"Consider adding \"pragma solidity ^" +
+					to_string(recommendedVersion.major()) +
+					string(".") +
+					to_string(recommendedVersion.minor()) +
+					string(".") +
+					to_string(recommendedVersion.patch()) +
+					string(";\"");
 
 		m_errorReporter.warning(_sourceUnit.location(), errorString);
 	}
@@ -69,10 +72,26 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 	if (_pragma.tokens()[0] != Token::Identifier)
 		m_errorReporter.syntaxError(_pragma.location(), "Invalid pragma \"" + _pragma.literals()[0] + "\"");
 
-//Alex Binesh: Start:New Pragma Changes
-	else if (_pragma.literals()[0] == "ShyftPragma")
+//Alex Binesh: Start: New Pragma Changes
+	else if (_pragma.literals()[0] == "substance" )
 	{
-		solAssert(m_sourceUnit, "");
+        vector<Token::Value> tokens(_pragma.tokens().begin() + 1, _pragma.tokens().end());
+        vector<string> literals(_pragma.literals().begin() + 1, _pragma.literals().end());
+        SemVerMatchExpressionParser parser(tokens, literals);
+        auto matchExpression = parser.parse();
+        SemVerVersion currentVersion{string(VersionString)};
+
+		bShyft_Compiler=true;
+/*        if (!matchExpression.matches(currentVersion))
+            m_errorReporter.syntaxError(
+                    _pragma.location(),
+                    "Source file requires different compiler version (current compiler is " +
+                    string(VersionString) + " - note that nightly builds are considered to be "
+                                            "strictly less than the released version"
+            );
+*/
+        m_versionPragmaFound = true;
+/*		solAssert(m_sourceUnit, "");
 		vector<string> literals(_pragma.literals().begin() + 1, _pragma.literals().end());
 		if (literals.size() == 0)
 			m_errorReporter.syntaxError(
@@ -101,7 +120,7 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 //					m_errorReporter.warning(_pragma.location(), "Shyft features are turned on. Do not use Shyft features on live deployments.");
 			}
 		}
-	}
+*/	}
 
 //Alex Binesh: End:New Pragma Changes
 
@@ -111,13 +130,13 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 		vector<string> literals(_pragma.literals().begin() + 1, _pragma.literals().end());
 		if (literals.size() == 0)
 			m_errorReporter.syntaxError(
-				_pragma.location(),
-				"Experimental feature name is missing."
+					_pragma.location(),
+					"Experimental feature name is missing."
 			);
 		else if (literals.size() > 1)
 			m_errorReporter.syntaxError(
-				_pragma.location(),
-				"Stray arguments."
+					_pragma.location(),
+					"Stray arguments."
 			);
 		else
 		{
@@ -144,14 +163,14 @@ bool SyntaxChecker::visit(PragmaDirective const& _pragma)
 		SemVerMatchExpressionParser parser(tokens, literals);
 		auto matchExpression = parser.parse();
 		SemVerVersion currentVersion{string(VersionString)};
-//Alex Binesh: Start. Commented out the line below since the compile version is not read properly
 		if (!matchExpression.matches(currentVersion))
 			m_errorReporter.syntaxError(
-				_pragma.location(),
-				"Source file requires different compiler version (current compiler is " +
-				string(VersionString) + " - note that nightly builds are considered to be "
-				"strictly less than the released version"
+					_pragma.location(),
+					"Source file requires different compiler version (current compiler is " +
+					string(VersionString) + " - note that nightly builds are considered to be "
+											"strictly less than the released version"
 			);
+
 		m_versionPragmaFound = true;
 	}
 	else
@@ -216,13 +235,13 @@ bool SyntaxChecker::visit(Throw const& _throwStatement)
 
 	if (v050)
 		m_errorReporter.syntaxError(
-			_throwStatement.location(),
-			"\"throw\" is deprecated in favour of \"revert()\", \"require()\" and \"assert()\"."
+				_throwStatement.location(),
+				"\"throw\" is deprecated in favour of \"revert()\", \"require()\" and \"assert()\"."
 		);
 	else
 		m_errorReporter.warning(
-			_throwStatement.location(),
-			"\"throw\" is deprecated in favour of \"revert()\", \"require()\" and \"assert()\"."
+				_throwStatement.location(),
+				"\"throw\" is deprecated in favour of \"revert()\", \"require()\" and \"assert()\"."
 		);
 
 	return true;
@@ -258,10 +277,10 @@ bool SyntaxChecker::visit(FunctionDefinition const& _function)
 			m_errorReporter.syntaxError(_function.location(), "No visibility specified.");
 		else
 			m_errorReporter.warning(
-				_function.location(),
-				"No visibility specified. Defaulting to \"" +
-				Declaration::visibilityToString(_function.visibility()) +
-				"\"."
+					_function.location(),
+					"No visibility specified. Defaulting to \"" +
+					Declaration::visibilityToString(_function.visibility()) +
+					"\"."
 			);
 	}
 	return true;

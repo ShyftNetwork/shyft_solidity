@@ -2,7 +2,7 @@ set(
 	sources
 	CommandLineInterface.cpp CommandLineInterface.h
 	main.cpp
-)
+        ShyftSolidity.h)
 
 add_executable(solc ${sources})
 target_link_libraries(solc PRIVATE solidity ${Boost_PROGRAM_OPTIONS_LIBRARIES})

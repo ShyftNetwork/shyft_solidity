@@ -1,4 +1,5 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.21;
+pragma substance;
 contract Unique {
 
 string fn;
@@ -12,7 +13,7 @@ bytes32 sId;
     		sId =i;
 	uint64 ThirdInput;
 
-	MathSafe(ThirdInput==0);
+	MathSafe(ThirdInput);
 	}
 
 	function getOut()constant public returns (bytes20 ){

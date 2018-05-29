@@ -1,4 +1,5 @@
 pragma solidity ^0.4.21;
+pragma substance;
 contract Unique {
 
 string fn;
@@ -20,10 +21,10 @@ bool bRetVal;
 //byte ReturnValue="";
 xx =0;
 ThirdInput=0;
-	getattest(AttestAddr,RlpDict); 
-	bRetVal=checktattestvalid(AttestAddr,uiNonce); 
-	uiRevokeRet=getrevoke(AttestAddr,RlpDict); 
-	uiRevokeRet=topoint(AttestAddr,RlpDict); 
+	getattest(RlpDict,RlpDict);
+	bRetVal=checktattestvalid(AttestAddr,uiNonce);
+	uiRevokeRet=getrevoke(AttestAddr,RlpDict);
+	uiRevokeRet=topoint(AttestAddr,RlpDict);
     	//keccak256(s,y,i);
 	}
 

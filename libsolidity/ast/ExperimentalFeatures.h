@@ -24,41 +24,41 @@
 
 namespace dev
 {
-namespace solidity
-{
+	namespace solidity
+	{
 
-enum class ExperimentalFeature
-{
-	SMTChecker,
-	ABIEncoderV2, // new ABI encoder that makes use of JULIA
-	V050, // v0.5.0 breaking changes
-	Test,
-	TestOnlyAnalysis,
-};
+		enum class ExperimentalFeature
+		{
+			SMTChecker,
+			ABIEncoderV2, // new ABI encoder that makes use of JULIA
+			V050, // v0.5.0 breaking changes
+			Test,
+			TestOnlyAnalysis,
+		};
 
-static const std::map<ExperimentalFeature, bool> ExperimentalFeatureOnlyAnalysis =
-{
-	{ ExperimentalFeature::SMTChecker, true },
-	{ ExperimentalFeature::TestOnlyAnalysis, true },
-};
+		static const std::map<ExperimentalFeature, bool> ExperimentalFeatureOnlyAnalysis =
+				{
+						{ ExperimentalFeature::SMTChecker, true },
+						{ ExperimentalFeature::TestOnlyAnalysis, true },
+				};
 
-static const std::map<std::string, ExperimentalFeature> ExperimentalFeatureNames =
-{
-	{ "SMTChecker", ExperimentalFeature::SMTChecker },
-	{ "ABIEncoderV2", ExperimentalFeature::ABIEncoderV2 },
-	{ "v0.5.0", ExperimentalFeature::V050 },
-	{ "__test", ExperimentalFeature::Test },
-	{ "__testOnlyAnalysis", ExperimentalFeature::TestOnlyAnalysis },
-//Alex Binesh:Start:Reserved Word Changes
-//	{ "ShyftPragma", ExperimentalFeature::TestOnlyAnalysis },
-//Alex Binesh:End:Reserved Words Changes
-};
+		static const std::map<std::string, ExperimentalFeature> ExperimentalFeatureNames =
+				{
+						{ "SMTChecker", ExperimentalFeature::SMTChecker },
+						{ "ABIEncoderV2", ExperimentalFeature::ABIEncoderV2 },
+						{ "v0.5.0", ExperimentalFeature::V050 },
+						{ "__test", ExperimentalFeature::Test },
+						{ "__testOnlyAnalysis", ExperimentalFeature::TestOnlyAnalysis },
+//Alex Binesh:Start:New Pragma Changes
+	{ "ShyftPragma", ExperimentalFeature::TestOnlyAnalysis },
+//Alex Binesh:End:New Pragma Changes
+				};
 
-//Alex Binesh: Start:New Pragma Changes
-enum class ShyftFeature
-{
-	NameOfShyftPragma
-};
+//Alex Binesh:Start:New Pragma Changes
+		enum class ShyftFeature
+		{
+			NameOfShyftPragma
+		};
 
 //static const std::map<ShyftFeature, bool> ShyftFeatureOnlyAnalysis =
 //			{
@@ -66,13 +66,13 @@ enum class ShyftFeature
 //					{ ExperimentalFeature::TestOnlyAnalysis, true },
 //			};
 
-static const std::map<std::string, ShyftFeature> ShyftFeaturesNames =
-{
-//Alex Binesh:Start:Reserved Word Changes
-	{ "ShyftPragmaName", ShyftFeature::NameOfShyftPragma },
-//Alex Binesh:End:Reserved Words Changes
-};
+		static const std::map<std::string, ShyftFeature> ShyftFeaturesNames =
+				{
+
+//						{ "ShyftPragmaName", ShyftFeature::NameOfShyftPragma },
+//Alex Binesh:End:New Pragma Changes Changes
+				};
 
 
-}
+	}
 }

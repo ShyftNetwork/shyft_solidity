@@ -680,6 +680,7 @@ libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libdevcore/
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libdevcore/FixedHash.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libdevcore/vector_ref.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libevmasm/Instruction.h
+libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libevmasm/LinkerObject.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libevmasm/SourceLocation.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/analysis/SemVerHandler.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/analysis/SyntaxChecker.h
@@ -691,11 +692,16 @@ libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/ast/ASTVisitor.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/ast/ExperimentalFeatures.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/ast/Types.h
+libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/interface/AssemblyStack.h
+libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/interface/CompilerStack.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/interface/ErrorReporter.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/interface/Exceptions.h
+libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/interface/ReadFile.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/interface/Version.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/parsing/Token.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libsolidity/parsing/UndefMacros.h
+libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../solc/CommandLineInterface.h
+libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../solc/ShyftSolidity.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libdevcore/Common.h
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libdevcore/boost_multiprecision_number_compare_bug_workaround.hpp
 libsolidity/CMakeFiles/solidity.dir/analysis/SyntaxChecker.cpp.o: ../libevmasm/Exceptions.h

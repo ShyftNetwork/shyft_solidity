@@ -32,195 +32,195 @@
 
 namespace dev
 {
-namespace solidity
-{
-
-class Type;
-using TypePointer = std::shared_ptr<Type const>;
-
-struct ASTAnnotation
-{
-	virtual ~ASTAnnotation() {}
-};
-
-struct DocTag
-{
-	std::string content;	///< The text content of the tag.
-	std::string paramName;	///< Only used for @param, stores the parameter name.
-};
-
-struct DocumentedAnnotation
-{
-	virtual ~DocumentedAnnotation() {}
-	/// Mapping docstring tag name -> content.
-	std::multimap<std::string, DocTag> docTags;
-};
-
-struct SourceUnitAnnotation: ASTAnnotation
-{
-	/// The "absolute" (in the compiler sense) path of this source unit.
-	std::string path;
-	/// The exported symbols (all global symbols).
-	std::map<ASTString, std::vector<Declaration const*>> exportedSymbols;
-	/// Experimental features.
-	std::set<ExperimentalFeature> experimentalFeatures;
-//Alex Binesh:Start:New Pragma Changes
-	std::set<ShyftFeature> ShyftFeatures;
-//Alex Binesh:End:New Pragma Changes
-};
-
-struct ImportAnnotation: ASTAnnotation
-{
-	/// The absolute path of the source unit to import.
-	std::string absolutePath;
-	/// The actual source unit.
-	SourceUnit const* sourceUnit = nullptr;
-};
-
-struct TypeDeclarationAnnotation: ASTAnnotation
-{
-	/// The name of this type, prefixed by proper namespaces if globally accessible.
-	std::string canonicalName;
-};
-
-struct ContractDefinitionAnnotation: TypeDeclarationAnnotation, DocumentedAnnotation
-{
-	/// List of functions without a body. Can also contain functions from base classes.
-	std::vector<FunctionDefinition const*> unimplementedFunctions;
-	/// List of all (direct and indirect) base contracts in order from derived to
-	/// base, including the contract itself.
-	std::vector<ContractDefinition const*> linearizedBaseContracts;
-	/// List of contracts this contract creates, i.e. which need to be compiled first.
-	/// Also includes all contracts from @a linearizedBaseContracts.
-	std::set<ContractDefinition const*> contractDependencies;
-};
-
-struct FunctionDefinitionAnnotation: ASTAnnotation, DocumentedAnnotation
-{
-	/// The function this function overrides, if any. This is always the closest
-	/// in the linearized inheritance hierarchy.
-	FunctionDefinition const* superFunction = nullptr;
-};
-
-struct EventDefinitionAnnotation: ASTAnnotation, DocumentedAnnotation
-{
-};
-
-struct ModifierDefinitionAnnotation: ASTAnnotation, DocumentedAnnotation
-{
-};
-
-struct VariableDeclarationAnnotation: ASTAnnotation
-{
-	/// Type of variable (type of identifier referencing this variable).
-	TypePointer type;
-};
-
-struct StatementAnnotation: ASTAnnotation, DocumentedAnnotation
-{
-};
-
-namespace assembly
-{
-	struct AsmAnalysisInfo;
-	struct Identifier;
-}
-
-struct InlineAssemblyAnnotation: StatementAnnotation
-{
-	struct ExternalIdentifierInfo
+	namespace solidity
 	{
-		Declaration const* declaration = nullptr;
-		bool isSlot = false; ///< Whether the storage slot of a variable is queried.
-		bool isOffset = false; ///< Whether the intra-slot offset of a storage variable is queried.
-		size_t valueSize = size_t(-1);
-	};
 
-	/// Mapping containing resolved references to external identifiers and their value size
-	std::map<assembly::Identifier const*, ExternalIdentifierInfo> externalReferences;
-	/// Information generated during analysis phase.
-	std::shared_ptr<assembly::AsmAnalysisInfo> analysisInfo;
-};
+		class Type;
+		using TypePointer = std::shared_ptr<Type const>;
 
-struct ReturnAnnotation: StatementAnnotation
-{
-	/// Reference to the return parameters of the function.
-	ParameterList const* functionReturnParameters = nullptr;
-};
+		struct ASTAnnotation
+		{
+			virtual ~ASTAnnotation() {}
+		};
 
-struct TypeNameAnnotation: ASTAnnotation
-{
-	/// Type declared by this type name, i.e. type of a variable where this type name is used.
-	/// Set during reference resolution stage.
-	TypePointer type;
-};
+		struct DocTag
+		{
+			std::string content;	///< The text content of the tag.
+			std::string paramName;	///< Only used for @param, stores the parameter name.
+		};
 
-struct UserDefinedTypeNameAnnotation: TypeNameAnnotation
-{
-	/// Referenced declaration, set during reference resolution stage.
-	Declaration const* referencedDeclaration = nullptr;
-	/// Stores a reference to the current contract.
-	/// This is needed because types of base contracts change depending on the context.
-	ContractDefinition const* contractScope = nullptr;
-};
+		struct DocumentedAnnotation
+		{
+			virtual ~DocumentedAnnotation() {}
+			/// Mapping docstring tag name -> content.
+			std::multimap<std::string, DocTag> docTags;
+		};
 
-struct VariableDeclarationStatementAnnotation: StatementAnnotation
-{
-	/// Information about which component of the value is assigned to which variable.
-	/// The pointer can be null to signify that the component is discarded.
-	std::vector<VariableDeclaration const*> assignments;
-};
+		struct SourceUnitAnnotation: ASTAnnotation
+		{
+			/// The "absolute" (in the compiler sense) path of this source unit.
+			std::string path;
+			/// The exported symbols (all global symbols).
+			std::map<ASTString, std::vector<Declaration const*>> exportedSymbols;
+			/// Experimental features.
+			std::set<ExperimentalFeature> experimentalFeatures;
+//Alex Binesh:Start:New Pragma Changes
+			std::set<ShyftFeature> ShyftFeatures;
+//Alex Binesh:End:New Pragma Changes
+		};
 
-struct ExpressionAnnotation: ASTAnnotation
-{
-	/// Inferred type of the expression.
-	TypePointer type;
-	/// Whether the expression is a constant variable
-	bool isConstant = false;
-	/// Whether the expression is pure, i.e. compile-time constant.
-	bool isPure = false;
-	/// Whether it is an LValue (i.e. something that can be assigned to).
-	bool isLValue = false;
-	/// Whether the expression is used in a context where the LValue is actually required.
-	bool lValueRequested = false;
-	/// Types of arguments if the expression is a function that is called - used
-	/// for overload resolution.
-	std::shared_ptr<std::vector<TypePointer>> argumentTypes;
-};
+		struct ImportAnnotation: ASTAnnotation
+		{
+			/// The absolute path of the source unit to import.
+			std::string absolutePath;
+			/// The actual source unit.
+			SourceUnit const* sourceUnit = nullptr;
+		};
 
-struct IdentifierAnnotation: ExpressionAnnotation
-{
-	/// Referenced declaration, set at latest during overload resolution stage.
-	Declaration const* referencedDeclaration = nullptr;
-	/// List of possible declarations it could refer to.
-	std::vector<Declaration const*> overloadedDeclarations;
-};
+		struct TypeDeclarationAnnotation: ASTAnnotation
+		{
+			/// The name of this type, prefixed by proper namespaces if globally accessible.
+			std::string canonicalName;
+		};
 
-struct MemberAccessAnnotation: ExpressionAnnotation
-{
-	/// Referenced declaration, set at latest during overload resolution stage.
-	Declaration const* referencedDeclaration = nullptr;
-};
+		struct ContractDefinitionAnnotation: TypeDeclarationAnnotation, DocumentedAnnotation
+		{
+			/// List of functions without a body. Can also contain functions from base classes.
+			std::vector<FunctionDefinition const*> unimplementedFunctions;
+			/// List of all (direct and indirect) base contracts in order from derived to
+			/// base, including the contract itself.
+			std::vector<ContractDefinition const*> linearizedBaseContracts;
+			/// List of contracts this contract creates, i.e. which need to be compiled first.
+			/// Also includes all contracts from @a linearizedBaseContracts.
+			std::set<ContractDefinition const*> contractDependencies;
+		};
 
-struct BinaryOperationAnnotation: ExpressionAnnotation
-{
-	/// The common type that is used for the operation, not necessarily the result type (which
-	/// e.g. for comparisons is bool).
-	TypePointer commonType;
-};
+		struct FunctionDefinitionAnnotation: ASTAnnotation, DocumentedAnnotation
+		{
+			/// The function this function overrides, if any. This is always the closest
+			/// in the linearized inheritance hierarchy.
+			FunctionDefinition const* superFunction = nullptr;
+		};
 
-enum class FunctionCallKind
-{
-	Unset,
-	FunctionCall,
-	TypeConversion,
-	StructConstructorCall
-};
+		struct EventDefinitionAnnotation: ASTAnnotation, DocumentedAnnotation
+		{
+		};
 
-struct FunctionCallAnnotation: ExpressionAnnotation
-{
-	FunctionCallKind kind = FunctionCallKind::Unset;
-};
+		struct ModifierDefinitionAnnotation: ASTAnnotation, DocumentedAnnotation
+		{
+		};
 
-}
+		struct VariableDeclarationAnnotation: ASTAnnotation
+		{
+			/// Type of variable (type of identifier referencing this variable).
+			TypePointer type;
+		};
+
+		struct StatementAnnotation: ASTAnnotation, DocumentedAnnotation
+		{
+		};
+
+		namespace assembly
+		{
+			struct AsmAnalysisInfo;
+			struct Identifier;
+		}
+
+		struct InlineAssemblyAnnotation: StatementAnnotation
+		{
+			struct ExternalIdentifierInfo
+			{
+				Declaration const* declaration = nullptr;
+				bool isSlot = false; ///< Whether the storage slot of a variable is queried.
+				bool isOffset = false; ///< Whether the intra-slot offset of a storage variable is queried.
+				size_t valueSize = size_t(-1);
+			};
+
+			/// Mapping containing resolved references to external identifiers and their value size
+			std::map<assembly::Identifier const*, ExternalIdentifierInfo> externalReferences;
+			/// Information generated during analysis phase.
+			std::shared_ptr<assembly::AsmAnalysisInfo> analysisInfo;
+		};
+
+		struct ReturnAnnotation: StatementAnnotation
+		{
+			/// Reference to the return parameters of the function.
+			ParameterList const* functionReturnParameters = nullptr;
+		};
+
+		struct TypeNameAnnotation: ASTAnnotation
+		{
+			/// Type declared by this type name, i.e. type of a variable where this type name is used.
+			/// Set during reference resolution stage.
+			TypePointer type;
+		};
+
+		struct UserDefinedTypeNameAnnotation: TypeNameAnnotation
+		{
+			/// Referenced declaration, set during reference resolution stage.
+			Declaration const* referencedDeclaration = nullptr;
+			/// Stores a reference to the current contract.
+			/// This is needed because types of base contracts change depending on the context.
+			ContractDefinition const* contractScope = nullptr;
+		};
+
+		struct VariableDeclarationStatementAnnotation: StatementAnnotation
+		{
+			/// Information about which component of the value is assigned to which variable.
+			/// The pointer can be null to signify that the component is discarded.
+			std::vector<VariableDeclaration const*> assignments;
+		};
+
+		struct ExpressionAnnotation: ASTAnnotation
+		{
+			/// Inferred type of the expression.
+			TypePointer type;
+			/// Whether the expression is a constant variable
+			bool isConstant = false;
+			/// Whether the expression is pure, i.e. compile-time constant.
+			bool isPure = false;
+			/// Whether it is an LValue (i.e. something that can be assigned to).
+			bool isLValue = false;
+			/// Whether the expression is used in a context where the LValue is actually required.
+			bool lValueRequested = false;
+			/// Types of arguments if the expression is a function that is called - used
+			/// for overload resolution.
+			std::shared_ptr<std::vector<TypePointer>> argumentTypes;
+		};
+
+		struct IdentifierAnnotation: ExpressionAnnotation
+		{
+			/// Referenced declaration, set at latest during overload resolution stage.
+			Declaration const* referencedDeclaration = nullptr;
+			/// List of possible declarations it could refer to.
+			std::vector<Declaration const*> overloadedDeclarations;
+		};
+
+		struct MemberAccessAnnotation: ExpressionAnnotation
+		{
+			/// Referenced declaration, set at latest during overload resolution stage.
+			Declaration const* referencedDeclaration = nullptr;
+		};
+
+		struct BinaryOperationAnnotation: ExpressionAnnotation
+		{
+			/// The common type that is used for the operation, not necessarily the result type (which
+			/// e.g. for comparisons is bool).
+			TypePointer commonType;
+		};
+
+		enum class FunctionCallKind
+		{
+			Unset,
+			FunctionCall,
+			TypeConversion,
+			StructConstructorCall
+		};
+
+		struct FunctionCallAnnotation: ExpressionAnnotation
+		{
+			FunctionCallKind kind = FunctionCallKind::Unset;
+		};
+
+	}
 }
