@@ -11,8 +11,35 @@ Call Stack (most recent call first):
   CMakeLists.txt:8 (eth_policy)
 
 
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- boost headers: /usr/include
 -- boost lib   : /usr/lib/x86_64-linux-gnu/libboost_regex.a;/usr/lib/x86_64-linux-gnu/libboost_filesystem.a;/usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a;/usr/lib/x86_64-linux-gnu/libboost_program_options.a;/usr/lib/x86_64-linux-gnu/libboost_system.a
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Performing Test fstack-protector-strong
+-- Performing Test fstack-protector-strong - Success
+-- Performing Test Wimplicit-fallthrough
+-- Performing Test Wimplicit-fallthrough - Failed
 
 ------------------------------------------------------------------------
 -- Configuring solidity

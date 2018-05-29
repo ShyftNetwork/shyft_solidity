@@ -11,9 +11,9 @@ bytes32 sId;
 	    	fn =s;
     		ln =y;
     		sId =i;
-	uint64 ThirdInput;
+		uint64 ThirdInput;
 
-	MathSafe(ThirdInput);
+		MathSafe(ThirdInput);//This is the function to test
 	}
 
 	function getOut()constant public returns (bytes20 ){
