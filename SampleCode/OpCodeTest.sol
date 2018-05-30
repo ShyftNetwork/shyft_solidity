@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.22;
 pragma substance;
 contract Unique {
 
@@ -13,7 +13,9 @@ bytes32 sId;
     		sId =i;
 		uint64 ThirdInput;
 
-		MathSafe(ThirdInput);//This is the function to test
+		    ThirdInput = 0;
+		    MathSafe(ThirdInput);//This is the function to test
+
 	}
 
 	function getOut()constant public returns (bytes20 ){
