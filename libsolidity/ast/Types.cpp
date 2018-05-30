@@ -2359,9 +2359,11 @@ string FunctionType::richIdentifier() const
 		case Kind::Require: id += "require";break;
 
 // Alex Binesh: Start:Opcode Changes
-		case Kind::Getattest: id += "getattest";break;  // Is this needed ? Perhaps not. The control flow never visits here
+		case Kind::Getattest: id += "getattest";break;
+		case Kind::CheckAttestValid: id += "checktattestvalid";break;
+		case Kind::Getrevoke: id += "getrevoke";break;
+		case Kind::Topoint: id += "topoint";break;
 // Alex Binesh: End:Opcode Changes
-
 
 		default: solAssert(false, "Unknown function location."); break;
 	}
