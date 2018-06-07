@@ -27,7 +27,9 @@
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
-
+//Alex Binesh: Start: Disabling warnings
+extern bool bShyft_Suppress_Warnings;
+//Alex Binesh: End: Disabling Warnings
 namespace
 {
 
@@ -166,10 +168,15 @@ void ViewPureChecker::endVisit(FunctionDefinition const& _funDef)
 		!_funDef.isFallback() &&
 		!_funDef.annotation().superFunction
 	)
-		m_errorReporter.warning(
+// Alex Binesh:Start Disabling the warnings
+		if (!bShyft_Suppress_Warnings)
+// Alex Binesh: End Disabling the warnings
+		{
+			m_errorReporter.warning(
 			_funDef.location(),
 			"Function state mutability can be restricted to " + stateMutabilityToString(m_currentBestMutability)
-		);
+			);
+		}
 	m_currentFunction = nullptr;
 }
 

@@ -4,8 +4,11 @@
 
 #ifndef SOLIDITY_SHYFTSOLIDITY_H
 //Alex Binesh: Start:New Pragma Changes
- bool bShyft_Compiler;
+ bool bShyft_Compiler=false;
 //Alex Binesh: End:New Pragma Changes
+//Alex Binesh: Start: Disabling Warnings
+bool bShyft_Suppress_Warnings=false;
+//Alex Binesh: End: Disabling Warnings
 #define SOLIDITY_SHYFTSOLIDITY_H
 
 #endif //SOLIDITY_SHYFTSOLIDITY_H

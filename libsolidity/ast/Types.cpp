@@ -2356,14 +2356,12 @@ string FunctionType::richIdentifier() const
 		case Kind::ByteArrayPush: id += "bytearraypush"; break;
 		case Kind::ObjectCreation: id += "objectcreation"; break;
 		case Kind::Assert: id += "assert"; break;
-		case Kind::Require: id += "require";break;
-
-// Alex Binesh: Start:Opcode Changes
 		case Kind::Getattest: id += "getattest";break;
-		case Kind::CheckAttestValid: id += "checktattestvalid";break;
+    	case Kind::CheckAttestValid: id += "checktattestvalid";break;
 		case Kind::Getrevoke: id += "getrevoke";break;
 		case Kind::Topoint: id += "topoint";break;
-// Alex Binesh: End:Opcode Changes
+
+ // Alex Binesh: End:Opcode Changes
 
 		default: solAssert(false, "Unknown function location."); break;
 	}

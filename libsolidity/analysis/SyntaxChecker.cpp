@@ -274,15 +274,22 @@ bool SyntaxChecker::visit(FunctionDefinition const& _function)
 	if (_function.noVisibilitySpecified())
 	{
 		if (v050)
-			m_errorReporter.syntaxError(_function.location(), "No visibility specified.");
+			return true;
 		else
-			m_errorReporter.warning(
+// Alex Binesh: Start Disabling the warnings
+			if (!bShyft_Suppress_Warnings)
+// Alex Binesh: End Disabling the warnings
+			{
+				m_errorReporter.warning(
 					_function.location(),
 					"No visibility specified. Defaulting to \"" +
 					Declaration::visibilityToString(_function.visibility()) +
 					"\"."
-			);
+				);
+			}
+
 	}
+
 	return true;
 }
 

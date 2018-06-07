@@ -50,6 +50,10 @@
 #include <boost/filesystem/operations.hpp>
 #include <boost/algorithm/string.hpp>
 
+//Alex Binesh: Start: Disabling Warnings
+extern bool bShyft_Suppress_Warnings;
+//Alex Binesh: End: Disabling Warnings
+
 #ifdef _WIN32 // windows
 	#include <io.h>
 	#define isatty _isatty
@@ -116,7 +120,9 @@ static string const g_strStandardJSON = "standard-json";
 static string const g_strStrictAssembly = "strict-assembly";
 static string const g_strPrettyJson = "pretty-json";
 static string const g_strVersion = "version";
-
+//Alex Binesh: Start Disabling Warnings
+static string const g_strSuppressWarnings = "no-warnings";
+//Alex Binesh: End Disabling Warnings
 static string const g_argAbi = g_strAbi;
 static string const g_argAddStandard = g_strAddStandard;
 static string const g_argPrettyJson = g_strPrettyJson;
@@ -153,10 +159,15 @@ static string const g_argStandardJSON = g_strStandardJSON;
 static string const g_argStrictAssembly = g_strStrictAssembly;
 static string const g_argVersion = g_strVersion;
 static string const g_stdinFileName = g_stdinFileNameStr;
-
+//Alex Binesh: Start Disabling Warnings
+static string const g_argSuppressWarnings = g_strSuppressWarnings;
+//Alex Binesh: End Disabling Warnings
 /// Possible arguments to for --combined-json
 static set<string> const g_combinedJsonArgs
 {
+//Alex Binesh: Start Disabling Warnings
+	g_strSuppressWarnings,
+//Alex Binesh: End Disabling Warnings
 	g_strAbi,
 	g_strAsm,
 	g_strAst,
@@ -220,7 +231,11 @@ static bool needsHumanTargetedStdout(po::variables_map const& _args)
 		g_argNatspecUser,
 		g_argNatspecDev,
 		g_argOpcodes,
-		g_argSignatureHashes
+//Alex Binesh: Start Disabling Warnings
+		g_strSuppressWarnings,
+//Alex Binesh: End Disabling Warnings
+ 		g_argSignatureHashes
+
 	})
 		if (_args.count(arg))
 			return true;
@@ -536,6 +551,9 @@ Allowed options)",
 	desc.add_options()
 		(g_argHelp.c_str(), "Show help message and exit.")
 		(g_argVersion.c_str(), "Show version and exit.")
+//Alex Binesh: Start Disabling Warnings
+		(g_argSuppressWarnings.c_str(), "Suppress Warnings and continue.")
+//Alex Binesh: End Disabling Warnings
 		(g_strLicense.c_str(), "Show licensing information and exit.")
 		(g_argOptimize.c_str(), "Enable bytecode optimizer.")
 		(
@@ -648,6 +666,13 @@ Allowed options)",
 		version();
 		return false;
 	}
+//Alex Binesh: Start Disabling Warnings
+	if (m_args.count(g_argSuppressWarnings))
+	{
+		bShyft_Suppress_Warnings = true;
+		return true;
+	}
+//Alex Binesh: End Disabling Warnings
 
 	if (m_args.count(g_strLicense))
 	{

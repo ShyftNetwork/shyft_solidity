@@ -908,7 +908,8 @@ public:
         CheckAttestValid, ///CHECKATTESTVALID()
         Getrevoke, ///CHECKATTESTVALID()
 		Topoint /// TOPOINT()
-//Alex Binesh: End:Opcode Changes
+
+ //Alex Binesh: End:Opcode Changes
 	};
 
 	virtual Category category() const override { return Category::Function; }

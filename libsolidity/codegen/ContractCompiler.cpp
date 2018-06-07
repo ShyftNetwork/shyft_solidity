@@ -583,7 +583,6 @@ bool ContractCompiler::visit(FunctionDefinition const& _function)
 	for (unsigned i = 0; i < c_returnValuesSize; ++i)
 		stackLayout.push_back(i);
 	stackLayout += vector<int>(c_localVariablesSize, -1);
-
 	if (stackLayout.size() > 17)
 		BOOST_THROW_EXCEPTION(
 			CompilerError() <<

@@ -23,7 +23,9 @@
 #include <boost/test/unit_test.hpp>
 
 #include <string>
-
+//Alex Binesh: Start: Disabling warnings
+extern bool bShyft_Suppress_Warnings;
+//Alex Binesh: End: Disabling Warnings
 using namespace std;
 
 namespace dev
@@ -136,12 +138,17 @@ BOOST_AUTO_TEST_CASE(environment_access)
 	}
 	for (string const& x: pure)
 	{
-		CHECK_WARNING_ALLOW_MULTI(
-			"contract C { function f() view public { var x = " + x + "; x; } }",
-			(std::vector<std::string>{
-				"Function state mutability can be restricted to pure",
-				"Use of the \"var\" keyword is deprecated."
-		}));
+// Alex Binesh:Start Disabling the warnings
+		if (!bShyft_Suppress_Warnings)
+// Alex Binesh: End Disabling the warnings
+		{
+			CHECK_WARNING_ALLOW_MULTI(
+					"contract C { function f() view public { var x = " + x + "; x; } }",
+					(std::vector<std::string>{
+							"Function state mutability can be restricted to pure",
+							"Use of the \"var\" keyword is deprecated."
+					}));
+		}
 	}
 }
 
