@@ -26,10 +26,13 @@
 #include <libsolidity/interface/ErrorReporter.h>
 #include <libsolidity/parsing/DocStringParser.h>
 
+
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
-
+//Alex Binesh: Start Stack Overflow
+extern set<string> validParams;
+//Alex Binesh: End Stack Overflow
 bool DocStringAnalyser::analyseDocStrings(SourceUnit const& _sourceUnit)
 {
 	m_errorOccured = false;
@@ -75,9 +78,14 @@ void DocStringAnalyser::handleCallable(
 	static const set<string> validTags = set<string>{"author", "dev", "notice", "return", "param"};
 	parseDocStrings(_node, _annotation, validTags, "functions");
 
-	set<string> validParams;
-	for (auto const& p: _callable.parameters())
+/*Alex Binesh: Start Stack Overflow
+ 	set<string> validParams;
+*/
+for (auto const& p: _callable.parameters()){
 		validParams.insert(p->name());
+	}
+
+
 	if (_callable.returnParameterList())
 		for (auto const& p: _callable.returnParameterList()->parameters())
 			validParams.insert(p->name());

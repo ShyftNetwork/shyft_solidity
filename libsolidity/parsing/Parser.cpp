@@ -433,6 +433,7 @@ ASTPointer<ASTNode> Parser::parseFunctionDefinitionOrFunctionTypeStateVariable(A
 			header.stateMutability,
 			c_isConstructor,
 			docstring,
+//Alex Binesh
 			header.parameters,
 			header.modifiers,
 			header.returnParameters,
@@ -819,6 +820,7 @@ ASTPointer<ParameterList> Parser::parseParameterList(
 	VarDeclParserOptions options(_options);
 	options.allowEmptyName = true;
 	expectToken(Token::LParen);
+//	cout << "This is the inout list: " << char(m_scanner->currentToken())<< endl;
 	if (!_allowEmpty || m_scanner->currentToken() != Token::RParen)
 	{
 		parameters.push_back(parseVariableDeclaration(options));

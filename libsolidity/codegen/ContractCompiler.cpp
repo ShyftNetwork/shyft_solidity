@@ -38,7 +38,9 @@
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
-
+//Alex Binesh: Start Stack Overflow
+extern std::set<string> validParams;
+//Alex Binesh: End Stack Overflow
 namespace
 {
 
@@ -575,20 +577,65 @@ bool ContractCompiler::visit(FunctionDefinition const& _function)
 
 	unsigned const c_argumentsSize = CompilerUtils::sizeOnStack(_function.parameters());
 	unsigned const c_returnValuesSize = CompilerUtils::sizeOnStack(_function.returnParameters());
-	unsigned const c_localVariablesSize = CompilerUtils::sizeOnStack(_function.localVariables());
 
+	std::vector<ASTPointer<VariableDeclaration>>  retdParams;
+	retdParams= _function.returnParameters();//ASTPointer<ParameterList> m_returnParameters
+//	std::vector<VariableDeclaration const*> m_localVar=_function.localVariables();
+	unsigned const c_localVariablesSize = CompilerUtils::sizeOnStack(_function.localVariables());
+// Alex Binesh: Start Take me out later
+//	cout << "This is the list of params" << (std::basic_ostream<char>)_function.parameters()<< endl;
+//	cout << "This is the list of params" << _function.returnParameters()[0]<< endl;
+//	cout << "This is the list of returned params" << function.returnParameters()<< endl;
+//	cout << "This is the list of local variables" << function.localVariables()<< endl;
+// Alex Binesh: Start Take me out later
 	vector<int> stackLayout;
 	stackLayout.push_back(c_returnValuesSize); // target of return address
 	stackLayout += vector<int>(c_argumentsSize, -1); // discard all arguments
 	for (unsigned i = 0; i < c_returnValuesSize; ++i)
 		stackLayout.push_back(i);
 	stackLayout += vector<int>(c_localVariablesSize, -1);
+
+
 	if (stackLayout.size() > 17)
+    {
+//Alex Binesh: Start Stack Overflow
+        std::cout << "\nIVALID Parameters for the below function are causing this Error:\n\n";
+        int iParamCounter=0;
+        bool bAlreadyStartedValidCount=false, bAlreadyStartedInvalidCount=false;
+        for( auto iter = std::begin(validParams) ; iter != std::end(validParams) ; ++iter ) {
+            ++iParamCounter;
+            //The below logic is weird since if there are more than 16 parameters, they get added to the beginning of the set
+            if (validParams.size()>16) {
+                if ((validParams.size() - iParamCounter) < 16) {
+                    if (!bAlreadyStartedValidCount){
+                        std::cout << "\nValid Parameters: " << *iter ;
+                        bAlreadyStartedValidCount=true;
+                    }
+                    else {
+                        cout<< ','<<*iter ;
+                    }
+                }
+                else
+                {
+                    if (!bAlreadyStartedInvalidCount){
+                        std::cout << "InValid Parameters: " << *iter ;
+                        bAlreadyStartedInvalidCount=true;
+                    }
+                    else {
+                        cout<< ','<<*iter ;
+                    }
+                }
+            }
+        }
+//Alex Binesh: End Stack Overflow
+        cout<< endl<< endl;
+
 		BOOST_THROW_EXCEPTION(
 			CompilerError() <<
 			errinfo_sourceLocation(_function.location()) <<
 			errinfo_comment("Stack too deep, try removing local variables.")
 		);
+    }
 	while (stackLayout.back() != int(stackLayout.size() - 1))
 		if (stackLayout.back() < 0)
 		{

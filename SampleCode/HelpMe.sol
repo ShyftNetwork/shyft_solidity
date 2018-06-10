@@ -21,7 +21,9 @@ contract HelpMe {
 		uint _n,
 		uint _o,
 		uint _p,
-		uint _q){}
+		uint _Q,
+		uint _R
+	){}
 
 	function vmError() {
 		require(false);
