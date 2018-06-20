@@ -11,6 +11,9 @@ using namespace std;
 //Alex Binesh: Start: Disabling Warnings
 bool bShyft_Suppress_Warnings=false;
 //Alex Binesh: End: Disabling Warnings
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+bool bShyft_Display_Extra_Assembly_Error_Info=false;
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
 set<string> validParams;
 
 #define SOLIDITY_SHYFTSOLIDITY_H

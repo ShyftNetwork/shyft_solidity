@@ -23,8 +23,10 @@
 #include <libsolidity/interface/SourceReferenceFormatter.h>
 #include <libsolidity/parsing/Scanner.h>
 #include <libsolidity/interface/Exceptions.h>
-
-using namespace std;
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+extern bool bShyft_Display_Extra_Assembly_Error_Info;
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
+ using namespace std;
 
 namespace dev
 {
@@ -74,13 +76,66 @@ void SourceReferenceFormatter::printSourceLocation(SourceLocation const* _locati
 			m_stream << "^";
 		m_stream << endl;
 	}
-	else
-		m_stream <<
-			scanner.lineAtPosition(_location->start) <<
-			endl <<
-			string(startColumn, ' ') <<
-			"^\n" <<
-			"Spanning multiple lines.\n";
+	else{
+		if (! bShyft_Display_Extra_Assembly_Error_Info){
+			m_stream <<
+				scanner.lineAtPosition(_location->start) <<
+				endl <<
+				string(startColumn, ' ') <<
+				"^\n" <<
+				"Spanning multiple lines.\n";
+		}
+	}
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+
+		// The below is a snippet of scanner.m_source_m_source string which contacins the stack overflow error details
+		// We are interested in the variables in the assembley{} section, e.g. MyInteger and   YourInteger
+		// .....
+		// unbalancedStack() {\n\t\tuint MyInteger;\n\t\tuint YourInteger;\n\t\t
+		// assembly {\n\t\t            MyInteger\n\t\t            YourInteger\n\t\t}\n\t}\n}"
+	if (bShyft_Display_Extra_Assembly_Error_Info)
+	{
+		int iReversePointer=1;
+		int j=-1;
+
+
+
+		//i +=  scanner.lineAtPosition(_location->start).length();// Skip the "assembly {" line and inspect the parameters
+
+		if ( _location->start == _location->end){ //Rewind if the line pointer is at the end. In cases where previous error messages have caused the pointer to advance
+			while  (iReversePointer++<100)  {
+	//			cout <<  scanner.lineAtPosition(_location->start -k)   << endl;
+				j=scanner.lineAtPosition(_location->start-iReversePointer).find("assembly");
+				if (j  > -1)
+				{
+		            //Only print the lines below if this error is related to assembly{} block
+
+
+					break;
+				}
+			}
+		}
+
+		j=scanner.lineAtPosition(_location->start-iReversePointer).find("assembly");
+        if (j  > -1) {
+		    int iCounter=0;
+	  	    j=-1;
+		    cout<< "\nError: Please check the following value(s) in your assembly code as one or more may be causing this error:"<<endl;
+		    cout <<scanner.lineAtPosition(_location->start-iReversePointer)<<endl;                                                      	  	    while (iCounter++ <= 100) {// Loop a limited number of times to avoid an infinite loop since we don't know where "assembly" directive is
+                  j = scanner.lineAtPosition(_location->start - iReversePointer).find("}");//End of assembly {..} block
+                  if (j > -1) {
+                      break;
+                  }
+                  j = scanner.lineAtPosition(_location->start - iReversePointer).find("assembly");
+                  if (-1 == j) {
+                      cout << scanner.lineAtPosition(_location->start - iReversePointer) << endl;
+                  }
+                  iReversePointer -= scanner.lineAtPosition(_location->start - iReversePointer).length();
+              }
+          }
+ 	} //if (bShyft_Display_Extr...
+ //Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
+
 }
 
 void SourceReferenceFormatter::printSourceName(SourceLocation const* _location)
@@ -99,29 +154,36 @@ void SourceReferenceFormatter::printExceptionInformation(
 	string const& _name
 )
 {
-	SourceLocation const* location = boost::get_error_info<errinfo_sourceLocation>(_exception);
+ 	SourceLocation const* location = boost::get_error_info<errinfo_sourceLocation>(_exception);
 	auto secondarylocation = boost::get_error_info<errinfo_secondarySourceLocation>(_exception);
 
-	printSourceName(location);
 
-	m_stream << _name;
-	if (string const* description = boost::get_error_info<errinfo_comment>(_exception))
-		m_stream << ": " << *description << endl;
-	else
-		m_stream << endl;
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+	if (!bShyft_Display_Extra_Assembly_Error_Info)
+	{
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
+		printSourceName(location);
+		m_stream << _name;
+ 		if (string const* description = boost::get_error_info<errinfo_comment>(_exception))
+			m_stream << ": " << *description << endl;
+		else
+			m_stream << endl;
 
+ //Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+	}                                                                           		
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code   		
 	printSourceLocation(location);
-
 	if (secondarylocation && !secondarylocation->infos.empty())
 	{
-		for (auto info: secondarylocation->infos)
-		{
-			printSourceName(&info.second);
-			m_stream << info.first << endl;
-			printSourceLocation(&info.second);
-		}
-		m_stream << endl;
+			for (auto info: secondarylocation->infos)
+			{
+				printSourceName(&info.second);
+				m_stream << info.first << endl;
+				printSourceLocation(&info.second);
+			}
+			m_stream << endl;
 	}
+
 }
 
 }

@@ -53,7 +53,9 @@
 //Alex Binesh: Start: Disabling Warnings
 extern bool bShyft_Suppress_Warnings;
 //Alex Binesh: End: Disabling Warnings
-
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+extern bool bShyft_Display_Extra_Assembly_Error_Info;
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
 #ifdef _WIN32 // windows
 	#include <io.h>
 	#define isatty _isatty
@@ -829,9 +831,19 @@ bool CommandLineInterface::processInput()
 				*error,
 				(error->type() == Error::Type::Warning) ? "Warning" : "Error"
 			);
-
-		if (!successful)
-			return false;
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+	if 	(!bShyft_Display_Extra_Assembly_Error_Info){
+		bShyft_Display_Extra_Assembly_Error_Info=true;
+		for (auto const& error: m_compiler->errors()){
+				formatter.printExceptionInformation(
+				*error,
+				"");
+				break;// Break the loop as we just want to print this error one time
+		}
+	}
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
+	if (!successful)
+		return false;
 	}
 	catch (CompilerError const& _exception)
 	{

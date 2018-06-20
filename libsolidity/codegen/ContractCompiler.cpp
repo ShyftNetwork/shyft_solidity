@@ -598,15 +598,19 @@ bool ContractCompiler::visit(FunctionDefinition const& _function)
 
 	if (stackLayout.size() > 17)
     {
-//Alex Binesh: Start Stack Overflow
-        std::cout << "\nIVALID Parameters for the below function are causing this Error:\n\n";
-        int iParamCounter=0;
+//Alex Binesh: Start Stack Overflow- Too many Paramters passed to function
+        std::cout << "\nINVALID Parameters for the below function are causing this Error:\n\n";
+//        int iParamCounter=0;
+		string sInvalidString;
+		int iListSize =validParams.size();
         bool bAlreadyStartedValidCount=false, bAlreadyStartedInvalidCount=false;
         for( auto iter = std::begin(validParams) ; iter != std::end(validParams) ; ++iter ) {
-            ++iParamCounter;
+
             //The below logic is weird since if there are more than 16 parameters, they get added to the beginning of the set
-            if (validParams.size()>16) {
-                if ((validParams.size() - iParamCounter) < 16) {
+			//cout<< ','<<*iter  ;
+				//++iParamCounter;
+			if (iListSize <= 17 ) {
+                if (iListSize > 1 ) {
                     if (!bAlreadyStartedValidCount){
                         std::cout << "\nValid Parameters: " << *iter ;
                         bAlreadyStartedValidCount=true;
@@ -618,16 +622,22 @@ bool ContractCompiler::visit(FunctionDefinition const& _function)
                 else
                 {
                     if (!bAlreadyStartedInvalidCount){
-                        std::cout << "InValid Parameters: " << *iter ;
-                        bAlreadyStartedInvalidCount=true;
+                        std::cout << "\n\nInValid Parameters: " << *iter <<  sInvalidString ;
+                        //bAlreadyStartedInvalidCount=true;
                     }
                     else {
-                        cout<< ','<<*iter ;
+                        cout<< " , "<<*iter ;
                     }
                 }
+				iListSize--;
+            }
+            else
+            {
+				sInvalidString +=  " , " + *iter  ;
+				iListSize--;
             }
         }
-//Alex Binesh: End Stack Overflow
+//Alex Binesh: End Stack Overflow Too many Paramters passed to function
         cout<< endl<< endl;
 
 		BOOST_THROW_EXCEPTION(

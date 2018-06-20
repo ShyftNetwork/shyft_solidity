@@ -82,8 +82,13 @@ void StaticAnalyzer::endVisit(FunctionDefinition const&)
 				}
 			}
 			else
-				m_errorReporter.warning(var.first->location(), "Unused local variable.");
-		}
+//Alex Binesh: Start: Disabling Warnings
+				//if (!bShyft_Suppress_Warnings)
+//Alex Binesh: End: Disabling Warnings
+				{
+					m_errorReporter.warning(var.first->location(), "Unused local variable.");
+				}
+			}
 
 	m_localVarUseCount.clear();
 }

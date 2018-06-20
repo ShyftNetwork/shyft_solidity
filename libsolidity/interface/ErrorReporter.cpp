@@ -27,7 +27,9 @@
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
-
+//Alex Binesh: Start: Disabling Warnings
+extern bool bShyft_Suppress_Warnings;
+//Alex Binesh: End: Disabling Warnings
 ErrorReporter& ErrorReporter::operator=(ErrorReporter const& _errorReporter)
 {
 	if (&_errorReporter == this)
@@ -37,19 +39,28 @@ ErrorReporter& ErrorReporter::operator=(ErrorReporter const& _errorReporter)
 }
 
 
-void ErrorReporter::warning(string const& _description)
-{
-	error(Error::Type::Warning, SourceLocation(), _description);
+void ErrorReporter::warning(string const& _description) {
+//Alex Binesh: Start: Disabling Warnings
+	if (!bShyft_Suppress_Warnings)
+//Alex Binesh: End: Disabling Warnings
+	{
+		error(Error::Type::Warning, SourceLocation(), _description);
+
+	}
 }
 
 void ErrorReporter::warning(
 	SourceLocation const& _location,
 	string const& _description
-)
-{
-	error(Error::Type::Warning, _location, _description);
-}
+) {
+//Alex Binesh: Start: Disabling Warnings
+	if (!bShyft_Suppress_Warnings)
+//Alex Binesh: End: Disabling Warnings
+	{
+		error(Error::Type::Warning, _location, _description);
 
+	}
+}
 void ErrorReporter::warning(
 	SourceLocation const& _location,
 	string const& _description,

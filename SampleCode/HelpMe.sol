@@ -20,10 +20,7 @@ contract HelpMe {
 		uint _m,
 		uint _n,
 		uint _o,
-		uint _p,
-		uint _Q,
-		uint _R
-	){}
+		uint _p){}
 
 	function vmError() {
 		require(false);
@@ -38,4 +35,14 @@ contract HelpMe {
 	function emitEvent() {
 		emitMe(); // this will cause a warning with newer versions of solc
 	}
+
+	function unbalancedStack() {
+		uint iVar1;
+		uint iVar2;
+		uint iVar3;
+		assembly {
+		    iVar3 :=3
+		}
+	}
+
 }
