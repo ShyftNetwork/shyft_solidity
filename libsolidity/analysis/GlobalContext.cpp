@@ -66,7 +66,7 @@ m_magicVariables(vector<shared_ptr<MagicVariableDeclaration const>>{
 
 //Alex Binesh: End:Opcode Changes
 //Alex Binesh: Start:Reserved Word Changes
-    make_shared<MagicVariableDeclaration>("MathSafe", make_shared<FunctionType>(strings{"uint64"}, strings{}, FunctionType::Kind::Require, false, StateMutability::Pure)),
+    make_shared<MagicVariableDeclaration>("MathSafeFunction", make_shared<FunctionType>(strings{"uint64","uint64"}, strings{}, FunctionType::Kind::Require, false, StateMutability::Pure)),
 //Alex Binesh: End:Reserved Word Changes
 
 })

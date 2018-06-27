@@ -78,17 +78,20 @@ void DocStringAnalyser::handleCallable(
 	static const set<string> validTags = set<string>{"author", "dev", "notice", "return", "param"};
 	parseDocStrings(_node, _annotation, validTags, "functions");
 
-/*Alex Binesh: Start Stack Overflow
+/*Alex Binesh: Start Stack Overflow. Took out this declaration and made it global
  	set<string> validParams;
 */
-for (auto const& p: _callable.parameters()){
+	for (auto const& p: _callable.parameters()){
 		validParams.insert(p->name());
 	}
 
 
 	if (_callable.returnParameterList())
-		for (auto const& p: _callable.returnParameterList()->parameters())
+		for (auto const& p: _callable.returnParameterList()->parameters()) {
 			validParams.insert(p->name());
+
+		}
+
 	auto paramRange = _annotation.docTags.equal_range("param");
 	for (auto i = paramRange.first; i != paramRange.second; ++i)
 		if (!validParams.count(i->second.paramName))

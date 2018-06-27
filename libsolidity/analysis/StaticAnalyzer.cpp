@@ -71,9 +71,6 @@ void StaticAnalyzer::endVisit(FunctionDefinition const&)
 		if (var.second == 0)
 		{
 			if (var.first->isCallableParameter()){
-//Alex Binesh: Start: Disabling Warnings
-				if (!bShyft_Suppress_Warnings)
-//Alex Binesh: End: Disabling Warnings
 				{
 					m_errorReporter.warning(
 					var.first->location(),

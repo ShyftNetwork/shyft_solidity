@@ -276,9 +276,6 @@ bool SyntaxChecker::visit(FunctionDefinition const& _function)
 		if (v050)
 			return true;
 		else
-// Alex Binesh: Start Disabling the warnings
-			if (!bShyft_Suppress_Warnings)
-// Alex Binesh: End Disabling the warnings
 			{
 				m_errorReporter.warning(
 					_function.location(),
