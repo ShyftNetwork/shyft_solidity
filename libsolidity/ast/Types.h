@@ -907,9 +907,8 @@ public:
 		Getattest, ///< GETATTEST()
         CheckAttestValid, ///CHECKATTESTVALID()
         Getrevoke, ///CHECKATTESTVALID()
-		Topoint /// TOPOINT()
-
- //Alex Binesh: End:Opcode Changes
+		Topoint, /// TOPOINT()
+		MerkleProve ///MERKLEPROVE
 	};
 
 	virtual Category category() const override { return Category::Function; }

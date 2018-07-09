@@ -685,7 +685,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			m_context << Instruction::DUP1 << Instruction::ISZERO;
 			m_context.appendConditionalInvalid();
 			arguments[0]->accept(*this);
-//Alex Binesh: Replace libe below with me later			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
+//Alex Binesh: Replace line below with me later			utils().convertType(*arguments[0]->annotation().type, IntegerType(160, IntegerType::Modifier::Address));
 			utils().convertType(*arguments[0]->annotation().type, IntegerType(64));
 			m_context << Instruction::GETATTEST;
 			break;
@@ -707,6 +707,43 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			m_context << Instruction::CHECKATTESTVALID;
 			break;
 		}
+			case FunctionType::Kind::MerkleProve:
+			{
+//Alex Binesh: Start:New Pragma Changes
+				if (!bShyft_Compiler)
+				{
+					solAssert(false, "Invalid function type, merkleprove()");
+				}
+//Alex Binesh: End:New Pragma Changes
+
+
+				arguments[3]->accept(*this);
+				utils().convertType(*arguments[3]->annotation().type, FixedBytesType(32));// This is the 2nd parameter passed into the function
+				m_context << Instruction::DUP1 << Instruction::ISZERO;
+				m_context.appendConditionalInvalid();
+
+				arguments[2]->accept(*this);
+				utils().convertType(*arguments[2]->annotation().type, FixedBytesType(32));// This is the 2nd parameter passed into the function
+				m_context << Instruction::DUP1 << Instruction::ISZERO;
+				m_context.appendConditionalInvalid();
+
+				arguments[1]->accept(*this);
+				utils().convertType(*arguments[1]->annotation().type, IntegerType(256));// This is the 2nd parameter passed into the function
+				m_context << Instruction::DUP1 << Instruction::ISZERO;
+				m_context.appendConditionalInvalid();
+
+				arguments[0]->accept(*this);
+//              TypePointer  TP=Type::Category::FixedPoint;
+//ArrayType* ArrayType(DataLocation::Storage, TP);
+//				utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Storage, _types.Category);
+
+                utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Storage, false));
+   //             utils().convertType(*arguments[0]->annotation().type, dev::solidity::ArrayType);// This is the First parameter passed into the function
+				m_context << Instruction::MERKLEPROVE;
+				break;
+			}
+
+
 		case FunctionType::Kind::Getrevoke:
 		{
 //Alex Binesh: Start:New Pragma Changes

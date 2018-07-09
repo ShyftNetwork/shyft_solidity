@@ -2356,10 +2356,12 @@ string FunctionType::richIdentifier() const
 		case Kind::ByteArrayPush: id += "bytearraypush"; break;
 		case Kind::ObjectCreation: id += "objectcreation"; break;
 		case Kind::Assert: id += "assert"; break;
+// Alex Binesh: Start: Opcode Changes
 		case Kind::Getattest: id += "getattest";break;
     	case Kind::CheckAttestValid: id += "checktattestvalid";break;
 		case Kind::Getrevoke: id += "getrevoke";break;
 		case Kind::Topoint: id += "topoint";break;
+		case Kind::MerkleProve: id += "merkleprove";break;
 
  // Alex Binesh: End:Opcode Changes
 

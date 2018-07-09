@@ -52,7 +52,8 @@ void StackVariable::retrieveValue(SourceLocation const& _location, bool) const
 			errinfo_sourceLocation(_location) <<
 //Alex Binesh: Start Stack too deep try removing local variables. Removed this line and replaced with the one below
 //			errinfo_comment("Stack too deep, try removing local variables.")
-            errinfo_comment("Stack too deep, try removing local variables.\n-\e[1m You are returning more than 7 parameters from this function. Remove the extra parameters\e[0m")
+            errinfo_comment("Stack too deep, try removing local variables.\nThis could be because the combination of Returned parameters and Array index references add up to more than 16\n"
+							"Please see this line:")
         //Alex Binesh: End Stack too deep try removing local variables.
 		);
     }

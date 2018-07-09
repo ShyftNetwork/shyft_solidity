@@ -63,6 +63,7 @@ m_magicVariables(vector<shared_ptr<MagicVariableDeclaration const>>{
 	make_shared<MagicVariableDeclaration>("checktattestvalid", make_shared<FunctionType>(strings{"address", "uint256"}, strings{"bool"}, FunctionType::Kind::CheckAttestValid, false, StateMutability::Pure)),
 	make_shared<MagicVariableDeclaration>("getrevoke", make_shared<FunctionType>(strings{"address", "uint64"}, strings{"uint64"}, FunctionType::Kind::Getrevoke, false, StateMutability::Pure)),
 	make_shared<MagicVariableDeclaration>("topoint", make_shared<FunctionType>(strings{"address", "uint64"}, strings{"uint64"}, FunctionType::Kind::Topoint, false, StateMutability::Pure)),
+	make_shared<MagicVariableDeclaration>("merkleprove", make_shared<FunctionType>(strings{"bytes", "uint256","bytes32","bytes32" }, strings{"bool"}, FunctionType::Kind::MerkleProve, false, StateMutability::Pure)),
 
 //Alex Binesh: End:Opcode Changes
 //Alex Binesh: Start:Reserved Word Changes

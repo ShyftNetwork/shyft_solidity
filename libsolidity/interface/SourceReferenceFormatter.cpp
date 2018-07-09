@@ -95,9 +95,9 @@ void SourceReferenceFormatter::printSourceLocation(SourceLocation const* _locati
 		// assembly {\n\t\t            MyInteger\n\t\t            YourInteger\n\t\t}\n\t}\n}"
 	if (bShyft_Display_Extra_Assembly_Error_Info)
 	{
-		int iReversePointer=1;
+		int iReversePointer=-1;
 		int j=-1;
-
+		//iReversePointer=_location->end;
 
 
 		//i +=  scanner.lineAtPosition(_location->start).length();// Skip the "assembly {" line and inspect the parameters
@@ -120,15 +120,22 @@ void SourceReferenceFormatter::printSourceLocation(SourceLocation const* _locati
         if (j  > -1) {
 		    int iCounter=0;
 	  	    j=-1;
-		    cout<< "\nError: Please check the following value(s) in your assembly code as one or more may be causing this error:"<<endl;
-		    cout <<scanner.lineAtPosition(_location->start-iReversePointer)<<endl;                                                      	  	    while (iCounter++ <= 100) {// Loop a limited number of times to avoid an infinite loop since we don't know where "assembly" directive is
+		    cout<< "\nError: Please check the expressions in your assembly code as one or more may be causing this error:"<<endl;
+		    cout <<scanner.lineAtPosition(_location->start-iReversePointer)<<endl;
+		    while (iCounter++ <= 500) {// Loop a limited number of times to avoid an infinite loop since we don't know where "assembly" directive is
                   j = scanner.lineAtPosition(_location->start - iReversePointer).find("}");//End of assembly {..} block
                   if (j > -1) {
                       break;
                   }
-                  j = scanner.lineAtPosition(_location->start - iReversePointer).find("assembly");
-                  if (-1 == j) {
-                      cout << scanner.lineAtPosition(_location->start - iReversePointer) << endl;
+                  //j = scanner.lineAtPosition(_location->start - iReversePointer).find("assembly");
+                  //if (-1 == j)
+                  {
+                  	if ( "" != scanner.lineAtPosition(_location->start - iReversePointer)){
+						//if (! scanner.lineAtPosition(_location->start-iReversePointer).find("assembly"))
+						{
+							cout << scanner.lineAtPosition(_location->start - iReversePointer) << endl;
+						}
+					}
                   }
                   iReversePointer -= scanner.lineAtPosition(_location->start - iReversePointer).length();
               }

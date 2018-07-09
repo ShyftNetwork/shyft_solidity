@@ -595,55 +595,72 @@ bool ContractCompiler::visit(FunctionDefinition const& _function)
 		stackLayout.push_back(i);
 	stackLayout += vector<int>(c_localVariablesSize, -1);
 
-
 	if (stackLayout.size() > 17)
     {
 //Alex Binesh: Start Stack Overflow- Too many Paramters passed to function
-        std::cout << "\nINVALID Parameters for the below function are causing this Error:\n\n";
-//        int iParamCounter=0;
-		string sInvalidString;
+
+        string sInvalidString, sValidString;
 		int iListSize =validParams.size();
-        bool bAlreadyStartedValidCount=false, bAlreadyStartedInvalidCount=false;
+        int iStackSize=stackLayout.size();
+        bool bAlreadyStartedValidCount=false, bAlreadyStartedInvalidCount=false, bWasTheFirstValueNull=false;
+        int iAvailableStackSpace = iStackSize - iListSize;
+        //This means there are no parameters passed into or returned from this function. Strictly too many variables declared
+        if (std::begin(validParams) == std::end(validParams))
+            sValidString = "\n\t\tYou have declared more than 16 variables in this function:";
+        else
+            sValidString = "\n\t\tYou cannot have more than a total of 16 Parameters passed to AND Declared in this function:";
+
+
         for( auto iter = std::begin(validParams) ; iter != std::end(validParams) ; ++iter ) {
 
             //The below logic is weird since if there are more than 16 parameters, they get added to the beginning of the set
-			//cout<< ','<<*iter  ;
-				//++iParamCounter;
 			if (iListSize <= 17 ) {
-                if (iListSize > 1 ) {
+//                if (iListSize > 1 && (iListSize > (iStackSize - 17)) ) {
+               if (iAvailableStackSpace < 17) {
                     if (!bAlreadyStartedValidCount){
-                        std::cout << "\nValid Parameters: " << *iter ;
+                        if (*iter == ""){
+                            bWasTheFirstValueNull=true;
+                        }
+                        sValidString += "\n\n\t\tPossible Valid Parameters: " + *iter ;
                         bAlreadyStartedValidCount=true;
                     }
                     else {
-                        cout<< ','<<*iter ;
+                        if (bWasTheFirstValueNull) {
+                            sValidString += *iter;
+                            bWasTheFirstValueNull = false;
+                        }else{
+                            sValidString +=  ',' + *iter ;
+                        }
                     }
                 }
                 else
                 {
                     if (!bAlreadyStartedInvalidCount){
-                        std::cout << "\n\nInValid Parameters: " << *iter <<  sInvalidString ;
-                        //bAlreadyStartedInvalidCount=true;
+                        sInvalidString = "\n\t\tPossible Extra Parameters: " + *iter ;
+                        bAlreadyStartedInvalidCount=true;
                     }
                     else {
-                        cout<< " , "<<*iter ;
+                        sInvalidString +=  " , " + *iter ;
                     }
                 }
 				iListSize--;
             }
             else
             {
-				sInvalidString +=  " , " + *iter  ;
+
+                sInvalidString +=  " , " + *iter  ;
 				iListSize--;
             }
+            iAvailableStackSpace++;
+
         }
+        //cout<< endl<< endl;
 //Alex Binesh: End Stack Overflow Too many Paramters passed to function
-        cout<< endl<< endl;
 
 		BOOST_THROW_EXCEPTION(
 			CompilerError() <<
 			errinfo_sourceLocation(_function.location()) <<
-			errinfo_comment("Stack too deep, try removing local variables.")
+			errinfo_comment("Stack too deep, try removing local variables." + sValidString +sInvalidString+'\n')
 		);
     }
 	while (stackLayout.back() != int(stackLayout.size() - 1))

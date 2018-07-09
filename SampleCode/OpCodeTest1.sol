@@ -18,9 +18,11 @@ uint256 ThirdInput;
 uint256 xx;
 uint256 uiNonce;
 bool bRetVal;
-//byte ReturnValue="";
+bytes proof;
+
 xx =0;
 ThirdInput=0;
+    merkleprove(proof,xx,sId,sId);
 	getattest(RlpDict,RlpDict);
 	bRetVal=checktattestvalid(AttestAddr,uiNonce);
 	uiRevokeRet=getrevoke(AttestAddr,RlpDict);
