@@ -95,50 +95,70 @@ void SourceReferenceFormatter::printSourceLocation(SourceLocation const* _locati
 		// assembly {\n\t\t            MyInteger\n\t\t            YourInteger\n\t\t}\n\t}\n}"
 	if (bShyft_Display_Extra_Assembly_Error_Info)
 	{
-		int iReversePointer=-1;
-		int j=-1;
+		int iReversePointer=0;
+		int j=-1, iStartOfTokens=_location->start;
+		string sNextLine="";
+		int iTokenLength=0;
 		//iReversePointer=_location->end;
 
 
 		//i +=  scanner.lineAtPosition(_location->start).length();// Skip the "assembly {" line and inspect the parameters
 
-		if ( _location->start == _location->end){ //Rewind if the line pointer is at the end. In cases where previous error messages have caused the pointer to advance
-			while  (iReversePointer++<100)  {
+		if ( iStartOfTokens == _location->end){ //Rewind if the line pointer is at the end. In cases where previous error messages have caused the pointer to advance
+			while  (iReversePointer < 100)  {
 	//			cout <<  scanner.lineAtPosition(_location->start -k)   << endl;
-				j=scanner.lineAtPosition(_location->start-iReversePointer).find("assembly");
+				iStartOfTokens -= iReversePointer;
+				j=scanner.lineAtPosition(iStartOfTokens).find("assembly");
 				if (j  > -1)
 				{
+					iStartOfTokens -= iReversePointer;
 		            //Only print the lines below if this error is related to assembly{} block
-
-
 					break;
 				}
+				iReversePointer++;
 			}
 		}
 
-		j=scanner.lineAtPosition(_location->start-iReversePointer).find("assembly");
+		j=scanner.lineAtPosition(iStartOfTokens).find("assembly");
         if (j  > -1) {
 		    int iCounter=0;
-	  	    j=-1;
+	  	    int  iLeftBracketCount=0, iFoundLocation=0;
 		    cout<< "\nError: Please check the expressions in your assembly code as one or more may be causing this error:"<<endl;
-		    cout <<scanner.lineAtPosition(_location->start-iReversePointer)<<endl;
+//		    cout <<scanner.lineAtPosition(_location->start-iReversePointer)<<endl;
 		    while (iCounter++ <= 500) {// Loop a limited number of times to avoid an infinite loop since we don't know where "assembly" directive is
-                  j = scanner.lineAtPosition(_location->start - iReversePointer).find("}");//End of assembly {..} block
-                  if (j > -1) {
+				sNextLine =scanner.lineAtPosition(iStartOfTokens);
+                sNextLine.replace('\t',' ');
+                iTokenLength =scanner.lineAtPosition(iStartOfTokens).length();
+                iStartOfTokens += iTokenLength;
+				iFoundLocation = scanner.lineAtPosition(iStartOfTokens).find("{");//End of assembly {..} block
+				if (iFoundLocation > -1) {//If nested braces
+					iLeftBracketCount++;
+				}
+
+				iFoundLocation = scanner.lineAtPosition(iStartOfTokens).find("}");//End of assembly {..} block
+                if (iFoundLocation > -1) {
+                  	if (iLeftBracketCount>0){
+						iLeftBracketCount--;
+						
+					}
+					else{
                       break;
+					}
                   }
+
                   //j = scanner.lineAtPosition(_location->start - iReversePointer).find("assembly");
                   //if (-1 == j)
                   {
-                  	if ( "" != scanner.lineAtPosition(_location->start - iReversePointer)){
+                  	//sNextLine =scanner.lineAtPosition(_location->start - iReversePointer);
+                  	if ( "" != sNextLine){
 						//if (! scanner.lineAtPosition(_location->start-iReversePointer).find("assembly"))
 						{
-							cout << scanner.lineAtPosition(_location->start - iReversePointer) << endl;
+							cout << sNextLine << endl;
 						}
 					}
                   }
-                  iReversePointer -= scanner.lineAtPosition(_location->start - iReversePointer).length();
-              }
+
+			}
           }
  	} //if (bShyft_Display_Extr...
  //Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code

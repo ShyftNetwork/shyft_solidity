@@ -41,8 +41,13 @@ contract HelpMe {
 		uint iVar2;
 		uint iVar3;
 		assembly {
-		    let xiVar1 := 3 { let iVar2 := add(iVar1, 1) }
-		    iVar3
+		iVar3 =
+		    iVar2
+//		    let iVar1 = 3
+//		    { let iVar2 := add(iVar1, 2) }
+		    iVar3 :=9
+//		    { let iVar1 := add(iVar1, 1) }
+
 		}
 	}
 
