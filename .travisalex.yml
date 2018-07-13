@@ -1,0 +1,117 @@
+language: cpp
+branches:
+  only:
+  - develop
+  - release
+  - "/^v[0-9]/"
+  - shyft_test_develop_march21
+env:
+  global:
+  - ENCRYPTION_LABEL="6d4541b72666"
+  - SOLC_BUILD_TYPE=RelWithDebInfo
+  - SOLC_EMSCRIPTEN=Off
+  - SOLC_INSTALL_DEPS_TRAVIS=On
+  - SOLC_RELEASE=On
+  - SOLC_TESTS=On
+  - SOLC_STOREBYTECODE=Off
+  - SOLC_DOCKER=Off
+  matrix:
+#Alex Binesh. Added the below line for the Docker login password. This is my docker password
+    secure: t3IuBNngD4NHtN2L4Lz502ln6j+lDAlMV2sIVxF5AK8YuOSB4ziFgZurucBJDfv8KiJ6QbmfZA7Rge+W02Cu/78sYYFC8gzQGyGLumJa/LzqJ8oJgZhegJgg2jnNsDEvyyaEsMBeo4XJbdo0O1leyf1V5g0HK3KigV1VJj+bYNTKzN6Gs2VFsJJnxkPi+W2PO2BdmyxLKbdZBtDkmCwgF2qdaRncv2AMKBmdv8LgtZBhemSQgWo2GqH33oTUlz34xwLM8rtUC7NfQN3qRpAQnsSgo7h5gYdffOEtqLqW1SjxOyqTLJbB88/cE8qljEQAF1gCZnG3YIxc7OFZ33bmV5q8N4slFBxODacN429lBydQAkBbM7MAHLWS0ze7c1GId2aLIE+J/waOZxitULRRZzwOneh0NmUe+5qzWMMwB9b3ugqllr7/LfQvmCjObo2M6DS9BEK91vZLoVp6cewO33soD6hz0zPKa5DRo4RPMe4zV3JoYSOoZVfTsEyzFQsGWL1nAbcITxd8gHhi4VUATolEPuzGA3h9KjHCLHJVVfvdkrL/blzHqk5sUwbdIQI/t21iYiRS8px7yhTzqzywR/YjN6kgeHXHxs1/+Wd2wOZJtY7XPqrZW0NSoJr8n/qxo3+NH7hyuPxq8kHGY68tBSKd9LiYuRW4uonTq2QCJbA=
+#Alex Binesh. Added the above line for the Docker login password. This is my docker password
+matrix:
+  include:
+  - os: linux
+    dist: trusty
+    sudo: required
+    compiler: gcc
+    env:
+    - ZIP_SUFFIX=ubuntu-trusty
+    - SOLC_STOREBYTECODE=On
+  - os: linux
+    dist: trusty
+    sudo: required
+    compiler: clang
+    env:
+    - ZIP_SUFFIX=ubuntu-trusty-clang
+    - SOLC_STOREBYTECODE=On
+  - os: linux
+    dist: trusty
+    sudo: required
+    services:
+    - docker
+    env:
+#Alex Binesh. Added the below line for the Docker login credential. This is my docker username
+    - username=alexatshyft
+#Alex Binesh. Added the above line for the Docker login credential. This is my docker username
+    - SOLC_DOCKER=On
+    - SOLC_INSTALL_DEPS_TRAVIS=Off
+    - SOLC_RELEASE=Off
+    - SOLC_TESTS=Off
+  - os: linux
+    dist: trusty
+    sudo: required
+    compiler: gcc
+    node_js:
+    - '7'
+    services:
+    - docker
+    before_install:
+    - nvm install 7
+    - nvm use 7
+    - docker pull trzeci/emscripten:sdk-tag-1.35.4-64bit
+    env:
+    - SOLC_EMSCRIPTEN=On
+    - SOLC_INSTALL_DEPS_TRAVIS=Off
+    - SOLC_RELEASE=Off
+    - SOLC_TESTS=Off
+    - ZIP_SUFFIX=emscripten
+    - SOLC_STOREBYTECODE=On
+git:
+  depth: 2
+cache:
+  ccache: true
+  directories:
+  - boost_1_57_0
+  - "$HOME/.local"
+install:
+- test $SOLC_INSTALL_DEPS_TRAVIS != On || (scripts/install_deps.sh)
+- test "$TRAVIS_OS_NAME" != "linux" || (scripts/install_cmake.sh)
+- if [ "$TRAVIS_BRANCH" = release -o -n "$TRAVIS_TAG" ]; then echo -n > prerelease.txt;
+  else date -u +"nightly.%Y.%-m.%-d" > prerelease.txt; fi
+- echo -n "$TRAVIS_COMMIT" > commit_hash.txt
+before_script:
+- test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
+- test $SOLC_DOCKER != On || (scripts/docker_build.sh)
+- test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
+  $ZIP_SUFFIX && scripts/create_source_tarball.sh)
+script:
+- test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
+deploy:
+- provider: script
+  script: test $SOLC_EMSCRIPTEN != On || (scripts/release_emscripten.sh)
+  skip_cleanup: true
+  on:
+    branch:
+    - develop
+    - release
+    - shyft_test_develop_march21
+- provider: script
+  script: test $SOLC_DOCKER != On || (scripts/docker_deploy.sh)
+  skip_cleanup: true
+  on:
+    branch:
+    - develop
+    - release
+    - "/^v\\d/"
+    - shyft_test_develop_march21
+- provider: releases
+  api_key:
+    secure: PWH37xVBCF0XiSjl+eH7XIdkrfxZXjzvqF4PiBOnD3VnFz+odrdnIwBmCeBYTHTWF8efpp8fmzWJk2UVq1JcpyZiC+SVxO8dx91W2ia1a+wKrEQuDgkUrZBkl5IQNCv0QS81DDQhliyZEaYh8wHO/7RReyMpGpw2U2u85WkFiZ+LdlHEZPfzUeh9lxQ9n8qwFL8Rja+Q05d4cQ8zaVEtofJJT4T6DUWhc3TzuxDYxOmjwg37rC9CkGSLn6VadSh8b3j5R0SZupFsAEvBL/imBLP9r9ewoo7o4p6By3jwiIgH9yNg7LM618xbffcNaYF/KtLBi9uPHfqF7hRD4PlECz+D0PR78nQItOX5HKm1QMg5kCnghRVCA0IVjpV5fiYQnMLM7dCRv34I5b3zLpa69wQ/GLYB2FViqNUfvPeiZTEeIJ2OmATlFx8AH2JoqpY1XJknWb35+vMfa8LSiJJW++SLWeV+ncC92hrvyZ1cy3trepRRZIfyYepxHifnfdWMkddQUJk5b2WS5Fy/TJLZNPeombnpvRhUC38dsYItarKeXTc6k4oADCEDZ2rgGIcEiqRxXV11Y5xHJekLDWzUs+YJNcCuL4pnAP//LOnbnH2w9rLpwhQYSl0anCd097NivAXQJXO2JI/byIYz1kiCVQWnW6EM8+72mLOklf/Qr8k=
+  overwrite: true
+  file_glob: true
+  file: "$TRAVIS_BUILD_DIR/upload/*"
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true

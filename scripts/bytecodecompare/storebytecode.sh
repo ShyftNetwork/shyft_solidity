@@ -82,15 +82,16 @@ EOF
 
     if [ "$TRAVIS_SECURE_ENV_VARS" = "true" ]
     then
-        openssl aes-256-cbc -K $encrypted_60701c962b9c_key -iv $encrypted_60701c962b9c_iv -in "$REPO_ROOT"/scripts/bytecodecompare/deploy_key.enc -out deploy_key -d
+        openssl aes-256-cbc -K $encrypted_4a65ea335f48_key -iv $encrypted_4a65ea335f48_iv -in "$REPO_ROOT"/scripts/bytecodecompare/shyft_deploy_key.enc -out deploy_key -d
+
         chmod 600 deploy_key
         eval `ssh-agent -s`
         ssh-add deploy_key
 
-        git clone --depth 2 git@github.com:ethereum/solidity-test-bytecode.git
-        cd solidity-test-bytecode
+        git clone --depth 2 git@github.com:shyftnetwork/shyft_solidity-test-bytecode.git
+        cd shyft_solidity-test-bytecode
         git config user.name "travis"
-        git config user.email "chris@ethereum.org"
+        git config user.email "david@chainsafe.io"
         git clean -f -d -x
 
         DIRNAME=$(cd "$REPO_ROOT" && git show -s --format="%cd-%H" --date=short)

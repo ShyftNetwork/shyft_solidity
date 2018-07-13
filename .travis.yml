@@ -1,51 +1,23 @@
-#------------------------------------------------------------------------------
-# TravisCI configuration file for solidity.
-#
-# The documentation for solidity is hosted at:
-#
-# http://solidity.readthedocs.org
-#
-# ------------------------------------------------------------------------------
-# This file is part of solidity.
-#
-# solidity is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# solidity is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with solidity.  If not, see <http://www.gnu.org/licenses/>
-#
-# (c) 2016-2017 solidity contributors.
-#------------------------------------------------------------------------------
-
 language: cpp
-
 branches:
-    # We need to whitelist the branches which we want to have "push" automation,
-    # this includes tags (which are treated as branches by travis).
-    # Pull request automation is not constrained to this set of branches.
-    only:
-        - develop
-        - release
-        - /^v[0-9]/
-
+  only:
+  - develop
+  - release
+  - "/^v[0-9]/"
 env:
-    global:
-        - ENCRYPTION_LABEL="6d4541b72666"
-        - SOLC_BUILD_TYPE=RelWithDebInfo
-        - SOLC_EMSCRIPTEN=Off
-        - SOLC_INSTALL_DEPS_TRAVIS=On
-        - SOLC_RELEASE=On
-        - SOLC_TESTS=On
-        - SOLC_STOREBYTECODE=Off
-        - SOLC_DOCKER=Off
-
+  global:
+  - ENCRYPTION_LABEL="6d4541b72666"
+  - SOLC_BUILD_TYPE=RelWithDebInfo
+  - SOLC_EMSCRIPTEN=Off
+  - SOLC_INSTALL_DEPS_TRAVIS=On
+  - SOLC_RELEASE=On
+  - SOLC_TESTS=On
+  - SOLC_STOREBYTECODE=Off
+  - SOLC_DOCKER=Off
+  - secure: s9vjx9rFdGrpWxagefsJjA1YBwsVNq4dOjOpZkIL8EjQ9IlUONjp+J1lFe110Ik/RV9rCc0YIyD6cA+8KNJIzmQZac4VWye5LC5N4YfIrYJbPlDYZvfCZA4DNUkprr0whwuU+jWeM0vPfoLOJoENZ3/HPYn7c2TaFsv5aRR3mslPbk5AknhsdDIcltPhPbkq2bElAfU8MDxi+TgHoOl194No96bx7yRvNvLy4FGoVOo1T0vCLtVR/wAfCrHQvcH9eTx89f4vO23mpyPa0ziyZExODeZfLcuL+Tu+fAgI4sTxgTxcxlQ+b5faVzqa75JOqjDahvxdoPFECOUFhvOOJoeOM0iQMzmQPpBkwDDv8bIbA9TVPdhwR9E+5pNiZ0Mj8IwjGWA0jSmpNWJdNqTIozXUbuuNEUSWnji0WwCIGNye/IaLT4iYFQxOstbp9+sR44/vQAz1COuzGk97LWL8ZL9puYvt2sI/U+1KvRVPrYD9188/vonzfeLxmqsa5WjqSgON/5cPWPsnGwf8NsNsmjb9Xgmf3zrh+5fTMsY51HfbyooZ3TY+eAzWblWIUEmgNSTcEw91LBVg8q31JRWNThdonXvbB2OZw9obv5mDlI5pWpk2zcdvxO+1TCYDi11hQiSAUXpiWi9pMBBtAh4H8w9v4GKTmux+zHYyUKzvenw=
+  - secure: qCv/1GvvyELprYtR3aZf2xrzzbAtwRrl/BhMxBhbCxAt9PoAFkVDW3fqDgkYFAW5zw+kTJ6WEMsd7jZOXyP1mSAo/Gdl3AoYM//ol8OV2Cnio7liS5++PL2EgDqlBpWv1RyFNpSGF7clLouv0/JDLYfqPDv0oBV/n0JxU70yGGcMPEXi2ulB6XOwx5XkNxjhcqL80LRnJOIVp8hHK9fDP4V+xGSSj48E08mNVLoG9W1xu6ew0LdwN+QNenD0LI6cX0KXV8/OWz90zBXvjE7TkIUPkhLrYD5gZlAyOQOKKQueZ8MxcClt/Wi6RTLa8HDCpJcTDRil3pBEZfpQBg/b/aqf4SWC1JyMiM67DhEm3GGs4mx/GCl56kzj8ikwPz6z41fO7O4501rQ255ct+j++LlS9Onhd5t0vyM1lcRo1uJOI9hgYBUNtgl6S6xRbiW/1gebeaKIyxXb5r49XyHuzGDULFBtXcozll6Gc574OtP4o0TZ5my2pPswLhw/AXpaNmKeoD9MdBF4E+iy+b9H11LxgN8ap2BX4UkCPxlOdPq6zHU8S5mfkm0IidWjIWrFUs1RBth+/FLavtvSm8sNloiwZYlep0hiA8SFiMvmUnmzD+AbYDzOF5Iy9yx9rECDP6FL0JHakSYVMpt4dyli0MVZLOLtDTHf7i1V1lhopXw=
+  matrix:
+    secure: Z3bBMaA/7cqBjPorFRhInz8gs+C21ysRtdErC3yVxSCueM5ri8t0KnmX9XzPVh+ulX10qDS8bN7gokQ2jjTiB3+KB2+QgFnffNHWqitiragtb0pRrg0HqG0rdFdZg545S4sWzYAo4vaOWtSpP5yfcyW93LOGcmqGPEED/3KpxE8Qm7HFNs496gh9vBm8/2rNr2rqDG8GxoV+gIPsADs4HaWADRaOjEvwZZpXIubqPQH8KKqULrgtJbLHMjwVUXYyGgZR5gBBTJ2a4kLSd+Kyk6El6UT2rFCrycpjlYbcz0F09atLxYdfv1BPLAcHJFGlFDxoMc/Do7hZzepnTRYZvj57XAMt/yS1G1pGh6lCCj7YQdoGr6zdsRa7ynGAl89h0+6qi38z4WLGqEJZ4aYGj05f+LE+vghfO7Ku8KenOUXWVnKX4Xvhwze8xAK3p/lW2UwNdCmkWwwfeIY2JJP/zScrluZb07dEQhP1cFVTJ+eIGyfeGcLfpGwgVIIQAZhXbL2POJiHi68pajoAjlXXrqOQ5FR9ldijx+FEN4AVpZBjgoUC0dSFLHuP0uSVsSK8QIE9HagpT212Xgc/S48XmhPaMg6j3XfkP6yr/irIuEKessXyB7h/95deGwWfey+YYLZykp6EdQmvPW6AhagwP61QFZD9efyGS+Ovlw6IQAI=
 matrix:
     include:
         - os: linux
@@ -148,14 +120,12 @@ matrix:
 #              - ZIP_SUFFIX=macos-sierra
 
 git:
-    depth: 2
-
+  depth: 2
 cache:
-    ccache: true
-    directories:
-        - boost_1_57_0
-        - $HOME/.local
-
+  ccache: true
+  directories:
+  - boost_1_57_0
+  - "$HOME/.local"
 install:
     - test $SOLC_INSTALL_DEPS_TRAVIS != On || (scripts/install_deps.sh)
     - test "$TRAVIS_OS_NAME" != "linux" || (scripts/install_cmake.sh)
@@ -166,55 +136,39 @@ install:
     - echo -n "$TRAVIS_COMMIT" > commit_hash.txt
 
 before_script:
-    - test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
-    - test $SOLC_DOCKER != On || (scripts/docker_build.sh)
-    - test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE
-      && scripts/release.sh $ZIP_SUFFIX
-      && scripts/create_source_tarball.sh)
-
+- test $SOLC_EMSCRIPTEN != On || (scripts/build_emscripten.sh)
+- test $SOLC_DOCKER != On || (scripts/docker_build.sh)
+- test $SOLC_RELEASE != On || (scripts/build.sh $SOLC_BUILD_TYPE && scripts/release.sh
+  $ZIP_SUFFIX && scripts/create_source_tarball.sh)
 script:
     - test $SOLC_EMSCRIPTEN != On -o $SOLC_TESTS != On || (scripts/test_emscripten.sh)
     - test $SOLC_TESTS != On || (cd $TRAVIS_BUILD_DIR && scripts/tests.sh)
     - test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
 
 deploy:
-    # This is the deploy target for the Emscripten build.
-    # It publishes the JS file which was compiled as part of the earlier 'build_emscripten.sh'
-    # step to https://github.com/ethereum/solc-bin/tree/gh-pages/bin.
-    # Both the build and deploy steps for Emscripten are only run within the Ubuntu
-    # configurations (not for macOS).  That is controlled by conditionals within the bash
-    # scripts because TravisCI doesn't provide much in the way of conditional logic.
-   
-    - provider: script
-      script: test $SOLC_EMSCRIPTEN != On || (scripts/release_emscripten.sh)
-      skip_cleanup: true
-      on:
-          branch:
-            - develop
-            - release
-    # This is the deploy target for the dockerfile. If we are pushing into a develop branch, it will be tagged
-    # as a nightly and appended the commit of the branch it was pushed in. If we are pushing to master it will
-    # be tagged as "stable" and given the version tag as well.
-    - provider: script
-      script: test $SOLC_DOCKER != On || (scripts/docker_deploy.sh)
-      skip_cleanup: true
-      on:
-          branch:
-            - develop
-            - release
-            - /^v\d/
-    # This is the deploy target for the native build (Linux and macOS)
-    # which generates ZIPs per commit and the source tarball.
-    #
-    # This runs for each tag that is created and adds the corresponding files.
-    - provider: releases
-      api_key:
-          secure: PWH37xVBCF0XiSjl+eH7XIdkrfxZXjzvqF4PiBOnD3VnFz+odrdnIwBmCeBYTHTWF8efpp8fmzWJk2UVq1JcpyZiC+SVxO8dx91W2ia1a+wKrEQuDgkUrZBkl5IQNCv0QS81DDQhliyZEaYh8wHO/7RReyMpGpw2U2u85WkFiZ+LdlHEZPfzUeh9lxQ9n8qwFL8Rja+Q05d4cQ8zaVEtofJJT4T6DUWhc3TzuxDYxOmjwg37rC9CkGSLn6VadSh8b3j5R0SZupFsAEvBL/imBLP9r9ewoo7o4p6By3jwiIgH9yNg7LM618xbffcNaYF/KtLBi9uPHfqF7hRD4PlECz+D0PR78nQItOX5HKm1QMg5kCnghRVCA0IVjpV5fiYQnMLM7dCRv34I5b3zLpa69wQ/GLYB2FViqNUfvPeiZTEeIJ2OmATlFx8AH2JoqpY1XJknWb35+vMfa8LSiJJW++SLWeV+ncC92hrvyZ1cy3trepRRZIfyYepxHifnfdWMkddQUJk5b2WS5Fy/TJLZNPeombnpvRhUC38dsYItarKeXTc6k4oADCEDZ2rgGIcEiqRxXV11Y5xHJekLDWzUs+YJNcCuL4pnAP//LOnbnH2w9rLpwhQYSl0anCd097NivAXQJXO2JI/byIYz1kiCVQWnW6EM8+72mLOklf/Qr8k=
+- provider: script
+  script: test $SOLC_EMSCRIPTEN != On || (scripts/release_emscripten.sh)
+  skip_cleanup: true
+  on:
+    branch:
+    - develop
+    - release
+- provider: script
+  script: test $SOLC_DOCKER != On || (scripts/docker_deploy.sh)
+  skip_cleanup: true
+  on:
+    branch:
+    - develop
+    - release
+    - "/^v\\d/"
+- provider: releases
+  api_key:
+    secure: PWH37xVBCF0XiSjl+eH7XIdkrfxZXjzvqF4PiBOnD3VnFz+odrdnIwBmCeBYTHTWF8efpp8fmzWJk2UVq1JcpyZiC+SVxO8dx91W2ia1a+wKrEQuDgkUrZBkl5IQNCv0QS81DDQhliyZEaYh8wHO/7RReyMpGpw2U2u85WkFiZ+LdlHEZPfzUeh9lxQ9n8qwFL8Rja+Q05d4cQ8zaVEtofJJT4T6DUWhc3TzuxDYxOmjwg37rC9CkGSLn6VadSh8b3j5R0SZupFsAEvBL/imBLP9r9ewoo7o4p6By3jwiIgH9yNg7LM618xbffcNaYF/KtLBi9uPHfqF7hRD4PlECz+D0PR78nQItOX5HKm1QMg5kCnghRVCA0IVjpV5fiYQnMLM7dCRv34I5b3zLpa69wQ/GLYB2FViqNUfvPeiZTEeIJ2OmATlFx8AH2JoqpY1XJknWb35+vMfa8LSiJJW++SLWeV+ncC92hrvyZ1cy3trepRRZIfyYepxHifnfdWMkddQUJk5b2WS5Fy/TJLZNPeombnpvRhUC38dsYItarKeXTc6k4oADCEDZ2rgGIcEiqRxXV11Y5xHJekLDWzUs+YJNcCuL4pnAP//LOnbnH2w9rLpwhQYSl0anCd097NivAXQJXO2JI/byIYz1kiCVQWnW6EM8+72mLOklf/Qr8k=
+  overwrite: true
+  file_glob: true
+  file: "$TRAVIS_BUILD_DIR/upload/*"
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true
 
-      overwrite: true
-      file_glob: true
-      file: $TRAVIS_BUILD_DIR/upload/*
-      skip_cleanup: true
-      on:
-          all_branches: true
-          tags: true

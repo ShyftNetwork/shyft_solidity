@@ -41,8 +41,8 @@ enum class DocumentationType: uint8_t;
 class CommandLineInterface
 {
 public:
-	CommandLineInterface() {}
 
+	CommandLineInterface() {}
 	/// Parse command line arguments and return false if we should not continue
 	bool parseArguments(int _argc, char** _argv);
 	/// Parse the files and create source code objects
@@ -51,7 +51,11 @@ public:
 	/// @returns true on success.
 	bool actOnInput();
 
+
 private:
+//Alex Binesh: Start:New Pragma Changes
+	static	bool bShyft_Compiler;
+//Alex Binesh: End:New Pragma Changes
 	bool link();
 	void writeLinkedFiles();
 

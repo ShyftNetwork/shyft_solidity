@@ -50,6 +50,12 @@
 #include <boost/filesystem/operations.hpp>
 #include <boost/algorithm/string.hpp>
 
+//Alex Binesh: Start: Disabling Warnings
+extern bool bShyft_Suppress_Warnings;
+//Alex Binesh: End: Disabling Warnings
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+extern bool bShyft_Display_Extra_Assembly_Error_Info;
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
 #ifdef _WIN32 // windows
 	#include <io.h>
 	#define isatty _isatty
@@ -116,8 +122,10 @@ static string const g_strStandardJSON = "standard-json";
 static string const g_strStrictAssembly = "strict-assembly";
 static string const g_strPrettyJson = "pretty-json";
 static string const g_strVersion = "version";
+//Alex Binesh: Start Disabling Warnings
+static string const g_strSuppressWarnings = "no-warnings";
+//Alex Binesh: End Disabling Warnings
 static string const g_strIgnoreMissingFiles = "ignore-missing";
-
 static string const g_argAbi = g_strAbi;
 static string const g_argPrettyJson = g_strPrettyJson;
 static string const g_argAllowPaths = g_strAllowPaths;
@@ -153,11 +161,17 @@ static string const g_argStandardJSON = g_strStandardJSON;
 static string const g_argStrictAssembly = g_strStrictAssembly;
 static string const g_argVersion = g_strVersion;
 static string const g_stdinFileName = g_stdinFileNameStr;
+//Alex Binesh: Start Disabling Warnings
+static string const g_argSuppressWarnings = g_strSuppressWarnings;
+//Alex Binesh: End Disabling Warnings
 static string const g_argIgnoreMissingFiles = g_strIgnoreMissingFiles;
 
 /// Possible arguments to for --combined-json
 static set<string> const g_combinedJsonArgs
 {
+//Alex Binesh: Start Disabling Warnings
+	g_strSuppressWarnings,
+//Alex Binesh: End Disabling Warnings
 	g_strAbi,
 	g_strAsm,
 	g_strAst,
@@ -221,7 +235,11 @@ static bool needsHumanTargetedStdout(po::variables_map const& _args)
 		g_argNatspecUser,
 		g_argNatspecDev,
 		g_argOpcodes,
-		g_argSignatureHashes
+//Alex Binesh: Start Disabling Warnings
+		g_strSuppressWarnings,
+//Alex Binesh: End Disabling Warnings
+ 		g_argSignatureHashes
+
 	})
 		if (_args.count(arg))
 			return true;
@@ -554,6 +572,9 @@ Allowed options)",
 	desc.add_options()
 		(g_argHelp.c_str(), "Show help message and exit.")
 		(g_argVersion.c_str(), "Show version and exit.")
+//Alex Binesh: Start Disabling Warnings
+		(g_argSuppressWarnings.c_str(), "Suppress Warnings and continue.")
+//Alex Binesh: End Disabling Warnings
 		(g_strLicense.c_str(), "Show licensing information and exit.")
 		(
 			g_strEVMVersion.c_str(),
@@ -672,6 +693,13 @@ Allowed options)",
 		version();
 		return false;
 	}
+//Alex Binesh: Start Disabling Warnings
+	if (m_args.count(g_argSuppressWarnings))
+	{
+		bShyft_Suppress_Warnings = true;
+		return true;
+	}
+//Alex Binesh: End Disabling Warnings
 
 	if (m_args.count(g_strLicense))
 	{
@@ -842,9 +870,19 @@ bool CommandLineInterface::processInput()
 				*error,
 				(error->type() == Error::Type::Warning) ? "Warning" : "Error"
 			);
-
-		if (!successful)
-			return false;
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+	if 	(bShyft_Display_Extra_Assembly_Error_Info){
+        bShyft_Display_Extra_Assembly_Error_Info = false;
+		for (auto const& error: m_compiler->errors()){
+				formatter.printExceptionInformation(
+				*error,
+				"");
+				break;// Break the loop as we just want to print this error one time
+		}
+	}
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
+	if (!successful)
+		return false;
 	}
 	catch (CompilerError const& _exception)
 	{

@@ -198,7 +198,8 @@ public:
 		ASTNode(_location), m_name(_name), m_visibility(_visibility) {}
 
 	/// @returns the declared name.
-	ASTString const& name() const { return *m_name; }
+	ASTString const& name() const {
+		return *m_name; }
 	bool noVisibilitySpecified() const { return m_visibility == Visibility::Default; }
 	Visibility visibility() const { return m_visibility == Visibility::Default ? defaultVisibility() : m_visibility; }
 	bool isPublic() const { return visibility() >= Visibility::Public; }

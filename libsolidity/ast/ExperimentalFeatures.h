@@ -24,8 +24,8 @@
 
 namespace dev
 {
-namespace solidity
-{
+	namespace solidity
+	{
 
 enum class ExperimentalFeature
 {
@@ -50,7 +50,30 @@ static const std::map<std::string, ExperimentalFeature> ExperimentalFeatureNames
 	{ "v0.5.0", ExperimentalFeature::V050 },
 	{ "__test", ExperimentalFeature::Test },
 	{ "__testOnlyAnalysis", ExperimentalFeature::TestOnlyAnalysis },
-};
 
-}
+//Alex Binesh:Start:New Pragma Changes
+	{ "ShyftPragma", ExperimentalFeature::TestOnlyAnalysis },
+//Alex Binesh:End:New Pragma Changes
+};
+//Alex Binesh:Start:New Pragma Changes
+		enum class ShyftFeature
+		{
+			NameOfShyftPragma
+		};
+
+//static const std::map<ShyftFeature, bool> ShyftFeatureOnlyAnalysis =
+//			{
+//					{ ExperimentalFeature::SMTChecker, true },
+//					{ ExperimentalFeature::TestOnlyAnalysis, true },
+//			};
+
+		static const std::map<std::string, ShyftFeature> ShyftFeaturesNames =
+				{
+
+//						{ "ShyftPragmaName", ShyftFeature::NameOfShyftPragma },
+//Alex Binesh:End:New Pragma Changes Changes
+				};
+
+
+	}
 }

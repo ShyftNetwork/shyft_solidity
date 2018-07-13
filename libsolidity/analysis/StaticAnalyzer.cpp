@@ -29,7 +29,9 @@
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
-
+//Alex Binesh: Start: Disabling Warnings
+extern bool bShyft_Suppress_Warnings;
+//Alex Binesh: End: Disabling Warnings
 bool StaticAnalyzer::analyze(SourceUnit const& _sourceUnit)
 {
 	_sourceUnit.accept(*this);
@@ -84,6 +86,8 @@ void StaticAnalyzer::endVisit(FunctionDefinition const&)
 					var.first.second->location(),
 					"Unused function parameter. Remove or comment out the variable name to silence this warning."
 				);
+				}
+			}
 			else
 				m_errorReporter.warning(var.first.second->location(), "Unused local variable.");
 		}

@@ -1128,18 +1128,29 @@ void CompilerUtils::moveToStackVariable(VariableDeclaration const& _variable)
 	solAssert(stackPosition >= size, "Variable size and position mismatch.");
 	// move variable starting from its top end in the stack
 	if (stackPosition - size + 1 > 16)
-		BOOST_THROW_EXCEPTION(
-			CompilerError() <<
-			errinfo_sourceLocation(_variable.location()) <<
-			errinfo_comment("Stack too deep, try removing local variables.")
-		);
+//Alex Binesh: Start Stack Overflow- Too many variables declared in and Paramters passed to function
+//Alex Binesh: Replaced the line below with the obe below it
+//		BOOST_THROW_EXCEPTION(
+//			CompilerError() <<
+//			errinfo_sourceLocation(_variable.location()) <<
+//			errinfo_comment("Stack too deep, try removing local variables.")
+//		);
+    BOOST_THROW_EXCEPTION(
+            CompilerError() << errinfo_sourceLocation(_variable.location()) <<
+            errinfo_comment("Stack too deep, try removing local variables.\n This is caused probably because you have a total of more than 16 local variables declared in and Returned from this function\n")
+    );
+//Alex Binesh: End Stack Overflow- oo many variables declared in and Paramters passed to function
+
 	for (unsigned i = 0; i < size; ++i)
 		m_context << swapInstruction(stackPosition - size + 1) << Instruction::POP;
 }
 
 void CompilerUtils::copyToStackTop(unsigned _stackDepth, unsigned _itemSize)
 {
-	solAssert(_stackDepth <= 16, "Stack too deep, try removing local variables.");
+//Alex Binesh: Start Stack too deep try removing local variables. Removed this line and replaced with the one below
+	//solAssert(_stackDepth <= 16, "Stack too deep, try removing local variables.");
+	solAssert(_stackDepth <= 16, "Stack too deep, try removing local variables.\n You are probably returning too many parameters from this function.");
+//Alex Binesh: Start Stack too deep try removing local variables. Removed this line and replaced with the one below
 	for (unsigned i = 0; i < _itemSize; ++i)
 		m_context << dupInstruction(_stackDepth);
 }

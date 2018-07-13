@@ -33,6 +33,9 @@
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
+//Alex Binesh: Start: Disabling Warnings
+extern bool bShyft_Suppress_Warnings;
+//Alex Binesh: End: Disabling Warnings
 
 namespace
 {
@@ -1725,8 +1728,9 @@ bool TypeChecker::visit(FunctionCall const& _functionCall)
 	{
 		if (m_scope->sourceUnit().annotation().experimentalFeatures.count(ExperimentalFeature::V050))
 			m_errorReporter.typeError(_functionCall.location(), "Event invocations have to be prefixed by \"emit\".");
-		else
-			m_errorReporter.warning(_functionCall.location(), "Invoking events without \"emit\" prefix is deprecated.");
+		else {
+				m_errorReporter.warning(_functionCall.location(), "Invoking events without \"emit\" prefix is deprecated.");
+		}
 	}
 
 	TypePointers parameterTypes = functionType->parameterTypes();

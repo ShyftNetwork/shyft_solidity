@@ -206,8 +206,10 @@ void FunctionDefinition::accept(ASTConstVisitor& _visitor) const
 	if (_visitor.visit(*this))
 	{
 		m_parameters->accept(_visitor);
-		if (m_returnParameters)
+		if (m_returnParameters){
 			m_returnParameters->accept(_visitor);
+		}
+
 		listAccept(m_functionModifiers, _visitor);
 		if (m_body)
 			m_body->accept(_visitor);

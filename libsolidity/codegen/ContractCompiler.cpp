@@ -38,7 +38,9 @@
 using namespace std;
 using namespace dev;
 using namespace dev::solidity;
-
+//Alex Binesh: Start Stack Overflow
+extern std::set<string> validParams;
+//Alex Binesh: End Stack Overflow
 namespace
 {
 
@@ -467,8 +469,17 @@ bool ContractCompiler::visit(FunctionDefinition const& _function)
 
 	unsigned const c_argumentsSize = CompilerUtils::sizeOnStack(_function.parameters());
 	unsigned const c_returnValuesSize = CompilerUtils::sizeOnStack(_function.returnParameters());
-	unsigned const c_localVariablesSize = CompilerUtils::sizeOnStack(_function.localVariables());
 
+	std::vector<ASTPointer<VariableDeclaration>>  retdParams;
+	retdParams= _function.returnParameters();//ASTPointer<ParameterList> m_returnParameters
+//	std::vector<VariableDeclaration const*> m_localVar=_function.localVariables();
+	unsigned const c_localVariablesSize = CompilerUtils::sizeOnStack(_function.localVariables());
+// Alex Binesh: Start Take me out later
+//	cout << "This is the list of params" << (std::basic_ostream<char>)_function.parameters()<< endl;
+//	cout << "This is the list of params" << _function.returnParameters()[0]<< endl;
+//	cout << "This is the list of returned params" << function.returnParameters()<< endl;
+//	cout << "This is the list of local variables" << function.localVariables()<< endl;
+// Alex Binesh: Start Take me out later
 	vector<int> stackLayout;
 	stackLayout.push_back(c_returnValuesSize); // target of return address
 	stackLayout += vector<int>(c_argumentsSize, -1); // discard all arguments
@@ -477,11 +488,73 @@ bool ContractCompiler::visit(FunctionDefinition const& _function)
 	stackLayout += vector<int>(c_localVariablesSize, -1);
 
 	if (stackLayout.size() > 17)
+    {
+//Alex Binesh: Start Stack Overflow- Too many Paramters passed to function
+
+        string sInvalidString, sValidString;
+		int iListSize =validParams.size();
+        int iStackSize=stackLayout.size();
+        bool bAlreadyStartedValidCount=false, bAlreadyStartedInvalidCount=false, bWasTheFirstValueNull=false;
+        int iAvailableStackSpace = iStackSize - iListSize;
+        //This means there are no parameters passed into or returned from this function. Strictly too many variables declared
+        if (std::begin(validParams) == std::end(validParams))
+            sValidString = "\n\t\tYou have declared more than 16 variables in this function:";
+        else
+            sValidString = "\n\t\tYou cannot have more than a total of 16 Parameters passed to AND Declared in this function:";
+
+
+        for( auto iter = std::begin(validParams) ; iter != std::end(validParams) ; ++iter ) {
+
+            //The below logic is weird since if there are more than 16 parameters, they get added to the beginning of the set
+			if (iListSize <= 17 ) {
+//                if (iListSize > 1 && (iListSize > (iStackSize - 17)) ) {
+               if (iAvailableStackSpace < 17) {
+                    if (!bAlreadyStartedValidCount){
+                        if (*iter == ""){
+                            bWasTheFirstValueNull=true;
+                        }
+                        sValidString += "\n\n\t\tPossible Valid Parameters: " + *iter ;
+                        bAlreadyStartedValidCount=true;
+                    }
+                    else {
+                        if (bWasTheFirstValueNull) {
+                            sValidString += *iter;
+                            bWasTheFirstValueNull = false;
+                        }else{
+                            sValidString +=  ',' + *iter ;
+                        }
+                    }
+                }
+                else
+                {
+                    if (!bAlreadyStartedInvalidCount){
+                        sInvalidString = "\n\t\tPossible Extra Parameters: " + *iter ;
+                        bAlreadyStartedInvalidCount=true;
+                    }
+                    else {
+                        sInvalidString +=  " , " + *iter ;
+                    }
+                }
+				iListSize--;
+            }
+            else
+            {
+
+                sInvalidString +=  " , " + *iter  ;
+				iListSize--;
+            }
+            iAvailableStackSpace++;
+
+        }
+        //cout<< endl<< endl;
+//Alex Binesh: End Stack Overflow Too many Paramters passed to function
+
 		BOOST_THROW_EXCEPTION(
 			CompilerError() <<
 			errinfo_sourceLocation(_function.location()) <<
-			errinfo_comment("Stack too deep, try removing local variables.")
+			errinfo_comment("Stack too deep, try removing local variables." + sValidString +sInvalidString+'\n')
 		);
+    }
 	while (stackLayout.back() != int(stackLayout.size() - 1))
 		if (stackLayout.back() < 0)
 		{

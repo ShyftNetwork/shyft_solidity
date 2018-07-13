@@ -61,13 +61,20 @@ m_magicVariables(vector<shared_ptr<MagicVariableDeclaration const>>{
 	make_shared<MagicVariableDeclaration>("sha3", make_shared<FunctionType>(strings(), strings{"bytes32"}, FunctionType::Kind::SHA3, true, StateMutability::Pure)),
 	make_shared<MagicVariableDeclaration>("suicide", make_shared<FunctionType>(strings{"address"}, strings{}, FunctionType::Kind::Selfdestruct)),
 	make_shared<MagicVariableDeclaration>("tx", make_shared<MagicType>(MagicType::Kind::Transaction)),
-//Alex Binesh: Start
-	make_shared<MagicVariableDeclaration>("getattest", make_shared<FunctionType>(strings{"address", "uint64"}, strings{"bytes"}, FunctionType::Kind::Getattest, false, StateMutability::Pure)),
+//Alex Binesh: Start:Opcode Changes
+//Alex: Replace me later    make_shared<MagicVariableDeclaration>("getattest", make_shared<FunctionType>(strings{"address", "uint64"}, strings{"Bytes"}, FunctionType::Kind::Getattest, false, StateMutability::Pure)),
+
+    make_shared<MagicVariableDeclaration>("getattest", make_shared<FunctionType>(strings{"uint64", "uint64"}, strings{"uint64"}, FunctionType::Kind::Getattest, false, StateMutability::Pure)),
 	make_shared<MagicVariableDeclaration>("checktattestvalid", make_shared<FunctionType>(strings{"address", "uint256"}, strings{"bool"}, FunctionType::Kind::CheckAttestValid, false, StateMutability::Pure)),
 	make_shared<MagicVariableDeclaration>("getrevoke", make_shared<FunctionType>(strings{"address", "uint64"}, strings{"uint64"}, FunctionType::Kind::Getrevoke, false, StateMutability::Pure)),
 	make_shared<MagicVariableDeclaration>("topoint", make_shared<FunctionType>(strings{"address", "uint64"}, strings{"uint64"}, FunctionType::Kind::Topoint, false, StateMutability::Pure)),
+	make_shared<MagicVariableDeclaration>("merkleprove", make_shared<FunctionType>(strings{"bytes", "uint256","bytes32","bytes32" }, strings{"bool"}, FunctionType::Kind::MerkleProve, false, StateMutability::Pure)),
 
-//Alex Binesh: End
+//Alex Binesh: End:Opcode Changes
+//Alex Binesh: Start:Reserved Word Changes
+    make_shared<MagicVariableDeclaration>("MathSafeFunction", make_shared<FunctionType>(strings{"uint64","uint64"}, strings{}, FunctionType::Kind::Require, false, StateMutability::Pure)),
+//Alex Binesh: End:Reserved Word Changes
+
 })
 {
 }
@@ -102,4 +109,8 @@ MagicVariableDeclaration const* GlobalContext::currentSuper() const
 }
 
 }
+
+
 }
+
+

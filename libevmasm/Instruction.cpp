@@ -168,7 +168,14 @@ const std::map<std::string, Instruction> dev::solidity::c_instructions =
 	{ "CREATE2", Instruction::CREATE2 },
 	{ "REVERT", Instruction::REVERT },
 	{ "INVALID", Instruction::INVALID },
-	{ "SELFDESTRUCT", Instruction::SELFDESTRUCT }
+	{ "SELFDESTRUCT", Instruction::SELFDESTRUCT },
+// Alex Binesh: Start: Opcode Changes
+	{ "TOPOINT", Instruction::TOPOINT},
+	{ "GETATTEST", Instruction::GETATTEST},
+	{ "CHECKATTESTVALID", Instruction::CHECKATTESTVALID},
+	{ "GETACTIVEREVOKE", Instruction::GETREVOKE},
+	{ "MERKLEPROVE", Instruction::MERKLEPROVE},
+// Alex Binesh: End: Opcode Changes
 };
 
 static const std::map<Instruction, InstructionInfo> c_instructionInfo =
@@ -311,7 +318,49 @@ static const std::map<Instruction, InstructionInfo> c_instructionInfo =
 	{ Instruction::CREATE2,		{ "CREATE2",		0, 4, 1, true, Tier::Special } },
 	{ Instruction::REVERT,		{ "REVERT",		0, 2, 0, true, Tier::Zero } },
 	{ Instruction::INVALID,		{ "INVALID",		0, 0, 0, true, Tier::Zero } },
-	{ Instruction::SELFDESTRUCT,	{ "SELFDESTRUCT",		0, 1, 0, true, Tier::Special } }
+	{ Instruction::SELFDESTRUCT,	{ "SELFDESTRUCT",		0, 1, 0, true, Tier::Special } },
+// Alex Binesh: Start: Opcode Changes
+
+	// @note: @here: Shyft opcodes.
+	// @note: @here: TOPOINT returns a point on the secp256k curve.
+	{ Instruction::TOPOINT, 	{"TOPOINT", 0, 2, 1, false, Tier::Special } },
+	// @note: @here: GETATTEST has 2 arguments, an address and an rlp dictionary.
+	// this covers valid or not (binary), Trust Anchor address (index in dictionary), 
+	// Jurisdiction (index in dictionary), and other restrictions (validity for certain
+	// periods, start time, etc.)
+	// it returns an rlp encoded stream of attestations with the index (nonce) of
+	// the attestation as the first element.
+	//
+	// on other EVM architectures, a precompiler can occur which points to addresses
+	// of specific contracts that have pre-built hash maps of the calling contract
+	// and its most up to date list of attestations (attestation cache libraries)
+	// this would be ~800 gas from callcontract and a bunch for SLOADs, but should
+	// be manageable with other solidity commands that can allow for a specialized
+	// map search.
+	{ Instruction::GETATTEST, 	{"GETATTEST", 0, 2, 1, false, Tier::Special } },
+	// @note: @here:  CHECKATTESTVALID has two arguments, the address the attestation 
+	// applies to and the nonce of the attestation.
+	// on other EVM architectures, GETATTEST would be used in place of CHECKVALIDATTEST,
+	// with the flag of valid attestations only, and there would be a check made from
+	// the return of this hash map to to the nonce
+	// returns a boolean true if the attestation is valid.
+	{ Instruction::CHECKATTESTVALID, 	{"CHECKATTESTVALID", 0, 2, 1, false, Tier::Special } },
+	// @note: @here: GETREVOKE has 2 arguments, an address and an rlp dictionary.
+	// this covers active or not (binary), Trust Anchor address (index in dictionary), 
+	// Jurisdiction (index in dictionary).
+	// it returns an rlp encoded stream of revocations, with the index (nonce) of
+	// the revocation as the first element.
+	//
+	// on other EVM architectures, a precompiler can occur which points to addresses
+	// of specific contracts that have pre-built hash maps of the calling contract
+	// and its most up to date list of revocations (revocation cache libraries)
+	// this would be ~800 gas from callcontract and a bunch for SLOADs, but should
+	// be manageable with other solidity commands that can allow for a specialized
+	// map search.
+	{ Instruction::GETREVOKE, 	{"GETREVOKE", 0, 2, 1, false, Tier::Special } },
+	{ Instruction::MERKLEPROVE, 	{"MERKLEPROVE", 0, 4, 1, false, Tier::Low } },
+// Alex Binesh: End: Opcode Changes
+
 };
 
 void dev::solidity::eachInstruction(

@@ -29,6 +29,9 @@
 using namespace std;
 using namespace dev;
 using namespace solidity;
+//Alex Binesh: Start Stack too deep try removing local variables.
+extern set<string> validParams;
+//Alex Binesh: End Stack too deep try removing local variables.
 
 
 StackVariable::StackVariable(CompilerContext& _compilerContext, VariableDeclaration const& _declaration):
@@ -42,11 +45,18 @@ void StackVariable::retrieveValue(SourceLocation const& _location, bool) const
 {
 	unsigned stackPos = m_context.baseToCurrentStackOffset(m_baseStackOffset);
 	if (stackPos + 1 > 16) //@todo correct this by fetching earlier or moving to memory
+    {
+	//Alex Binesh: End Stack too deep try removing local variables.
 		BOOST_THROW_EXCEPTION(
 			CompilerError() <<
 			errinfo_sourceLocation(_location) <<
-			errinfo_comment("Stack too deep, try removing local variables.")
+//Alex Binesh: Start Stack too deep try removing local variables. Removed this line and replaced with the one below
+//			errinfo_comment("Stack too deep, try removing local variables.")
+            errinfo_comment("Stack too deep, try removing local variables.\nThis could be because the combination of Returned parameters and Array index references add up to more than 16\n"
+							"Please see this line:")
+        //Alex Binesh: End Stack too deep try removing local variables.
 		);
+    }
 	solAssert(stackPos + 1 >= m_size, "Size and stack pos mismatch.");
 	for (unsigned i = 0; i < m_size; ++i)
 		m_context << dupInstruction(stackPos + 1);

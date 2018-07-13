@@ -113,7 +113,6 @@ public:
 
 	/// @returns the next token and advances input
 	Token::Value next();
-
 	///@{
 	///@name Information about the current token
 

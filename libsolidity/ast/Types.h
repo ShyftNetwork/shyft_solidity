@@ -917,17 +917,17 @@ public:
 		ObjectCreation, ///< array creation using new
 		Assert, ///< assert()
 		Require, ///< require()
-		ABIEncode,
 		ABIEncodePacked,
+		ABIEncode,
 		ABIEncodeWithSelector,
 		ABIEncodeWithSignature,
 		GasLeft ///< gasleft()
-		Require, ///< require()
-//Alex Binesh: Start
+//Alex Binesh: Start:Opcode Changes
 		Getattest, ///< GETATTEST()
         CheckAttestValid, ///CHECKATTESTVALID()
         Getrevoke, ///CHECKATTESTVALID()
-		Topoint /// TOPOINT()
+		Topoint, /// TOPOINT()
+		MerkleProve ///MERKLEPROVE
 //Alex Binesh: End
 	};
 

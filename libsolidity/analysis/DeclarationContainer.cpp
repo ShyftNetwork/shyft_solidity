@@ -160,3 +160,4 @@ vector<ASTString> DeclarationContainer::similarNames(ASTString const& _name) con
 
 	return similar;
 }
+

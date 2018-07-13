@@ -66,6 +66,7 @@ enum class Instruction: uint8_t
 	SAR,				///< bitwise SAR operation
 
 	KECCAK256 = 0x20,		///< compute KECCAK-256 hash
+	TOPOINT = 0x21,		///< add pederson commitments requisite opcodes re: bluepaper (to_point opcode)
 
 	ADDRESS = 0x30,		///< get address of currently executing account
 	BALANCE,			///< get balance of the given account
@@ -186,7 +187,12 @@ enum class Instruction: uint8_t
 	RETURNSUB,          ///< return to subroutine jumped from -- not part of Instructions.cpp
 	PUTLOCAL,           ///< pop top of stack to local variable -- not part of Instructions.cpp
 	GETLOCAL,           ///< push local variable to top of stack -- not part of Instructions.cpp
-
+// Alex Binesh: Start: Opcode Changes
+	GETATTEST = 0xe0,
+	CHECKATTESTVALID,
+	GETREVOKE,
+	MERKLEPROVE,
+// Alex Binesh: End: Opcode Changes
 	CREATE = 0xf0,		///< create a new account with associated code
 	CALL,				///< message-call into an account
 	CALLCODE,			///< message-call with another account's code only
