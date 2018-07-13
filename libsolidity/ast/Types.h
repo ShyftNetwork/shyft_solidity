@@ -922,6 +922,13 @@ public:
 		ABIEncodeWithSelector,
 		ABIEncodeWithSignature,
 		GasLeft ///< gasleft()
+		Require, ///< require()
+//Alex Binesh: Start
+		Getattest, ///< GETATTEST()
+        CheckAttestValid, ///CHECKATTESTVALID()
+        Getrevoke, ///CHECKATTESTVALID()
+		Topoint /// TOPOINT()
+//Alex Binesh: End
 	};
 
 	virtual Category category() const override { return Category::Function; }
