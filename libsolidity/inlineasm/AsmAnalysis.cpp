@@ -37,7 +37,9 @@ using namespace std;
 using namespace dev;
 using namespace dev::solidity;
 using namespace dev::solidity::assembly;
-
+//Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
+extern bool bShyft_Display_Extra_Assembly_Error_Info;
+//Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
 namespace {
 
 set<string> const builtinTypes{"bool", "u8", "s8", "u32", "s32", "u64", "s64", "u128", "s128", "u256", "s256"};
@@ -423,6 +425,7 @@ bool AsmAnalyzer::operator()(Block const& _block)
 				to_string(-stackDiff) + string(" missing item(s).")
 			)
 		);
+		bShyft_Display_Extra_Assembly_Error_Info=true;
 		success = false;
 	}
 

@@ -4,7 +4,7 @@ contract HelpMe {
 	event emitMe();
 
 	// uncomment this function to get a stack too deep error at compilation
-/*	function stackTooDeep(
+	function stackTooDeep(
 		uint _a,
 		uint _b,
 		uint _c,
@@ -35,21 +35,25 @@ contract HelpMe {
 	function emitEvent() {
 		emitMe(); // this will cause a warning with newer versions of solc
 	}
-*/
+
 	function unbalancedStack() {
 		uint iVar1;
 		uint iVar2;
 		uint iVar3;
 
-		assembly
-
-		iVar3
-		    iVar2
+	assembly
+		{
+            iVar3
+            iVar2
 //		    { let iVar1 := add(iVar1, 1) }
 		    iVar3 :=9
+//		    { let iVar1 := add(iVar1, 1) }
+
 		}
+
 	}
-	function emitEvent() {
+	function emitEvent1() {
 		emitMe(); // this will cause a warning with newer versions of solc
 	}
+
 }

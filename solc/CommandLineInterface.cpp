@@ -832,8 +832,8 @@ bool CommandLineInterface::processInput()
 				(error->type() == Error::Type::Warning) ? "Warning" : "Error"
 			);
 //Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
-	if 	(!bShyft_Display_Extra_Assembly_Error_Info){
-		bShyft_Display_Extra_Assembly_Error_Info=true;
+	if 	(bShyft_Display_Extra_Assembly_Error_Info){
+        bShyft_Display_Extra_Assembly_Error_Info = false;
 		for (auto const& error: m_compiler->errors()){
 				formatter.printExceptionInformation(
 				*error,
