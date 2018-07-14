@@ -20,9 +20,12 @@
 
 #include <test/libsolidity/AnalysisFramework.h>
 
+#include <test/Options.h>
+
 #include <boost/test/unit_test.hpp>
 
 #include <string>
+#include <tuple>
 //Alex Binesh: Start: Disabling warnings
 extern bool bShyft_Suppress_Warnings;
 //Alex Binesh: End: Disabling Warnings
@@ -111,6 +114,8 @@ BOOST_AUTO_TEST_CASE(environment_access)
 		"block.difficulty",
 		"block.number",
 		"block.gaslimit",
+		"blockhash(7)",
+		"gasleft()",
 		"msg.gas",
 		"msg.value",
 		"msg.sender",
@@ -119,11 +124,12 @@ BOOST_AUTO_TEST_CASE(environment_access)
 		"this",
 		"address(1).balance"
 	};
+	// ``block.blockhash`` and ``blockhash`` are tested seperately below because their usage will
+	// produce warnings that can't be handled in a generic way.
 	vector<string> pure{
 		"msg.data",
 		"msg.data[0]",
 		"msg.sig",
-		"block.blockhash", // Not evaluating the function
 		"msg",
 		"block",
 		"tx"
@@ -131,25 +137,41 @@ BOOST_AUTO_TEST_CASE(environment_access)
 	for (string const& x: view)
 	{
 		CHECK_ERROR(
-			"contract C { function f() pure public { var x = " + x + "; x; } }",
+			"contract C { function f() pure public { " + x + "; } }",
 			TypeError,
 			"Function declared as pure, but this expression (potentially) reads from the environment or state and thus requires \"view\""
 		);
 	}
 	for (string const& x: pure)
 	{
-// Alex Binesh:Start Disabling the warnings
+	  // Alex Binesh:Start Disabling the warnings
 		if (!bShyft_Suppress_Warnings)
-// Alex Binesh: End Disabling the warnings
 		{
-			CHECK_WARNING_ALLOW_MULTI(
-					"contract C { function f() view public { var x = " + x + "; x; } }",
-					(std::vector<std::string>{
-							"Function state mutability can be restricted to pure",
-							"Use of the \"var\" keyword is deprecated."
-					}));
+		// Alex Binesh: End Disabling the warnings
+  		CHECK_WARNING_ALLOW_MULTI(
+  			"contract C { function f() view public { var x = " + x + "; x; } }",
+  			(std::vector<std::string>{
+  				"Function state mutability can be restricted to pure",
+  				"Use of the \"var\" keyword is deprecated."
+  		}));
+  	// Alex Binesh:Start Disabling the warnings
 		}
+		// Alex Binesh: End Disabling the warnings
 	}
+
+	CHECK_WARNING_ALLOW_MULTI(
+		"contract C { function f() view public { blockhash; } }",
+		(std::vector<std::string>{
+			"Function state mutability can be restricted to pure",
+			"Statement has no effect."
+	}));
+
+	CHECK_WARNING_ALLOW_MULTI(
+		"contract C { function f() view public { block.blockhash; } }",
+		(std::vector<std::string>{
+			"Function state mutability can be restricted to pure",
+			"\"block.blockhash()\" has been deprecated in favor of \"blockhash()\""
+	}));
 }
 
 BOOST_AUTO_TEST_CASE(view_error_for_050)
@@ -284,11 +306,11 @@ BOOST_AUTO_TEST_CASE(builtin_functions)
 	string text = R"(
 		contract C {
 			function f() public {
-				this.transfer(1);
-				require(this.send(2));
-				selfdestruct(this);
-				require(this.delegatecall());
-				require(this.call());
+				address(this).transfer(1);
+				require(address(this).send(2));
+				selfdestruct(address(this));
+				require(address(this).delegatecall());
+				require(address(this).call());
 			}
 			function g() pure public {
 				bytes32 x = keccak256("abc");
@@ -430,7 +452,10 @@ BOOST_AUTO_TEST_CASE(assembly_staticcall)
 			}
 		}
 	)";
-	CHECK_WARNING(text, "only available after the Metropolis");
+	if (!dev::test::Options::get().evmVersion().hasStaticCall())
+		CHECK_WARNING(text, "\"staticcall\" instruction is only available for Byzantium-compatible");
+	else
+		CHECK_SUCCESS_NO_WARNINGS(text);
 }
 
 BOOST_AUTO_TEST_CASE(assembly_jump)

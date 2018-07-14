@@ -43,7 +43,7 @@ public:
 		m_runtimeCompiler(_runtimeCompiler),
 		m_context(_context)
 	{
-		m_context = CompilerContext(_runtimeCompiler ? &_runtimeCompiler->m_context : nullptr);
+		m_context = CompilerContext(_context.evmVersion(), _runtimeCompiler ? &_runtimeCompiler->m_context : nullptr);
 	}
 
 	void compileContract(
@@ -90,10 +90,6 @@ private:
 	void appendDelegatecallCheck();
 	void appendFunctionSelector(ContractDefinition const& _contract);
 	void appendCallValueCheck();
-	/// Creates code that unpacks the arguments for the given function represented by a vector of TypePointers.
-	/// From memory if @a _fromMemory is true, otherwise from call data.
-	/// Expects source offset on the stack, which is removed.
-	void appendCalldataUnpacker(TypePointers const& _typeParameters, bool _fromMemory = false);
 	void appendReturnValuePacker(TypePointers const& _typeParameters, bool _isLibrary);
 
 	void registerStateVariables(ContractDefinition const& _contract);
@@ -125,7 +121,7 @@ private:
 	void compileExpression(Expression const& _expression, TypePointer const& _targetType = TypePointer());
 
 	/// @returns the runtime assembly for clone contracts.
-	static eth::AssemblyPointer cloneRuntime();
+	eth::AssemblyPointer cloneRuntime() const;
 
 	bool const m_optimise;
 	/// Pointer to the runtime compiler in case this is a creation compiler.
@@ -139,7 +135,7 @@ private:
 	FunctionDefinition const* m_currentFunction = nullptr;
 	unsigned m_stackCleanupForReturn = 0; ///< this number of stack elements need to be removed before jump to m_returnTag
 	// arguments for base constructors, filled in derived-to-base order
-	std::map<FunctionDefinition const*, std::vector<ASTPointer<Expression>> const*> m_baseArguments;
+	std::map<FunctionDefinition const*, ASTNode const*> const* m_baseArguments;
 };
 
 }

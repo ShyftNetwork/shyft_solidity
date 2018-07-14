@@ -62,13 +62,16 @@ Function modifiers can be used to amend the semantics of functions in a declarat
 
 ::
 
-    pragma solidity ^0.4.11;
+    pragma solidity ^0.4.22;
 
     contract Purchase {
         address public seller;
 
         modifier onlySeller() { // Modifier
-            require(msg.sender == seller);
+            require(
+                msg.sender == seller,
+                "Only seller can call this."
+            );
             _;
         }
 
@@ -86,7 +89,7 @@ Events are convenience interfaces with the EVM logging facilities.
 
 ::
 
-    pragma solidity ^0.4.20; // should actually be 0.4.21
+    pragma solidity ^0.4.21;
 
     contract SimpleAuction {
         event HighestBidIncreased(address bidder, uint amount); // Event
@@ -126,7 +129,7 @@ Structs are custom defined types that can group several variables (see
 Enum Types
 ==========
 
-Enums can be used to create custom types with a finite set of values (see
+Enums can be used to create custom types with a finite set of 'constant values' (see
 :ref:`enums` in types section).
 
 ::

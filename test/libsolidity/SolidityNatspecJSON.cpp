@@ -20,7 +20,7 @@
  * Unit tests for the solidity compiler JSON Interface output.
  */
 
-#include "../TestHelper.h"
+#include <test/Options.h>
 #include <string>
 #include <libdevcore/JSON.h>
 #include <libsolidity/interface/CompilerStack.h>
@@ -47,6 +47,7 @@ public:
 	{
 		m_compilerStack.reset(false);
 		m_compilerStack.addSource("", "pragma solidity >=0.0;\n" + _code);
+		m_compilerStack.setEVMVersion(dev::test::Options::get().evmVersion());
 		BOOST_REQUIRE_MESSAGE(m_compilerStack.parseAndAnalyze(), "Parsing contract failed");
 
 		Json::Value generatedDocumentation;
@@ -67,6 +68,7 @@ public:
 	{
 		m_compilerStack.reset(false);
 		m_compilerStack.addSource("", "pragma solidity >=0.0;\n" + _code);
+		m_compilerStack.setEVMVersion(dev::test::Options::get().evmVersion());
 		BOOST_CHECK(!m_compilerStack.parseAndAnalyze());
 		BOOST_REQUIRE(Error::containsErrorOfType(m_compilerStack.errors(), Error::Type::DocstringParsingError));
 	}

@@ -54,7 +54,7 @@ keyid=703F83D0
 email=builds@ethereum.org
 packagename=solc
 
-for distribution in trusty vivid xenial zesty artful
+for distribution in trusty vivid xenial zesty artful bionic
 do
 cd /tmp/
 rm -rf $distribution
@@ -76,7 +76,7 @@ mv solidity solc
 
 # Fetch jsoncpp dependency
 mkdir -p ./solc/deps/downloads/ 2>/dev/null || true
-wget -O ./solc/deps/downloads/jsoncpp-1.7.7.tar.gz https://github.com/open-source-parsers/jsoncpp/archive/1.7.7.tar.gz
+wget -O ./solc/deps/downloads/jsoncpp-1.8.4.tar.gz https://github.com/open-source-parsers/jsoncpp/archive/1.8.4.tar.gz
 
 # Determine version
 cd solc

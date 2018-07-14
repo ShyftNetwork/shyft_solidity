@@ -77,7 +77,6 @@ namespace solidity
 
 static string const g_stdinFileNameStr = "<stdin>";
 static string const g_strAbi = "abi";
-static string const g_strAddStandard = "add-std";
 static string const g_strAllowPaths = "allow-paths";
 static string const g_strAsm = "asm";
 static string const g_strAsmJson = "asm-json";
@@ -93,6 +92,7 @@ static string const g_strCompactJSON = "compact-format";
 static string const g_strContracts = "contracts";
 static string const g_strEVM = "evm";
 static string const g_strEVM15 = "evm15";
+static string const g_strEVMVersion = "evm-version";
 static string const g_streWasm = "ewasm";
 static string const g_strFormal = "formal";
 static string const g_strGas = "gas";
@@ -125,8 +125,8 @@ static string const g_strVersion = "version";
 //Alex Binesh: Start Disabling Warnings
 static string const g_strSuppressWarnings = "no-warnings";
 //Alex Binesh: End Disabling Warnings
+static string const g_strIgnoreMissingFiles = "ignore-missing";
 static string const g_argAbi = g_strAbi;
-static string const g_argAddStandard = g_strAddStandard;
 static string const g_argPrettyJson = g_strPrettyJson;
 static string const g_argAllowPaths = g_strAllowPaths;
 static string const g_argAsm = g_strAsm;
@@ -164,6 +164,8 @@ static string const g_stdinFileName = g_stdinFileNameStr;
 //Alex Binesh: Start Disabling Warnings
 static string const g_argSuppressWarnings = g_strSuppressWarnings;
 //Alex Binesh: End Disabling Warnings
+static string const g_argIgnoreMissingFiles = g_strIgnoreMissingFiles;
+
 /// Possible arguments to for --combined-json
 static set<string> const g_combinedJsonArgs
 {
@@ -416,8 +418,9 @@ void CommandLineInterface::handleGasEstimation(string const& _contract)
 	}
 }
 
-void CommandLineInterface::readInputFilesAndConfigureRemappings()
+bool CommandLineInterface::readInputFilesAndConfigureRemappings()
 {
+	bool ignoreMissing = m_args.count(g_argIgnoreMissingFiles);
 	bool addStdin = false;
 	if (!m_args.count(g_argInputFile))
 		addStdin = true;
@@ -434,13 +437,27 @@ void CommandLineInterface::readInputFilesAndConfigureRemappings()
 				auto infile = boost::filesystem::path(path);
 				if (!boost::filesystem::exists(infile))
 				{
-					cerr << "Skipping non-existent input file \"" << infile << "\"" << endl;
+					if (!ignoreMissing)
+					{
+						cerr << "\"" << infile << "\" is not found" << endl;
+						return false;
+					}
+					else
+						cerr << "\"" << infile << "\" is not found. Skipping." << endl;
+
 					continue;
 				}
 
 				if (!boost::filesystem::is_regular_file(infile))
 				{
-					cerr << "\"" << infile << "\" is not a valid file. Skipping" << endl;
+					if (!ignoreMissing)
+					{
+						cerr << "\"" << infile << "\" is not a valid file" << endl;
+						return false;
+					}
+					else
+						cerr << "\"" << infile << "\" is not a valid file. Skipping." << endl;
+
 					continue;
 				}
 
@@ -451,6 +468,8 @@ void CommandLineInterface::readInputFilesAndConfigureRemappings()
 		}
 	if (addStdin)
 		m_sourceCodes[g_stdinFileName] = dev::readStandardInput();
+
+	return true;
 }
 
 bool CommandLineInterface::parseLibraryOption(string const& _input)
@@ -557,13 +576,18 @@ Allowed options)",
 		(g_argSuppressWarnings.c_str(), "Suppress Warnings and continue.")
 //Alex Binesh: End Disabling Warnings
 		(g_strLicense.c_str(), "Show licensing information and exit.")
+		(
+			g_strEVMVersion.c_str(),
+			po::value<string>()->value_name("version"),
+			"Select desired EVM version. Either homestead, tangerineWhistle, spuriousDragon, byzantium (default) or constantinople."
+		)
 		(g_argOptimize.c_str(), "Enable bytecode optimizer.")
 		(
 			g_argOptimizeRuns.c_str(),
 			po::value<unsigned>()->value_name("n")->default_value(200),
-			"Estimated number of contract runs for optimizer tuning."
+			"Set for how many contract runs to optimize."
+			"Lower values will optimize more for initial deployment cost, higher values will optimize more for high-frequency usage."
 		)
-		(g_argAddStandard.c_str(), "Add standard contracts.")
 		(g_argPrettyJson.c_str(), "Output JSON in pretty format. Currently it only works with the combined JSON output.")
 		(
 			g_argLibraries.c_str(),
@@ -616,7 +640,8 @@ Allowed options)",
 			g_argAllowPaths.c_str(),
 			po::value<string>()->value_name("path(s)"),
 			"Allow a given path for imports. A list of paths can be supplied by separating them with a comma."
-		);
+		)
+		(g_argIgnoreMissingFiles.c_str(), "Ignore missing files.");
 	po::options_description outputComponents("Output Components");
 	outputComponents.add_options()
 		(g_argAst.c_str(), "AST of all source files.")
@@ -633,7 +658,7 @@ Allowed options)",
 		(g_argNatspecUser.c_str(), "Natspec user documentation of all contracts.")
 		(g_argNatspecDev.c_str(), "Natspec developer documentation of all contracts.")
 		(g_argMetadata.c_str(), "Combined Metadata JSON whose Swarm hash is stored on-chain.")
-		(g_argFormal.c_str(), "Translated source suitable for formal analysis.");
+		(g_argFormal.c_str(), "Translated source suitable for formal analysis. (Deprecated)");
 	desc.add(outputComponents);
 
 	po::options_description allOptions = desc;
@@ -704,7 +729,7 @@ bool CommandLineInterface::processInput()
 		try
 		{
 			auto path = boost::filesystem::path(_path);
-			auto canonicalPath = boost::filesystem::canonical(path);
+			auto canonicalPath = weaklyCanonicalFilesystemPath(path);
 			bool isAllowed = false;
 			for (auto const& allowedDir: m_allowedDirectories)
 			{
@@ -720,16 +745,16 @@ bool CommandLineInterface::processInput()
 			}
 			if (!isAllowed)
 				return ReadCallback::Result{false, "File outside of allowed directories."};
-			else if (!boost::filesystem::exists(path))
+
+			if (!boost::filesystem::exists(canonicalPath))
 				return ReadCallback::Result{false, "File not found."};
-			else if (!boost::filesystem::is_regular_file(canonicalPath))
+
+			if (!boost::filesystem::is_regular_file(canonicalPath))
 				return ReadCallback::Result{false, "Not a valid file."};
-			else
-			{
-				auto contents = dev::readFileAsString(canonicalPath.string());
-				m_sourceCodes[path.string()] = contents;
-				return ReadCallback::Result{true, contents};
-			}
+
+			auto contents = dev::readFileAsString(canonicalPath.string());
+			m_sourceCodes[path.string()] = contents;
+			return ReadCallback::Result{true, contents};
 		}
 		catch (Exception const& _exception)
 		{
@@ -765,12 +790,25 @@ bool CommandLineInterface::processInput()
 		return true;
 	}
 
-	readInputFilesAndConfigureRemappings();
+	if (!readInputFilesAndConfigureRemappings())
+		return false;
 
 	if (m_args.count(g_argLibraries))
 		for (string const& library: m_args[g_argLibraries].as<vector<string>>())
 			if (!parseLibraryOption(library))
 				return false;
+
+	if (m_args.count(g_strEVMVersion))
+	{
+		string versionOptionStr = m_args[g_strEVMVersion].as<string>();
+		boost::optional<EVMVersion> versionOption = EVMVersion::fromString(versionOptionStr);
+		if (!versionOption)
+		{
+			cerr << "Invalid option for --evm-version: " << versionOptionStr << endl;
+			return false;
+		}
+		m_evmVersion = *versionOption;
+	}
 
 	if (m_args.count(g_argAssemble) || m_args.count(g_argStrictAssembly) || m_args.count(g_argJulia))
 	{
@@ -819,6 +857,7 @@ bool CommandLineInterface::processInput()
 			m_compiler->addSource(sourceCode.first, sourceCode.second);
 		if (m_args.count(g_argLibraries))
 			m_compiler->setLibraries(m_libraries);
+		m_compiler->setEVMVersion(m_evmVersion);
 		// TODO: Perhaps we should not compile unless requested
 		bool optimize = m_args.count(g_argOptimize) > 0;
 		unsigned runs = m_args[g_argOptimizeRuns].as<unsigned>();
@@ -832,7 +871,8 @@ bool CommandLineInterface::processInput()
 				(error->type() == Error::Type::Warning) ? "Warning" : "Error"
 			);
 //Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
-	if 	(bShyft_Display_Extra_Assembly_Error_Info){
+//	if 	(bShyft_Display_Extra_Assembly_Error_Info)
+	{
         bShyft_Display_Extra_Assembly_Error_Info = false;
 		for (auto const& error: m_compiler->errors()){
 				formatter.printExceptionInformation(
@@ -987,7 +1027,7 @@ void CommandLineInterface::handleAst(string const& _argStr)
 		// FIXME: shouldn't this be done for every contract?
 		if (m_compiler->runtimeAssemblyItems(m_compiler->lastContractName()))
 			gasCosts = GasEstimator::breakToStatementLevel(
-				GasEstimator::structuralEstimation(*m_compiler->runtimeAssemblyItems(m_compiler->lastContractName()), asts),
+				GasEstimator(m_evmVersion).structuralEstimation(*m_compiler->runtimeAssemblyItems(m_compiler->lastContractName()), asts),
 				asts
 			);
 
@@ -1108,7 +1148,7 @@ bool CommandLineInterface::assemble(
 	map<string, AssemblyStack> assemblyStacks;
 	for (auto const& src: m_sourceCodes)
 	{
-		auto& stack = assemblyStacks[src.first] = AssemblyStack(_language);
+		auto& stack = assemblyStacks[src.first] = AssemblyStack(m_evmVersion, _language);
 		try
 		{
 			if (!stack.parseAndAnalyze(src.first, src.second))

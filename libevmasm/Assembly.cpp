@@ -353,7 +353,7 @@ void Assembly::injectStart(AssemblyItem const& _i)
 	m_items.insert(m_items.begin(), _i);
 }
 
-Assembly& Assembly::optimise(bool _enable, bool _isCreation, size_t _runs)
+Assembly& Assembly::optimise(bool _enable, EVMVersion _evmVersion, bool _isCreation, size_t _runs)
 {
 	OptimiserSettings settings;
 	settings.isCreation = _isCreation;
@@ -365,6 +365,7 @@ Assembly& Assembly::optimise(bool _enable, bool _isCreation, size_t _runs)
 		settings.runCSE = true;
 		settings.runConstantOptimiser = true;
 	}
+	settings.evmVersion = _evmVersion;
 	settings.expectedExecutionsPerDeployment = _runs;
 	optimise(settings);
 	return *this;
@@ -437,13 +438,15 @@ map<u256, u256> Assembly::optimiseInternal(
 			// function types that can be stored in storage.
 			AssemblyItems optimisedItems;
 
+			bool usesMSize = (find(m_items.begin(), m_items.end(), AssemblyItem(Instruction::MSIZE)) != m_items.end());
+
 			auto iter = m_items.begin();
 			while (iter != m_items.end())
 			{
 				KnownState emptyState;
 				CommonSubexpressionEliminator eliminator(emptyState);
 				auto orig = iter;
-				iter = eliminator.feedItems(iter, m_items.end());
+				iter = eliminator.feedItems(iter, m_items.end(), usesMSize);
 				bool shouldReplace = false;
 				AssemblyItems optimisedChunk;
 				try
@@ -482,6 +485,7 @@ map<u256, u256> Assembly::optimiseInternal(
 		ConstantOptimisationMethod::optimiseConstants(
 			_settings.isCreation,
 			_settings.isCreation ? 1 : _settings.expectedExecutionsPerDeployment,
+			_settings.evmVersion,
 			*this,
 			m_items
 		);

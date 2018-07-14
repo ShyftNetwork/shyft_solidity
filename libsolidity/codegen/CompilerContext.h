@@ -24,6 +24,8 @@
 
 #include <libsolidity/codegen/ABIFunctions.h>
 
+#include <libsolidity/interface/EVMVersion.h>
+
 #include <libsolidity/ast/ASTForward.h>
 #include <libsolidity/ast/Types.h>
 #include <libsolidity/ast/ASTAnnotations.h>
@@ -50,13 +52,17 @@ namespace solidity {
 class CompilerContext
 {
 public:
-	explicit CompilerContext(CompilerContext* _runtimeContext = nullptr):
+	explicit CompilerContext(EVMVersion _evmVersion = EVMVersion{}, CompilerContext* _runtimeContext = nullptr):
 		m_asm(std::make_shared<eth::Assembly>()),
-		m_runtimeContext(_runtimeContext)
+		m_evmVersion(_evmVersion),
+		m_runtimeContext(_runtimeContext),
+		m_abiFunctions(m_evmVersion)
 	{
 		if (m_runtimeContext)
 			m_runtimeSub = size_t(m_asm->newSub(m_runtimeContext->m_asm).data());
 	}
+
+	EVMVersion const& evmVersion() const { return m_evmVersion; }
 
 	/// Update currently enabled set of experimental features.
 	void setExperimentalFeatures(std::set<ExperimentalFeature> const& _features) { m_experimentalFeatures = _features; }
@@ -125,7 +131,7 @@ public:
 	void appendMissingLowLevelFunctions();
 	ABIFunctions& abiFunctions() { return m_abiFunctions; }
 
-	ModifierDefinition const& functionModifier(std::string const& _name) const;
+	ModifierDefinition const& resolveVirtualFunctionModifier(ModifierDefinition const& _modifier) const;
 	/// Returns the distance of the given local variable from the bottom of the stack (of the current function).
 	unsigned baseStackOffsetOfVariable(Declaration const& _declaration) const;
 	/// If supplied by a value returned by @ref baseStackOffsetOfVariable(variable), returns
@@ -151,8 +157,11 @@ public:
 	CompilerContext& appendConditionalInvalid();
 	/// Appends a REVERT(0, 0) call
 	CompilerContext& appendRevert();
-	/// Appends a conditional REVERT(0, 0) call
-	CompilerContext& appendConditionalRevert();
+	/// Appends a conditional REVERT-call, either forwarding the RETURNDATA or providing the
+	/// empty string. Consumes the condition.
+	/// If the current EVM version does not support RETURNDATA, uses REVERT but does not forward
+	/// the data.
+	CompilerContext& appendConditionalRevert(bool _forwardReturnData = false);
 	/// Appends a JUMP to a specific tag
 	CompilerContext& appendJumpTo(eth::AssemblyItem const& _tag) { m_asm->appendJump(_tag); return *this; }
 	/// Appends pushing of a new tag and @returns the new tag.
@@ -204,7 +213,7 @@ public:
 	void appendAuxiliaryData(bytes const& _data) { m_asm->appendAuxiliaryDataToEnd(_data); }
 
 	/// Run optimisation step.
-	void optimise(bool _fullOptimsation, unsigned _runs = 200) { m_asm->optimise(_fullOptimsation, true, _runs); }
+	void optimise(bool _fullOptimsation, unsigned _runs = 200) { m_asm->optimise(_fullOptimsation, m_evmVersion, true, _runs); }
 
 	/// @returns the runtime context if in creation mode and runtime context is set, nullptr otherwise.
 	CompilerContext* runtimeContext() { return m_runtimeContext; }
@@ -287,6 +296,8 @@ private:
 	} m_functionCompilationQueue;
 
 	eth::AssemblyPointer m_asm;
+	/// Version of the EVM to compile against.
+	EVMVersion m_evmVersion;
 	/// Activated experimental features.
 	std::set<ExperimentalFeature> m_experimentalFeatures;
 	/// Other already compiled contracts to be used in contract creation calls.

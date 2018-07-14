@@ -102,7 +102,7 @@ void SourceReferenceFormatter::printSourceLocation(SourceLocation const* _locati
         sOriginalSource =scanner.source();
         string cStartOfAssembly="";
         iFoundLocation=sOriginalSource.find("assembly", 0);
-
+		bShyft_Display_Extra_Assembly_Error_Info = false; // So if this block is revisited it won't print the same msg repeatedly
         if (-1 == iFoundLocation){
             return;
         }
@@ -129,7 +129,7 @@ void SourceReferenceFormatter::printSourceLocation(SourceLocation const* _locati
                 }
                 i++;
         }
-
+		cout << endl;
  	} //if (bShyft_Display_Extr...
  //Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
 }
@@ -155,7 +155,7 @@ void SourceReferenceFormatter::printExceptionInformation(
 
 
 //Alex Binesh: Start Stack Overflow- Invalid use of parameters in Assembly code
-	if (!bShyft_Display_Extra_Assembly_Error_Info)
+//	if (!bShyft_Display_Extra_Assembly_Error_Info)
 	{
 //Alex Binesh: End Stack Overflow- Invalid use of parameters in Assembly code
 		printSourceName(location);

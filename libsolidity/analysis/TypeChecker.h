@@ -22,6 +22,8 @@
 
 #pragma once
 
+#include <libsolidity/interface/EVMVersion.h>
+
 #include <libsolidity/ast/Types.h>
 #include <libsolidity/ast/ASTAnnotations.h>
 #include <libsolidity/ast/ASTForward.h>
@@ -43,7 +45,10 @@ class TypeChecker: private ASTConstVisitor
 {
 public:
 	/// @param _errorReporter provides the error logging functionality.
-	TypeChecker(ErrorReporter& _errorReporter): m_errorReporter(_errorReporter) {}
+	TypeChecker(EVMVersion _evmVersion, ErrorReporter& _errorReporter):
+		m_evmVersion(_evmVersion),
+		m_errorReporter(_errorReporter)
+	{}
 
 	/// Performs type checking on the given contract and all of its sub-nodes.
 	/// @returns true iff all checks passed. Note even if all checks passed, errors() can still contain warnings
@@ -68,7 +73,12 @@ private:
 	void checkFunctionOverride(FunctionDefinition const& function, FunctionDefinition const& super);
 	void overrideError(FunctionDefinition const& function, FunctionDefinition const& super, std::string message);
 	void checkContractAbstractFunctions(ContractDefinition const& _contract);
-	void checkContractAbstractConstructors(ContractDefinition const& _contract);
+	void checkContractBaseConstructorArguments(ContractDefinition const& _contract);
+	void annotateBaseConstructorArguments(
+		ContractDefinition const& _currentContract,
+		FunctionDefinition const* _baseConstructor,
+		ASTNode const* _argumentNode
+	);
 	/// Checks that different functions with external visibility end up having different
 	/// external argument types (i.e. different signature).
 	void checkContractExternalTypeClashes(ContractDefinition const& _contract);
@@ -131,6 +141,8 @@ private:
 	void requireLValue(Expression const& _expression);
 
 	ContractDefinition const* m_scope = nullptr;
+
+	EVMVersion m_evmVersion;
 
 	/// Flag indicating whether we are currently inside an EmitStatement.
 	bool m_insideEmitStatement = false;

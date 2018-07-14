@@ -329,6 +329,220 @@ BOOST_AUTO_TEST_CASE(ways_to_merge_variables)
 	CHECK_WARNING(text, "Assertion violation happens here");
 }
 
+BOOST_AUTO_TEST_CASE(bool_simple)
+{
+	string text = R"(
+		contract C {
+			function f(bool x) public pure {
+				assert(x);
+			}
+		}
+	)";
+	CHECK_WARNING(text, "Assertion violation happens here");
+	text = R"(
+		contract C {
+			function f(bool x, bool y) public pure {
+				assert(x == y);
+			}
+		}
+	)";
+	CHECK_WARNING(text, "Assertion violation happens here");
+	text = R"(
+		contract C {
+			function f(bool x, bool y) public pure {
+				bool z = x || y;
+				assert(!(x && y) || z);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C {
+			function f(bool x) public pure {
+				if(x) {
+					assert(x);
+				} else {
+					assert(!x);
+				}
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C {
+			function f(bool x) public pure {
+				bool y = x;
+				assert(x == y);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C {
+			function f(bool x) public pure {
+				require(x);
+				bool y;
+				y = false;
+				assert(x || y);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C {
+			function f(bool x) public pure {
+				bool y;
+				assert(x <= y);
+			}
+		}
+	)";
+	CHECK_WARNING(text, "Assertion violation happens here");
+	text = R"(
+		contract C {
+			function f(bool x) public pure {
+				bool y;
+				assert(x >= y);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C {
+			function f(bool x) public pure {
+				require(x);
+				bool y;
+				assert(x > y);
+				assert(y < x);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+}
+
+BOOST_AUTO_TEST_CASE(bool_int_mixed)
+{
+	string text = R"(
+		contract C {
+			function f(bool x) public pure {
+				uint a;
+				if(x)
+					a = 1;
+				assert(!x || a > 0);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C {
+			function f(bool x, uint a) public pure {
+				require(!x || a > 0);
+				uint b = a;
+				assert(!x || b > 0);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C {
+			function f(bool x, bool y) public pure {
+				uint a;
+				if (x) {
+					if (y) {
+						a = 0;
+					} else {
+						a = 1;
+					}
+				} else {
+					if (y) {
+						a = 1;
+					} else {
+						a = 0;
+					}
+				}
+				bool xor_x_y = (x && !y) || (!x && y);
+				assert(!xor_x_y || a > 0);
+			}
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+}
+
+BOOST_AUTO_TEST_CASE(storage_value_vars)
+{
+	string text = R"(
+		contract C
+		{
+			address a;
+			bool b;
+			uint c;
+			function f(uint x) public {
+				if (x == 0)
+				{
+					a = 100;
+					b = true;
+				}
+				else
+				{
+					a = 200;
+					b = false;
+				}
+				assert(a > 0 && b);
+			}
+		}
+	)";
+	CHECK_WARNING(text, "Assertion violation happens here");
+	text = R"(
+		contract C
+		{
+			address a;
+			bool b;
+			uint c;
+			function f() public view {
+				assert(c > 0);
+			}
+		}
+	)";
+	CHECK_WARNING(text, "Assertion violation happens here");
+	text = R"(
+		contract C
+		{
+			function f(uint x) public {
+				if (x == 0)
+				{
+					a = 100;
+					b = true;
+				}
+				else
+				{
+					a = 200;
+					b = false;
+				}
+				assert(b == (a < 200));
+			}
+
+			function g() public view {
+				require(a < 100);
+				assert(c >= 0);
+			}
+			address a;
+			bool b;
+			uint c;
+		}
+	)";
+	CHECK_SUCCESS_NO_WARNINGS(text);
+	text = R"(
+		contract C
+		{
+			function f() public view {
+				assert(c > 0);
+			}
+			uint c;
+		}
+	)";
+	CHECK_WARNING(text, "Assertion violation happens here");
+
+}
+
 BOOST_AUTO_TEST_CASE(while_loop_simple)
 {
 	// Check that variables are cleared

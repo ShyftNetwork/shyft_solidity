@@ -19,10 +19,14 @@
 
 #ifdef HAVE_Z3
 #include <libsolidity/formal/Z3Interface.h>
+#elif HAVE_CVC4
+#include <libsolidity/formal/CVC4Interface.h>
 #else
 #include <libsolidity/formal/SMTLib2Interface.h>
 #endif
 
+#include <libsolidity/formal/SSAVariable.h>
+#include <libsolidity/formal/SymbolicIntVariable.h>
 #include <libsolidity/formal/VariableUsage.h>
 
 #include <libsolidity/interface/ErrorReporter.h>
@@ -37,6 +41,8 @@ using namespace dev::solidity;
 SMTChecker::SMTChecker(ErrorReporter& _errorReporter, ReadCallback::Callback const& _readFileCallback):
 #ifdef HAVE_Z3
 	m_interface(make_shared<smt::Z3Interface>()),
+#elif HAVE_CVC4
+	m_interface(make_shared<smt::CVC4Interface>()),
 #else
 	m_interface(make_shared<smt::SMTLib2Interface>(_readFileCallback)),
 #endif
@@ -50,6 +56,19 @@ void SMTChecker::analyze(SourceUnit const& _source)
 	m_variableUsage = make_shared<VariableUsage>(_source);
 	if (_source.annotation().experimentalFeatures.count(ExperimentalFeature::SMTChecker))
 		_source.accept(*this);
+}
+
+bool SMTChecker::visit(ContractDefinition const& _contract)
+{
+	for (auto _var : _contract.stateVariables())
+		if (_var->type()->isValueType())
+			createVariable(*_var);
+	return true;
+}
+
+void SMTChecker::endVisit(ContractDefinition const&)
+{
+	m_stateVariables.clear();
 }
 
 void SMTChecker::endVisit(VariableDeclaration const& _varDecl)
@@ -66,14 +85,13 @@ bool SMTChecker::visit(FunctionDefinition const& _function)
 			"Assertion checker does not yet support constructors and functions with modifiers."
 		);
 	m_currentFunction = &_function;
-	// We only handle local variables, so we clear at the beginning of the function.
-	// If we add storage variables, those should be cleared differently.
 	m_interface->reset();
-	m_currentSequenceCounter.clear();
-	m_nextFreeSequenceCounter.clear();
+	m_variables.clear();
+	m_variables.insert(m_stateVariables.begin(), m_stateVariables.end());
 	m_pathConditions.clear();
-	m_conditionalExecutionHappened = false;
+	m_loopExecutionHappened = false;
 	initializeLocalVariables(_function);
+	resetStateVariables();
 	return true;
 }
 
@@ -91,13 +109,17 @@ bool SMTChecker::visit(IfStatement const& _node)
 
 	checkBooleanNotConstant(_node.condition(), "Condition is always $VALUE.");
 
-	auto countersEndFalse = m_currentSequenceCounter;
 	auto countersEndTrue = visitBranch(_node.trueStatement(), expr(_node.condition()));
 	vector<Declaration const*> touchedVariables = m_variableUsage->touchedVariables(_node.trueStatement());
+	decltype(countersEndTrue) countersEndFalse;
 	if (_node.falseStatement())
 	{
 		countersEndFalse = visitBranch(*_node.falseStatement(), !expr(_node.condition()));
 		touchedVariables += m_variableUsage->touchedVariables(*_node.falseStatement());
+	}
+	else
+	{
+		countersEndFalse = m_variables;
 	}
 
 	mergeVariables(touchedVariables, expr(_node.condition()), countersEndTrue, countersEndFalse);
@@ -123,6 +145,7 @@ bool SMTChecker::visit(WhileStatement const& _node)
 
 		visitBranch(_node.body(), expr(_node.condition()));
 	}
+	m_loopExecutionHappened = true;
 	resetVariables(touchedVariables);
 
 	return false;
@@ -152,7 +175,7 @@ bool SMTChecker::visit(ForStatement const& _node)
 		checkBooleanNotConstant(*_node.condition(), "For loop condition is always $VALUE.");
 	}
 
-	VariableSequenceCounters sequenceCountersStart = m_currentSequenceCounter;
+	VariableSequenceCounters sequenceCountersStart = m_variables;
 	m_interface->push();
 	if (_node.condition())
 		m_interface->addAssertion(expr(*_node.condition()));
@@ -162,8 +185,8 @@ bool SMTChecker::visit(ForStatement const& _node)
 
 	m_interface->pop();
 
-	m_conditionalExecutionHappened = true;
-	m_currentSequenceCounter = sequenceCountersStart;
+	m_loopExecutionHappened = true;
+	std::swap(sequenceCountersStart, m_variables);
 
 	resetVariables(touchedVariables);
 
@@ -200,7 +223,7 @@ void SMTChecker::endVisit(Assignment const& _assignment)
 			_assignment.location(),
 			"Assertion checker does not yet implement compound assignment."
 		);
-	else if (_assignment.annotation().type->category() != Type::Category::Integer)
+	else if (!SSAVariable::isSupportedType(_assignment.annotation().type->category()))
 		m_errorReporter.warning(
 			_assignment.location(),
 			"Assertion checker does not yet implement type " + _assignment.annotation().type->toString()
@@ -240,14 +263,14 @@ void SMTChecker::endVisit(TupleExpression const& _tuple)
 void SMTChecker::checkUnderOverflow(smt::Expression _value, IntegerType const& _type, SourceLocation const& _location)
 {
 	checkCondition(
-		_value < minValue(_type),
+		_value < SymbolicIntVariable::minValue(_type),
 		_location,
 		"Underflow (resulting value less than " + formatNumber(_type.minValue()) + ")",
 		"value",
 		&_value
 	);
 	checkCondition(
-		_value > maxValue(_type),
+		_value > SymbolicIntVariable::maxValue(_type),
 		_location,
 		"Overflow (resulting value larger than " + formatNumber(_type.maxValue()) + ")",
 		"value",
@@ -261,14 +284,15 @@ void SMTChecker::endVisit(UnaryOperation const& _op)
 	{
 	case Token::Not: // !
 	{
-		solAssert(_op.annotation().type->category() == Type::Category::Bool, "");
+		solAssert(SSAVariable::isBool(_op.annotation().type->category()), "");
 		defineExpr(_op, !expr(_op.subExpression()));
 		break;
 	}
 	case Token::Inc: // ++ (pre- or postfix)
 	case Token::Dec: // -- (pre- or postfix)
 	{
-		solAssert(_op.annotation().type->category() == Type::Category::Integer, "");
+
+		solAssert(SSAVariable::isInteger(_op.annotation().type->category()), "");
 		solAssert(_op.subExpression().annotation().lValueRequested, "");
 		if (Identifier const* identifier = dynamic_cast<Identifier const*>(&_op.subExpression()))
 		{
@@ -365,7 +389,7 @@ void SMTChecker::endVisit(Identifier const& _identifier)
 	{
 		// Will be translated as part of the node that requested the lvalue.
 	}
-	else if (dynamic_cast<IntegerType const*>(_identifier.annotation().type.get()))
+	else if (SSAVariable::isSupportedType(_identifier.annotation().type->category()))
 		defineExpr(_identifier, currentValue(*decl));
 	else if (FunctionType const* fun = dynamic_cast<FunctionType const*>(_identifier.annotation().type.get()))
 	{
@@ -439,21 +463,37 @@ void SMTChecker::arithmeticOperation(BinaryOperation const& _op)
 void SMTChecker::compareOperation(BinaryOperation const& _op)
 {
 	solAssert(_op.annotation().commonType, "");
-	if (_op.annotation().commonType->category() == Type::Category::Integer)
+	if (SSAVariable::isSupportedType(_op.annotation().commonType->category()))
 	{
 		smt::Expression left(expr(_op.leftExpression()));
 		smt::Expression right(expr(_op.rightExpression()));
 		Token::Value op = _op.getOperator();
-		smt::Expression value = (
-			op == Token::Equal ? (left == right) :
-			op == Token::NotEqual ? (left != right) :
-			op == Token::LessThan ? (left < right) :
-			op == Token::LessThanOrEqual ? (left <= right) :
-			op == Token::GreaterThan ? (left > right) :
-			/*op == Token::GreaterThanOrEqual*/ (left >= right)
-		);
+		shared_ptr<smt::Expression> value;
+		if (SSAVariable::isInteger(_op.annotation().commonType->category()))
+		{
+			value = make_shared<smt::Expression>(
+				op == Token::Equal ? (left == right) :
+				op == Token::NotEqual ? (left != right) :
+				op == Token::LessThan ? (left < right) :
+				op == Token::LessThanOrEqual ? (left <= right) :
+				op == Token::GreaterThan ? (left > right) :
+				/*op == Token::GreaterThanOrEqual*/ (left >= right)
+			);
+		}
+		else // Bool
+		{
+			solUnimplementedAssert(SSAVariable::isBool(_op.annotation().commonType->category()), "Operation not yet supported");
+			value = make_shared<smt::Expression>(
+				op == Token::Equal ? (left == right) :
+				op == Token::NotEqual ? (left != right) :
+				op == Token::LessThan ? (!left && right) :
+				op == Token::LessThanOrEqual ? (!left || right) :
+				op == Token::GreaterThan ? (left && !right) :
+				/*op == Token::GreaterThanOrEqual*/ (left || !right)
+			);
+		}
 		// TODO: check that other values for op are not possible.
-		defineExpr(_op, value);
+		defineExpr(_op, *value);
 	}
 	else
 		m_errorReporter.warning(
@@ -514,7 +554,7 @@ SMTChecker::VariableSequenceCounters SMTChecker::visitBranch(Statement const& _s
 
 SMTChecker::VariableSequenceCounters SMTChecker::visitBranch(Statement const& _statement, smt::Expression const* _condition)
 {
-	VariableSequenceCounters sequenceCountersStart = m_currentSequenceCounter;
+	VariableSequenceCounters beforeVars = m_variables;
 
 	if (_condition)
 		pushPathCondition(*_condition);
@@ -522,9 +562,9 @@ SMTChecker::VariableSequenceCounters SMTChecker::visitBranch(Statement const& _s
 	if (_condition)
 		popPathCondition();
 
-	m_conditionalExecutionHappened = true;
-	std::swap(sequenceCountersStart, m_currentSequenceCounter);
-	return sequenceCountersStart;
+	std::swap(m_variables, beforeVars);
+
+	return beforeVars;
 }
 
 void SMTChecker::checkCondition(
@@ -559,15 +599,21 @@ void SMTChecker::checkCondition(
 				expressionsToEvaluate.emplace_back(currentValue(*var));
 				expressionNames.push_back(var->name());
 			}
+		for (auto const& var: m_stateVariables)
+			if (knownVariable(*var.first))
+			{
+				expressionsToEvaluate.emplace_back(currentValue(*var.first));
+				expressionNames.push_back(var.first->name());
+			}
 	}
 	smt::CheckResult result;
 	vector<string> values;
 	tie(result, values) = checkSatisfiableAndGenerateModel(expressionsToEvaluate);
 
-	string conditionalComment;
-	if (m_conditionalExecutionHappened)
-		conditionalComment =
-			"\nNote that some information is erased after conditional execution of parts of the code.\n"
+	string loopComment;
+	if (m_loopExecutionHappened)
+		loopComment =
+			"\nNote that some information is erased after the execution of loops.\n"
 			"You can re-introduce information using require().";
 	switch (result)
 	{
@@ -580,17 +626,18 @@ void SMTChecker::checkCondition(
 			message << " for:\n";
 			solAssert(values.size() == expressionNames.size(), "");
 			for (size_t i = 0; i < values.size(); ++i)
-				message << "  " << expressionNames.at(i) << " = " << values.at(i) << "\n";
+				if (expressionsToEvaluate.at(i).name != values.at(i))
+					message << "  " << expressionNames.at(i) << " = " << values.at(i) << "\n";
 		}
 		else
 			message << ".";
-		m_errorReporter.warning(_location, message.str() + conditionalComment);
+		m_errorReporter.warning(_location, message.str() + loopComment);
 		break;
 	}
 	case smt::CheckResult::UNSATISFIABLE:
 		break;
 	case smt::CheckResult::UNKNOWN:
-		m_errorReporter.warning(_location, _description + " might happen here." + conditionalComment);
+		m_errorReporter.warning(_location, _description + " might happen here." + loopComment);
 		break;
 	case smt::CheckResult::ERROR:
 		m_errorReporter.warning(_location, "Error trying to invoke SMT solver.");
@@ -695,6 +742,15 @@ void SMTChecker::initializeLocalVariables(FunctionDefinition const& _function)
 				setZeroValue(*retParam);
 }
 
+void SMTChecker::resetStateVariables()
+{
+	for (auto const& variable: m_stateVariables)
+	{
+		newValue(*variable.first);
+		setUnknownValue(*variable.first);
+	}
+}
+
 void SMTChecker::resetVariables(vector<Declaration const*> _variables)
 {
 	for (auto const* decl: _variables)
@@ -709,8 +765,8 @@ void SMTChecker::mergeVariables(vector<Declaration const*> const& _variables, sm
 	set<Declaration const*> uniqueVars(_variables.begin(), _variables.end());
 	for (auto const* decl: uniqueVars)
 	{
-		int trueCounter = _countersEndTrue.at(decl);
-		int falseCounter = _countersEndFalse.at(decl);
+		int trueCounter = _countersEndTrue.at(decl).index();
+		int falseCounter = _countersEndFalse.at(decl).index();
 		solAssert(trueCounter != falseCounter, "");
 		m_interface->addAssertion(newValue(*decl) == smt::Expression::ite(
 			_condition,
@@ -722,14 +778,17 @@ void SMTChecker::mergeVariables(vector<Declaration const*> const& _variables, sm
 
 bool SMTChecker::createVariable(VariableDeclaration const& _varDecl)
 {
-	if (dynamic_cast<IntegerType const*>(_varDecl.type().get()))
+	if (SSAVariable::isSupportedType(_varDecl.type()->category()))
 	{
-		solAssert(m_currentSequenceCounter.count(&_varDecl) == 0, "");
-		solAssert(m_nextFreeSequenceCounter.count(&_varDecl) == 0, "");
 		solAssert(m_variables.count(&_varDecl) == 0, "");
-		m_currentSequenceCounter[&_varDecl] = 0;
-		m_nextFreeSequenceCounter[&_varDecl] = 1;
-		m_variables.emplace(&_varDecl, m_interface->newFunction(uniqueSymbol(_varDecl), smt::Sort::Int, smt::Sort::Int));
+		solAssert(m_stateVariables.count(&_varDecl) == 0, "");
+		if (_varDecl.isLocalVariable())
+			m_variables.emplace(&_varDecl, SSAVariable(_varDecl, *m_interface));
+		else
+		{
+			solAssert(_varDecl.isStateVariable(), "");
+			m_stateVariables.emplace(&_varDecl, SSAVariable(_varDecl, *m_interface));
+		}
 		return true;
 	}
 	else
@@ -742,11 +801,6 @@ bool SMTChecker::createVariable(VariableDeclaration const& _varDecl)
 	}
 }
 
-string SMTChecker::uniqueSymbol(Declaration const& _decl)
-{
-	return _decl.name() + "_" + to_string(_decl.id());
-}
-
 string SMTChecker::uniqueSymbol(Expression const& _expr)
 {
 	return "expr_" + to_string(_expr.id());
@@ -754,48 +808,38 @@ string SMTChecker::uniqueSymbol(Expression const& _expr)
 
 bool SMTChecker::knownVariable(Declaration const& _decl)
 {
-	return m_currentSequenceCounter.count(&_decl);
+	return m_variables.count(&_decl);
 }
 
 smt::Expression SMTChecker::currentValue(Declaration const& _decl)
 {
-	solAssert(m_currentSequenceCounter.count(&_decl), "");
-	return valueAtSequence(_decl, m_currentSequenceCounter.at(&_decl));
+	solAssert(knownVariable(_decl), "");
+	return m_variables.at(&_decl)();
 }
 
-smt::Expression SMTChecker::valueAtSequence(const Declaration& _decl, int _sequence)
+smt::Expression SMTChecker::valueAtSequence(Declaration const& _decl, int _sequence)
 {
-	return var(_decl)(_sequence);
+	solAssert(knownVariable(_decl), "");
+	return m_variables.at(&_decl)(_sequence);
 }
 
 smt::Expression SMTChecker::newValue(Declaration const& _decl)
 {
-	solAssert(m_nextFreeSequenceCounter.count(&_decl), "");
-	m_currentSequenceCounter[&_decl] = m_nextFreeSequenceCounter[&_decl]++;
-	return currentValue(_decl);
+	solAssert(knownVariable(_decl), "");
+	++m_variables.at(&_decl);
+	return m_variables.at(&_decl)();
 }
 
 void SMTChecker::setZeroValue(Declaration const& _decl)
 {
-	solAssert(_decl.type()->category() == Type::Category::Integer, "");
-	m_interface->addAssertion(currentValue(_decl) == 0);
+	solAssert(knownVariable(_decl), "");
+	m_variables.at(&_decl).setZeroValue();
 }
 
 void SMTChecker::setUnknownValue(Declaration const& _decl)
 {
-	auto const& intType = dynamic_cast<IntegerType const&>(*_decl.type());
-	m_interface->addAssertion(currentValue(_decl) >= minValue(intType));
-	m_interface->addAssertion(currentValue(_decl) <= maxValue(intType));
-}
-
-smt::Expression SMTChecker::minValue(IntegerType const& _t)
-{
-	return smt::Expression(_t.minValue());
-}
-
-smt::Expression SMTChecker::maxValue(IntegerType const& _t)
-{
-	return smt::Expression(_t.maxValue());
+	solAssert(knownVariable(_decl), "");
+	m_variables.at(&_decl).setUnknownValue();
 }
 
 smt::Expression SMTChecker::expr(Expression const& _e)
@@ -831,7 +875,7 @@ void SMTChecker::createExpr(Expression const& _e)
 			m_expressions.emplace(&_e, m_interface->newBool(uniqueSymbol(_e)));
 			break;
 		default:
-			solAssert(false, "Type not implemented.");
+			solUnimplementedAssert(false, "Type not implemented.");
 		}
 	}
 }
@@ -840,12 +884,6 @@ void SMTChecker::defineExpr(Expression const& _e, smt::Expression _value)
 {
 	createExpr(_e);
 	m_interface->addAssertion(expr(_e) == _value);
-}
-
-smt::Expression SMTChecker::var(Declaration const& _decl)
-{
-	solAssert(m_variables.count(&_decl), "");
-	return m_variables.at(&_decl);
 }
 
 void SMTChecker::popPathCondition()

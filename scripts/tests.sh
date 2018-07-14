@@ -30,6 +30,17 @@ set -e
 
 REPO_ROOT="$(dirname "$0")"/..
 
+IPC_ENABLED=true
+if [[ "$OSTYPE" == "darwin"* ]]
+then
+    SMT_FLAGS="--no-smt"
+    if [ "$CIRCLECI" ]
+    then
+        IPC_ENABLED=false
+        IPC_FLAGS="--no-ipc"
+    fi
+fi
+
 if [ "$1" = --junit_report ]
 then
     if [ -z "$2" ]
@@ -37,20 +48,26 @@ then
         echo "Usage: $0 [--junit_report <report_directory>]"
         exit 1
     fi
-    testargs_no_opt="--logger=JUNIT,test_suite,$2/no_opt.xml"
-    testargs_opt="--logger=JUNIT,test_suite,$2/opt.xml"
+    log_directory="$2"
 else
-    testargs_no_opt=''
-    testargs_opt=''
+    log_directory=""
 fi
 
-echo "Running commandline tests..."
+function printError() { echo "$(tput setaf 1)$1$(tput sgr0)"; }
+function printTask() { echo "$(tput bold)$(tput setaf 2)$1$(tput sgr0)"; }
+
+
+printTask "Running commandline tests..."
 "$REPO_ROOT/test/cmdlineTests.sh" &
 CMDLINE_PID=$!
 # Only run in parallel if this is run on CI infrastructure
 if [ -z "$CI" ]
 then
-    wait $CMDLINE_PID
+    if ! wait $CMDLINE_PID
+    then
+        printError "Commandline tests FAILED"
+        exit 1
+    fi
 fi
 
 function download_eth()
@@ -61,12 +78,15 @@ function download_eth()
         ETH_PATH="eth"
     else
         mkdir -p /tmp/test
-        ETH_BINARY=eth_byzantium_artful
-        ETH_HASH="e527dd3e3dc17b983529dd7dcfb74a0d3a5aed4e"
         if grep -i trusty /etc/lsb-release >/dev/null 2>&1
         then
-            ETH_BINARY=eth_byzantium2
-            ETH_HASH="4dc3f208475f622be7c8e53bee720e14cd254c6f"
+            # built from 5ac09111bd0b6518365fe956e1bdb97a2db82af1 at 2018-04-05
+            ETH_BINARY=eth_2018-04-05_trusty
+            ETH_HASH="1e5e178b005e5b51f9d347df4452875ba9b53cc6"
+        else
+            # built from 5ac09111bd0b6518365fe956e1bdb97a2db82af1 at 2018-04-05
+            ETH_BINARY=eth_2018-04-05_artful
+            ETH_HASH="eb2d0df022753bb2b442ba73e565a9babf6828d6"
         fi
         wget -q -O /tmp/test/eth https://github.com/ethereum/cpp-ethereum/releases/download/solidityTester/$ETH_BINARY
         test "$(shasum /tmp/test/eth)" = "$ETH_HASH  /tmp/test/eth"
@@ -89,22 +109,55 @@ function run_eth()
     sleep 2
 }
 
-download_eth
-ETH_PID=$(run_eth /tmp/test)
+if [ "$IPC_ENABLED" = true ];
+then
+    download_eth
+    ETH_PID=$(run_eth /tmp/test)
+fi
 
 progress="--show-progress"
-if [ "$CI" ]
+if [ "$CIRCLECI" ]
 then
     progress=""
 fi
 
-echo "--> Running tests without optimizer..."
-"$REPO_ROOT"/build/test/soltest $testargs_no_opt $progress -- --ipcpath /tmp/test/geth.ipc
-echo "--> Running tests WITH optimizer..."
-"$REPO_ROOT"/build/test/soltest $testargs_opt $progress -- --optimize --ipcpath /tmp/test/geth.ipc
+EVM_VERSIONS="homestead byzantium"
 
-wait $CMDLINE_PID
+if [ "$CIRCLECI" ] || [ -z "$CI" ]
+then
+EVM_VERSIONS+=" constantinople"
+fi
 
-pkill "$ETH_PID" || true
-sleep 4
-pgrep "$ETH_PID" && pkill -9 "$ETH_PID" || true
+# And then run the Solidity unit-tests in the matrix combination of optimizer / no optimizer
+# and homestead / byzantium VM, # pointing to that IPC endpoint.
+for optimize in "" "--optimize"
+do
+  for vm in $EVM_VERSIONS
+  do
+    printTask "--> Running tests using "$optimize" --evm-version "$vm"..."
+    log=""
+    if [ -n "$log_directory" ]
+    then
+      if [ -n "$optimize" ]
+      then
+        log=--logger=JUNIT,test_suite,$log_directory/opt_$vm.xml $testargs
+      else
+        log=--logger=JUNIT,test_suite,$log_directory/noopt_$vm.xml $testargs_no_opt
+      fi
+    fi
+    "$REPO_ROOT"/build/test/soltest $progress $log -- --testpath "$REPO_ROOT"/test "$optimize" --evm-version "$vm" $SMT_FLAGS $IPC_FLAGS  --ipcpath /tmp/test/geth.ipc
+  done
+done
+
+if ! wait $CMDLINE_PID
+then
+    printError "Commandline tests FAILED"
+    exit 1
+fi
+
+if [ "$IPC_ENABLED" = true ]
+then
+    pkill "$ETH_PID" || true
+    sleep 4
+    pgrep "$ETH_PID" && pkill -9 "$ETH_PID" || true
+fi

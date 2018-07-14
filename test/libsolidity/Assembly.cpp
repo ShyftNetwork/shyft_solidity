@@ -20,11 +20,11 @@
  * Unit tests for Assembly Items from evmasm/Assembly.h
  */
 
-#include <string>
-#include <iostream>
-#include <boost/test/unit_test.hpp>
+#include <test/Options.h>
+
 #include <libevmasm/SourceLocation.h>
 #include <libevmasm/Assembly.h>
+
 #include <libsolidity/parsing/Scanner.h>
 #include <libsolidity/parsing/Parser.h>
 #include <libsolidity/analysis/NameAndTypeResolver.h>
@@ -32,6 +32,11 @@
 #include <libsolidity/ast/AST.h>
 #include <libsolidity/analysis/TypeChecker.h>
 #include <libsolidity/interface/ErrorReporter.h>
+
+#include <boost/test/unit_test.hpp>
+
+#include <string>
+#include <iostream>
 
 using namespace std;
 using namespace dev::eth;
@@ -46,7 +51,7 @@ namespace test
 namespace
 {
 
-eth::AssemblyItems compileContract(const string& _sourceCode)
+eth::AssemblyItems compileContract(string const& _sourceCode)
 {
 	ErrorList errors;
 	ErrorReporter errorReporter(errors);
@@ -69,7 +74,7 @@ eth::AssemblyItems compileContract(const string& _sourceCode)
 	for (ASTPointer<ASTNode> const& node: sourceUnit->nodes())
 		if (ContractDefinition* contract = dynamic_cast<ContractDefinition*>(node.get()))
 		{
-			TypeChecker checker(errorReporter);
+			TypeChecker checker(dev::test::Options::get().evmVersion(), errorReporter);
 			BOOST_REQUIRE_NO_THROW(checker.checkTypeRequirements(*contract));
 			if (!Error::containsOnlyWarnings(errorReporter.errors()))
 				return AssemblyItems();
@@ -77,7 +82,7 @@ eth::AssemblyItems compileContract(const string& _sourceCode)
 	for (ASTPointer<ASTNode> const& node: sourceUnit->nodes())
 		if (ContractDefinition* contract = dynamic_cast<ContractDefinition*>(node.get()))
 		{
-			Compiler compiler;
+			Compiler compiler(dev::test::Options::get().evmVersion());
 			compiler.compileContract(*contract, map<ContractDefinition const*, Assembly const*>{}, bytes());
 
 			return compiler.runtimeAssemblyItems();
@@ -152,14 +157,22 @@ BOOST_AUTO_TEST_CASE(location_test)
 		}
 	}
 	)";
-	shared_ptr<string const> n = make_shared<string>("");
 	AssemblyItems items = compileContract(sourceCode);
+	bool hasShifts = dev::test::Options::get().evmVersion().hasBitwiseShifting();
 	vector<SourceLocation> locations =
-		vector<SourceLocation>(24, SourceLocation(2, 75, n)) +
-		vector<SourceLocation>(32, SourceLocation(20, 72, n)) +
-		vector<SourceLocation>{SourceLocation(42, 51, n), SourceLocation(65, 67, n)} +
-		vector<SourceLocation>(2, SourceLocation(58, 67, n)) +
-		vector<SourceLocation>(2, SourceLocation(20, 72, n));
+		vector<SourceLocation>(hasShifts ? 23 : 24, SourceLocation(2, 75, make_shared<string>(""))) +
+		vector<SourceLocation>(2, SourceLocation(20, 72, make_shared<string>(""))) +
+		vector<SourceLocation>(1, SourceLocation(8, 17, make_shared<string>("--CODEGEN--"))) +
+		vector<SourceLocation>(3, SourceLocation(5, 7, make_shared<string>("--CODEGEN--"))) +
+		vector<SourceLocation>(1, SourceLocation(30, 31, make_shared<string>("--CODEGEN--"))) +
+		vector<SourceLocation>(1, SourceLocation(27, 28, make_shared<string>("--CODEGEN--"))) +
+		vector<SourceLocation>(1, SourceLocation(20, 32, make_shared<string>("--CODEGEN--"))) +
+		vector<SourceLocation>(1, SourceLocation(5, 7, make_shared<string>("--CODEGEN--"))) +
+		vector<SourceLocation>(24, SourceLocation(20, 72, make_shared<string>(""))) +
+		vector<SourceLocation>(1, SourceLocation(42, 51, make_shared<string>(""))) +
+		vector<SourceLocation>(1, SourceLocation(65, 67, make_shared<string>(""))) +
+		vector<SourceLocation>(2, SourceLocation(58, 67, make_shared<string>(""))) +
+		vector<SourceLocation>(2, SourceLocation(20, 72, make_shared<string>("")));
 	checkAssemblyLocations(items, locations);
 }
 

@@ -272,9 +272,12 @@ Assignment
 Destructuring Assignments and Returning Multiple Values
 -------------------------------------------------------
 
-Solidity internally allows tuple types, i.e. a list of objects of potentially different types whose size is a constant at compile-time. Those tuples can be used to return multiple values at the same time and also assign them to multiple variables (or LValues in general) at the same time::
+Solidity internally allows tuple types, i.e. a list of objects of potentially different types whose size is a constant at compile-time. Those tuples can be used to return multiple values at the same time.
+These can then either be assigned to newly declared variables or to pre-existing variables (or LValues in general):
 
-    pragma solidity ^0.4.16;
+::
+
+    pragma solidity >0.4.23 <0.5.0;
 
     contract C {
         uint[] data;
@@ -284,19 +287,12 @@ Solidity internally allows tuple types, i.e. a list of objects of potentially di
         }
 
         function g() public {
-            // Declares and assigns the variables. Specifying the type explicitly is not possible.
-            var (x, b, y) = f();
-            // Assigns to a pre-existing variable.
-            (x, y) = (2, 7);
+            // Variables declared with type and assigned from the returned tuple.
+            (uint x, bool b, uint y) = f();
             // Common trick to swap values -- does not work for non-value storage types.
             (x, y) = (y, x);
             // Components can be left out (also for variable declarations).
-            // If the tuple ends in an empty component,
-            // the rest of the values are discarded.
-            (data.length,) = f(); // Sets the length to 7
-            // The same can be done on the left side.
-            // If the tuple begins in an empty component, the beginning values are discarded.
-            (,data[3]) = f(); // Sets data[3] to 2
+            (data.length,,) = f(); // Sets the length to 7
             // Components can only be left out at the left-hand-side of assignments, with
             // one exception:
             (x,) = (1,);
@@ -304,6 +300,11 @@ Solidity internally allows tuple types, i.e. a list of objects of potentially di
             // equivalent to 1.
         }
     }
+
+.. note::
+    Prior to version 0.4.24 it was possible to assign to tuples of smaller size, either
+    filling up on the left or on the right side (which ever was empty). This is
+    now deprecated, both sides have to have the same number of components.
 
 Complications for Arrays and Structs
 ------------------------------------
@@ -328,7 +329,9 @@ A variable declared anywhere within a function will be in scope for the *entire 
 (this will change soon, see below).
 This happens because Solidity inherits its scoping rules from JavaScript.
 This is in contrast to many languages where variables are only scoped where they are declared until the end of the semantic block.
-As a result, the following code is illegal and cause the compiler to throw an error, ``Identifier already declared``::
+As a result, the following code is illegal and cause the compiler to throw an error, ``Identifier already declared``:
+
+::
 
     // This will not compile
 
@@ -453,8 +456,9 @@ The ``require`` function should be used to ensure valid conditions, such as inpu
 If used properly, analysis tools can evaluate your contract to identify the conditions and function calls which will reach a failing ``assert``. Properly functioning code should never reach a failing assert statement; if this happens there is a bug in your contract which you should fix.
 
 There are two other ways to trigger exceptions: The ``revert`` function can be used to flag an error and
-revert the current call. In the future it might be possible to also include details about the error
-in a call to ``revert``. The ``throw`` keyword can also be used as an alternative to ``revert()``.
+revert the current call. It is possible to provide a string message containing details about the error
+that will be passed back to the caller.
+The deprecated keyword ``throw`` can also be used as an alternative to ``revert()`` (but only without error message).
 
 .. note::
     From version 0.4.13 the ``throw`` keyword is deprecated and will be phased out in the future.
@@ -469,13 +473,16 @@ of an exception instead of "bubbling up".
 Catching exceptions is not yet possible.
 
 In the following example, you can see how ``require`` can be used to easily check conditions on inputs
-and how ``assert`` can be used for internal error checking::
+and how ``assert`` can be used for internal error checking. Note that you can optionally provide
+a message string for ``require``, but not for ``assert``.
 
-    pragma solidity ^0.4.0;
+::
+
+    pragma solidity ^0.4.22;
 
     contract Sharer {
         function sendHalf(address addr) public payable returns (uint balance) {
-            require(msg.value % 2 == 0); // Only allow even numbers
+            require(msg.value % 2 == 0, "Even value required.");
             uint balanceBeforeTransfer = this.balance;
             addr.transfer(msg.value / 2);
             // Since transfer throws an exception on failure and
@@ -513,3 +520,33 @@ the EVM to revert all changes made to the state. The reason for reverting is tha
 did not occur. Because we want to retain the atomicity of transactions, the safest thing to do is to revert all changes and make the whole transaction
 (or at least call) without effect. Note that ``assert``-style exceptions consume all gas available to the call, while
 ``require``-style exceptions will not consume any gas starting from the Metropolis release.
+
+The following example shows how an error string can be used together with revert and require:
+
+::
+
+    pragma solidity ^0.4.22;
+
+    contract VendingMachine {
+        function buy(uint amount) payable {
+            if (amount > msg.value / 2 ether)
+                revert("Not enough Ether provided.");
+            // Alternative way to do it:
+            require(
+                amount <= msg.value / 2 ether,
+                "Not enough Ether provided."
+            );
+            // Perform the purchase.
+        }
+    }
+
+The provided string will be :ref:`abi-encoded <ABI>` as if it were a call to a function ``Error(string)``.
+In the above example, ``revert("Not enough Ether provided.");`` will cause the following hexadecimal data be
+set as error return data:
+
+.. code::
+
+    0x08c379a0                                                         // Function selector for Error(string)
+    0x0000000000000000000000000000000000000000000000000000000000000020 // Data offset
+    0x000000000000000000000000000000000000000000000000000000000000001a // String length
+    0x4e6f7420656e6f7567682045746865722070726f76696465642e000000000000 // String data

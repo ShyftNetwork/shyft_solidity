@@ -4,23 +4,28 @@ contract HelpMe {
 	event emitMe();
 
 	// uncomment this function to get a stack too deep error at compilation
-	function stackTooDeep(
-		uint _a,
-		uint _b,
-		uint _c,
-		uint _d,
-		uint _e,
-		uint _f,
-		uint _g,
-		uint _h,
-		uint _i,
-		uint _j,
-		uint _k,
-		uint _l,
-		uint _m,
-		uint _n,
-		uint _o,
-		uint _p){}
+function getUser(){
+
+           int[] MyVariable1;
+           int[] MyVariable2;
+           int[] MyVariable3;
+           int[] MyVariable4;
+           int[] MyVariable5;
+           int[] MyVariable6;
+           int[] MyVariable7;
+           int[] MyVariable8;
+           int[] MyVariable9;
+           int[] MyVariable10;
+           int[] MyVariable11;
+           int[] MyVariable12;
+           int[] MyVariable13;
+           int[] MyVariable14;
+           int[] MyVariable15;
+           int[] MyVariable16;
+
+           MyVariable1 [0] = 3;
+           return ();
+       }
 
 	function vmError() {
 		require(false);
@@ -42,9 +47,8 @@ contract HelpMe {
 		uint iVar3;
 
 	assembly
-		{
-            iVar3
-            iVar2
+{
+            iVar3 :=9
 //		    { let iVar1 := add(iVar1, 1) }
 		    iVar3 :=9
 //		    { let iVar1 := add(iVar1, 1) }

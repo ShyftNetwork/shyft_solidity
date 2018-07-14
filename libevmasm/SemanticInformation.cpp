@@ -28,7 +28,7 @@ using namespace std;
 using namespace dev;
 using namespace dev::eth;
 
-bool SemanticInformation::breaksCSEAnalysisBlock(AssemblyItem const& _item)
+bool SemanticInformation::breaksCSEAnalysisBlock(AssemblyItem const& _item, bool _msizeImportant)
 {
 	switch (_item.type())
 	{
@@ -58,6 +58,11 @@ bool SemanticInformation::breaksCSEAnalysisBlock(AssemblyItem const& _item)
 		if (_item.instruction() == Instruction::SSTORE)
 			return false;
 		if (_item.instruction() == Instruction::MSTORE)
+			return false;
+		if (!_msizeImportant && (
+			_item.instruction() == Instruction::MLOAD ||
+			_item.instruction() == Instruction::KECCAK256
+		))
 			return false;
 		//@todo: We do not handle the following memory instructions for now:
 		// calldatacopy, codecopy, extcodecopy, mstore8,
@@ -165,7 +170,10 @@ bool SemanticInformation::movable(Instruction _instruction)
 	switch (_instruction)
 	{
 	case Instruction::KECCAK256:
-	case Instruction::BALANCE:
+//Alex Binesh: Start
+//    case Instruction::GETATTEST:  // Not sure if I will need this. The flow control never gets here. May have to remove it soon
+//Alex Binesh: End
+    case Instruction::BALANCE:
 	case Instruction::EXTCODESIZE:
 	case Instruction::RETURNDATASIZE:
 	case Instruction::SLOAD:

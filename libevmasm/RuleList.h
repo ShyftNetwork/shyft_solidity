@@ -89,6 +89,16 @@ std::vector<SimplificationRule<Pattern>> simplificationRuleList(
 			u256 mask = (u256(1) << testBit) - 1;
 			return u256(boost::multiprecision::bit_test(B.d(), testBit) ? B.d() | ~mask : B.d() & mask);
 		}, false},
+		{{Instruction::SHL, {A, B}}, [=]{
+			if (A.d() > 255)
+				return u256(0);
+			return u256(bigint(B.d()) << unsigned(A.d()));
+		}, false},
+		{{Instruction::SHR, {A, B}}, [=]{
+			if (A.d() > 255)
+				return u256(0);
+			return B.d() >> unsigned(A.d());
+		}, false},
 
 		// invariants involving known constants
 		{{Instruction::ADD, {X, 0}}, [=]{ return X; }, false},
@@ -160,6 +170,26 @@ std::vector<SimplificationRule<Pattern>> simplificationRuleList(
 		rules.push_back({
 			{Instruction::MOD, {X, value}},
 			[=]() -> Pattern { return {Instruction::AND, {X, value - 1}}; },
+			false
+		});
+	}
+
+	for (auto const& op: std::vector<Instruction>{
+		Instruction::ADDRESS,
+		Instruction::CALLER,
+		Instruction::ORIGIN,
+		Instruction::COINBASE
+	})
+	{
+		u256 const mask = (u256(1) << 160) - 1;
+		rules.push_back({
+			{Instruction::AND, {{op, mask}}},
+			[=]() -> Pattern { return op; },
+			false
+		});
+		rules.push_back({
+			{Instruction::AND, {{mask, op}}},
+			[=]() -> Pattern { return op; },
 			false
 		});
 	}

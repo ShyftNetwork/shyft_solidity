@@ -24,8 +24,8 @@ Creating contracts programatically on Ethereum is best done via using the JavaSc
 As of today it has a method called `web3.eth.Contract <https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract>`_
 to facilitate contract creation.
 
-When a contract is created, its constructor (a function with the same
-name as the contract) is executed once.
+When a contract is created, its constructor (a function declared with the
+``constructor`` keyword) is executed once.
 A constructor is optional. Only one constructor is allowed, and this means
 overloading is not supported.
 
@@ -40,7 +40,7 @@ This means that cyclic creation dependencies are impossible.
 
 ::
 
-    pragma solidity ^0.4.16;
+    pragma solidity ^0.4.22;
 
     contract OwnedToken {
         // TokenCreator is a contract type that is defined below.
@@ -52,7 +52,7 @@ This means that cyclic creation dependencies are impossible.
 
         // This is the constructor which registers the
         // creator and the assigned name.
-        function OwnedToken(bytes32 _name) public {
+        constructor(bytes32 _name) public {
             // State variables are accessed via their name
             // and not via e.g. this.owner. This also applies
             // to functions and especially in the constructors,
@@ -301,7 +301,7 @@ inheritable properties of contracts and may be overridden by derived contracts.
 
 ::
 
-    pragma solidity ^0.4.11;
+    pragma solidity ^0.4.22;
 
     contract owned {
         function owned() public { owner = msg.sender; }
@@ -315,7 +315,10 @@ inheritable properties of contracts and may be overridden by derived contracts.
         // function is executed and otherwise, an exception is
         // thrown.
         modifier onlyOwner {
-            require(msg.sender == owner);
+            require(
+                msg.sender == owner,
+                "Only owner can call this function."
+            );
             _;
         }
     }
@@ -360,7 +363,10 @@ inheritable properties of contracts and may be overridden by derived contracts.
     contract Mutex {
         bool locked;
         modifier noReentrancy() {
-            require(!locked);
+            require(
+                !locked,
+                "Reentrant call."
+            );
             locked = true;
             _;
             locked = false;
@@ -402,7 +408,7 @@ State variables can be declared as ``constant``. In this case, they have to be
 assigned from an expression which is a constant at compile time. Any expression
 that accesses storage, blockchain data (e.g. ``now``, ``this.balance`` or
 ``block.number``) or
-execution data (``msg.gas``) or make calls to external contracts are disallowed. Expressions
+execution data (``msg.value`` or ``gasleft()``) or make calls to external contracts are disallowed. Expressions
 that might have a side-effect on memory allocation are allowed, but those that
 might have a side-effect on other memory objects are not. The built-in functions
 ``keccak256``, ``sha256``, ``ripemd160``, ``ecrecover``, ``addmod`` and ``mulmod``
@@ -467,13 +473,20 @@ The following statements are considered modifying the state:
     }
 
 .. note::
-  ``constant`` on functions is an alias to ``view``, but this is deprecated and is planned to be dropped in version 0.5.0.
+  ``constant`` on functions is an alias to ``view``, but this is deprecated and will be dropped in version 0.5.0.
 
 .. note::
   Getter methods are marked ``view``.
 
+.. note::
+  If invalid explicit type conversions are used, state modifications are possible
+  even though a ``view`` function was called.
+  You can switch the compiler to use ``STATICCALL`` when calling such functions and thus
+  prevent modifications to the state on the level of the EVM by adding
+  ``pragma experimental "v0.5.0";``
+
 .. warning::
-  Before version 0.4.17 the compiler didn't enforce that ``view`` is not modifying the state.
+  The compiler does not enforce yet that a ``view`` method is not modifying state. It raises a warning though.
 
 .. index:: ! pure function, function;pure
 
@@ -502,8 +515,20 @@ In addition to the list of state modifying statements explained above, the follo
         }
     }
 
+.. note::
+  If invalid explicit type conversions are used, state modifications are possible
+  even though a ``pure`` function was called.
+  You can switch the compiler to use ``STATICCALL`` when calling such functions and thus
+  prevent modifications to the state on the level of the EVM by adding
+  ``pragma experimental "v0.5.0";``
+
 .. warning::
-  Before version 0.4.17 the compiler didn't enforce that ``view`` is not reading the state.
+  It is not possible to prevent functions from reading the state at the level
+  of the EVM, it is only possible to prevent them from writing to the state
+  (i.e. only ``view`` can be enforced at the EVM level, ``pure`` can not).
+
+.. warning::
+  Before version 0.4.17 the compiler didn't enforce that ``pure`` is not reading the state.
 
 .. index:: ! fallback function, function;fallback
 
@@ -523,16 +548,14 @@ Ether (without data). Additionally, in order to receive Ether, the fallback func
 must be marked ``payable``. If no such function exists, the contract cannot receive
 Ether through regular transactions.
 
-In such a context, there is usually very little gas available to the function call (to be precise, 2300 gas), so it is important to make fallback functions as cheap as possible. Note that the gas required by a transaction (as opposed to an internal call) that invokes the fallback function is much higher, because each transaction charges an additional amount of 21000 gas or more for things like signature checking.
-
-In particular, the following operations will consume more gas than the stipend provided to a fallback function:
+In the worst case, the fallback function can only rely on 2300 gas being available (for example when send or transfer is used), leaving not much room to perform other operations except basic logging. The following operations will consume more gas than the 2300 gas stipend:
 
 - Writing to storage
 - Creating a contract
 - Calling an external function which consumes a large amount of gas
 - Sending Ether
 
-Please ensure you test your fallback function thoroughly to ensure the execution cost is less than 2300 gas before deploying a contract.
+Like any function, the fallback function can execute complex operations as long as there is enough gas passed on to it.
 
 .. note::
     Even though the fallback function cannot have arguments, one can still use ``msg.data`` to retrieve
@@ -662,7 +685,7 @@ candidate, resolution fails.
         }
     }
 
-Calling ``f(50)`` would create a type error since ``250`` can be implicitly converted both to ``uint8``
+Calling ``f(50)`` would create a type error since ``50`` can be implicitly converted both to ``uint8``
 and ``uint256`` types. On another hand ``f(256)`` would resolve to ``f(uint256)`` overload as ``256`` cannot be implicitly
 converted to ``uint8``.
 
@@ -786,7 +809,7 @@ as topics. The event call above can be performed in the same way as
     }
 
 where the long hexadecimal number is equal to
-``keccak256("Deposit(address,hash256,uint256)")``, the signature of the event.
+``keccak256("Deposit(address,bytes32,uint256)")``, the signature of the event.
 
 Additional Resources for Understanding Events
 ==============================================
@@ -818,10 +841,10 @@ Details are given in the following example.
 
 ::
 
-    pragma solidity ^0.4.16;
+    pragma solidity ^0.4.22;
 
     contract owned {
-        function owned() { owner = msg.sender; }
+        constructor() { owner = msg.sender; }
         address owner;
     }
 
@@ -852,7 +875,7 @@ Details are given in the following example.
     // also a base class of `mortal`, yet there is only a single
     // instance of `owned` (as for virtual inheritance in C++).
     contract named is owned, mortal {
-        function named(bytes32 name) {
+        constructor(bytes32 name) {
             Config config = Config(0xD5f9D8D94886E70b06E474c3fB14Fd43E2f23970);
             NameReg(config.lookup(1)).register(name);
         }
@@ -890,10 +913,10 @@ Note that above, we call ``mortal.kill()`` to "forward" the
 destruction request. The way this is done is problematic, as
 seen in the following example::
 
-    pragma solidity ^0.4.0;
+    pragma solidity ^0.4.22;
 
     contract owned {
-        function owned() public { owner = msg.sender; }
+        constructor() public { owner = msg.sender; }
         address owner;
     }
 
@@ -919,10 +942,10 @@ derived override, but this function will bypass
 ``Base1.kill``, basically because it does not even know about
 ``Base1``.  The way around this is to use ``super``::
 
-    pragma solidity ^0.4.0;
+    pragma solidity ^0.4.22;
 
     contract owned {
-        function owned() public { owner = msg.sender; }
+        constructor() public { owner = msg.sender; }
         address owner;
     }
 
@@ -955,24 +978,75 @@ not known in the context of the class where it is used,
 although its type is known. This is similar for ordinary
 virtual method lookup.
 
+.. index:: ! constructor
+
+Constructors
+============
+A constructor is an optional function declared with the ``constructor`` keyword which is executed upon contract creation.
+Constructor functions can be either ``public`` or ``internal``. If there is no constructor, the contract will assume the
+default constructor: ``contructor() public {}``.
+
+
+::
+
+    pragma solidity ^0.4.22;
+
+    contract A {
+        uint public a;
+
+        constructor(uint _a) internal {
+            a = _a;
+        }
+    }
+
+    contract B is A(1) {
+        constructor() public {}
+    }
+
+A constructor set as ``internal`` causes the contract to be marked as :ref:`abstract <abstract-contract>`.
+
+.. note ::
+    Prior to version 0.4.22, constructors were defined as functions with the same name as the contract. This syntax is now deprecated.
+
+::
+
+    pragma solidity ^0.4.11;
+
+    contract A {
+        uint public a;
+
+        function A(uint _a) internal {
+            a = _a;
+        }
+    }
+
+    contract B is A(1) {
+        function B() public {}
+    }
+
+
 .. index:: ! base;constructor
 
 Arguments for Base Constructors
 ===============================
 
-Derived contracts need to provide all arguments needed for
-the base constructors. This can be done in two ways::
+The constructors of all the base contracts will be called following the
+linearization rules explained below. If the base constructors have arguments,
+derived contracts need to specify all of them. This can be done in two ways::
 
-    pragma solidity ^0.4.0;
+    pragma solidity ^0.4.22;
 
     contract Base {
         uint x;
-        function Base(uint _x) public { x = _x; }
+        constructor(uint _x) public { x = _x; }
     }
 
-    contract Derived is Base(7) {
-        function Derived(uint _y) Base(_y * _y) public {
-        }
+    contract Derived1 is Base(7) {
+        constructor(uint _y) public {}
+    }
+
+    contract Derived2 is Base {
+        constructor(uint _y) Base(_y * _y) public {}
     }
 
 One way is directly in the inheritance list (``is Base(7)``).  The other is in
@@ -982,8 +1056,12 @@ do it is more convenient if the constructor argument is a
 constant and defines the behaviour of the contract or
 describes it. The second way has to be used if the
 constructor arguments of the base depend on those of the
-derived contract. If, as in this silly example, both places
-are used, the modifier-style argument takes precedence.
+derived contract. Arguments have to be given either in the
+inheritance list or in modifier-style in the derived constuctor.
+Specifying arguments in both places is an error.
+
+If a derived contract doesn't specify the arguments to all of its base
+contracts' constructors, it will be abstract.
 
 .. index:: ! inheritance;multiple, ! linearization, ! C3 linearization
 
@@ -992,12 +1070,15 @@ Multiple Inheritance and Linearization
 
 Languages that allow multiple inheritance have to deal with
 several problems.  One is the `Diamond Problem <https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem>`_.
-Solidity follows the path of Python and uses "`C3 Linearization <https://en.wikipedia.org/wiki/C3_linearization>`_"
+Solidity is similar to Python in that it uses "`C3 Linearization <https://en.wikipedia.org/wiki/C3_linearization>`_"
 to force a specific order in the DAG of base classes. This
 results in the desirable property of monotonicity but
 disallows some inheritance graphs. Especially, the order in
 which the base classes are given in the ``is`` directive is
-important. In the following code, Solidity will give the
+important: You have to list the direct base contracts
+in the order from "most base-like" to "most derived".
+Note that this order is different from the one used in Python.
+In the following code, Solidity will give the
 error "Linearization of inheritance graph impossible".
 
 ::
@@ -1015,9 +1096,6 @@ The reason for this is that ``C`` requests ``X`` to override ``A``
 requests to override ``X``, which is a contradiction that
 cannot be resolved.
 
-A simple rule to remember is to specify the base classes in
-the order from "most base-like" to "most derived".
-
 Inheriting Different Kinds of Members of the Same Name
 ======================================================
 
@@ -1027,11 +1105,13 @@ As an exception, a state variable getter can override a public function.
 
 .. index:: ! contract;abstract, ! abstract contract
 
+.. _abstract-contract:
+
 ******************
 Abstract Contracts
 ******************
 
-Contract functions can lack an implementation as in the following example (note that the function declaration header is terminated by ``;``)::
+Contracts are marked as abstract when at least one of their functions lacks an implementation as in the following example (note that the function declaration header is terminated by ``;``)::
 
     pragma solidity ^0.4.0;
 
@@ -1039,9 +1119,7 @@ Contract functions can lack an implementation as in the following example (note 
         function utterance() public returns (bytes32);
     }
 
-Such contracts cannot be compiled (even if they contain
-implemented functions alongside non-implemented functions),
-but they can be used as base contracts::
+Such contracts cannot be compiled (even if they contain implemented functions alongside non-implemented functions), but they can be used as base contracts::
 
     pragma solidity ^0.4.0;
 
@@ -1064,6 +1142,10 @@ Example of function without implementation (a function declaration)::
 Example of a Function Type (a variable declaration, where the variable is of type ``function``)::
 
     function(address) external returns (address) foo;
+
+Abstract contracts decouple the definition of a contract from its implementation providing better extensibility and self-documentation and
+facilitating patterns like the `Template method <https://en.wikipedia.org/wiki/Template_method_pattern>`_ and removing code duplication.
+Abstract contracts are useful in the same way that defining methods in an interface is useful. It is a way for the designer of the abstract contract to say "any child of mine must implement this method".
 
 
 .. index:: ! contract;interface, ! interface contract
@@ -1139,7 +1221,7 @@ more advanced example to implement a set).
 
 ::
 
-    pragma solidity ^0.4.16;
+    pragma solidity ^0.4.22;
 
     library Set {
       // We define a new struct datatype that will be used to

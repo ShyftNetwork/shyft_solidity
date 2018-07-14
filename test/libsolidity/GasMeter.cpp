@@ -49,13 +49,14 @@ public:
 		m_compiler.reset(false);
 		m_compiler.addSource("", "pragma solidity >=0.0;\n" + _sourceCode);
 		m_compiler.setOptimiserSettings(dev::test::Options::get().optimize);
+		m_compiler.setEVMVersion(m_evmVersion);
 		BOOST_REQUIRE_MESSAGE(m_compiler.compile(), "Compiling contract failed");
 
 		AssemblyItems const* items = m_compiler.runtimeAssemblyItems(m_compiler.lastContractName());
 		ASTNode const& sourceUnit = m_compiler.ast("");
 		BOOST_REQUIRE(items != nullptr);
 		m_gasCosts = GasEstimator::breakToStatementLevel(
-			GasEstimator::structuralEstimation(*items, vector<ASTNode const*>({&sourceUnit})),
+			GasEstimator(dev::test::Options::get().evmVersion()).structuralEstimation(*items, vector<ASTNode const*>({&sourceUnit})),
 			{&sourceUnit}
 		);
 	}
@@ -64,7 +65,7 @@ public:
 	{
 		compileAndRun(_sourceCode);
 		auto state = make_shared<KnownState>();
-		PathGasMeter meter(*m_compiler.assemblyItems(m_compiler.lastContractName()));
+		PathGasMeter meter(*m_compiler.assemblyItems(m_compiler.lastContractName()), dev::test::Options::get().evmVersion());
 		GasMeter::GasConsumption gas = meter.estimateMax(0, state);
 		u256 bytecodeSize(m_compiler.runtimeObject(m_compiler.lastContractName()).bytecode.size());
 		// costs for deployment
@@ -73,7 +74,7 @@ public:
 		gas += gasForTransaction(m_compiler.object(m_compiler.lastContractName()).bytecode, true);
 
 		BOOST_REQUIRE(!gas.isInfinite);
-		BOOST_CHECK(gas.value == m_gasUsed);
+		BOOST_CHECK_EQUAL(gas.value, m_gasUsed);
 	}
 
 	/// Compares the gas computed by PathGasMeter for the given signature (but unknown arguments)
@@ -90,12 +91,12 @@ public:
 			gas = max(gas, gasForTransaction(hash.asBytes() + arguments, false));
 		}
 
-		gas += GasEstimator::functionalEstimation(
+		gas += GasEstimator(dev::test::Options::get().evmVersion()).functionalEstimation(
 			*m_compiler.runtimeAssemblyItems(m_compiler.lastContractName()),
 			_sig
 		);
 		BOOST_REQUIRE(!gas.isInfinite);
-		BOOST_CHECK(gas.value == m_gasUsed);
+		BOOST_CHECK_EQUAL(gas.value, m_gasUsed);
 	}
 
 	static GasMeter::GasConsumption gasForTransaction(bytes const& _data, bool _isCreation)
@@ -291,6 +292,59 @@ BOOST_AUTO_TEST_CASE(extcodesize_gas)
 	)";
 	testCreationTimeGas(sourceCode);
 	testRunTimeGas("f()", vector<bytes>{encodeArgs()});
+}
+
+BOOST_AUTO_TEST_CASE(regular_functions_exclude_fallback)
+{
+	// A bug in the estimator caused the costs for a specific function
+	// to always include the costs for the fallback.
+	char const* sourceCode = R"(
+		contract A {
+			uint public x;
+			function() { x = 2; }
+		}
+	)";
+	testCreationTimeGas(sourceCode);
+	testRunTimeGas("x()", vector<bytes>{encodeArgs()});
+}
+
+BOOST_AUTO_TEST_CASE(complex_control_flow)
+{
+	// This crashed the gas estimator previously (or took a very long time).
+	// Now we do not follow branches if they start out with lower gas costs than the ones
+	// we previously considered. This of course reduces accuracy.
+	char const* sourceCode = R"(
+		contract log {
+			function ln(int128 x) constant returns (int128 result) {
+				int128 t = x / 256;
+				int128 y = 5545177;
+				x = t;
+				t = x * 16; if (t <= 1000000) { x = t; y = y - 2772588; }
+				t = x * 4; if (t <= 1000000) { x = t; y = y - 1386294; }
+				t = x * 2; if (t <= 1000000) { x = t; y = y - 693147; }
+				t = x + x / 2; if (t <= 1000000) { x = t; y = y - 405465; }
+				t = x + x / 4; if (t <= 1000000) { x = t; y = y - 223144; }
+				t = x + x / 8; if (t <= 1000000) { x = t; y = y - 117783; }
+				t = x + x / 16; if (t <= 1000000) { x = t; y = y - 60624; }
+				t = x + x / 32; if (t <= 1000000) { x = t; y = y - 30771; }
+				t = x + x / 64; if (t <= 1000000) { x = t; y = y - 15504; }
+				t = x + x / 128; if (t <= 1000000) { x = t; y = y - 7782; }
+				t = x + x / 256; if (t <= 1000000) { x = t; y = y - 3898; }
+				t = x + x / 512; if (t <= 1000000) { x = t; y = y - 1951; }
+				t = x + x / 1024; if (t <= 1000000) { x = t; y = y - 976; }
+				t = x + x / 2048; if (t <= 1000000) { x = t; y = y - 488; }
+				t = x + x / 4096; if (t <= 1000000) { x = t; y = y - 244; }
+				t = x + x / 8192; if (t <= 1000000) { x = t; y = y - 122; }
+				t = x + x / 16384; if (t <= 1000000) { x = t; y = y - 61; }
+				t = x + x / 32768; if (t <= 1000000) { x = t; y = y - 31; }
+				t = x + x / 65536; if (t <= 1000000) { y = y - 15; }
+				return y;
+			}
+		}
+	)";
+	testCreationTimeGas(sourceCode);
+	// max gas is used for small x
+	testRunTimeGas("ln(int128)", vector<bytes>{encodeArgs(0), encodeArgs(10), encodeArgs(105), encodeArgs(30000)});
 }
 
 BOOST_AUTO_TEST_SUITE_END()

@@ -261,19 +261,24 @@ BOOST_AUTO_TEST_CASE(basic_compilation)
 	BOOST_CHECK(contract["evm"]["bytecode"]["object"].isString());
 	BOOST_CHECK_EQUAL(
 		dev::test::bytecodeSansMetadata(contract["evm"]["bytecode"]["object"].asString()),
-		"60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00"
+		"6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00"
 	);
 	BOOST_CHECK(contract["evm"]["assembly"].isString());
 	BOOST_CHECK(contract["evm"]["assembly"].asString().find(
-		"    /* \"fileA\":0:14  contract A { } */\n  mstore(0x40, 0x60)\n  jumpi(tag_1, iszero(callvalue))\n"
-		"  0x0\n  dup1\n  revert\ntag_1:\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x0\n  codecopy\n  0x0\n"
-		"  return\nstop\n\nsub_0: assembly {\n        /* \"fileA\":0:14  contract A { } */\n"
-		"      mstore(0x40, 0x60)\n      0x0\n      dup1\n      revert\n\n"
-		"    auxdata: 0xa165627a7a7230582") == 0);
+		"    /* \"fileA\":0:14  contract A { } */\n  mstore(0x40, 0x80)\n  "
+		"callvalue\n    /* \"--CODEGEN--\":8:17   */\n  dup1\n    "
+		"/* \"--CODEGEN--\":5:7   */\n  iszero\n  tag_1\n  jumpi\n    "
+		"/* \"--CODEGEN--\":30:31   */\n  0x0\n    /* \"--CODEGEN--\":27:28   */\n  "
+		"dup1\n    /* \"--CODEGEN--\":20:32   */\n  revert\n    /* \"--CODEGEN--\":5:7   */\n"
+		"tag_1:\n    /* \"fileA\":0:14  contract A { } */\n  pop\n  dataSize(sub_0)\n  dup1\n  "
+		"dataOffset(sub_0)\n  0x0\n  codecopy\n  0x0\n  return\nstop\n\nsub_0: assembly {\n        "
+		"/* \"fileA\":0:14  contract A { } */\n      mstore(0x40, 0x80)\n      0x0\n      "
+		"dup1\n      revert\n\n    auxdata: 0xa165627a7a72305820"
+	) == 0);
 	BOOST_CHECK(contract["evm"]["gasEstimates"].isObject());
 	BOOST_CHECK_EQUAL(
 		dev::jsonCompactPrint(contract["evm"]["gasEstimates"]),
-		"{\"creation\":{\"codeDepositCost\":\"10600\",\"executionCost\":\"61\",\"totalCost\":\"10661\"}}"
+		"{\"creation\":{\"codeDepositCost\":\"10600\",\"executionCost\":\"66\",\"totalCost\":\"10666\"}}"
 	);
 	BOOST_CHECK(contract["metadata"].isString());
 	BOOST_CHECK(dev::test::isValidMetadata(contract["metadata"].asString()));
@@ -321,9 +326,9 @@ BOOST_AUTO_TEST_CASE(compilation_error)
 		{
 			BOOST_CHECK_EQUAL(
 				dev::jsonCompactPrint(error),
-				"{\"component\":\"general\",\"formattedMessage\":\"fileA:1:23: ParserError: Expected identifier, got 'RBrace'\\n"
-				"contract A { function }\\n                      ^\\n\",\"message\":\"Expected identifier, got 'RBrace'\","
-				"\"severity\":\"error\",\"sourceLocation\":{\"end\":22,\"file\":\"fileA\",\"start\":22},\"type\":\"ParserError\"}"
+				"{\"component\":\"general\",\"formattedMessage\":\"fileA:1:23: ParserError: Expected identifier but got '}'\\n"
+				"contract A { function }\\n                      ^\\n\",\"message\":\"Expected identifier but got '}'\","
+				"\"severity\":\"error\",\"sourceLocation\":{\"end\":23,\"file\":\"fileA\",\"start\":22},\"type\":\"ParserError\"}"
 			);
 		}
 	}
@@ -633,7 +638,7 @@ BOOST_AUTO_TEST_CASE(libraries_invalid_hex)
 	BOOST_CHECK(containsError(result, "JSONError", "Invalid library address (\"0x4200000000000000000000000000000000000xx1\") supplied."));
 }
 
-BOOST_AUTO_TEST_CASE(libraries_various_addresses)
+BOOST_AUTO_TEST_CASE(libraries_invalid_length)
 {
 	char const* input = R"(
 	{
@@ -641,11 +646,8 @@ BOOST_AUTO_TEST_CASE(libraries_various_addresses)
 		"settings": {
 			"libraries": {
 				"library.sol": {
-					"L": 42,
-					"L3": "42",
-					"L4": "0x42",
-					"L5": "0x4200000000000000000000000000000000000001",
-					"L6": "4200000000000000000000000000000000000001"
+					"L1": "0x42",
+					"L2": "0x4200000000000000000000000000000000000001ff"
 				}
 			}
 		},
@@ -657,7 +659,30 @@ BOOST_AUTO_TEST_CASE(libraries_various_addresses)
 	}
 	)";
 	Json::Value result = compile(input);
-	BOOST_CHECK(containsAtMostWarnings(result));
+	BOOST_CHECK(containsError(result, "JSONError", "Library address is of invalid length."));
+}
+
+BOOST_AUTO_TEST_CASE(libraries_missing_hex_prefix)
+{
+	char const* input = R"(
+	{
+		"language": "Solidity",
+		"settings": {
+			"libraries": {
+				"library.sol": {
+					"L": "4200000000000000000000000000000000000001"
+				}
+			}
+		},
+		"sources": {
+			"empty": {
+				"content": ""
+			}
+		}
+	}
+	)";
+	Json::Value result = compile(input);
+	BOOST_CHECK(containsError(result, "JSONError", "Library address is not prefixed with \"0x\"."));
 }
 
 BOOST_AUTO_TEST_CASE(library_linking)
@@ -703,6 +728,45 @@ BOOST_AUTO_TEST_CASE(library_linking)
 	BOOST_CHECK(contract["evm"]["bytecode"]["linkReferences"]["library2.sol"]["L2"].isArray());
 	BOOST_CHECK(contract["evm"]["bytecode"]["linkReferences"]["library2.sol"]["L2"][0].isObject());
 }
+
+BOOST_AUTO_TEST_CASE(evm_version)
+{
+	auto inputForVersion = [](string const& _version)
+	{
+		return R"(
+			{
+				"language": "Solidity",
+				"sources": { "fileA": { "content": "contract A { }" } },
+				"settings": {
+					)" + _version + R"(
+					"outputSelection": {
+						"fileA": {
+							"A": [ "metadata" ]
+						}
+					}
+				}
+			}
+		)";
+	};
+	Json::Value result;
+	result = compile(inputForVersion("\"evmVersion\": \"homestead\","));
+	BOOST_CHECK(result["contracts"]["fileA"]["A"]["metadata"].asString().find("\"evmVersion\":\"homestead\"") != string::npos);
+	result = compile(inputForVersion("\"evmVersion\": \"tangerineWhistle\","));
+	BOOST_CHECK(result["contracts"]["fileA"]["A"]["metadata"].asString().find("\"evmVersion\":\"tangerineWhistle\"") != string::npos);
+	result = compile(inputForVersion("\"evmVersion\": \"spuriousDragon\","));
+	BOOST_CHECK(result["contracts"]["fileA"]["A"]["metadata"].asString().find("\"evmVersion\":\"spuriousDragon\"") != string::npos);
+	result = compile(inputForVersion("\"evmVersion\": \"byzantium\","));
+	BOOST_CHECK(result["contracts"]["fileA"]["A"]["metadata"].asString().find("\"evmVersion\":\"byzantium\"") != string::npos);
+	result = compile(inputForVersion("\"evmVersion\": \"constantinople\","));
+	BOOST_CHECK(result["contracts"]["fileA"]["A"]["metadata"].asString().find("\"evmVersion\":\"constantinople\"") != string::npos);
+	// test default
+	result = compile(inputForVersion(""));
+	BOOST_CHECK(result["contracts"]["fileA"]["A"]["metadata"].asString().find("\"evmVersion\":\"byzantium\"") != string::npos);
+	// test invalid
+	result = compile(inputForVersion("\"evmVersion\": \"invalid\","));
+	BOOST_CHECK(result["errors"][0]["message"].asString() == "Invalid EVM version requested.");
+}
+
 
 BOOST_AUTO_TEST_SUITE_END()
 

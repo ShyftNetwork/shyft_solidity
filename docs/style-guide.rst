@@ -112,10 +112,12 @@ No::
         }
     }
 
-Maximum Line Length
+.. _maximum_line_length:
+
+Maximum Line Length 
 ===================
 
-Keeping lines under the `PEP 8 recommendation <https://www.python.org/dev/peps/pep-0008/#maximum-line-length>`_ of 79 (or 99) 
+Keeping lines under the `PEP 8 recommendation <https://www.python.org/dev/peps/pep-0008/#maximum-line-length>`_ to a maximum of 79 (or 99) 
 characters helps readers easily parse the code.
 
 Wrapped lines should conform to the following guidelines.
@@ -267,7 +269,7 @@ Functions should be grouped according to their visibility and ordered:
 - internal
 - private
 
-Within a grouping, place the ``constant`` functions last.
+Within a grouping, place the ``view`` and ``pure`` functions last.
 
 Yes::
 
@@ -283,7 +285,10 @@ Yes::
         // External functions
         // ...
 
-        // External functions that are constant
+        // External functions that are view
+        // ...
+
+        // External functions that are pure
         // ...
 
         // Public functions
@@ -650,6 +655,50 @@ No::
         doSomething();
     }
 
+Multiline output parameters and return statements should follow the same style recommended for wrapping long lines found in the :ref:`Maximum Line Length <maximum_line_length>` section.
+
+Yes::
+
+    function thisFunctionNameIsReallyLong(
+        address a,
+        address b,
+        address c
+    ) 
+        public 
+        returns (
+            address someAddressName, 
+            uint256 LongArgument, 
+            uint256 Argument
+        )
+    {    
+        doSomething()
+        
+        return (
+            veryLongReturnArg1, 
+            veryLongReturnArg2, 
+            veryLongReturnArg3
+        );
+    }
+
+No::
+
+    function thisFunctionNameIsReallyLong(
+        address a,
+        address b,
+        address c
+    ) 
+        public 
+        returns (address someAddressName, 
+                 uint256 LongArgument, 
+                 uint256 Argument)
+    {    
+        doSomething()
+        
+        return (veryLongReturnArg1, 
+                veryLongReturnArg1, 
+                veryLongReturnArg1);
+    }
+
 For constructor functions on inherited contracts whose bases require arguments,
 it is recommended to drop the base constructors onto new lines in the same
 manner as modifiers if the function declaration is long or hard to read.
@@ -858,7 +907,7 @@ Constants
 =========
 
 Constants should be named with all capital letters with underscores separating
-words. Examples: ``MAX_BLOCKS``, `TOKEN_NAME`, ``TOKEN_TICKER``, ``CONTRACT_VERSION``.
+words. Examples: ``MAX_BLOCKS``, ``TOKEN_NAME``, ``TOKEN_TICKER``, ``CONTRACT_VERSION``.
 
 
 Modifier Names
