@@ -700,6 +700,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			else
 				m_context.appendRevert();
 			break;
+        }
 //Alex Binesh Start:Opcode Changes
         case FunctionType::Kind::Getattest:
 		{

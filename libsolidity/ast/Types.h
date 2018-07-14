@@ -921,7 +921,7 @@ public:
 		ABIEncode,
 		ABIEncodeWithSelector,
 		ABIEncodeWithSignature,
-		GasLeft ///< gasleft()
+		GasLeft, ///< gasleft()
 //Alex Binesh: Start:Opcode Changes
 		Getattest, ///< GETATTEST()
         CheckAttestValid, ///CHECKATTESTVALID()

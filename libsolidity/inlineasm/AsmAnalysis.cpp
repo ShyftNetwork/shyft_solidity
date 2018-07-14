@@ -453,7 +453,9 @@ bool AsmAnalyzer::operator()(Block const& _block)
 				to_string(-stackDiff) + string(" missing item(s).")
 			)
 		);
-		bShyft_Display_Extra_Assembly_Error_Info=true;
+//		if (bShyft_Display_Extra_Assembly_Error_Info == false){
+		    bShyft_Display_Extra_Assembly_Error_Info = true;
+//        }
 		success = false;
 	}
 
