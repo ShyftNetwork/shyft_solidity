@@ -29,6 +29,8 @@
 #include <libsolidity/ast/AST.h>
 #include <libsolidity/parsing/Scanner.h>
 #include <libsolidity/parsing/Parser.h>
+#include <libsolidity/analysis/ControlFlowAnalyzer.h>
+#include <libsolidity/analysis/ControlFlowGraph.h>
 #include <libsolidity/analysis/GlobalContext.h>
 #include <libsolidity/analysis/NameAndTypeResolver.h>
 #include <libsolidity/analysis/TypeChecker.h>
@@ -74,6 +76,12 @@ void CompilerStack::setRemappings(vector<string> const& _remappings)
 	swap(m_remappings, remappings);
 }
 
+void CompilerStack::setEVMVersion(EVMVersion _version)
+{
+	solAssert(m_stackState < State::ParsingSuccessful, "Set EVM version after parsing.");
+	m_evmVersion = _version;
+}
+
 void CompilerStack::reset(bool _keepSources)
 {
 	if (_keepSources)
@@ -88,6 +96,7 @@ void CompilerStack::reset(bool _keepSources)
 		m_sources.clear();
 	}
 	m_libraries.clear();
+	m_evmVersion = EVMVersion();
 	m_optimize = false;
 	m_optimizeRuns = 200;
 	m_globalContext.reset();
@@ -157,84 +166,110 @@ bool CompilerStack::analyze()
 	resolveImports();
 
 	bool noErrors = true;
-	SyntaxChecker syntaxChecker(m_errorReporter);
-	for (Source const* source: m_sourceOrder)
-		if (!syntaxChecker.checkSyntax(*source->ast))
-			noErrors = false;
 
-	DocStringAnalyser docStringAnalyser(m_errorReporter);
-	for (Source const* source: m_sourceOrder)
-		if (!docStringAnalyser.analyseDocStrings(*source->ast))
-			noErrors = false;
-	m_globalContext = make_shared<GlobalContext>();
-	NameAndTypeResolver resolver(m_globalContext->declarations(), m_scopes, m_errorReporter);
-	for (Source const* source: m_sourceOrder)
-		if (!resolver.registerDeclarations(*source->ast))
-			return false;
+	try {
+		SyntaxChecker syntaxChecker(m_errorReporter);
+		for (Source const* source: m_sourceOrder)
+			if (!syntaxChecker.checkSyntax(*source->ast))
+				noErrors = false;
 
-	map<string, SourceUnit const*> sourceUnitsByName;
-	for (auto& source: m_sources)
-		sourceUnitsByName[source.first] = source.second.ast.get();
-	for (Source const* source: m_sourceOrder)
-		if (!resolver.performImports(*source->ast, sourceUnitsByName))
-			return false;
+		DocStringAnalyser docStringAnalyser(m_errorReporter);
+		for (Source const* source: m_sourceOrder)
+			if (!docStringAnalyser.analyseDocStrings(*source->ast))
+				noErrors = false;
 
-	for (Source const* source: m_sourceOrder)
-		for (ASTPointer<ASTNode> const& node: source->ast->nodes())
-			if (ContractDefinition* contract = dynamic_cast<ContractDefinition*>(node.get()))
-			{
-				m_globalContext->setCurrentContract(*contract);
-				if (!resolver.updateDeclaration(*m_globalContext->currentThis())) return false;
-				if (!resolver.updateDeclaration(*m_globalContext->currentSuper())) return false;
-				if (!resolver.resolveNamesAndTypes(*contract)) return false;
+		m_globalContext = make_shared<GlobalContext>();
+		NameAndTypeResolver resolver(m_globalContext->declarations(), m_scopes, m_errorReporter);
+		for (Source const* source: m_sourceOrder)
+			if (!resolver.registerDeclarations(*source->ast))
+				return false;
 
-				// Note that we now reference contracts by their fully qualified names, and
-				// thus contracts can only conflict if declared in the same source file.  This
-				// already causes a double-declaration error elsewhere, so we do not report
-				// an error here and instead silently drop any additional contracts we find.
+		map<string, SourceUnit const*> sourceUnitsByName;
+		for (auto& source: m_sources)
+			sourceUnitsByName[source.first] = source.second.ast.get();
+		for (Source const* source: m_sourceOrder)
+			if (!resolver.performImports(*source->ast, sourceUnitsByName))
+				return false;
 
-				if (m_contracts.find(contract->fullyQualifiedName()) == m_contracts.end())
-					m_contracts[contract->fullyQualifiedName()].contract = contract;
-			}
+		for (Source const* source: m_sourceOrder)
+			for (ASTPointer<ASTNode> const& node: source->ast->nodes())
+				if (ContractDefinition* contract = dynamic_cast<ContractDefinition*>(node.get()))
+				{
+					m_globalContext->setCurrentContract(*contract);
+					if (!resolver.updateDeclaration(*m_globalContext->currentThis())) return false;
+					if (!resolver.updateDeclaration(*m_globalContext->currentSuper())) return false;
+					if (!resolver.resolveNamesAndTypes(*contract)) return false;
 
-	TypeChecker typeChecker(m_errorReporter);
-	for (Source const* source: m_sourceOrder)
-		for (ASTPointer<ASTNode> const& node: source->ast->nodes())
-			if (ContractDefinition* contract = dynamic_cast<ContractDefinition*>(node.get()))
-				if (!typeChecker.checkTypeRequirements(*contract))
+					// Note that we now reference contracts by their fully qualified names, and
+					// thus contracts can only conflict if declared in the same source file.  This
+					// already causes a double-declaration error elsewhere, so we do not report
+					// an error here and instead silently drop any additional contracts we find.
+
+					if (m_contracts.find(contract->fullyQualifiedName()) == m_contracts.end())
+						m_contracts[contract->fullyQualifiedName()].contract = contract;
+				}
+
+		TypeChecker typeChecker(m_evmVersion, m_errorReporter);
+		for (Source const* source: m_sourceOrder)
+			for (ASTPointer<ASTNode> const& node: source->ast->nodes())
+				if (ContractDefinition* contract = dynamic_cast<ContractDefinition*>(node.get()))
+					if (!typeChecker.checkTypeRequirements(*contract))
+						noErrors = false;
+
+		if (noErrors)
+		{
+			PostTypeChecker postTypeChecker(m_errorReporter);
+			for (Source const* source: m_sourceOrder)
+				if (!postTypeChecker.check(*source->ast))
+					noErrors = false;
+		}
+
+		if (noErrors)
+		{
+			CFG cfg(m_errorReporter);
+			for (Source const* source: m_sourceOrder)
+				if (!cfg.constructFlow(*source->ast))
 					noErrors = false;
 
-	if (noErrors)
-	{
-		PostTypeChecker postTypeChecker(m_errorReporter);
-		for (Source const* source: m_sourceOrder)
-			if (!postTypeChecker.check(*source->ast))
+			if (noErrors)
+			{
+				ControlFlowAnalyzer controlFlowAnalyzer(cfg, m_errorReporter);
+				for (Source const* source: m_sourceOrder)
+					if (!controlFlowAnalyzer.analyze(*source->ast))
+						noErrors = false;
+			}
+		}
+
+		if (noErrors)
+		{
+			StaticAnalyzer staticAnalyzer(m_errorReporter);
+			for (Source const* source: m_sourceOrder)
+				if (!staticAnalyzer.analyze(*source->ast))
+					noErrors = false;
+		}
+
+		if (noErrors)
+		{
+			vector<ASTPointer<ASTNode>> ast;
+			for (Source const* source: m_sourceOrder)
+				ast.push_back(source->ast);
+
+			if (!ViewPureChecker(ast, m_errorReporter).check())
 				noErrors = false;
+		}
+
+		if (noErrors)
+		{
+			SMTChecker smtChecker(m_errorReporter, m_smtQuery);
+			for (Source const* source: m_sourceOrder)
+				smtChecker.analyze(*source->ast);
+		}
 	}
-
-	if (noErrors)
+	catch(FatalError const&)
 	{
-		StaticAnalyzer staticAnalyzer(m_errorReporter);
-		for (Source const* source: m_sourceOrder)
-			if (!staticAnalyzer.analyze(*source->ast))
-				noErrors = false;
-	}
-
-	if (noErrors)
-	{
-		vector<ASTPointer<ASTNode>> ast;
-		for (Source const* source: m_sourceOrder)
-			ast.push_back(source->ast);
-
-		if (!ViewPureChecker(ast, m_errorReporter).check())
-			noErrors = false;
-	}
-
-	if (noErrors)
-	{
-		SMTChecker smtChecker(m_errorReporter, m_smtQuery);
-		for (Source const* source: m_sourceOrder)
-			smtChecker.analyze(*source->ast);
+		if (m_errorReporter.errors().empty())
+			throw; // Something is weird here, rather throw again.
+		noErrors = false;
 	}
 
 	if (noErrors)
@@ -676,7 +711,7 @@ void CompilerStack::compileContract(
 	for (auto const* dependency: _contract.annotation().contractDependencies)
 		compileContract(*dependency, _compiledContracts);
 
-	shared_ptr<Compiler> compiler = make_shared<Compiler>(m_optimize, m_optimizeRuns);
+	shared_ptr<Compiler> compiler = make_shared<Compiler>(m_evmVersion, m_optimize, m_optimizeRuns);
 	Contract& compiledContract = m_contracts.at(_contract.fullyQualifiedName());
 	string metadata = createMetadata(compiledContract);
 	bytes cborEncodedHash =
@@ -735,7 +770,7 @@ void CompilerStack::compileContract(
 	{
 		if (!_contract.isLibrary())
 		{
-			Compiler cloneCompiler(m_optimize, m_optimizeRuns);
+			Compiler cloneCompiler(m_evmVersion, m_optimize, m_optimizeRuns);
 			cloneCompiler.compileClone(_contract, _compiledContracts);
 			compiledContract.cloneObject = cloneCompiler.assembledObject();
 		}
@@ -837,6 +872,7 @@ string CompilerStack::createMetadata(Contract const& _contract) const
 	}
 	meta["settings"]["optimizer"]["enabled"] = m_optimize;
 	meta["settings"]["optimizer"]["runs"] = m_optimizeRuns;
+	meta["settings"]["evmVersion"] = m_evmVersion.name();
 	meta["settings"]["compilationTarget"][_contract.contract->sourceUnitName()] =
 		_contract.contract->annotation().canonicalName;
 
@@ -950,11 +986,12 @@ Json::Value CompilerStack::gasEstimates(string const& _contractName) const
 		return Json::Value();
 
 	using Gas = GasEstimator::GasConsumption;
+	GasEstimator gasEstimator(m_evmVersion);
 	Json::Value output(Json::objectValue);
 
 	if (eth::AssemblyItems const* items = assemblyItems(_contractName))
 	{
-		Gas executionGas = GasEstimator::functionalEstimation(*items);
+		Gas executionGas = gasEstimator.functionalEstimation(*items);
 		u256 bytecodeSize(runtimeObject(_contractName).bytecode.size());
 		Gas codeDepositGas = bytecodeSize * eth::GasCosts::createDataGas;
 
@@ -975,14 +1012,14 @@ Json::Value CompilerStack::gasEstimates(string const& _contractName) const
 		for (auto it: contract.interfaceFunctions())
 		{
 			string sig = it.second->externalSignature();
-			externalFunctions[sig] = gasToJson(GasEstimator::functionalEstimation(*items, sig));
+			externalFunctions[sig] = gasToJson(gasEstimator.functionalEstimation(*items, sig));
 		}
 
 		if (contract.fallbackFunction())
 			/// This needs to be set to an invalid signature in order to trigger the fallback,
 			/// without the shortcut (of CALLDATSIZE == 0), and therefore to receive the upper bound.
 			/// An empty string ("") would work to trigger the shortcut only.
-			externalFunctions[""] = gasToJson(GasEstimator::functionalEstimation(*items, "INVALID"));
+			externalFunctions[""] = gasToJson(gasEstimator.functionalEstimation(*items, "INVALID"));
 
 		if (!externalFunctions.empty())
 			output["external"] = externalFunctions;
@@ -998,7 +1035,7 @@ Json::Value CompilerStack::gasEstimates(string const& _contractName) const
 			size_t entry = functionEntryPoint(_contractName, *it);
 			GasEstimator::GasConsumption gas = GasEstimator::GasConsumption::infinite();
 			if (entry > 0)
-				gas = GasEstimator::functionalEstimation(*items, entry, *it);
+				gas = gasEstimator.functionalEstimation(*items, entry, *it);
 
 			/// TODO: This could move into a method shared with externalSignature()
 			FunctionType type(*it);

@@ -20,6 +20,8 @@
 
 #include <test/libsolidity/AnalysisFramework.h>
 
+#include <test/Options.h>
+
 #include <libsolidity/interface/CompilerStack.h>
 #include <libsolidity/interface/SourceReferenceFormatter.h>
 
@@ -46,6 +48,7 @@ AnalysisFramework::parseAnalyseAndReturnError(
 {
 	m_compiler.reset();
 	m_compiler.addSource("", _insertVersionPragma ? "pragma solidity >=0.0;\n" + _source : _source);
+	m_compiler.setEVMVersion(dev::test::Options::get().evmVersion());
 	if (!m_compiler.parse())
 	{
 		BOOST_ERROR("Parsing contract failed in analysis test suite:" + formatErrors());
@@ -53,12 +56,23 @@ AnalysisFramework::parseAnalyseAndReturnError(
 
 	m_compiler.analyze();
 
+	ErrorList errors = filterErrors(m_compiler.errors(), _reportWarnings);
+	if (errors.size() > 1 && !_allowMultipleErrors)
+		BOOST_FAIL("Multiple errors found: " + formatErrors());
+
+	return make_pair(&m_compiler.ast(""), std::move(errors));
+}
+
+ErrorList AnalysisFramework::filterErrors(ErrorList const& _errorList, bool _includeWarnings) const
+{
 	ErrorList errors;
-	for (auto const& currentError: m_compiler.errors())
+	for (auto const& currentError: _errorList)
 	{
 		solAssert(currentError->comment(), "");
 		if (currentError->type() == Error::Type::Warning)
 		{
+			if (!_includeWarnings)
+				continue;
 			bool ignoreWarning = false;
 			for (auto const& filter: m_warningsToFilter)
 				if (currentError->comment()->find(filter) == 0)
@@ -70,17 +84,10 @@ AnalysisFramework::parseAnalyseAndReturnError(
 				continue;
 		}
 
-		if (_reportWarnings || (currentError->type() != Error::Type::Warning))
-		{
-			if (!_allowMultipleErrors && !errors.empty())
-			{
-				BOOST_FAIL("Multiple errors found: " + formatErrors());
-			}
-			errors.emplace_back(std::move(currentError));
-		}
+		errors.emplace_back(currentError);
 	}
 
-	return make_pair(&m_compiler.ast(""), errors);
+	return errors;
 }
 
 SourceUnit const* AnalysisFramework::parseAndAnalyse(string const& _source)
@@ -107,7 +114,7 @@ ErrorList AnalysisFramework::expectError(std::string const& _source, bool _warni
 	return sourceAndErrors.second;
 }
 
-string AnalysisFramework::formatErrors()
+string AnalysisFramework::formatErrors() const
 {
 	string message;
 	for (auto const& error: m_compiler.errors())
@@ -115,7 +122,7 @@ string AnalysisFramework::formatErrors()
 	return message;
 }
 
-string AnalysisFramework::formatError(Error const& _error)
+string AnalysisFramework::formatError(Error const& _error) const
 {
 	return SourceReferenceFormatter::formatExceptionInformation(
 			_error,

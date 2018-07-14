@@ -20,6 +20,8 @@
 
 #include <libsolidity/formal/SolverInterface.h>
 
+#include <libsolidity/formal/SSAVariable.h>
+
 #include <libsolidity/ast/ASTVisitor.h>
 
 #include <libsolidity/interface/ReadFile.h>
@@ -48,6 +50,8 @@ private:
 	// because the order of expression evaluation is undefined
 	// TODO: or just force a certain order, but people might have a different idea about that.
 
+	virtual bool visit(ContractDefinition const& _node) override;
+	virtual void endVisit(ContractDefinition const& _node) override;
 	virtual void endVisit(VariableDeclaration const& _node) override;
 	virtual bool visit(FunctionDefinition const& _node) override;
 	virtual void endVisit(FunctionDefinition const& _node) override;
@@ -76,7 +80,7 @@ private:
 	void assignment(Declaration const& _variable, smt::Expression const& _value, SourceLocation const& _location);
 
 	/// Maps a variable to an SSA index.
-	using VariableSequenceCounters = std::map<Declaration const*, int>;
+	using VariableSequenceCounters = std::map<Declaration const*, SSAVariable>;
 
 	/// Visits the branch given by the statement, pushes and pops the current path conditions.
 	/// @param _condition if present, asserts that this condition is true within the branch.
@@ -109,6 +113,7 @@ private:
 	smt::CheckResult checkSatisfiable();
 
 	void initializeLocalVariables(FunctionDefinition const& _function);
+	void resetStateVariables();
 	void resetVariables(std::vector<Declaration const*> _variables);
 	/// Given two different branches and the touched variables,
 	/// merge the touched variables into after-branch ite variables
@@ -118,7 +123,6 @@ private:
 	/// This fails if the type is not supported.
 	bool createVariable(VariableDeclaration const& _varDecl);
 
-	static std::string uniqueSymbol(Declaration const& _decl);
 	static std::string uniqueSymbol(Expression const& _expr);
 
 	/// @returns true if _delc is a variable that is known at the current point, i.e.
@@ -139,18 +143,12 @@ private:
 	/// Resets the variable to an unknown value (in its range).
 	void setUnknownValue(Declaration const& decl);
 
-	static smt::Expression minValue(IntegerType const& _t);
-	static smt::Expression maxValue(IntegerType const& _t);
-
 	/// Returns the expression corresponding to the AST node. Throws if the expression does not exist.
 	smt::Expression expr(Expression const& _e);
 	/// Creates the expression (value can be arbitrary)
 	void createExpr(Expression const& _e);
 	/// Creates the expression and sets its value.
 	void defineExpr(Expression const& _e, smt::Expression _value);
-	/// Returns the function declaration corresponding to the given variable.
-	/// The function takes one argument which is the "sequence number".
-	smt::Expression var(Declaration const& _decl);
 
 	/// Adds a new path condition
 	void pushPathCondition(smt::Expression const& _e);
@@ -165,11 +163,10 @@ private:
 
 	std::shared_ptr<smt::SolverInterface> m_interface;
 	std::shared_ptr<VariableUsage> m_variableUsage;
-	bool m_conditionalExecutionHappened = false;
-	std::map<Declaration const*, int> m_currentSequenceCounter;
-	std::map<Declaration const*, int> m_nextFreeSequenceCounter;
+	bool m_loopExecutionHappened = false;
 	std::map<Expression const*, smt::Expression> m_expressions;
-	std::map<Declaration const*, smt::Expression> m_variables;
+	std::map<Declaration const*, SSAVariable> m_variables;
+	std::map<Declaration const*, SSAVariable> m_stateVariables;
 	std::vector<smt::Expression> m_pathConditions;
 	ErrorReporter& m_errorReporter;
 

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.22;
 
 import "./Token.sol";
 
@@ -8,16 +8,16 @@ contract StandardToken is Token {
 	mapping (address =>
 		mapping (address => uint256)) m_allowance;
 
-	function StandardToken(address _initialOwner, uint256 _supply) public {
+	constructor(address _initialOwner, uint256 _supply) public {
 		supply = _supply;
 		balance[_initialOwner] = _supply;
 	}
 
-	function balanceOf(address _account) constant public returns (uint) {
+	function balanceOf(address _account) view public returns (uint) {
 		return balance[_account];
 	}
 
-	function totalSupply() constant public returns (uint) {
+	function totalSupply() view public returns (uint) {
 		return supply;
 	}
 
@@ -53,7 +53,7 @@ contract StandardToken is Token {
 		return true;
 	}
 
-	function allowance(address _owner, address _spender) constant public returns (uint256) {
+	function allowance(address _owner, address _spender) view public returns (uint256) {
 		return m_allowance[_owner][_spender];
 	}
 }

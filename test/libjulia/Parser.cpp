@@ -19,7 +19,7 @@
  * Unit tests for parsing Julia.
  */
 
-#include "../TestHelper.h"
+#include <test/Options.h>
 
 #include <test/libsolidity/ErrorCheck.h>
 
@@ -56,7 +56,13 @@ bool parse(string const& _source, ErrorReporter& errorReporter)
 		if (parserResult)
 		{
 			assembly::AsmAnalysisInfo analysisInfo;
-			return (assembly::AsmAnalyzer(analysisInfo, errorReporter, assembly::AsmFlavour::IULIA)).analyze(*parserResult);
+			return (assembly::AsmAnalyzer(
+				analysisInfo,
+				errorReporter,
+				dev::test::Options::get().evmVersion(),
+				boost::none,
+				assembly::AsmFlavour::IULIA
+			)).analyze(*parserResult);
 		}
 	}
 	catch (FatalError const&)
@@ -206,10 +212,10 @@ BOOST_AUTO_TEST_CASE(tokens_as_identifers)
 
 BOOST_AUTO_TEST_CASE(lacking_types)
 {
-	CHECK_ERROR("{ let x := 1:u256 }", ParserError, "Expected token Identifier got 'Assign'");
-	CHECK_ERROR("{ let x:u256 := 1 }", ParserError, "Expected token Colon got 'RBrace'");
-	CHECK_ERROR("{ function f(a) {} }", ParserError, "Expected token Colon got 'RParen'");
-	CHECK_ERROR("{ function f(a:u256) -> b {} }", ParserError, "Expected token Colon got 'LBrace'");
+	CHECK_ERROR("{ let x := 1:u256 }", ParserError, "Expected identifier but got '='");
+	CHECK_ERROR("{ let x:u256 := 1 }", ParserError, "Expected ':' but got '}'");
+	CHECK_ERROR("{ function f(a) {} }", ParserError, "Expected ':' but got ')'");
+	CHECK_ERROR("{ function f(a:u256) -> b {} }", ParserError, "Expected ':' but got '{'");
 }
 
 BOOST_AUTO_TEST_CASE(invalid_types)
@@ -288,7 +294,7 @@ BOOST_AUTO_TEST_CASE(if_statement)
 BOOST_AUTO_TEST_CASE(if_statement_invalid)
 {
 	CHECK_ERROR("{ if let x:u256 {} }", ParserError, "Literal or identifier expected.");
-	CHECK_ERROR("{ if true:bool let x:u256 := 3:u256 }", ParserError, "Expected token LBrace");
+	CHECK_ERROR("{ if true:bool let x:u256 := 3:u256 }", ParserError, "Expected '{' but got reserved keyword 'let'");
 	// TODO change this to an error once we check types.
 	BOOST_CHECK(successParse("{ if 42:u256 { } }"));
 }

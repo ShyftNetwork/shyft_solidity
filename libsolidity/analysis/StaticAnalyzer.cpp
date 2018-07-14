@@ -21,6 +21,7 @@
  */
 
 #include <libsolidity/analysis/StaticAnalyzer.h>
+#include <libsolidity/analysis/ConstantEvaluator.h>
 #include <libsolidity/ast/AST.h>
 #include <libsolidity/interface/ErrorReporter.h>
 #include <memory>
@@ -52,6 +53,16 @@ void StaticAnalyzer::endVisit(ContractDefinition const&)
 
 bool StaticAnalyzer::visit(FunctionDefinition const& _function)
 {
+	const bool isInterface = m_currentContract->contractKind() == ContractDefinition::ContractKind::Interface;
+
+	if (_function.noVisibilitySpecified())
+		m_errorReporter.warning(
+			_function.location(),
+			"No visibility specified. Defaulting to \"" +
+			Declaration::visibilityToString(_function.visibility()) +
+			"\". " +
+			(isInterface ? "In interfaces it defaults to external." : "")
+		);
 	if (_function.isImplemented())
 		m_currentFunction = &_function;
 	else
@@ -70,22 +81,16 @@ void StaticAnalyzer::endVisit(FunctionDefinition const&)
 	for (auto const& var: m_localVarUseCount)
 		if (var.second == 0)
 		{
-			if (var.first->isCallableParameter()){
-				{
-					m_errorReporter.warning(
-					var.first->location(),
+			if (var.first.second->isCallableParameter()){
+				m_errorReporter.warning(
+					var.first.second->location(),
 					"Unused function parameter. Remove or comment out the variable name to silence this warning."
 				);
-				}
 			}
-			else
-//Alex Binesh: Start: Disabling Warnings
-				//if (!bShyft_Suppress_Warnings)
-//Alex Binesh: End: Disabling Warnings
-				{
-					m_errorReporter.warning(var.first->location(), "Unused local variable.");
-				}
+			else{
+				m_errorReporter.warning(var.first.second->location(), "Unused local variable.");
 			}
+		}
 
 	m_localVarUseCount.clear();
 }
@@ -97,7 +102,7 @@ bool StaticAnalyzer::visit(Identifier const& _identifier)
 		{
 			solAssert(!var->name().empty(), "");
 			if (var->isLocalVariable())
-				m_localVarUseCount[var] += 1;
+				m_localVarUseCount[make_pair(var->id(), var)] += 1;
 		}
 	return true;
 }
@@ -109,7 +114,7 @@ bool StaticAnalyzer::visit(VariableDeclaration const& _variable)
 		solAssert(_variable.isLocalVariable(), "");
 		if (_variable.name() != "")
 			// This is not a no-op, the entry might pre-exist.
-			m_localVarUseCount[&_variable] += 0;
+			m_localVarUseCount[make_pair(_variable.id(), &_variable)] += 0;
 	}
 	else if (_variable.isStateVariable())
 	{
@@ -132,7 +137,7 @@ bool StaticAnalyzer::visit(Return const& _return)
 	if (m_currentFunction && _return.expression())
 		for (auto const& var: m_currentFunction->returnParameters())
 			if (!var->name().empty())
-				m_localVarUseCount[var.get()] += 1;
+				m_localVarUseCount[make_pair(var->id(), var.get())] += 1;
 	return true;
 }
 
@@ -149,6 +154,38 @@ bool StaticAnalyzer::visit(ExpressionStatement const& _statement)
 
 bool StaticAnalyzer::visit(MemberAccess const& _memberAccess)
 {
+	bool const v050 = m_currentContract->sourceUnit().annotation().experimentalFeatures.count(ExperimentalFeature::V050);
+
+	if (MagicType const* type = dynamic_cast<MagicType const*>(_memberAccess.expression().annotation().type.get()))
+	{
+		if (type->kind() == MagicType::Kind::Message && _memberAccess.memberName() == "gas")
+		{
+			if (v050)
+				m_errorReporter.typeError(
+					_memberAccess.location(),
+					"\"msg.gas\" has been deprecated in favor of \"gasleft()\""
+				);
+			else
+				m_errorReporter.warning(
+					_memberAccess.location(),
+					"\"msg.gas\" has been deprecated in favor of \"gasleft()\""
+				);
+		}
+		if (type->kind() == MagicType::Kind::Block && _memberAccess.memberName() == "blockhash")
+		{
+			if (v050)
+				m_errorReporter.typeError(
+					_memberAccess.location(),
+					"\"block.blockhash()\" has been deprecated in favor of \"blockhash()\""
+				);
+			else
+				m_errorReporter.warning(
+					_memberAccess.location(),
+					"\"block.blockhash()\" has been deprecated in favor of \"blockhash()\""
+				);
+		}
+	}
+
 	if (m_nonPayablePublic && !m_library)
 		if (MagicType const* type = dynamic_cast<MagicType const*>(_memberAccess.expression().annotation().type.get()))
 			if (type->kind() == MagicType::Kind::Message && _memberAccess.memberName() == "value")
@@ -161,7 +198,7 @@ bool StaticAnalyzer::visit(MemberAccess const& _memberAccess)
 		if (auto const* type = dynamic_cast<FunctionType const*>(_memberAccess.annotation().type.get()))
 			if (type->kind() == FunctionType::Kind::BareCallCode)
 			{
-				if (m_currentContract->sourceUnit().annotation().experimentalFeatures.count(ExperimentalFeature::V050))
+				if (v050)
 					m_errorReporter.typeError(
 						_memberAccess.location(),
 						"\"callcode\" has been deprecated in favour of \"delegatecall\"."
@@ -173,10 +210,32 @@ bool StaticAnalyzer::visit(MemberAccess const& _memberAccess)
 					);
 			}
 
-	if (m_constructor && m_currentContract)
-		if (ContractType const* type = dynamic_cast<ContractType const*>(_memberAccess.expression().annotation().type.get()))
-			if (type->contractDefinition() == *m_currentContract)
-				m_errorReporter.warning(_memberAccess.location(), "\"this\" used in constructor.");
+	if (m_constructor)
+	{
+		auto const* expr = &_memberAccess.expression();
+		while(expr)
+		{
+			if (auto id = dynamic_cast<Identifier const*>(expr))
+			{
+				if (id->name() == "this")
+					m_errorReporter.warning(
+						id->location(),
+						"\"this\" used in constructor. "
+						"Note that external functions of a contract "
+						"cannot be called while it is being constructed.");
+				break;
+			}
+			else if (auto tuple = dynamic_cast<TupleExpression const*>(expr))
+			{
+				if (tuple->components().size() == 1)
+					expr = tuple->components().front().get();
+				else
+					break;
+			}
+			else
+				break;
+		}
+	}
 
 	return true;
 }
@@ -192,10 +251,51 @@ bool StaticAnalyzer::visit(InlineAssembly const& _inlineAssembly)
 		{
 			solAssert(!var->name().empty(), "");
 			if (var->isLocalVariable())
-				m_localVarUseCount[var] += 1;
+				m_localVarUseCount[make_pair(var->id(), var)] += 1;
 		}
 	}
 
+	return true;
+}
+
+bool StaticAnalyzer::visit(BinaryOperation const& _operation)
+{
+	if (
+		_operation.rightExpression().annotation().isPure &&
+		(_operation.getOperator() == Token::Div || _operation.getOperator() == Token::Mod)
+	)
+		if (auto rhs = dynamic_pointer_cast<RationalNumberType const>(
+			ConstantEvaluator(m_errorReporter).evaluate(_operation.rightExpression())
+		))
+			if (rhs->isZero())
+				m_errorReporter.typeError(
+					_operation.location(),
+					(_operation.getOperator() == Token::Div) ? "Division by zero." : "Modulo zero."
+				);
+
+	return true;
+}
+
+bool StaticAnalyzer::visit(FunctionCall const& _functionCall)
+{
+	if (_functionCall.annotation().kind == FunctionCallKind::FunctionCall)
+	{
+		auto functionType = dynamic_pointer_cast<FunctionType const>(_functionCall.expression().annotation().type);
+		solAssert(functionType, "");
+		if (functionType->kind() == FunctionType::Kind::AddMod || functionType->kind() == FunctionType::Kind::MulMod)
+		{
+			solAssert(_functionCall.arguments().size() == 3, "");
+			if (_functionCall.arguments()[2]->annotation().isPure)
+				if (auto lastArg = dynamic_pointer_cast<RationalNumberType const>(
+					ConstantEvaluator(m_errorReporter).evaluate(*(_functionCall.arguments())[2])
+				))
+					if (lastArg->isZero())
+						m_errorReporter.typeError(
+							_functionCall.location(),
+							"Arithmetic modulo zero."
+						);
+		}
+	}
 	return true;
 }
 

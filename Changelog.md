@@ -1,21 +1,123 @@
-### 0.4.21 (unreleased)
+### 0.4.24 (2018-05-16)
+
+Language Features:
+ * Code Generator: Use native shift instructions on target Constantinople.
+ * General: Allow multiple variables to be declared as part of a tuple assignment, e.g. ``(uint a, uint b) = ...``.
+ * General: Remove deprecated ``constant`` as function state modifier from documentation and tests (but still leave it as a valid feature).
+ * Type Checker: Deprecate the ``years`` unit denomination and raise a warning for it (or an error as experimental 0.5.0 feature).
+ * Type Checker: Make literals (without explicit type casting) an error for tight packing as experimental 0.5.0 feature.
+ * Type Checker: Warn about wildcard tuple assignments (this will turn into an error with version 0.5.0).
+ * Type Checker: Warn when ``keccak256``, ``sha256`` and ``ripemd160`` are not used with a single bytes argument (suggest to use ``abi.encodePacked(...)``). This will turn into an error with version 0.5.0.
+
+Compiler Features:
+ * Build System: Update internal dependency of jsoncpp to 1.8.4, which introduces more strictness and reduces memory usage.
+ * Control Flow Graph: Add Control Flow Graph as analysis structure.
+ * Control Flow Graph: Warn about returning uninitialized storage pointers.
+ * Gas Estimator: Only explore paths with higher gas costs. This reduces accuracy but greatly improves the speed of gas estimation.
+ * Optimizer: Remove unnecessary masking of the result of known short instructions (``ADDRESS``, ``CALLER``, ``ORIGIN`` and ``COINBASE``).
+ * Parser: Display nicer error messages by showing the actual tokens and not internal names.
+ * Parser: Use the entire location of the token instead of only its starting position as source location for parser errors.
+ * SMT Checker: Support state variables of integer and bool type.
+
+Bugfixes:
+ * Code Generator: Fix ``revert`` with reason coming from a state or local string variable.
+ * Type Checker: Show proper error when trying to ``emit`` a non-event.
+ * Type Checker: Warn about empty tuple components (this will turn into an error with version 0.5.0).
+ * Type Checker: The ABI encoding functions are pure and thus can be used for constants.
+
+### 0.4.23 (2018-04-19)
 
 Features:
- * C99/C++-style scoping rules (instead of JavaScript function scoping) take effect as experimental v0.5.0 feature.
- * Code Generator: Assert that ``k != 0`` for ``molmod(a, b, k)`` and ``addmod(a, b, k)`` as experimental 0.5.0 feature.
+ * Build system: Support Ubuntu Bionic.
+ * SMTChecker: Integration with CVC4 SMT solver
+ * Syntax Checker: Warn about functions named "constructor".
+
+Bugfixes:
+ * Type Checker: Improve error message for failed function overload resolution.
+ * Type Checker: Do not complain about new-style constructor and fallback function to have the same name.
+ * Type Checker: Detect multiple constructor declarations in the new syntax and old syntax.
+ * Type Checker: Explicit conversion of ``bytesXX`` to ``contract`` is properly disallowed.
+
+### 0.4.22 (2018-04-16)
+
+Features:
+ * Code Generator: Initialize arrays without using ``msize()``.
+ * Code Generator: More specialized and thus optimized implementation for ``x.push(...)``
+ * Commandline interface: Error when missing or inaccessible file detected. Suppress it with the ``--ignore-missing`` flag.
+ * Constant Evaluator: Fix evaluation of single element tuples.
+ * General: Add encoding routines ``abi.encodePacked``, ``abi.encode``, ``abi.encodeWithSelector`` and ``abi.encodeWithSignature``.
+ * General: Add global function ``gasleft()`` and deprecate ``msg.gas``.
+ * General: Add global function ``blockhash(uint)`` and deprecate ``block.hash(uint)``.
+ * General: Allow providing reason string for ``revert()`` and ``require()``.
+ * General: Introduce new constructor syntax using the ``constructor`` keyword as experimental 0.5.0 feature.
+ * General: Limit the number of errors output in a single run to 256.
+ * General: Support accessing dynamic return data in post-byzantium EVMs.
+ * Inheritance: Error when using empty parentheses for base class constructors that require arguments as experimental 0.5.0 feature.
+ * Inheritance: Error when using no parentheses in modifier-style constructor calls as experimental 0.5.0 feature.
+ * Interfaces: Allow overriding external functions in interfaces with public in an implementing contract.
+ * Optimizer: Optimize ``SHL`` and ``SHR`` only involving constants (Constantinople only).
+ * Optimizer: Remove useless ``SWAP1`` instruction preceding a commutative instruction (such as ``ADD``, ``MUL``, etc).
+ * Optimizer: Replace comparison operators (``LT``, ``GT``, etc) with opposites if preceded by ``SWAP1``, e.g. ``SWAP1 LT`` is replaced with ``GT``.
+ * Optimizer: Optimize across ``mload`` if ``msize()`` is not used.
+ * Static Analyzer: Error on duplicated super constructor calls as experimental 0.5.0 feature.
+ * Syntax Checker: Issue warning for empty structs (or error as experimental 0.5.0 feature).
+ * Syntax Checker: Warn about modifiers on functions without implementation (this will turn into an error with version 0.5.0).
+ * Syntax Tests: Add source locations to syntax test expectations.
+ * Type Checker: Improve documentation and warnings for accessing contract members inherited from ``address``.
+
+Bugfixes:
+ * Code Generator: Allow ``block.blockhash`` without being called.
+ * Code Generator: Do not include internal functions in the runtime bytecode which are only referenced in the constructor.
+ * Code Generator: Properly skip unneeded storage array cleanup when not reducing length.
+ * Code Generator: Bugfix in modifier lookup in libraries.
+ * Code Generator: Implement packed encoding of external function types.
+ * Code Generator: Treat empty base constructor argument list as not provided.
+ * Code Generator: Properly force-clean bytesXX types for shortening conversions.
+ * Commandline interface: Fix error messages for imported files that do not exist.
+ * Commandline interface: Support ``--evm-version constantinople`` properly.
+ * DocString Parser: Fix error message for empty descriptions.
+ * Gas Estimator: Correctly ignore costs of fallback function for other functions.
+ * JSON AST: Remove storage qualifier for type name strings.
+ * Parser: Fix internal compiler error when parsing ``var`` declaration without identifier.
+ * Parser: Fix parsing of getters for function type variables.
+ * Standard JSON: Support ``constantinople`` as ``evmVersion`` properly.
+ * Static Analyzer: Fix non-deterministic order of unused variable warnings.
+ * Static Analyzer: Invalid arithmetic with constant expressions causes errors.
+ * Type Checker: Fix detection of recursive structs.
+ * Type Checker: Fix asymmetry bug when comparing with literal numbers.
+ * Type System: Improve error message when attempting to shift by a fractional amount.
+ * Type System: Make external library functions accessible.
+ * Type System: Prevent encoding of weird types.
+ * Type System: Restrict rational numbers to 4096 bits.
+
+### 0.4.21 (2018-03-07)
+
+Features:
+ * Code Generator: Assert that ``k != 0`` for ``mulmod(a, b, k)`` and ``addmod(a, b, k)`` as experimental 0.5.0 feature.
+ * Code Generator: Do not retain any gas in calls (except if EVM version is set to homestead).
+ * Code Generator: Use ``STATICCALL`` opcode for calling ``view`` and ``pure`` functions as experimenal 0.5.0 feature.
+ * General: C99/C++-style scoping rules (instead of JavaScript function scoping) take effect as experimental v0.5.0 feature.
+ * General: Improved messaging when error spans multiple lines of a sourcefile
+ * General: Support and recommend using ``emit EventName();`` to call events explicitly.
+ * Inline Assembly: Enforce strict mode as experimental 0.5.0 feature.
+ * Interface: Provide ability to select target EVM version (homestead or byzantium, with byzantium being the default).
  * Standard JSON: Reject badly formatted invalid JSON inputs.
  * Type Checker: Disallow uninitialized storage pointers as experimental 0.5.0 feature.
- * Support and recommend using ``emit EventName();`` to call events explicitly.
  * Syntax Analyser: Do not warn about experimental features if they do not concern code generation.
+ * Syntax Analyser: Do not warn about ``pragma experimental "v0.5.0"`` and do not set the experimental flag in the bytecode for this.
  * Syntax Checker: Mark ``throw`` as an error as experimental 0.5.0 feature.
  * Syntax Checker: Issue error if no visibility is specified on contract functions as experimental 0.5.0 feature.
+ * Syntax Checker: Issue warning when using overloads of ``address`` on contract instances.
+ * Type Checker: disallow combining hex numbers and unit denominations as experimental 0.5.0 feature.
 
 Bugfixes:
  * Assembly: Raise error on oversized number literals in assembly.
  * JSON-AST: Add "documentation" property to function, event and modifier definition.
  * Resolver: Properly determine shadowing for imports with aliases.
  * Standalone Assembly: Do not ignore input after closing brace of top level block.
- * Standard JSON: catch errors properly when invalid "sources" are passed
+ * Standard JSON: Catch errors properly when invalid "sources" are passed.
+ * Standard JSON: Ensure that library addresses supplied are of correct length and hex prefixed.
+ * Type Checker: Properly detect which array and struct types are unsupported by the old ABI encoder.
  * Type Checker: Properly warn when using ``_offset`` and ``_slot`` for constants in inline assembly.
  * Commandline interface: throw error if option is unknown
 

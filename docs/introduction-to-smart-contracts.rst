@@ -25,7 +25,7 @@ Storage
             storedData = x;
         }
 
-        function get() public constant returns (uint) {
+        function get() public view returns (uint) {
             return storedData;
         }
     }
@@ -80,7 +80,7 @@ registering with username and password - all you need is an Ethereum keypair.
 
 ::
 
-    pragma solidity ^0.4.20; // should actually be 0.4.21
+    pragma solidity ^0.4.21;
 
     contract Coin {
         // The keyword "public" makes those variables
@@ -326,7 +326,13 @@ EVM bytecode and executed. The output of this execution is
 permanently stored as the code of the contract.
 This means that in order to create a contract, you do not
 send the actual code of the contract, but in fact code that
-returns that code.
+returns that code when executed.
+
+.. note::
+  While a contract is being created, its code is still empty.
+  Because of that, you should not call back into the
+  contract under construction until its constructor has
+  finished executing.
 
 .. index:: ! gas, ! gas price
 

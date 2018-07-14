@@ -40,7 +40,7 @@ using namespace dev::solidity;
 GasEstimator::ASTGasConsumptionSelfAccumulated GasEstimator::structuralEstimation(
 	AssemblyItems const& _items,
 	vector<ASTNode const*> const& _ast
-)
+) const
 {
 	solAssert(std::count(_ast.begin(), _ast.end(), nullptr) == 0, "");
 	map<SourceLocation, GasConsumption> particularCosts;
@@ -49,7 +49,7 @@ GasEstimator::ASTGasConsumptionSelfAccumulated GasEstimator::structuralEstimatio
 	for (BasicBlock const& block: cfg.optimisedBlocks())
 	{
 		solAssert(!!block.startState, "");
-		GasMeter meter(block.startState->copy());
+		GasMeter meter(block.startState->copy(), m_evmVersion);
 		auto const end = _items.begin() + block.end;
 		for (auto iter = _items.begin() + block.begin; iter != end; ++iter)
 			particularCosts[iter->location()] += meter.estimateMax(*iter);
@@ -127,7 +127,7 @@ map<ASTNode const*, GasMeter::GasConsumption> GasEstimator::breakToStatementLeve
 GasEstimator::GasConsumption GasEstimator::functionalEstimation(
 	AssemblyItems const& _items,
 	string const& _signature
-)
+) const
 {
 	auto state = make_shared<KnownState>();
 
@@ -138,13 +138,29 @@ GasEstimator::GasConsumption GasEstimator::functionalEstimation(
 		using Ids = vector<Id>;
 		Id hashValue = classes.find(u256(FixedHash<4>::Arith(FixedHash<4>(dev::keccak256(_signature)))));
 		Id calldata = classes.find(Instruction::CALLDATALOAD, Ids{classes.find(u256(0))});
-		classes.forceEqual(hashValue, Instruction::DIV, Ids{
-			calldata,
-			classes.find(u256(1) << (8 * 28))
-		});
+		if (!m_evmVersion.hasBitwiseShifting())
+			// div(calldataload(0), 1 << 224) equals to hashValue
+			classes.forceEqual(
+				hashValue,
+				Instruction::DIV,
+				Ids{calldata, classes.find(u256(1) << 224)}
+			);
+		else
+			// shr(0xe0, calldataload(0)) equals to hashValue
+			classes.forceEqual(
+				hashValue,
+				Instruction::SHR,
+				Ids{classes.find(u256(0xe0)), calldata}
+			);
+		// lt(calldatasize(), 4) equals to 0 (ignore the shortcut for fallback functions)
+		classes.forceEqual(
+			classes.find(u256(0)),
+			Instruction::LT,
+			Ids{classes.find(Instruction::CALLDATASIZE), classes.find(u256(4))}
+		);
 	}
 
-	PathGasMeter meter(_items);
+	PathGasMeter meter(_items, m_evmVersion);
 	return meter.estimateMax(0, state);
 }
 
@@ -152,7 +168,7 @@ GasEstimator::GasConsumption GasEstimator::functionalEstimation(
 	AssemblyItems const& _items,
 	size_t const& _offset,
 	FunctionDefinition const& _function
-)
+) const
 {
 	auto state = make_shared<KnownState>();
 
@@ -167,7 +183,7 @@ GasEstimator::GasConsumption GasEstimator::functionalEstimation(
 	if (parametersSize > 0)
 		state->feedItem(swapInstruction(parametersSize));
 
-	return PathGasMeter(_items).estimateMax(_offset, state);
+	return PathGasMeter(_items, m_evmVersion).estimateMax(_offset, state);
 }
 
 set<ASTNode const*> GasEstimator::finestNodesAtLocation(
