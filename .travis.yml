@@ -65,16 +65,16 @@ matrix:
               - SOLC_STOREBYTECODE=On
 
         # Docker target, which generates a statically linked alpine image
-        - os: linux
-          dist: trusty
-          sudo: required
-          services:
-            - docker
-          env:
-            - SOLC_DOCKER=On
-            - SOLC_INSTALL_DEPS_TRAVIS=Off
-            - SOLC_RELEASE=Off
-            - SOLC_TESTS=Off
+        #- os: linux
+        #  dist: trusty
+        #  sudo: required
+        #  services:
+        #    - docker
+        #  env:
+        #    - SOLC_DOCKER=On
+        #    - SOLC_INSTALL_DEPS_TRAVIS=Off
+        #    - SOLC_RELEASE=Off
+        #    - SOLC_TESTS=Off
 
         # Emscripten target, which compiles 'solc' to javascript and uploads the resulting .js
         # files to https://github.com/ethereum/solc-bin.  These binaries are used in Browser-Solidity
