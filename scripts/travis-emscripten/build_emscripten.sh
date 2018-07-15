@@ -37,13 +37,13 @@ set -ev
 if ! type git &>/dev/null; then
     # We need git for extracting the commit hash
     apt-get update
-    apt-get -y install git-core
+    apt-get -yq install git-core
 fi
 
 if ! type wget &>/dev/null; then
     # We need wget to install cmake
     apt-get update
-    apt-get -y install wget
+    apt-get -yq install wget
 fi
 
 WORKSPACE=/root/project
