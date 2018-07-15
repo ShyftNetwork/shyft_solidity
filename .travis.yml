@@ -130,6 +130,9 @@ script:
     - test $SOLC_TESTS != On || (cd $TRAVIS_BUILD_DIR && scripts/tests.sh)
     - test $SOLC_STOREBYTECODE != On || (cd $TRAVIS_BUILD_DIR && scripts/bytecodecompare/storebytecode.sh)
 
+after_failure:
+    - tail -n 100 ~/build.log
+
 deploy:
     # This is the deploy target for the Emscripten build.
     # It publishes the JS file which was compiled as part of the earlier 'build_emscripten.sh'
