@@ -72,11 +72,11 @@ find . -name 'libboost*.a' -exec cp {} . \;
 rm -rf b2 libs doc tools more bin.v2 status
 )
 echo -en 'travis_fold:end:compiling_boost\\r'
-
+echo 'DONE COMPILING BOOST'
 echo -en 'travis_fold:start:install_cmake.sh\\r'
 source $WORKSPACE/scripts/install_cmake.sh
 echo -en 'travis_fold:end:install_cmake.sh\\r'
-
+echo 'DONE INSTALLING CMAKE'
 # Build dependent components and solidity itself
 echo -en 'travis_fold:start:compiling_solidity\\r'
 cd $WORKSPACE
