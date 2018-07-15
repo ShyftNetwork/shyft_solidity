@@ -36,14 +36,14 @@ set -ev
 
 if ! type git &>/dev/null; then
     # We need git for extracting the commit hash
-    apt-get update
-    apt-get -yq install git-core
+    apt-get -qq update
+    apt-get -yqq install git-core
 fi
 
 if ! type wget &>/dev/null; then
     # We need wget to install cmake
-    apt-get update
-    apt-get -yq install wget
+    apt-get -qq update
+    apt-get -yqq install wget
 fi
 
 WORKSPACE=/root/project
@@ -102,7 +102,7 @@ cmake \
   -DBoost_UNIT_TEST_FRAMEWORK_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_unit_test_framework.a \
   -DTESTS=0 \
   ..
-make -j 4
+make -j 4 --silent
 
 cd ..
 mkdir -p upload
