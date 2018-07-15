@@ -36,14 +36,14 @@ set -ev
 
 if ! type git &>/dev/null; then
     # We need git for extracting the commit hash
-    apt-get update
-    apt-get -y install git-core
+    apt-get -qq update
+    apt-get -yqq install git-core
 fi
 
 if ! type wget &>/dev/null; then
     # We need wget to install cmake
-    apt-get update
-    apt-get -y install wget
+    apt-get -qq update
+    apt-get -yqq install wget
 fi
 
 WORKSPACE=/root/project
@@ -67,16 +67,16 @@ sed -i 's|using gcc ;|using gcc : : em++ ;|g' ./project-config.jam
 sed -i 's|$(archiver\[1\])|emar|g' ./tools/build/src/tools/gcc.jam
 sed -i 's|$(ranlib\[1\])|emranlib|g' ./tools/build/src/tools/gcc.jam
 ./b2 link=static variant=release threading=single runtime-link=static \
-       system regex filesystem unit_test_framework program_options
+       system regex filesystem unit_test_framework program_options >> ~/build.log
 find . -name 'libboost*.a' -exec cp {} . \;
 rm -rf b2 libs doc tools more bin.v2 status
 )
 echo -en 'travis_fold:end:compiling_boost\\r'
-
+echo 'DONE COMPILING BOOST'
 echo -en 'travis_fold:start:install_cmake.sh\\r'
 source $WORKSPACE/scripts/install_cmake.sh
 echo -en 'travis_fold:end:install_cmake.sh\\r'
-
+echo 'DONE INSTALLING CMAKE'
 # Build dependent components and solidity itself
 echo -en 'travis_fold:start:compiling_solidity\\r'
 cd $WORKSPACE
@@ -102,7 +102,7 @@ cmake \
   -DBoost_UNIT_TEST_FRAMEWORK_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_unit_test_framework.a \
   -DTESTS=0 \
   ..
-make -j 4
+make -j 4 --silent
 
 cd ..
 mkdir -p upload
