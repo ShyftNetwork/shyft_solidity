@@ -67,7 +67,7 @@ sed -i 's|using gcc ;|using gcc : : em++ ;|g' ./project-config.jam
 sed -i 's|$(archiver\[1\])|emar|g' ./tools/build/src/tools/gcc.jam
 sed -i 's|$(ranlib\[1\])|emranlib|g' ./tools/build/src/tools/gcc.jam
 ./b2 link=static variant=release threading=single runtime-link=static \
-       system regex filesystem unit_test_framework program_options
+       system regex filesystem unit_test_framework program_options >> ~/build.log
 find . -name 'libboost*.a' -exec cp {} . \;
 rm -rf b2 libs doc tools more bin.v2 status
 )
@@ -101,7 +101,7 @@ cmake \
   -DBoost_UNIT_TEST_FRAMEWORK_LIBRARY="$WORKSPACE"/boost_1_57_0/libboost_unit_test_framework.a \
   -DBoost_UNIT_TEST_FRAMEWORK_LIBRARIES="$WORKSPACE"/boost_1_57_0/libboost_unit_test_framework.a \
   -DTESTS=0 \
-  .. >> ~/build.log
+  ..
 make -j 4 --silent
 
 cd ..
