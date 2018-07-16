@@ -22,7 +22,7 @@ bytes proof;
 
 xx =0;
 ThirdInput=0;
-    merkleprove(proof,xx,sId,sId);
+    merkleprove(proof,sId,sId);
 	getattest(RlpDict,RlpDict);
 	bRetVal=checktattestvalid(AttestAddr,uiNonce);
 	uiRevokeRet=getrevoke(AttestAddr,RlpDict);
