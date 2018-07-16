@@ -747,18 +747,15 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 //Alex Binesh: End:New Pragma Changes
 
 
-				arguments[3]->accept(*this);
-				utils().convertType(*arguments[3]->annotation().type, FixedBytesType(32));// This is the 2nd parameter passed into the function
-				m_context << Instruction::DUP1 << Instruction::ISZERO;
-				m_context.appendConditionalInvalid();
+
 
 				arguments[2]->accept(*this);
-				utils().convertType(*arguments[2]->annotation().type, FixedBytesType(32));// This is the 2nd parameter passed into the function
+				utils().convertType(*arguments[2]->annotation().type, FixedBytesType(32));// This is the 3rd parameter passed into the function
 				m_context << Instruction::DUP1 << Instruction::ISZERO;
 				m_context.appendConditionalInvalid();
 
 				arguments[1]->accept(*this);
-				utils().convertType(*arguments[1]->annotation().type, IntegerType(256));// This is the 2nd parameter passed into the function
+				utils().convertType(*arguments[1]->annotation().type, FixedBytesType(32));// This is the 2nd parameter passed into the function
 				m_context << Instruction::DUP1 << Instruction::ISZERO;
 				m_context.appendConditionalInvalid();
 
