@@ -763,8 +763,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 //              TypePointer  TP=Type::Category::FixedPoint;
 //ArrayType* ArrayType(DataLocation::Storage, TP);
 //				utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Storage, _types.Category);
-
-                utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Storage, false));
+                utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Memory, false));
    //             utils().convertType(*arguments[0]->annotation().type, dev::solidity::ArrayType);// This is the First parameter passed into the function
 				m_context << Instruction::MERKLEPROVE;
 				break;

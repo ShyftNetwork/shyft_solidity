@@ -14,7 +14,7 @@ bytes32 sId;
 		uint64 ThirdInput;
 
 		    ThirdInput = 0;
-		    MathSafeFunction(ThirdInput,ThirdInput);//This is the function to test
+		    SafeMathFunction(ThirdInput,ThirdInput);//This is the function to test
 
 	}
 
