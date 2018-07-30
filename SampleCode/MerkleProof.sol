@@ -14,7 +14,7 @@ contract Unique {
     function function1() public {
 
         bytes memory x = new bytes(4);
-        merkleprove(x, sId, sId);
+        bool y=merkleprove(x, sId, sId);
     }
 
 }
