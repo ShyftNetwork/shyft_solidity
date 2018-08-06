@@ -1,6 +1,6 @@
 pragma solidity ^0.4.23;
-
 pragma substance;
+
 
 contract Unique {
     string fn;
@@ -14,7 +14,7 @@ contract Unique {
     function function1() public {
 
         bytes memory x = new bytes(4);
-        bool y=merkleprove(x, sId, sId);
+        uint256 y= merkleprove(x, sId, sId);
     }
 
 }
