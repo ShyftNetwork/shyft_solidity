@@ -746,9 +746,6 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 				}
 //Alex Binesh: End:New Pragma Changes
 
-
-
-
 				arguments[2]->accept(*this);
 				utils().convertType(*arguments[2]->annotation().type, FixedBytesType(32));// This is the 3rd parameter passed into the function
 				m_context << Instruction::DUP1 << Instruction::ISZERO;
@@ -760,12 +757,13 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 				m_context.appendConditionalInvalid();
 
 				arguments[0]->accept(*this);
-//              TypePointer  TP=Type::Category::FixedPoint;
-//ArrayType* ArrayType(DataLocation::Storage, TP);
-//				utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Storage, _types.Category);
                 utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Memory, false));
-   //             utils().convertType(*arguments[0]->annotation().type, dev::solidity::ArrayType);// This is the First parameter passed into the function
-                m_context << Instruction::MLOAD;
+
+                // Param on top
+                // Duplicate -> path | path | leaf | etc...
+                // MLOAD
+                // Swap top two
+                m_context << Instruction::SWAP1 << Instruction::MLOAD << Instruction::DUP1;
                 m_context << Instruction::MERKLEPROVE;
 				break;
 			}
