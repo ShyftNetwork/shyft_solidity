@@ -174,7 +174,8 @@ const std::map<std::string, Instruction> dev::solidity::c_instructions =
 	{ "GETATTEST", Instruction::GETATTEST},
 	{ "CHECKATTESTVALID", Instruction::CHECKATTESTVALID},
 	{ "GETACTIVEREVOKE", Instruction::GETREVOKE},
-	{ "MERKLEPROVE", Instruction::MERKLEPROVE},
+	{ ""
+   "MERKLEPROVE", Instruction::MERKLEPROVE},
 // Alex Binesh: End: Opcode Changes
 };
 
@@ -358,7 +359,7 @@ static const std::map<Instruction, InstructionInfo> c_instructionInfo =
 	// be manageable with other solidity commands that can allow for a specialized
 	// map search.
 	{ Instruction::GETREVOKE, 	{"GETREVOKE", 0, 2, 1, false, Tier::Special } },
-	{ Instruction::MERKLEPROVE, 	{"MERKLEPROVE", 0, 3, 1, false, Tier::Low } },
+	{ Instruction::MERKLEPROVE, 	{"MERKLEPROVE", 0, 4, 1, true, Tier::Low } },
 // Alex Binesh: End: Opcode Changes
 
 };
