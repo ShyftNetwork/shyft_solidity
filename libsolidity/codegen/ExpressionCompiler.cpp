@@ -758,12 +758,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 
 				arguments[0]->accept(*this);
                 utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Memory, false));
-
-                // Param on top
-                // Duplicate -> path | path | leaf | etc...
-                // MLOAD
-                // Swap top two
-                m_context << Instruction::SWAP1 << Instruction::MLOAD << Instruction::DUP1;
+                //m_context << Instruction::DUP1 << Instruction::ISZERO;
                 m_context << Instruction::MERKLEPROVE;
 				break;
 			}
