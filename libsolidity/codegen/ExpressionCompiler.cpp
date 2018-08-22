@@ -765,7 +765,8 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 //				utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Storage, _types.Category);
                 utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Memory, false));
    //             utils().convertType(*arguments[0]->annotation().type, dev::solidity::ArrayType);// This is the First parameter passed into the function
-//                m_context << Instruction::MLOAD;
+                m_context << Instruction::DUP1 << Instruction::ISZERO;
+                m_context.appendConditionalInvalid();
                 m_context << Instruction::MERKLEPROVE;
 				break;
 			}
