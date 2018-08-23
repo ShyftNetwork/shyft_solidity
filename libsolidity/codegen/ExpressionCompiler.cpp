@@ -748,19 +748,19 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 
 				arguments[2]->accept(*this);
 				utils().convertType(*arguments[2]->annotation().type, FixedBytesType(32));// This is the 3rd parameter passed into the function
-				m_context << Instruction::DUP1 << Instruction::ISZERO;
-				m_context.appendConditionalInvalid();
+//				m_context << Instruction::DUP1 << Instruction::ISZERO;
+//				m_context.appendConditionalInvalid();
 
 				arguments[1]->accept(*this);
 				utils().convertType(*arguments[1]->annotation().type, FixedBytesType(32));// This is the 2nd parameter passed into the function
-				m_context << Instruction::DUP1 << Instruction::ISZERO;
-				m_context.appendConditionalInvalid();
+//				m_context << Instruction::DUP1 << Instruction::ISZERO;
+//				m_context.appendConditionalInvalid();
 
 				arguments[0]->accept(*this);
                 utils().convertType(*arguments[0]->annotation().type, ArrayType(DataLocation::Memory, false));
 //             utils().convertType(*arguments[0]->annotation().type, dev::solidity::ArrayType);// This is the First parameter passed into the function
-                m_context << Instruction::DUP1 << Instruction::ISZERO;
-                m_context.appendConditionalInvalid();
+//                m_context << Instruction::DUP1 << Instruction::ISZERO;
+//                m_context.appendConditionalInvalid();
 
                 m_context << Instruction::MERKLEPROVE;
 				break;
