@@ -1,0 +1,37 @@
+pragma solidity ^0.4.23;
+
+pragma substance;
+
+contract Unique {
+
+
+
+    event EVT_PROOF(bytes);
+
+    event EVT_RES(uint256);
+
+
+
+    function function1() public returns (uint256) {
+
+        bytes memory proof = hex"010ef9d8f8804d174666011a394cab7901679a8944d24249fd148a6a36071151f8";
+
+        bool bRes = merkleprove(proof, 0x60811857dd566889ff6255277d82526f2d9b3bbcb96076be22a5860765ac3d06, 0x905be01e25a661e3918a53a7206cb16ad11eb184bb53275f975607e8f245ad6e);
+        uint256 res = 5;
+        emit EVT_RES(res);
+
+        return res;
+
+    }
+
+
+
+    function showProof() public {
+
+        bytes memory proof = hex"000ef9d8f8804d174666011a394cab7901679a8944d24249fd148a6a36071151f8";
+
+        emit EVT_PROOF(proof);
+
+    }
+
+}
